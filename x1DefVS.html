@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="ru" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Определение векторного пространства</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="_static/pretext/fonts/material-symbols-outlined.css">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+</style>
+<link rel="stylesheet" type="text/css" href="external/customcss.css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Линейная алгебра: верный подход">
+<meta property="og:title" content="Линейная алгебра: верный подход">
+<meta property="book:title" content="Линейная алгебра: верный подход">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.55"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.55"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.dd07797f77620576.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.11d27cdc38930c2c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Перейти к основному содержимому</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Линейная алгебра: верный подход</span></a></div>
+<p class="byline">Шелдон Акслер</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Содержание"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Содержание</span></button><a class="index-button button" href="backmatter-5.html" title="Предметный указатель"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Указатель</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Поиск по книге"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Поиск</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Поисковый запрос" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Поисковый запрос"><button aria-label="Закрыть" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Результаты поиска: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>Ничего не найдено.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Читать вслух" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Читать вслух</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Предыдущее предложение"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Воспроизвести"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Следующее предложение"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Продолжить<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Настройки чтения"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Настройки чтения вслух</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Закрыть"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Голос</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Скорость чтения</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Свёрнутое содержимое</span></label><select id="ptx-read-aloud-asides"><option value="skip">Объявлять, не читать</option>
+<option value="read">Читать автоматически</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Следить за текстом (автопрокрутка)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Автоматически переходить на следующую страницу</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Настройки отображения"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Настройки отображения</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Настройки отображения</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Закрыть"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Межстрочный интервал</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Размер шрифта</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Тема</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>Системная</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Светлая</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Тёмная</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Специальные возможности</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Показывать постоянные ссылки</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Сбросить всё</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="Rn_and_Cn.html" title="Назад"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Назад</span></a><a class="up-button button" href="VectorSpaces.html" title="Наверх"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Наверх</span></a><a class="next-button button" href="x1Subspaces.html" title="Далее"><span class="name">Далее</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tensor}{\otimes}
+\newcommand{\F}[1]{\symbf{F}^{#1}}
+\newcommand{\andd}{\quad \text{и} \quad}
+\newcommand{\orr}{\quad \text{или} \quad}
+\newcommand{\butt}{\quad \text{но} \quad}
+\newcommand{\fun}[3]{#1 \colon #2 \to #3}
+\newcommand{\nth}{{\text{-й}}}
+\newcommand{\C}[1]{\symbf{C}^{#1}}
+\newcommand{\F}[1]{\symbf{F}^{#1}}
+\newcommand{\R}[1]{\symbf{R}^{#1}}
+\newcommand{\CC}[1]{\symbf{C}^{#1}}
+\newcommand{\FF}[1]{\symbf{F}^{#1}}
+\newcommand{\RR}[1]{\symbf{R}^{#1}}
+\newcommand{\A}{\symcal{A}}
+\newcommand{\B}{\symcal{B}}
+\newcommand{\E}{\symcal{E}}
+\newcommand{\CF}{\symcal{F}}
+\newcommand{\Lc}{\symcal{L}}
+\newcommand{\M}{\symcal{M}}
+\newcommand{\P}{\symcal{P}}
+\newcommand{\sm}{\backslash}
+\newcommand{\Space}{}
+\newcommand{\pound}[1]{#1^{\#}}
+\DeclareMathOperator{\ran}{range}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\perm}{perm}
+\DeclareMathOperator{\vol}{volume}
+\DeclareMathOperator{\ker}{null}
+\newcommand{\tran}[1]{#1^{\text{t}}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Содержание" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Линейная алгебра: верный подход</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="author.html" class="internal"><span class="title">Об авторе</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="forStudents.html" class="internal"><span class="title">Предисловие для студентов</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="forInstructors.html" class="internal"><span class="title">Предисловие для преподавателей</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgments.html" class="internal"><span class="title">Благодарности</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="VectorSpaces.html" class="internal"><span class="codenumber">1</span> <span class="title">Векторные пространства</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-VectorSpaces">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="VectorSpaces-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Rn_and_Cn.html" class="internal"><span class="codenumber">1.1</span> <span class="title"><span class="process-math">\(\R n\)</span> и <span class="process-math">\(\C n\)</span></span></a></div>
+<ul id="ptx-toc-group-Rn_and_Cn" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Rn_and_Cn.html#Rn_and_Cn-2" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Комплексные числа</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Rn_and_Cn.html#Rn_and_Cn-3" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Списки</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Rn_and_Cn.html#Rn_and_Cn-4" class="internal"><span class="codenumber">1.1.3</span> <span class="title"><span class="process-math">\(\F n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="Rn_and_Cn.html#fields" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Отступление о полях</span></a></div>
+<ul id="ptx-toc-group-fields" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Rn_and_Cn.html#fields-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="x1DefVS.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Определение векторного пространства</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-x1DefVS"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x1DefVS.html#x1DefVS-46" class="internal"><span class="codenumber">1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x1Subspaces.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Подпространства</span></a></div>
+<ul id="ptx-toc-group-x1Subspaces" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x1Subspaces.html#x1Subspaces-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Суммы подпространств</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x1Subspaces.html#x1Subspaces-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Прямые суммы</span></a></div>
+<ul id="ptx-toc-group-x1Subspaces-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x1Subspaces.html#x1Subspaces-4-18" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="fin-dimVS.html" class="internal"><span class="codenumber">2</span> <span class="title">Конечномерные векторные пространства</span></a></div>
+<ul id="ptx-toc-group-fin-dimVS" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="fin-dimVS-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x2spli.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Линейная оболочка и линейная независимость</span></a></div>
+<ul id="ptx-toc-group-x2spli" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x2spli.html#x2spli-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Линейные комбинации и линейная оболочка</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x2spli.html#x2spli-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Линейная независимость</span></a></div>
+<ul id="ptx-toc-group-x2spli-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x2spli.html#x2spli-4-26" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="bases.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Базисы</span></a></div>
+<ul id="ptx-toc-group-bases" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="bases.html#bases-26" class="internal"><span class="codenumber">2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="dimension.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Размерность</span></a></div>
+<ul id="ptx-toc-group-dimension" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="dimension.html#dimension-30" class="internal"><span class="codenumber">2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="LinearMaps.html" class="internal"><span class="codenumber">3</span> <span class="title">Линейные отображения</span></a></div>
+<ul id="ptx-toc-group-LinearMaps" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="LinearMaps-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="vslinear.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Векторное пространство линейных отображений</span></a></div>
+<ul id="ptx-toc-group-vslinear" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="vslinear.html#vslinear-2" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Определение и примеры линейных отображений</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="vslinear.html#vslinear-3" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Алгебраические операции на <span class="process-math">\(\Lc(V, W)\)</span></span></a></div>
+<ul id="ptx-toc-group-vslinear-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vslinear.html#vslinear-3-20" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x3nullspace.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Нуль-пространства и образы</span></a></div>
+<ul id="ptx-toc-group-x3nullspace" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-2" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Нуль-пространство и инъективность</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-3" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Образ и сюръективность</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-4" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Основная теорема о линейных отображениях</span></a></div>
+<ul id="ptx-toc-group-x3nullspace-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-4-30" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="matrices.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Матрицы</span></a></div>
+<ul id="ptx-toc-group-matrices" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices.html#matrices-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Представление линейного отображения матрицей</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices.html#matrices-3" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Сложение матриц и умножение на скаляр</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices.html#matrices-4" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Умножение матриц</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="matrices.html#matrices-5" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Столбцово-строчная факторизация и ранг матрицы</span></a></div>
+<ul id="ptx-toc-group-matrices-5" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="matrices.html#x3think2" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="invertible.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Обратимость и изоморфизмы</span></a></div>
+<ul id="ptx-toc-group-invertible" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="invertible.html#invertible-2" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Обратимые линейные отображения</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="invertible.html#invertible-3" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Изоморфные векторные пространства</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="invertible.html#invertible-4" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Линейные отображения как умножение матриц</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="invertible.html#invertible-5" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Замена базиса</span></a></div>
+<ul id="ptx-toc-group-invertible-5" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="invertible.html#invertible-5-27" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="pq.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Произведения и факторпространства векторных пространств</span></a></div>
+<ul id="ptx-toc-group-pq" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="pq.html#pq-2" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Произведения векторных пространств</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="pq.html#pq-3" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Факторпространства</span></a></div>
+<ul id="ptx-toc-group-pq-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="pq.html#pq-3-29" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="duals.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Двойственность</span></a></div>
+<ul id="ptx-toc-group-duals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="duals.html#duals-2" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Двойственное пространство и двойственное отображение</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="duals.html#duals-3" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Нуль-пространство и образ двойственного отображения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="duals.html#duals-4" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Матрица двойственного отображения</span></a></div>
+<ul id="ptx-toc-group-duals-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="duals.html#duals-4-9" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="polynomials.html" class="internal"><span class="codenumber">4</span> <span class="title">Многочлены</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="eigs.html" class="internal"><span class="codenumber">5</span> <span class="title">Собственные значения и собственные векторы</span></a></div>
+<ul id="ptx-toc-group-eigs" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="eigs-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x5invar.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Инвариантные подпространства</span></a></div>
+<ul id="ptx-toc-group-x5invar" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x5invar.html#x5invar-2" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Собственные значения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x5invar.html#x5invar-3" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Многочлены от операторов</span></a></div>
+<ul id="ptx-toc-group-x5invar-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x5invar.html#x5invar-3-19" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="eigenuppertri.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Минимальный многочлен</span></a></div>
+<ul id="ptx-toc-group-eigenuppertri" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-2" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Существование собственных значений в комплексных векторных пространствах</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-3" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Собственные значения и минимальный многочлен</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-4" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Собственные значения в нечётномерных вещественных векторных пространствах</span></a></div>
+<ul id="ptx-toc-group-eigenuppertri-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-4-10" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x4utm.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Верхнетреугольные матрицы</span></a></div>
+<ul id="ptx-toc-group-x4utm" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x4utm.html#x4utm-40" class="internal"><span class="codenumber">5.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="diagmat.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Диагонализируемые операторы</span></a></div>
+<ul id="ptx-toc-group-diagmat" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="diagmat.html#diagmat-2" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Диагональные матрицы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="diagmat.html#diagmat-3" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Условия диагонализируемости</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="diagmat.html#diagmat-4" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Теорема Гершгорина о кругах</span></a></div>
+<ul id="ptx-toc-group-diagmat-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="diagmat.html#diagmat-4-12" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x2diagmat.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Коммутирующие операторы</span></a></div>
+<ul id="ptx-toc-group-x2diagmat" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x2diagmat.html#x2diagmat-30" class="internal"><span class="codenumber">5.5</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="InnerProductSpaces.html" class="internal"><span class="codenumber">6</span> <span class="title">Пространства со скалярным произведением</span></a></div>
+<ul id="ptx-toc-group-InnerProductSpaces" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="InnerProductSpaces-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x6ipn.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Скалярные произведения и нормы</span></a></div>
+<ul id="ptx-toc-group-x6ipn" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x6ipn.html#x6ipn-2" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Скалярные произведения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x6ipn.html#x6ipn-3" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Нормы</span></a></div>
+<ul id="ptx-toc-group-x6ipn-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x6ipn.html#x6ipn-3-41" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="orthobases.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Ортонормированные базисы</span></a></div>
+<ul id="ptx-toc-group-orthobases" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="orthobases.html#orthobases-2" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Ортонормированные списки и процесс Грама — Шмидта</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="orthobases.html#orthobases-3" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Линейные функционалы на пространствах со скалярным произведением</span></a></div>
+<ul id="ptx-toc-group-orthobases-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="orthobases.html#orthobases-3-16" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="OrthoMin.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Ортогональные дополнения и задачи минимизации</span></a></div>
+<ul id="ptx-toc-group-OrthoMin" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-2" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Ортогональные дополнения</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-3" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Задачи минимизации</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-4" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Псевдообратное отображение</span></a></div>
+<ul id="ptx-toc-group-OrthoMin-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-4-27" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="opsinner.html" class="internal"><span class="codenumber">7</span> <span class="title">Операторы в пространствах со скалярным произведением</span></a></div>
+<ul id="ptx-toc-group-opsinner" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="opsinner-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="selfadjoint_normal.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Самосопряжённые и нормальные операторы</span></a></div>
+<ul id="ptx-toc-group-selfadjoint_normal" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-2" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Сопряжённые операторы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-3" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Самосопряжённые операторы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-4" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Нормальные операторы</span></a></div>
+<ul id="ptx-toc-group-selfadjoint_normal-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-4-18" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SpectralTheorem.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Спектральная теорема</span></a></div>
+<ul id="ptx-toc-group-SpectralTheorem" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SpectralTheorem.html#SpectralTheorem-3" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Вещественная спектральная теорема</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="SpectralTheorem.html#SpectralTheorem-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Комплексная спектральная теорема</span></a></div>
+<ul id="ptx-toc-group-SpectralTheorem-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="SpectralTheorem.html#SpectralTheorem-4-10" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="POIUO.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Положительные операторы</span></a></div>
+<ul id="ptx-toc-group-POIUO" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="POIUO.html#POIUO-21" class="internal"><span class="codenumber">7.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x3QR.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Изометрии, унитарные операторы и факторизация матриц</span></a></div>
+<ul id="ptx-toc-group-x3QR" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3QR.html#x3QR-2" class="internal"><span class="codenumber">7.4.1</span> <span class="title">Изометрии</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3QR.html#x3QR-3" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Унитарные операторы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3QR.html#x3QR-4" class="internal"><span class="codenumber">7.4.3</span> <span class="title">QR-разложение</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x3QR.html#x3QR-5" class="internal"><span class="codenumber">7.4.4</span> <span class="title">Разложение Холецкого</span></a></div>
+<ul id="ptx-toc-group-x3QR-5" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x3QR.html#x3QR-5-13" class="internal"><span class="codenumber">7.4.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x2SVD.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Сингулярное разложение</span></a></div>
+<ul id="ptx-toc-group-x2SVD" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x2SVD.html#x2SVD-2" class="internal"><span class="codenumber">7.5.1</span> <span class="title">Сингулярные числа</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x2SVD.html#x2SVD-3" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Сингулярное разложение для линейных отображений и матриц</span></a></div>
+<ul id="ptx-toc-group-x2SVD-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x2SVD.html#x2SVD-3-22" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x9SVD.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Следствия сингулярного разложения</span></a></div>
+<ul id="ptx-toc-group-x9SVD" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-2" class="internal"><span class="codenumber">7.6.1</span> <span class="title">Нормы линейных отображений</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-3" class="internal"><span class="codenumber">7.6.2</span> <span class="title">Аппроксимация линейными отображениями с образом меньшей размерности</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-4" class="internal"><span class="codenumber">7.6.3</span> <span class="title">Полярное разложение</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-5" class="internal"><span class="codenumber">7.6.4</span> <span class="title">Действие операторов на эллипсоиды и параллелепипеды</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-6" class="internal"><span class="codenumber">7.6.5</span> <span class="title">Объём через сингулярные числа</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x9SVD.html#x9SVD-7" class="internal"><span class="codenumber">7.6.6</span> <span class="title">Свойства оператора, определяемые его собственными значениями</span></a></div>
+<ul id="ptx-toc-group-x9SVD-7" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-7-5" class="internal"><span class="codenumber">7.6.6</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="operators_complex_vs.html" class="internal"><span class="codenumber">8</span> <span class="title">Операторы в комплексных векторных пространствах</span></a></div>
+<ul id="ptx-toc-group-operators_complex_vs" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="operators_complex_vs-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="geneig.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Корневые векторы и нильпотентные операторы</span></a></div>
+<ul id="ptx-toc-group-geneig" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geneig.html#geneig-2" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Нуль-пространства степеней оператора</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geneig.html#geneig-3" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Корневые (обобщённые собственные) векторы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="geneig.html#geneig-4" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Нильпотентные операторы</span></a></div>
+<ul id="ptx-toc-group-geneig-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geneig.html#geneig-4-15" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="decompop.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Разложение в прямую сумму корневых подпространств</span></a></div>
+<ul id="ptx-toc-group-decompop" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="decompop.html#decompop-2" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Корневые (обобщённые собственные) подпространства</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="decompop.html#decompop-3" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Кратность собственного значения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="decompop.html#decompop-4" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Блочно-диагональные матрицы</span></a></div>
+<ul id="ptx-toc-group-decompop-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="decompop.html#decompop-4-10" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x8geneigde.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Следствия разложения на корневые подпространства</span></a></div>
+<ul id="ptx-toc-group-x8geneigde" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x8geneigde.html#x8geneigde-2" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Квадратные корни из операторов</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x8geneigde.html#Jordan" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Жорданова форма</span></a></div>
+<ul id="ptx-toc-group-Jordan" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x8geneigde.html#Jordan-19" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x7trace.html" class="internal"><span class="codenumber">8.4</span> <span class="title">След: связь между матрицами и операторами</span></a></div>
+<ul id="ptx-toc-group-x7trace" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x7trace.html#x7trace-36" class="internal"><span class="codenumber">8.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="MultLATensors.html" class="internal"><span class="codenumber">9</span> <span class="title">Полилинейная алгебра и определители</span></a></div>
+<ul id="ptx-toc-group-MultLATensors" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="MultLATensors-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="bilin_quad.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Билинейные и квадратичные формы</span></a></div>
+<ul id="ptx-toc-group-bilin_quad" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-2" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Билинейные формы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-3" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Симметричные билинейные формы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-4" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Квадратичные формы</span></a></div>
+<ul id="ptx-toc-group-bilin_quad-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-4-15" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="alt_multi.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Кососимметрические полилинейные формы</span></a></div>
+<ul id="ptx-toc-group-alt_multi" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="alt_multi.html#alt_multi-2" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Полилинейные формы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="alt_multi.html#alt_multi-3" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Кососимметрические полилинейные формы и перестановки</span></a></div>
+<ul id="ptx-toc-group-alt_multi-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="alt_multi.html#alt_multi-3-27" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x9det.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Определители</span></a></div>
+<ul id="ptx-toc-group-x9det" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9det.html#x9det-2" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Определение определителя</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x9det.html#x9det-3" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Свойства определителей</span></a></div>
+<ul id="ptx-toc-group-x9det-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x9det.html#x9det-3-65" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x9TensorSect.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Тензорные произведения</span></a></div>
+<ul id="ptx-toc-group-x9TensorSect" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-2" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Тензорное произведение двух векторных пространств</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-3" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Тензорное произведение пространств со скалярным произведением</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-4" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Тензорное произведение нескольких векторных пространств</span></a></div>
+<ul id="ptx-toc-group-x9TensorSect-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-4-25" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Приложения и указатель</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="photocredits.html" class="internal"><span class="codenumber">1</span> <span class="title">Источники фотографий</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="typesetting.html" class="internal"><span class="codenumber">2</span> <span class="title">Колофон: заметки о вёрстке</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretextplus.html" class="internal"><span class="codenumber">3</span> <span class="title">Колофон: веб-версия</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Предметный указатель</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="x1DefVS">
+<h1 class="heading hide-type">
+<span class="type">Раздел</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Определение векторного пространства</span>
+</h1>
+<div class="para" id="x1DefVS-2">Мотивация для определения векторного пространства исходит из свойств сложения и умножения на скаляр в <span class="process-math">\(\F{n}\)</span>: сложение коммутативно, ассоциативно и имеет тождество. Каждый элемент имеет противоположный элемент. умножение на скаляр ассоциативно. умножение на скаляр на <span class="process-math">\(1\)</span> действует, как и ожидалось. Сложение и умножение на скаляр связаны распределительными свойствами.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x1DefVS-3">Мы определим векторное пространство как множество <span class="process-math">\(V\)</span> со сложением и умножением на скаляр на <span class="process-math">\(V\)</span>, которые удовлетворяют свойствам, указанным в предыдущем абзаце.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="definition definition-like" id="x1DefVS-4"><h2 class="heading">
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.19</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">сложение, умножение на скаляр.</span>
+</h2>
+<div class="para logical" id="x1DefVS-4-2-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x1DefVS-4-2-1-1">
+<li id="x1DefVS-4-2-1-1-1">
+<div class="para" id="x1DefVS-4-2-1-1-1-1"><dfn class="terminology">Сложение</dfn> на множестве <span class="process-math">\(V\)</span> — это функция, которая ставит в соответствие элемент <span class="process-math">\(u + v \in V\)</span> каждой паре элементов из <span class="process-math">\(u,
+v \in V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-4-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#x1DefVS-4-2-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="x1DefVS-4-2-1-1-2">
+<div class="para" id="x1DefVS-4-2-1-1-2-1"><dfn class="terminology">Умножение на скаляр</dfn> на множестве <span class="process-math">\(V\)</span> — это функция, которая ставит в соответствие элемент <span class="process-math">\(\lambda v \in V\)</span> каждому <span class="process-math">\(\lambda \in \F{}\)</span> и каждому <span class="process-math">\(v \in V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-4-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#x1DefVS-4-2-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 1.19: addition, scalar multiplication"><a tabindex="-1" href="#x1DefVS-4" title="Copy heading and permalink for Definition 1.19: сложение, умножение на скаляр" aria-label="Copy heading and permalink for Definition 1.19: addition, scalar multiplication">🔗</a></div>
+</article>
+<div class="para" id="x1DefVS-5">Теперь мы готовы дать формальное определение векторного пространства.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="definition definition-like" id="vectorspace"><h2 class="heading">
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">векторное пространство.</span>
+</h2>
+<div class="para logical" id="vectorspace-2-1">
+<div class="para"><dfn class="terminology">Векторное пространство</dfn> — это множество <span class="process-math">\(V\)</span> вместе с операцией сложения на <span class="process-math">\(V\)</span> и операцией умножения на скаляр на <span class="process-math">\(V\)</span>, для которых выполняются следующие свойства.</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="vectorspace-2-1-6">
+<li id="vectorspace-2-1-6-1">
+<span class="heading li--heading"><span class="title li--heading-title">коммутативность.</span></span>
+<div class="para" id="vectorspace-2-1-6-1-2"><span class="process-math">\(u + v = v + u\)</span> для всех <span class="process-math">\(u, v \in V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#vectorspace-2-1-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a: commutativity"><a tabindex="-1" href="#vectorspace-2-1-6-1" title="Copy heading and permalink for Item a: коммутативность" aria-label="Copy heading and permalink for Item a: commutativity">🔗</a></div>
+</li>
+<li id="vectorspace-2-1-6-2">
+<span class="heading li--heading"><span class="title li--heading-title">ассоциативность.</span></span>
+<div class="para" id="vectorspace-2-1-6-2-2"><span class="process-math">\((u + v) + w = u + (v + w)\)</span> и <span class="process-math">\((ab)v = a(bv)\)</span> для всех <span class="process-math">\(u,
+v, w \in V\)</span> и для всех <span class="process-math">\(a, b \in \F{}{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#vectorspace-2-1-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b: associativity"><a tabindex="-1" href="#vectorspace-2-1-6-2" title="Copy heading and permalink for Item b: ассоциативность" aria-label="Copy heading and permalink for Item b: associativity">🔗</a></div>
+</li>
+<li id="vectorspace-2-1-6-3">
+<span class="heading li--heading"><span class="title li--heading-title">нулевой элемент.</span></span>
+<div class="para" id="vectorspace-2-1-6-3-2">Существует элемент <span class="process-math">\(0 \in V\)</span> такой, что <span class="process-math">\(v + 0 = v\)</span> для всех <span class="process-math">\(v \in V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#vectorspace-2-1-6-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c: additive identity"><a tabindex="-1" href="#vectorspace-2-1-6-3" title="Copy heading and permalink for Item c: нулевой элемент" aria-label="Copy heading and permalink for Item c: additive identity">🔗</a></div>
+</li>
+<li id="vectorspace-2-1-6-4">
+<span class="heading li--heading"><span class="title li--heading-title">противоположный элемент.</span></span>
+<div class="para" id="vectorspace-2-1-6-4-2">Для каждого <span class="process-math">\(v \in V{}\)</span> существует <span class="process-math">\(w \in V\)</span> такой, что <span class="process-math">\(v + w = 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#vectorspace-2-1-6-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item d: additive inverse"><a tabindex="-1" href="#vectorspace-2-1-6-4" title="Copy heading and permalink for Item d: противоположный элемент" aria-label="Copy heading and permalink for Item d: additive inverse">🔗</a></div>
+</li>
+<li id="vectorspace-2-1-6-5">
+<span class="heading li--heading"><span class="title li--heading-title">мультипликативное тождество.</span></span>
+<div class="para" id="vectorspace-2-1-6-5-2"><span class="process-math">\(1v = v\)</span> для всех <span class="process-math">\(v \in V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#vectorspace-2-1-6-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item e: multiplicative identity"><a tabindex="-1" href="#vectorspace-2-1-6-5" title="Copy heading and permalink for Item e: мультипликативное тождество" aria-label="Copy heading and permalink for Item e: multiplicative identity">🔗</a></div>
+</li>
+<li id="vectorspace-2-1-6-6">
+<span class="heading li--heading"><span class="title li--heading-title">распределительные свойства.</span></span>
+<div class="para" id="vectorspace-2-1-6-6-2"><span class="process-math">\(a(u + v) = au + av\)</span> и <span class="process-math">\((a + b)v = av + bv\)</span> для всех <span class="process-math">\(a,
+b \in \F{}\)</span> и всех <span class="process-math">\(u, v \in V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#vectorspace-2-1-6-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item f: distributive properties"><a tabindex="-1" href="#vectorspace-2-1-6-6" title="Copy heading and permalink for Item f: распределительные свойства" aria-label="Copy heading and permalink for Item f: distributive properties">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#vectorspace-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 1.20: vector space"><a tabindex="-1" href="#vectorspace" title="Copy heading and permalink for Definition 1.20: векторное пространство" aria-label="Copy heading and permalink for Definition 1.20: vector space">🔗</a></div>
+</article>
+<div class="para" id="x1DefVS-7">Следующий геометрический язык иногда помогает нашей интуиции.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="definition definition-like" id="x1DefVS-8"><h2 class="heading">
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.21</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">вектор, точка.</span>
+</h2>
+<div class="para" id="x1DefVS-8-2-1">Элементы векторного пространства называются <dfn class="terminology">векторами</dfn> или <dfn class="terminology">точками</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 1.21: vector, point"><a tabindex="-1" href="#x1DefVS-8" title="Copy heading and permalink for Definition 1.21: вектор, точка" aria-label="Copy heading and permalink for Definition 1.21: vector, point">🔗</a></div>
+</article>
+<div class="para" id="x1DefVS-9">умножение на скаляр в векторном пространстве зависит от <span class="process-math">\(\F{}{}\)</span>. Таким образом, когда нам нужно быть точным, мы будем говорить, что <span class="process-math">\(V\)</span> — это <dfn class="terminology">векторное пространство над <span class="process-math">\(\F{}\)</span></dfn>, вместо того, чтобы просто говорить, что <span class="process-math">\(V\)</span> — векторное пространство. Например, <span class="process-math">\(\R{n}\)</span> — это векторное пространство над <span class="process-math">\(\R{}\)</span>, а <span class="process-math">\(\C{n}\)</span> — векторное пространство над <span class="process-math">\(\C{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="definition definition-like" id="x1DefVS-10"><h2 class="heading">
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.22</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">действительное векторное пространство, комплексное векторное пространство.</span>
+</h2>
+<div class="para logical" id="x1DefVS-10-2-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x1DefVS-10-2-1-1">
+<li id="x1DefVS-10-2-1-1-1">
+<div class="para" id="x1DefVS-10-2-1-1-1-1">Векторное пространство над <span class="process-math">\(\R{}\)</span> называется <dfn class="terminology">действительным векторным пространством</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-10-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#x1DefVS-10-2-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="x1DefVS-10-2-1-1-2">
+<div class="para" id="x1DefVS-10-2-1-1-2-1">Векторное пространство над <span class="process-math">\(\C{}\)</span> называется <dfn class="terminology">комплексным векторным пространством</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-10-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#x1DefVS-10-2-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 1.22: real vector space, complex vector space"><a tabindex="-1" href="#x1DefVS-10" title="Copy heading and permalink for Definition 1.22: действительное векторное пространство, комплексное векторное пространство" aria-label="Copy heading and permalink for Definition 1.22: real vector space, complex vector space">🔗</a></div>
+</article>
+<div class="para" id="x1DefVS-11">Обычно выбор <span class="process-math">\(\F{}\)</span> либо ясен из контекста, либо не имеет значения. Таким образом, мы часто предполагаем, что <span class="process-math">\(\F{}\)</span> скрывается на заднем плане, не упоминая об этом конкретно.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="x1DefVS-12" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Примечание</span></h2></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="x1DefVS-12-1">Простейшим векторным пространством является <span class="process-math">\(\{0\}\)</span>, содержащее только одну точку.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<div class="para" id="x1DefVS-13">С обычными операциями сложения и умножения на скаляр <span class="process-math">\(\F{n}\)</span> является векторным пространством над <span class="process-math">\(\F{}{}\)</span>, как вы должны убедиться. Пример <span class="process-math">\(\F{n}\)</span> мотивировал наше определение векторного пространства.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="x1DefVS-14" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.23</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\F{\infty}\)</span>.</span>
+</h2></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="x1DefVS-14-2-1">
+<div class="para"><span class="process-math">\(\F{\infty}\)</span> определяется как множество всех последовательностей элементов <span class="process-math">\(\F{}\)</span>:</div>
+<div class="displaymath process-math" id="x1DefVS-14-2-1-4">
+\begin{equation*}
+\F{\infty} = \{  (x_1, x_2, \dotsc) : x_k \in \F{} \ for\  k = 1, 2, \dotsc \}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="x1DefVS-14-2-2">
+<div class="para">Сложение и умножение на скаляр на <span class="process-math">\(\F{\infty}\)</span> определяются как и ожидалось:</div>
+<div class="displaymath process-math" id="x1DefVS-14-2-2-2">
+\begin{gather*}
+(x_1, x_2, \dotsc) + (y_1, y_2, \dotsc) = (x_1 + y_1, x_2 + y_2, \dotsc),\\
+\lambda(x_1, x_2, \dotsc) = (\lambda x_1, \lambda x_2, \dotsc)\text{.}
+\end{gather*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-14-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="x1DefVS-14-2-3">Благодаря этим определениям <span class="process-math">\(\F{\infty}\)</span> становится векторным пространством над <span class="process-math">\(\F{}{}\)</span>, как вы и должны убедиться. нулевой элемент в этом векторном пространстве — это последовательность всех <span class="process-math">\(0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-14-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 1.23: \F{\infty}"><a tabindex="-1" href="#x1DefVS-14" title="Copy heading and permalink for Example 1.23: \F{\infty}" aria-label="Copy heading and permalink for Example 1.23: \F{\infty}">🔗</a></div>
+</article></details>
+<div class="para" id="x1DefVS-15">Наш следующий пример векторного пространства включает в себя множество функций.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="principle theorem-like" id="x1DefVS-16"><h2 class="heading">
+<span class="type">Обозначение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.24</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\F{S}\)</span>.</span>
+</h2>
+<div class="para logical" id="x1DefVS-16-2-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x1DefVS-16-2-1-1">
+<li id="x1DefVS-16-2-1-1-1">
+<div class="para" id="x1DefVS-16-2-1-1-1-1">Если <span class="process-math">\(S\)</span> — множество, то <span class="process-math">\(\F{S}\)</span> обозначает множество функций от <span class="process-math">\(S\)</span> до <span class="process-math">\(\F{}{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-16-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#x1DefVS-16-2-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="x1DefVS-16-2-1-1-2">
+<div class="para logical" id="x1DefVS-16-2-1-1-2-1">
+<div class="para">Для <span class="process-math">\(f, g \in \FF{S}\)</span> <dfn class="terminology">сумма</dfn> <span class="process-math">\(f + g \in \F{S}\)</span> — это функция, определяемая формулой</div>
+<div class="displaymath process-math" id="x1DefVS-16-2-1-1-2-1-5">
+\begin{equation*}
+(f + g)(x) = f(x) + g (x)
+\end{equation*}
+</div>
+<div class="para">для всех <span class="process-math">\(x \in S\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-16-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#x1DefVS-16-2-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="x1DefVS-16-2-1-1-3">
+<div class="para logical" id="x1DefVS-16-2-1-1-3-1">
+<div class="para">Для <span class="process-math">\(\lambda \in \F{}\)</span> и <span class="process-math">\(f\in \FF{S}\)</span> <dfn class="terminology">произведение</dfn> <span class="process-math">\(\lambda f \in \F{S}\)</span> — это функция, определяемая формулой</div>
+<div class="displaymath process-math" id="x1DefVS-16-2-1-1-3-1-5">
+\begin{equation*}
+(\lambda f)(x) = \lambda f(x)
+\end{equation*}
+</div>
+<div class="para">для всех <span class="process-math">\(x \in S\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-16-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#x1DefVS-16-2-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Notation 1.24: \F{S}"><a tabindex="-1" href="#x1DefVS-16" title="Copy heading and permalink for Notation 1.24: \F{S}" aria-label="Copy heading and permalink for Notation 1.24: \F{S}">🔗</a></div>
+</article>
+<div class="para" id="x1DefVS-17"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x1DefVS-18">В качестве примера обозначений выше: если <span class="process-math">\(S\)</span> — это интервал <span class="process-math">\([0, 1]\)</span> и <span class="process-math">\(\F{} = \R{}\)</span>, то <span class="process-math">\(\R{[0, 1]}\)</span> — это множество действительных функций на интервале <span class="process-math">\([0, 1]\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x1DefVS-19">Вам следует проверить все три пункта в следующем примере.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="x1DefVS-20" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.25</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\F{S}\)</span> — векторное пространство.</span>
+</h2></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="x1DefVS-20-2-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x1DefVS-20-2-1-1">
+<li id="x1DefVS-20-2-1-1-1">
+<div class="para" id="x1DefVS-20-2-1-1-1-1">Если <span class="process-math">\(S\)</span> — непустое множество, то <span class="process-math">\(\F{S}\)</span> (с операциями сложения и умножения на скаляр, определенными выше) — векторное пространство над <span class="process-math">\(\F{}{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-20-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#x1DefVS-20-2-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="x1DefVS-20-2-1-1-2">
+<div class="para logical" id="x1DefVS-20-2-1-1-2-1">
+<div class="para">нулевым элементом <span class="process-math">\(\F{S}\)</span> является функция <span class="process-math">\(0: S \to \F{}\)</span>, определенная формулой</div>
+<div class="displaymath process-math" id="x1DefVS-20-2-1-1-2-1-3">
+\begin{equation*}
+0(x) = 0
+\end{equation*}
+</div>
+<div class="para">для всех <span class="process-math">\(x \in S\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-20-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#x1DefVS-20-2-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="x1DefVS-20-2-1-1-3">
+<div class="para logical" id="x1DefVS-20-2-1-1-3-1">
+<div class="para">Для <span class="process-math">\(f \in \FF{S}\)</span> аддитивной обратной функцией <span class="process-math">\(f\)</span> является функция <span class="process-math">\(-f: S \to \F{}\)</span>, определяемая формулой</div>
+<div class="displaymath process-math" id="x1DefVS-20-2-1-1-3-1-4">
+\begin{equation*}
+(-f)(x) = -f(x)
+\end{equation*}
+</div>
+<div class="para">для всех <span class="process-math">\(x \in S\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-20-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#x1DefVS-20-2-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-20-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 1.25: \F{S} is a vector space"><a tabindex="-1" href="#x1DefVS-20" title="Copy heading and permalink for Example 1.25: \F{S} — векторное пространство" aria-label="Copy heading and permalink for Example 1.25: \F{S} is a vector space">🔗</a></div>
+</article></details>
+<details id="x1DefVS-21" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Примечание</span></h2></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="x1DefVS-21-1">Элементами векторного пространства <span class="process-math">\(\R{[0,1]}\)</span> являются вещественнозначные функции на <span class="process-math">\([0, 1]\)</span>, а не списки. В общем, векторное пространство — это абстрактная сущность, элементами которой могут быть списки, функции или странные объекты.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-21-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<div class="para" id="x1DefVS-22">Векторное пространство <span class="process-math">\(\F{n}\)</span> является частным случаем векторного пространства <span class="process-math">\(\F{S}\)</span>, поскольку каждое <span class="process-math">\((x_1, \ldots,
+x_n) \in \F{n}\)</span> можно рассматривать как функцию <span class="process-math">\(x\)</span> из множества <span class="process-math">\(\{1, 2, \dots,
+n\}\)</span> до <span class="process-math">\(\F{}\)</span>, записывая <span class="process-math">\(x(k)\)</span> вместо <span class="process-math">\(x_k\)</span> для координаты <span class="process-math">\(k^\nth\)</span> для <span class="process-math">\((x_1, \dots,
+x_n)\)</span>. Другими словами, мы можем думать о <span class="process-math">\(\F{n}\)</span> как о <span class="process-math">\(\FF{\{1, 2, \dots, n\}}\)</span>. Точно так же мы можем думать о <span class="process-math">\(\F{\infty}\)</span> как о <span class="process-math">\(\FF{\{1, 2, \dots \}}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x1DefVS-23">Вскоре мы увидим новые примеры векторных пространств, но сначала нам нужно развить некоторые элементарные свойства векторных пространств.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x1DefVS-24">Определение векторного пространства требует, чтобы оно имело нулевой элемент. Следующий результат утверждает, что это тождество уникально.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x1DefVS-25"><h2 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.26</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">единственная нулевой элемент.</span>
+</h2>
+<div class="para" id="x1DefVS-25-2-1">Векторное пространство имеет единственный нулевой элемент.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-25-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.26: unique additive identity"><a tabindex="-1" href="#x1DefVS-25" title="Copy heading and permalink for Theorem 1.26: единственная нулевой элемент" aria-label="Copy heading and permalink for Theorem 1.26: unique additive identity">🔗</a></div>
+</article>
+<details id="x1DefVS-26" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="x1DefVS-26-1">
+<div class="para">Предположим, что <span class="process-math">\(0\)</span> и <span class="process-math">\(0'\)</span> являются аддитивными тождествами для некоторого векторного пространства <span class="process-math">\(V{}\)</span>. Тогда</div>
+<div class="displaymath process-math" id="x1DefVS-26-1-5">
+\begin{equation*}
+0' = 0' + 0 = 0 + 0' = 0,
+\end{equation*}
+</div>
+<div class="para">где первое равенство выполнено, поскольку <span class="process-math">\(0\)</span> — нулевой элемент, второе равенство вытекает из коммутативности, а третье равенство выполнено, поскольку <span class="process-math">\(0'\)</span> — нулевой элемент. Таким образом, <span class="process-math">\(0' = 0\)</span> доказывает, что <span class="process-math">\(V\)</span> имеет только одну нулевой элемент.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-26-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 1.2.1"><a tabindex="-1" href="#x1DefVS-26" title="Copy heading and permalink for Proof 1.2.1" aria-label="Copy heading and permalink for Proof 1.2.1">🔗</a></div>
+</article></details>
+<div class="para" id="x1DefVS-27">Каждый элемент <span class="process-math">\(v\)</span> в векторном пространстве имеет противоположный элемент <span class="process-math">\(w\)</span> в векторном пространстве такой, что <span class="process-math">\(v + w = 0\)</span>. Следующий результат показывает, что каждый элемент векторного пространства имеет только один противоположный элемент.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x1DefVS-28"><h2 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.27</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">единственность противоположного элемента.</span>
+</h2>
+<div class="para" id="x1DefVS-28-2-1">Каждый элемент векторного пространства имеет единственный противоположный элемент.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-28-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.27: unique additive inverse"><a tabindex="-1" href="#x1DefVS-28" title="Copy heading and permalink for Theorem 1.27: единственность противоположного элемента" aria-label="Copy heading and permalink for Theorem 1.27: unique additive inverse">🔗</a></div>
+</article>
+<details id="x1DefVS-29" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="x1DefVS-29-1">
+<div class="para">Предположим, <span class="process-math">\(V\)</span> — векторное пространство. Пусть <span class="process-math">\(v \in V{}\)</span>. Предположим, что <span class="process-math">\(w\)</span> и <span class="process-math">\(w'\)</span> — противоположного элемента <span class="process-math">\(v\)</span>. Тогда</div>
+<div class="displaymath process-math" id="x1DefVS-29-1-6">
+\begin{equation*}
+w = w + 0 = w + (v + w') = (w + v) + w' = 0 + w' = w'\!.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-29-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x1DefVS-29-2">Таким образом, <span class="process-math">\(w = w'\!\)</span> по желанию.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-29-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 1.2.2"><a tabindex="-1" href="#x1DefVS-29" title="Copy heading and permalink for Proof 1.2.2" aria-label="Copy heading and permalink for Proof 1.2.2">🔗</a></div>
+</article></details>
+<div class="para" id="x1DefVS-30">Поскольку противоположные элементы единственны, следующее обозначение теперь корректно определено.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="principle theorem-like" id="x1DefVS-31"><h2 class="heading">
+<span class="type">Обозначение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.28</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(-v\text{,}\)</span> <span class="process-math">\(w - v\)</span>.</span>
+</h2>
+<div class="para logical" id="x1DefVS-31-2-1">
+<div class="para">Пусть <span class="process-math">\(v, w \in V{}\)</span>. Тогда</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x1DefVS-31-2-1-3">
+<li id="x1DefVS-31-2-1-3-1">
+<div class="para" id="x1DefVS-31-2-1-3-1-1"><span class="process-math">\(-v\)</span> обозначает противоположный элемент <span class="process-math">\(v\)</span>;<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-31-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#x1DefVS-31-2-1-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="x1DefVS-31-2-1-3-2">
+<div class="para" id="x1DefVS-31-2-1-3-2-1"><span class="process-math">\(w - v\)</span> определяется как <span class="process-math">\(w + (-v)\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-31-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#x1DefVS-31-2-1-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-31-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Notation 1.28: -v w - v"><a tabindex="-1" href="#x1DefVS-31" title="Copy heading and permalink for Notation 1.28: -v, w - v" aria-label="Copy heading and permalink for Notation 1.28: -v w - v">🔗</a></div>
+</article>
+<div class="para" id="x1DefVS-32">Почти все результаты в этой книге связаны с некоторым векторным пространством. Чтобы избежать необходимости часто повторять, что <span class="process-math">\(V\)</span> является векторным пространством, мы сейчас сделаем необходимое заявление раз и навсегда.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="principle theorem-like" id="x1DefVS-33"><h2 class="heading">
+<span class="type">Обозначение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.29</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(V\)</span>.</span>
+</h2>
+<div class="para" id="x1DefVS-33-2-1">В оставшейся части книги <span class="process-math">\(V\)</span> обозначает векторное пространство над <span class="process-math">\(\F{}{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-33-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Notation 1.29: V"><a tabindex="-1" href="#x1DefVS-33" title="Copy heading and permalink for Notation 1.29: V" aria-label="Copy heading and permalink for Notation 1.29: V">🔗</a></div>
+</article>
+<div class="para" id="x1DefVS-34"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x1DefVS-35">В следующем результате <span class="process-math">\(0\)</span> обозначает скаляр (число <span class="process-math">\(0 \in \F{}\)</span>) в левой части уравнения и вектор (нулевой элемент <span class="process-math">\(V\)</span>) в правой части уравнения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x64"><h2 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.30</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">умножение числа <span class="process-math">\(0\)</span> на вектор.</span>
+</h2>
+<div class="para" id="x64-2-1"><span class="process-math">\(0v = 0\)</span> для каждого <span class="process-math">\(v \in V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x64-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.30: the number 0 times a vector"><a tabindex="-1" href="#x64" title="Copy heading and permalink for Theorem 1.30: умножение числа 0 на вектор" aria-label="Copy heading and permalink for Theorem 1.30: the number 0 times a vector">🔗</a></div>
+</article>
+<details id="x1DefVS-37" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Примечание</span></h2></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="x1DefVS-37-1">Результат <a href="x1DefVS.html#x64" class="xref" data-knowl="./knowl/xref/x64.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 1.30: умножение числа 0 на вектор">Теоремы 1.30</a> включает в себя нулевой элемент <span class="process-math">\(V\)</span> и умножение на скаляр. Единственная часть определения векторного пространства, которая связывает сложение векторов и умножение на скаляр, — это свойство дистрибутивности. Таким образом, распределительное свойство необходимо использовать при доказательстве <a href="x1DefVS.html#x64" class="xref" data-knowl="./knowl/xref/x64.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 1.30: умножение числа 0 на вектор">теоремы 1.30</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-37-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<div class="para" id="x1DefVS-38"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-38" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="x1DefVS-39" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="x1DefVS-39-1">
+<div class="para">Для <span class="process-math">\(v \in V{}\)</span> имеем</div>
+<div class="displaymath process-math" id="x1DefVS-39-1-2">
+\begin{equation*}
+0v = (0 + 0)v = 0v + 0v.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-39-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x1DefVS-39-2">Добавление противоположного элемента <span class="process-math">\(0v\)</span> к обеим частям приведенного выше уравнения дает <span class="process-math">\(0 = 0v\)</span>, как и хотелось.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-39-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 1.2.3"><a tabindex="-1" href="#x1DefVS-39" title="Copy heading and permalink for Proof 1.2.3" aria-label="Copy heading and permalink for Proof 1.2.3">🔗</a></div>
+</article></details>
+<div class="para" id="x1DefVS-40">В следующем результате <span class="process-math">\(0\)</span> обозначает нулевой элемент <span class="process-math">\(V{}\)</span>. Хотя их доказательства схожи, <a href="x1DefVS.html#x64" class="xref" data-knowl="./knowl/xref/x64.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 1.30: умножение числа 0 на вектор">Теорема 1.30</a> и <a href="x1DefVS.html#x65" class="xref" data-knowl="./knowl/xref/x65.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 1.31: произведение числа на вектор 0">Теорема 1.31</a> не идентичны. Точнее, <a href="x1DefVS.html#x64" class="xref" data-knowl="./knowl/xref/x64.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 1.30: умножение числа 0 на вектор">Теорема 1.30</a> утверждает, что произведение скаляра <span class="process-math">\(0\)</span> и любого вектора равно вектору <span class="process-math">\(0\)</span>, тогда как <a href="x1DefVS.html#x65" class="xref" data-knowl="./knowl/xref/x65.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 1.31: произведение числа на вектор 0">Теорема 1.31</a> утверждает, что произведение любого скаляра и вектора <span class="process-math">\(0\)</span> равно вектору <span class="process-math">\(0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-40" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x65"><h2 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.31</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">произведение числа на вектор <span class="process-math">\(0\)</span>.</span>
+</h2>
+<div class="para" id="x65-2-1"><span class="process-math">\(a0 = 0\)</span> для каждого <span class="process-math">\(a \in \F{}{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x65-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.31: a number times the vector  0"><a tabindex="-1" href="#x65" title="Copy heading and permalink for Theorem 1.31: произведение числа на вектор 0" aria-label="Copy heading and permalink for Theorem 1.31: a number times the vector  0">🔗</a></div>
+</article>
+<details id="x1DefVS-42" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="x1DefVS-42-1">
+<div class="para">Для <span class="process-math">\(a \in \F{}{}\)</span> имеем</div>
+<div class="displaymath process-math" id="x1DefVS-42-1-2">
+\begin{equation*}
+a0 = a(0 + 0) = a0 + a0.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-42-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x1DefVS-42-2">Добавление противоположного элемента <span class="process-math">\(a0\)</span> к обеим частям приведенного выше уравнения дает <span class="process-math">\(0 = a0\)</span>, как и хотелось.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-42-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 1.2.4"><a tabindex="-1" href="#x1DefVS-42" title="Copy heading and permalink for Proof 1.2.4" aria-label="Copy heading and permalink for Proof 1.2.4">🔗</a></div>
+</article></details>
+<div class="para" id="x1DefVS-43">Теперь мы покажем, что если элемент <span class="process-math">\(V\)</span> умножить на скаляр <span class="process-math">\(-1\)</span>, то результатом будет противоположный элемент <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-43" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x2"><h2 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.32</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">умножение числа <span class="process-math">\(-1\)</span> на вектор.</span>
+</h2>
+<div class="para" id="x2-2-1"><span class="process-math">\((-1)v = -v\)</span> для каждого <span class="process-math">\(v \in V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.32: the number  -1 times a vector"><a tabindex="-1" href="#x2" title="Copy heading and permalink for Theorem 1.32: умножение числа -1 на вектор" aria-label="Copy heading and permalink for Theorem 1.32: the number  -1 times a vector">🔗</a></div>
+</article>
+<details id="x1DefVS-45" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="x1DefVS-45-1">
+<div class="para">Для <span class="process-math">\(v \in V{}\)</span> имеем</div>
+<div class="displaymath process-math" id="x1DefVS-45-1-2">
+\begin{equation*}
+v + (-1)v = 1v + (-1)v = \bigl(1 + (-1)\bigr)v = 0v = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-45-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x1DefVS-45-2">Это уравнение говорит, что <span class="process-math">\((-1)v\)</span>, добавленное к <span class="process-math">\(v\)</span>, дает <span class="process-math">\(0\)</span>. Таким образом, <span class="process-math">\((-1)v\)</span> является противоположным элементом <span class="process-math">\(v\)</span>, как и хотелось.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-45-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 1.2.5"><a tabindex="-1" href="#x1DefVS-45" title="Copy heading and permalink for Proof 1.2.5" aria-label="Copy heading and permalink for Proof 1.2.5">🔗</a></div>
+</article></details>
+<section class="exercises" id="x1DefVS-46">
+<h2 class="heading hide-type">
+<span class="type">Упражнения</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Упражнения</span>
+</h2>
+<article class="exercise exercise-like" id="x1DefVS-46-2"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="x1DefVS-46-2-1-1">Докажите, что <span class="process-math">\(-(-v) = v\)</span> для каждого <span class="process-math">\(v \in V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 1.2.1"><a tabindex="-1" href="#x1DefVS-46-2" title="Copy heading and permalink for Exercise 1.2.1" aria-label="Copy heading and permalink for Exercise 1.2.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x1DefVS-46-3"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="x1DefVS-46-3-1-1">Предположим, <span class="process-math">\(a \in \F{}{}\)</span>, <span class="process-math">\(v \in V{}\)</span> и <span class="process-math">\(av = 0\)</span>. Докажите, что <span class="process-math">\(a = 0\)</span> или <span class="process-math">\(v = 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 1.2.2"><a tabindex="-1" href="#x1DefVS-46-3" title="Copy heading and permalink for Exercise 1.2.2" aria-label="Copy heading and permalink for Exercise 1.2.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x1DefVS-46-4"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="x1DefVS-46-4-1-1">Предположим, <span class="process-math">\(v, w \in V{}\)</span>. Объясните, почему существует единственный <span class="process-math">\(x \in V\)</span> такой, что <span class="process-math">\(v + 3x = w\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 1.2.3"><a tabindex="-1" href="#x1DefVS-46-4" title="Copy heading and permalink for Exercise 1.2.3" aria-label="Copy heading and permalink for Exercise 1.2.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x1DefVS-46-5"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="x1DefVS-46-5-1-1">Пустое множество не является векторным пространством. Пустое множество не удовлетворяет только одному из требований, перечисленных в определении векторного пространства <a href="x1DefVS.html#vectorspace" class="xref" data-knowl="./knowl/xref/vectorspace.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Определение 1.20: векторное пространство">Определение 1.20</a>. Который из?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 1.2.4"><a tabindex="-1" href="#x1DefVS-46-5" title="Copy heading and permalink for Exercise 1.2.4" aria-label="Copy heading and permalink for Exercise 1.2.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x1DefVS-46-6"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para logical" id="x1DefVS-46-6-1-1">
+<div class="para">Покажите, что в определении векторного пространства <a href="x1DefVS.html#vectorspace" class="xref" data-knowl="./knowl/xref/vectorspace.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Определение 1.20: векторное пространство">Определение 1.20</a> аддитивное обратное условие можно заменить условием, что</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/vectorspace.html" id="x1DefVS-46-6-1-1-2">
+\begin{equation*}
+0v = 0 \text{ для всех }  v \in V{}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="x1DefVS-46-6-1-2">Здесь <span class="process-math">\(0\)</span> слева — это число <span class="process-math">\(0\)</span>, а <span class="process-math">\(0\)</span> справа — нулевой элемент <span class="process-math">\(V{}\)</span>. Примечание. Фраза «условие может быть заменено» в определении означает, что набор объектов, удовлетворяющих определению, не изменится, если исходное условие заменяется новым условием.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 1.2.5"><a tabindex="-1" href="#x1DefVS-46-6" title="Copy heading and permalink for Exercise 1.2.5" aria-label="Copy heading and permalink for Exercise 1.2.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x1DefVS-46-7"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para logical" id="x1DefVS-46-7-1-1">
+<div class="para">Пусть <span class="process-math">\(\infty\)</span> и <span class="process-math">\(-\infty\)</span> обозначают два различных объекта, ни один из которых не принадлежит <span class="process-math">\(\R{}\)</span>. Определите сложение и умножение на скаляр на <span class="process-math">\(\R{} \cup \{\infty, -\infty\}\)</span>, как вы могли догадаться из обозначений. В частности, сумма и произведение двух действительных чисел определяются как обычно, а для <span class="process-math">\(t \in \R{}\)</span> определяют</div>
+<div class="displaymath process-math" id="x1DefVS-46-7-1-1-6">
+\begin{equation*}
+t \infty = \begin{cases}-\infty \amp  \text{ если }  t \lt  0,\\ 0 \amp  \text{ если }  t = 0,\\ \infty \amp  \text{ если }  t &gt; 0, \end{cases}  t (-\infty) = \begin{cases}\infty \amp  \text{ если }  t \lt  0,\\ 0 \amp  \text{ если }  t = 0,\\ -\infty \amp  \text{ если }  t &gt; 0, \end{cases}
+\end{equation*}
+</div>
+<div class="para">и</div>
+<div class="displaymath process-math" id="x1DefVS-46-7-1-1-7">
+\begin{align*}
+t + \infty \amp = \infty + t = \infty + \infty = \infty,\\
+t + (-\infty) \amp = (-\infty) + t  = (-\infty) + (-\infty) = -\infty,\\
+\infty + (-\infty) \amp = (-\infty) + \infty = 0\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="x1DefVS-46-7-1-2">Является ли <span class="process-math">\(\R{} \cup \{\infty,-\infty\}\)</span> векторным пространством над <span class="process-math">\(\R{}\)</span> с учетом этих операций сложения и умножения на скаляр? Объяснять.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 1.2.6"><a tabindex="-1" href="#x1DefVS-46-7" title="Copy heading and permalink for Exercise 1.2.6" aria-label="Copy heading and permalink for Exercise 1.2.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x1DefVS-46-8"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="x1DefVS-46-8-1-1">Предположим, что <span class="process-math">\(S\)</span> — непустое множество. Пусть <span class="process-math">\(V^S\)</span> обозначает множество функций от <span class="process-math">\(S\)</span> до <span class="process-math">\(V{}\)</span>. Определите естественное сложение и умножение на скаляр на <span class="process-math">\(V^S\!\)</span> и покажите, что <span class="process-math">\(V^S\)</span> — векторное пространство с этими определениями.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 1.2.7"><a tabindex="-1" href="#x1DefVS-46-8" title="Copy heading and permalink for Exercise 1.2.7" aria-label="Copy heading and permalink for Exercise 1.2.7">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x1DefVS-46-9"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para logical" id="x1DefVS-46-9-1-1">
+<div class="para">Предположим, <span class="process-math">\(V\)</span> — вещественное векторное пространство.</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x1DefVS-46-9-1-1-2">
+<li id="x1DefVS-46-9-1-1-2-1">
+<div class="para" id="x1DefVS-46-9-1-1-2-1-1"><dfn class="terminology">комплексификация</dfn> <span class="process-math">\(V{}\)</span>, обозначаемая <span class="process-math">\(V{}_{\C{}}\)</span>, равна <span class="process-math">\(V{} \times V{}\)</span>. Элементом <span class="process-math">\(V{}_{\C{}}\)</span> является упорядоченная пара <span class="process-math">\((u, v)\)</span>, где <span class="process-math">\(u, v \in V{}\)</span>, но мы пишем это <span class="process-math">\(u + iv\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-9-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1.2.8.a"><a tabindex="-1" href="#x1DefVS-46-9-1-1-2-1" title="Copy heading and permalink for Item 1.2.8.a" aria-label="Copy heading and permalink for Item 1.2.8.a">🔗</a></div>
+</li>
+<li id="x1VC">
+<div class="para logical" id="x1VC-1">
+<div class="para">Сложение на <span class="process-math">\(V{}_{\C{}}\)</span> определяется формулой</div>
+<div class="displaymath process-math" id="x1VC-1-2">
+\begin{equation*}
+(u_1 + i v_1) + (u_2 + i v_2) = (u_1 + u_2) + i (v_1 + v_2)
+\end{equation*}
+</div>
+<div class="para">для всех <span class="process-math">\(u_1, v_1, u_2, v_2 \in V{}\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1VC-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1.2.8.b"><a tabindex="-1" href="#x1VC" title="Copy heading and permalink for Item 1.2.8.b" aria-label="Copy heading and permalink for Item 1.2.8.b">🔗</a></div>
+</li>
+<li id="x1DefVS-46-9-1-1-2-3">
+<div class="para logical" id="x1DefVS-46-9-1-1-2-3-1">
+<div class="para">Комплексное умножение на скаляр на <span class="process-math">\(V{}_{\C{}}\)</span> определяется формулой</div>
+<div class="displaymath process-math" id="x1DefVS-46-9-1-1-2-3-1-3">
+\begin{equation*}
+(a + bi)(u + iv) = (au - bv) + i(av + bu)
+\end{equation*}
+</div>
+<div class="para">для всех <span class="process-math">\(a, b \in \R{}\)</span> и всех <span class="process-math">\(u, v \in V{}\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-9-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1.2.8.c"><a tabindex="-1" href="#x1DefVS-46-9-1-1-2-3" title="Copy heading and permalink for Item 1.2.8.c" aria-label="Copy heading and permalink for Item 1.2.8.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="x1DefVS-46-9-1-2">Докажите, что с учетом приведенных выше определений сложения и умножения на скаляр <span class="process-math">\(V{}_{\C{}}\)</span> — комплексное векторное пространство. Примечание. Думайте о <span class="process-math">\(V\)</span> как о подмножестве <span class="process-math">\(V{}_{\C{}}\)</span>, отождествляя <span class="process-math">\(u \in V\)</span> с <span class="process-math">\(u + i0\)</span>. Тогда построение <span class="process-math">\(V{}_{\C{}}\)</span> из <span class="process-math">\(V\)</span> можно рассматривать как обобщение построения <span class="process-math">\(\C{n}\)</span> из <span class="process-math">\(\RR{n}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x1DefVS-46-9-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 1.2.8"><a tabindex="-1" href="#x1DefVS-46-9" title="Copy heading and permalink for Exercise 1.2.8" aria-label="Copy heading and permalink for Exercise 1.2.8">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercises 1.2: Exercises"><a tabindex="-1" href="#x1DefVS-46" title="Copy heading and permalink for Exercises 1.2: Упражнения" aria-label="Copy heading and permalink for Exercises 1.2: Exercises">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 1.2: Definition of Vector Space"><a tabindex="-1" href="#x1DefVS" title="Copy heading and permalink for Section 1.2: Определение векторного пространства" aria-label="Copy heading and permalink for Section 1.2: Definition of Vector Space">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="Rn_and_Cn.html" title="Назад"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Назад</span></a><a class="top-button button" href="#" title="В начало"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">В начало</span></a><a class="next-button button" href="x1Subspaces.html" title="Далее"><span class="name">Далее</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" alt="Runestone Academy logo" src="data:image/png;base64,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"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" alt="MathJax logo" src="data:image/png;base64,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"></a>
+</div>
+</body>
+</html>

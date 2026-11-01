@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="ru" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Нуль-пространства и образы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="_static/pretext/fonts/material-symbols-outlined.css">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+</style>
+<link rel="stylesheet" type="text/css" href="external/customcss.css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Линейная алгебра: верный подход">
+<meta property="og:title" content="Линейная алгебра: верный подход">
+<meta property="book:title" content="Линейная алгебра: верный подход">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.55"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.55"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.dd07797f77620576.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.11d27cdc38930c2c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Перейти к основному содержимому</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Линейная алгебра: верный подход</span></a></div>
+<p class="byline">Шелдон Акслер</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Содержание"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Содержание</span></button><a class="index-button button" href="backmatter-5.html" title="Предметный указатель"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Указатель</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Поиск по книге"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Поиск</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Поисковый запрос" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Поисковый запрос"><button aria-label="Закрыть" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Результаты поиска: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>Ничего не найдено.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Читать вслух" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Читать вслух</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Предыдущее предложение"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Воспроизвести"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Следующее предложение"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Продолжить<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Настройки чтения"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Настройки чтения вслух</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Закрыть"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Голос</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Скорость чтения</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Свёрнутое содержимое</span></label><select id="ptx-read-aloud-asides"><option value="skip">Объявлять, не читать</option>
+<option value="read">Читать автоматически</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Следить за текстом (автопрокрутка)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Автоматически переходить на следующую страницу</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Настройки отображения"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Настройки отображения</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Настройки отображения</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Закрыть"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Межстрочный интервал</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Размер шрифта</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Тема</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>Системная</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Светлая</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Тёмная</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Специальные возможности</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Показывать постоянные ссылки</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Сбросить всё</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="vslinear.html" title="Назад"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Назад</span></a><a class="up-button button" href="LinearMaps.html" title="Наверх"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Наверх</span></a><a class="next-button button" href="matrices.html" title="Далее"><span class="name">Далее</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tensor}{\otimes}
+\newcommand{\F}[1]{\symbf{F}^{#1}}
+\newcommand{\andd}{\quad \text{и} \quad}
+\newcommand{\orr}{\quad \text{или} \quad}
+\newcommand{\butt}{\quad \text{но} \quad}
+\newcommand{\fun}[3]{#1 \colon #2 \to #3}
+\newcommand{\nth}{{\text{-й}}}
+\newcommand{\C}[1]{\symbf{C}^{#1}}
+\newcommand{\F}[1]{\symbf{F}^{#1}}
+\newcommand{\R}[1]{\symbf{R}^{#1}}
+\newcommand{\CC}[1]{\symbf{C}^{#1}}
+\newcommand{\FF}[1]{\symbf{F}^{#1}}
+\newcommand{\RR}[1]{\symbf{R}^{#1}}
+\newcommand{\A}{\symcal{A}}
+\newcommand{\B}{\symcal{B}}
+\newcommand{\E}{\symcal{E}}
+\newcommand{\CF}{\symcal{F}}
+\newcommand{\Lc}{\symcal{L}}
+\newcommand{\M}{\symcal{M}}
+\newcommand{\P}{\symcal{P}}
+\newcommand{\sm}{\backslash}
+\newcommand{\Space}{}
+\newcommand{\pound}[1]{#1^{\#}}
+\DeclareMathOperator{\ran}{range}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\perm}{perm}
+\DeclareMathOperator{\vol}{volume}
+\DeclareMathOperator{\ker}{null}
+\newcommand{\tran}[1]{#1^{\text{t}}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Содержание" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Линейная алгебра: верный подход</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="author.html" class="internal"><span class="title">Об авторе</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="forStudents.html" class="internal"><span class="title">Предисловие для студентов</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="forInstructors.html" class="internal"><span class="title">Предисловие для преподавателей</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgments.html" class="internal"><span class="title">Благодарности</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="VectorSpaces.html" class="internal"><span class="codenumber">1</span> <span class="title">Векторные пространства</span></a></div>
+<ul id="ptx-toc-group-VectorSpaces" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="VectorSpaces-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Rn_and_Cn.html" class="internal"><span class="codenumber">1.1</span> <span class="title"><span class="process-math">\(\R n\)</span> и <span class="process-math">\(\C n\)</span></span></a></div>
+<ul id="ptx-toc-group-Rn_and_Cn" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Rn_and_Cn.html#Rn_and_Cn-2" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Комплексные числа</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Rn_and_Cn.html#Rn_and_Cn-3" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Списки</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Rn_and_Cn.html#Rn_and_Cn-4" class="internal"><span class="codenumber">1.1.3</span> <span class="title"><span class="process-math">\(\F n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="Rn_and_Cn.html#fields" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Отступление о полях</span></a></div>
+<ul id="ptx-toc-group-fields" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Rn_and_Cn.html#fields-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x1DefVS.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Определение векторного пространства</span></a></div>
+<ul id="ptx-toc-group-x1DefVS" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x1DefVS.html#x1DefVS-46" class="internal"><span class="codenumber">1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x1Subspaces.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Подпространства</span></a></div>
+<ul id="ptx-toc-group-x1Subspaces" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x1Subspaces.html#x1Subspaces-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Суммы подпространств</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x1Subspaces.html#x1Subspaces-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Прямые суммы</span></a></div>
+<ul id="ptx-toc-group-x1Subspaces-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x1Subspaces.html#x1Subspaces-4-18" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="fin-dimVS.html" class="internal"><span class="codenumber">2</span> <span class="title">Конечномерные векторные пространства</span></a></div>
+<ul id="ptx-toc-group-fin-dimVS" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="fin-dimVS-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x2spli.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Линейная оболочка и линейная независимость</span></a></div>
+<ul id="ptx-toc-group-x2spli" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x2spli.html#x2spli-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Линейные комбинации и линейная оболочка</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x2spli.html#x2spli-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Линейная независимость</span></a></div>
+<ul id="ptx-toc-group-x2spli-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x2spli.html#x2spli-4-26" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="bases.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Базисы</span></a></div>
+<ul id="ptx-toc-group-bases" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="bases.html#bases-26" class="internal"><span class="codenumber">2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="dimension.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Размерность</span></a></div>
+<ul id="ptx-toc-group-dimension" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="dimension.html#dimension-30" class="internal"><span class="codenumber">2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="LinearMaps.html" class="internal"><span class="codenumber">3</span> <span class="title">Линейные отображения</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-LinearMaps">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="LinearMaps-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="vslinear.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Векторное пространство линейных отображений</span></a></div>
+<ul id="ptx-toc-group-vslinear" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="vslinear.html#vslinear-2" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Определение и примеры линейных отображений</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="vslinear.html#vslinear-3" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Алгебраические операции на <span class="process-math">\(\Lc(V, W)\)</span></span></a></div>
+<ul id="ptx-toc-group-vslinear-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vslinear.html#vslinear-3-20" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="x3nullspace.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Нуль-пространства и образы</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-x3nullspace">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-2" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Нуль-пространство и инъективность</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-3" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Образ и сюръективность</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-4" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Основная теорема о линейных отображениях</span></a></div>
+<ul id="ptx-toc-group-x3nullspace-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-4-30" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="matrices.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Матрицы</span></a></div>
+<ul id="ptx-toc-group-matrices" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices.html#matrices-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Представление линейного отображения матрицей</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices.html#matrices-3" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Сложение матриц и умножение на скаляр</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices.html#matrices-4" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Умножение матриц</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="matrices.html#matrices-5" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Столбцово-строчная факторизация и ранг матрицы</span></a></div>
+<ul id="ptx-toc-group-matrices-5" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="matrices.html#x3think2" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="invertible.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Обратимость и изоморфизмы</span></a></div>
+<ul id="ptx-toc-group-invertible" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="invertible.html#invertible-2" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Обратимые линейные отображения</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="invertible.html#invertible-3" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Изоморфные векторные пространства</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="invertible.html#invertible-4" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Линейные отображения как умножение матриц</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="invertible.html#invertible-5" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Замена базиса</span></a></div>
+<ul id="ptx-toc-group-invertible-5" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="invertible.html#invertible-5-27" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="pq.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Произведения и факторпространства векторных пространств</span></a></div>
+<ul id="ptx-toc-group-pq" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="pq.html#pq-2" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Произведения векторных пространств</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="pq.html#pq-3" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Факторпространства</span></a></div>
+<ul id="ptx-toc-group-pq-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="pq.html#pq-3-29" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="duals.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Двойственность</span></a></div>
+<ul id="ptx-toc-group-duals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="duals.html#duals-2" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Двойственное пространство и двойственное отображение</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="duals.html#duals-3" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Нуль-пространство и образ двойственного отображения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="duals.html#duals-4" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Матрица двойственного отображения</span></a></div>
+<ul id="ptx-toc-group-duals-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="duals.html#duals-4-9" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="polynomials.html" class="internal"><span class="codenumber">4</span> <span class="title">Многочлены</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="eigs.html" class="internal"><span class="codenumber">5</span> <span class="title">Собственные значения и собственные векторы</span></a></div>
+<ul id="ptx-toc-group-eigs" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="eigs-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x5invar.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Инвариантные подпространства</span></a></div>
+<ul id="ptx-toc-group-x5invar" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x5invar.html#x5invar-2" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Собственные значения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x5invar.html#x5invar-3" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Многочлены от операторов</span></a></div>
+<ul id="ptx-toc-group-x5invar-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x5invar.html#x5invar-3-19" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="eigenuppertri.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Минимальный многочлен</span></a></div>
+<ul id="ptx-toc-group-eigenuppertri" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-2" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Существование собственных значений в комплексных векторных пространствах</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-3" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Собственные значения и минимальный многочлен</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-4" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Собственные значения в нечётномерных вещественных векторных пространствах</span></a></div>
+<ul id="ptx-toc-group-eigenuppertri-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-4-10" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x4utm.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Верхнетреугольные матрицы</span></a></div>
+<ul id="ptx-toc-group-x4utm" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x4utm.html#x4utm-40" class="internal"><span class="codenumber">5.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="diagmat.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Диагонализируемые операторы</span></a></div>
+<ul id="ptx-toc-group-diagmat" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="diagmat.html#diagmat-2" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Диагональные матрицы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="diagmat.html#diagmat-3" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Условия диагонализируемости</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="diagmat.html#diagmat-4" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Теорема Гершгорина о кругах</span></a></div>
+<ul id="ptx-toc-group-diagmat-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="diagmat.html#diagmat-4-12" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x2diagmat.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Коммутирующие операторы</span></a></div>
+<ul id="ptx-toc-group-x2diagmat" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x2diagmat.html#x2diagmat-30" class="internal"><span class="codenumber">5.5</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="InnerProductSpaces.html" class="internal"><span class="codenumber">6</span> <span class="title">Пространства со скалярным произведением</span></a></div>
+<ul id="ptx-toc-group-InnerProductSpaces" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="InnerProductSpaces-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x6ipn.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Скалярные произведения и нормы</span></a></div>
+<ul id="ptx-toc-group-x6ipn" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x6ipn.html#x6ipn-2" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Скалярные произведения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x6ipn.html#x6ipn-3" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Нормы</span></a></div>
+<ul id="ptx-toc-group-x6ipn-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x6ipn.html#x6ipn-3-41" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="orthobases.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Ортонормированные базисы</span></a></div>
+<ul id="ptx-toc-group-orthobases" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="orthobases.html#orthobases-2" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Ортонормированные списки и процесс Грама — Шмидта</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="orthobases.html#orthobases-3" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Линейные функционалы на пространствах со скалярным произведением</span></a></div>
+<ul id="ptx-toc-group-orthobases-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="orthobases.html#orthobases-3-16" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="OrthoMin.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Ортогональные дополнения и задачи минимизации</span></a></div>
+<ul id="ptx-toc-group-OrthoMin" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-2" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Ортогональные дополнения</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-3" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Задачи минимизации</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-4" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Псевдообратное отображение</span></a></div>
+<ul id="ptx-toc-group-OrthoMin-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-4-27" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="opsinner.html" class="internal"><span class="codenumber">7</span> <span class="title">Операторы в пространствах со скалярным произведением</span></a></div>
+<ul id="ptx-toc-group-opsinner" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="opsinner-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="selfadjoint_normal.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Самосопряжённые и нормальные операторы</span></a></div>
+<ul id="ptx-toc-group-selfadjoint_normal" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-2" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Сопряжённые операторы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-3" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Самосопряжённые операторы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-4" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Нормальные операторы</span></a></div>
+<ul id="ptx-toc-group-selfadjoint_normal-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-4-18" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SpectralTheorem.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Спектральная теорема</span></a></div>
+<ul id="ptx-toc-group-SpectralTheorem" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SpectralTheorem.html#SpectralTheorem-3" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Вещественная спектральная теорема</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="SpectralTheorem.html#SpectralTheorem-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Комплексная спектральная теорема</span></a></div>
+<ul id="ptx-toc-group-SpectralTheorem-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="SpectralTheorem.html#SpectralTheorem-4-10" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="POIUO.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Положительные операторы</span></a></div>
+<ul id="ptx-toc-group-POIUO" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="POIUO.html#POIUO-21" class="internal"><span class="codenumber">7.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x3QR.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Изометрии, унитарные операторы и факторизация матриц</span></a></div>
+<ul id="ptx-toc-group-x3QR" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3QR.html#x3QR-2" class="internal"><span class="codenumber">7.4.1</span> <span class="title">Изометрии</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3QR.html#x3QR-3" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Унитарные операторы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3QR.html#x3QR-4" class="internal"><span class="codenumber">7.4.3</span> <span class="title">QR-разложение</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x3QR.html#x3QR-5" class="internal"><span class="codenumber">7.4.4</span> <span class="title">Разложение Холецкого</span></a></div>
+<ul id="ptx-toc-group-x3QR-5" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x3QR.html#x3QR-5-13" class="internal"><span class="codenumber">7.4.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x2SVD.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Сингулярное разложение</span></a></div>
+<ul id="ptx-toc-group-x2SVD" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x2SVD.html#x2SVD-2" class="internal"><span class="codenumber">7.5.1</span> <span class="title">Сингулярные числа</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x2SVD.html#x2SVD-3" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Сингулярное разложение для линейных отображений и матриц</span></a></div>
+<ul id="ptx-toc-group-x2SVD-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x2SVD.html#x2SVD-3-22" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x9SVD.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Следствия сингулярного разложения</span></a></div>
+<ul id="ptx-toc-group-x9SVD" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-2" class="internal"><span class="codenumber">7.6.1</span> <span class="title">Нормы линейных отображений</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-3" class="internal"><span class="codenumber">7.6.2</span> <span class="title">Аппроксимация линейными отображениями с образом меньшей размерности</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-4" class="internal"><span class="codenumber">7.6.3</span> <span class="title">Полярное разложение</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-5" class="internal"><span class="codenumber">7.6.4</span> <span class="title">Действие операторов на эллипсоиды и параллелепипеды</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-6" class="internal"><span class="codenumber">7.6.5</span> <span class="title">Объём через сингулярные числа</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x9SVD.html#x9SVD-7" class="internal"><span class="codenumber">7.6.6</span> <span class="title">Свойства оператора, определяемые его собственными значениями</span></a></div>
+<ul id="ptx-toc-group-x9SVD-7" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-7-5" class="internal"><span class="codenumber">7.6.6</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="operators_complex_vs.html" class="internal"><span class="codenumber">8</span> <span class="title">Операторы в комплексных векторных пространствах</span></a></div>
+<ul id="ptx-toc-group-operators_complex_vs" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="operators_complex_vs-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="geneig.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Корневые векторы и нильпотентные операторы</span></a></div>
+<ul id="ptx-toc-group-geneig" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geneig.html#geneig-2" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Нуль-пространства степеней оператора</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geneig.html#geneig-3" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Корневые (обобщённые собственные) векторы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="geneig.html#geneig-4" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Нильпотентные операторы</span></a></div>
+<ul id="ptx-toc-group-geneig-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geneig.html#geneig-4-15" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="decompop.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Разложение в прямую сумму корневых подпространств</span></a></div>
+<ul id="ptx-toc-group-decompop" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="decompop.html#decompop-2" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Корневые (обобщённые собственные) подпространства</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="decompop.html#decompop-3" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Кратность собственного значения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="decompop.html#decompop-4" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Блочно-диагональные матрицы</span></a></div>
+<ul id="ptx-toc-group-decompop-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="decompop.html#decompop-4-10" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x8geneigde.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Следствия разложения на корневые подпространства</span></a></div>
+<ul id="ptx-toc-group-x8geneigde" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x8geneigde.html#x8geneigde-2" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Квадратные корни из операторов</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x8geneigde.html#Jordan" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Жорданова форма</span></a></div>
+<ul id="ptx-toc-group-Jordan" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x8geneigde.html#Jordan-19" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x7trace.html" class="internal"><span class="codenumber">8.4</span> <span class="title">След: связь между матрицами и операторами</span></a></div>
+<ul id="ptx-toc-group-x7trace" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x7trace.html#x7trace-36" class="internal"><span class="codenumber">8.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="MultLATensors.html" class="internal"><span class="codenumber">9</span> <span class="title">Полилинейная алгебра и определители</span></a></div>
+<ul id="ptx-toc-group-MultLATensors" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="MultLATensors-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="bilin_quad.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Билинейные и квадратичные формы</span></a></div>
+<ul id="ptx-toc-group-bilin_quad" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-2" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Билинейные формы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-3" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Симметричные билинейные формы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-4" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Квадратичные формы</span></a></div>
+<ul id="ptx-toc-group-bilin_quad-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-4-15" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="alt_multi.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Кососимметрические полилинейные формы</span></a></div>
+<ul id="ptx-toc-group-alt_multi" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="alt_multi.html#alt_multi-2" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Полилинейные формы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="alt_multi.html#alt_multi-3" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Кососимметрические полилинейные формы и перестановки</span></a></div>
+<ul id="ptx-toc-group-alt_multi-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="alt_multi.html#alt_multi-3-27" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x9det.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Определители</span></a></div>
+<ul id="ptx-toc-group-x9det" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9det.html#x9det-2" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Определение определителя</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x9det.html#x9det-3" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Свойства определителей</span></a></div>
+<ul id="ptx-toc-group-x9det-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x9det.html#x9det-3-65" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x9TensorSect.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Тензорные произведения</span></a></div>
+<ul id="ptx-toc-group-x9TensorSect" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-2" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Тензорное произведение двух векторных пространств</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-3" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Тензорное произведение пространств со скалярным произведением</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-4" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Тензорное произведение нескольких векторных пространств</span></a></div>
+<ul id="ptx-toc-group-x9TensorSect-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-4-25" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Приложения и указатель</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="photocredits.html" class="internal"><span class="codenumber">1</span> <span class="title">Источники фотографий</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="typesetting.html" class="internal"><span class="codenumber">2</span> <span class="title">Колофон: заметки о вёрстке</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretextplus.html" class="internal"><span class="codenumber">3</span> <span class="title">Колофон: веб-версия</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Предметный указатель</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="x3nullspace">
+<h1 class="heading hide-type">
+<span class="type">Раздел</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Нуль-пространства и образы</span>
+</h1>
+<section class="subsection" id="x3nullspace-2">
+<h2 class="heading hide-type">
+<span class="type">Подраздел</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Нуль-пространство и инъективность</span>
+</h2>
+<div class="para" id="x3nullspace-2-2">В этом разделе мы узнаем о двух подпространствах, которые тесно связаны с каждым линейным отображением. Начнем с множества векторов, которые отображаются в <span class="process-math">\(0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="definition definition-like" id="x3nullspace-2-3"><h3 class="heading">
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">нуль-пространство, <span class="process-math">\(\ker T\)</span>.</span>
+</h3>
+<div class="para logical" id="x3nullspace-2-3-2-1">
+<div class="para">Для <span class="process-math">\(T \in \Lc(V{},W)\)</span> <dfn class="terminology">нуль-пространство</dfn> <span class="process-math">\(T\)</span>, обозначаемое <span class="process-math">\(\ker T\)</span>, представляет собой подмножество <span class="process-math">\(V\)</span>, состоящее из тех векторов, которые <span class="process-math">\(T\)</span> отображает в <span class="process-math">\(0\)</span>:</div>
+<div class="displaymath process-math" id="x3nullspace-2-3-2-1-9">
+\begin{equation*}
+\ker T = \{v \in V: Tv = 0 \}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.11: null space, \ker T"><a tabindex="-1" href="#x3nullspace-2-3" title="Copy heading and permalink for Definition 3.11: нуль-пространство, \ker T" aria-label="Copy heading and permalink for Definition 3.11: null space, \ker T">🔗</a></div>
+</article>
+<details id="x3nullspace-2-4" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="x3nullspace-2-4-1">Слово «нуль» означает ноль. Таким образом, термин «нуль-пространство» должен напоминать вам о связи с  <span class="process-math">\(0\)</span>. Некоторые математики используют термин <em class="emphasis">ядро</em> вместо пустого пространства.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<details id="null" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">нуль-пространство.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="null-2-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="null-2-1-1">
+<li id="null-2-1-1-1">
+<div class="para" id="null-2-1-1-1-1">Если <span class="process-math">\(T\)</span> — нулевое отображение <span class="process-math">\(V\)</span> в <span class="process-math">\(W{}\)</span>, то есть <span class="process-math">\(Tv = 0\)</span> для каждого <span class="process-math">\(v \in V{}\)</span>, то <span class="process-math">\(\ker T = V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#null-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#null-2-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="null-2-1-1-2">
+<div class="para" id="null-2-1-1-2-1">Предположим, <span class="process-math">\(\phi \in \Lc( \CC3, \C{} )\)</span> определяется <span class="process-math">\(\phi(z_1, z_2, z_3) = z_1 + 2z_2 + 3z_3\)</span>. Тогда <span class="process-math">\(\ker \phi\)</span> равно <span class="process-math">\(\{ (z_1, z_2, z_3) \in \C3:
+z_1 + 2z_2 + 3z_3 = 0 \}\)</span>, которое является подпространством области определения <span class="process-math">\(\phi\)</span>. Вскоре мы увидим, что нуль-пространство каждого линейного отображения является подпространством его области определения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#null-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#null-2-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="null-2-1-1-3">
+<div class="para" id="null-2-1-1-3-1">Предположим, что <span class="process-math">\(D\in \Lc\bigl(\P(\R{})\bigr)\)</span> — отображение дифференцирования, определенное <span class="process-math">\(Dp = p'\!\)</span>. Единственные функции, производная которых равна нулю, — это постоянные функции. Таким образом, нуль-пространство <span class="process-math">\(D\)</span> равно множеству постоянных функций.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#null-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#null-2-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+<li id="null-2-1-1-4">
+<div class="para" id="null-2-1-1-4-1">Предположим, что <span class="process-math">\(T\in \Lc\bigl(\P(\R{})\bigr)\)</span> — это умножение на отображение <span class="process-math">\(x^2\)</span>, определенное <span class="process-math">\((Tp)(x) = x^2 p(x)\)</span>. Единственный многочлен <span class="process-math">\(p\)</span>, такой что <span class="process-math">\(x^2 p(x) = 0\)</span> для всех <span class="process-math">\(x \in \R{}\)</span>, — это многочлен <span class="process-math">\(0\)</span>. Таким образом, <span class="process-math">\(\ker T = \{ 0 \}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#null-2-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item d"><a tabindex="-1" href="#null-2-1-1-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
+</li>
+<li id="null-2-1-1-5">
+<div class="para logical" id="null-2-1-1-5-1">
+<div class="para">Предположим, что <span class="process-math">\(T\in \Lc( \F{\infty} )\)</span> — сдвиг назад, определяемый формулой</div>
+<div class="displaymath process-math" id="null-2-1-1-5-1-3">
+\begin{equation*}
+T(x_1, x_2, x_3, \dots) = (x_2, x_3, \dots).
+\end{equation*}
+</div>
+<div class="para">Тогда <span class="process-math">\(T(x_1, x_2, x_3, \dots)\)</span> равно <span class="process-math">\(0\)</span> тогда и только тогда, когда все числа <span class="process-math">\(x_2, x_3, \dots\)</span> равны <span class="process-math">\(0\)</span>. Таким образом, <span class="process-math">\(\ker T = \{  (a, 0, 0, \dots): a \in \F{}  \}\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#null-2-1-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item e"><a tabindex="-1" href="#null-2-1-1-5" title="Copy heading and permalink for Item e" aria-label="Copy heading and permalink for Item e">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#null-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.12: null space"><a tabindex="-1" href="#null" title="Copy heading and permalink for Example 3.12: нуль-пространство" aria-label="Copy heading and permalink for Example 3.12: null space">🔗</a></div>
+</article></details>
+<div class="para" id="x3nullspace-2-6">Следующий результат показывает, что нуль-пространство каждого линейного отображения является подпространством области определения. В частности, <span class="process-math">\(0\)</span> находится в нуль-пространстве любого линейного отображения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x3nullspace-2-7"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.13</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">нуль-пространство является подпространством.</span>
+</h3>
+<div class="para" id="x3nullspace-2-7-2-1">Предположим, <span class="process-math">\(T \in \Lc(V{},W)\)</span>. Тогда <span class="process-math">\(\ker T\)</span> — подпространство <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.13: the null space is a subspace"><a tabindex="-1" href="#x3nullspace-2-7" title="Copy heading and permalink for Theorem 3.13: нуль-пространство является подпространством" aria-label="Copy heading and permalink for Theorem 3.13: the null space is a subspace">🔗</a></div>
+</article>
+<details id="x3nullspace-2-8" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="x3nullspace-2-8-1">Поскольку <span class="process-math">\(T\)</span> является линейным отображением, <span class="process-math">\(T(0) = 0\)</span> (по <a href="vslinear.html#zerotozero" class="xref" data-knowl="./knowl/xref/zerotozero.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.10: линейные отображения переводят 0 в 0">теореме 3.10</a>). Таким образом, <span class="process-math">\(0 \in \ker T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="x3nullspace-2-8-2">
+<div class="para">Предположим, <span class="process-math">\(u, v \in \ker T{}\)</span>. Тогда</div>
+<div class="displaymath process-math" id="x3nullspace-2-8-2-2">
+\begin{equation*}
+T(u + v) = Tu + Tv = 0 + 0 = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x3nullspace-2-8-3">Следовательно, <span class="process-math">\(u + v \in \ker T{}\)</span>. Таким образом, <span class="process-math">\(\ker T\)</span> замкнуто относительно сложения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="x3nullspace-2-8-4">
+<div class="para">Предположим <span class="process-math">\(u \in \ker T\)</span> и <span class="process-math">\(\lambda \in \F{}{}\)</span>. Тогда</div>
+<div class="displaymath process-math" id="x3nullspace-2-8-4-3">
+\begin{equation*}
+T(\lambda u) = \lambda Tu = \lambda 0 = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-8-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x3nullspace-2-8-5">Следовательно, <span class="process-math">\(\lambda u \in \ker T{}\)</span>. Таким образом, <span class="process-math">\(\ker T\)</span> замкнуто относительно умножения на скаляр.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-8-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x3nullspace-2-8-6">Мы показали, что <span class="process-math">\(\ker T\)</span> содержит <span class="process-math">\(0\)</span> и замкнуто относительно сложения и умножения на скаляр. Таким образом, <span class="process-math">\(\ker T\)</span> является подпространством <span class="process-math">\(V\)</span> (по <a href="x1Subspaces.html#subspace" class="xref" data-knowl="./knowl/xref/subspace.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 1.34: условия для подпространства">теореме 1.34</a>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-8-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.2.1.1"><a tabindex="-1" href="#x3nullspace-2-8" title="Copy heading and permalink for Proof 3.2.1.1" aria-label="Copy heading and permalink for Proof 3.2.1.1">🔗</a></div>
+</article></details>
+<div class="para" id="x3nullspace-2-9">Как мы вскоре увидим, следующее определение линейного отображения тесно связано с нуль-пространством.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="definition definition-like" id="x3nullspace-2-10"><h3 class="heading">
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.14</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">инъективный.</span>
+</h3>
+<div class="para" id="x3nullspace-2-10-2-1">Функция <span class="process-math">\(T\colon V \rightarrow W\)</span> называется <dfn class="terminology">инъективной</dfn>, если из <span class="process-math">\(Tu = Tv\)</span> следует <span class="process-math">\(u = v\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.14: injective"><a tabindex="-1" href="#x3nullspace-2-10" title="Copy heading and permalink for Definition 3.14: инъективный" aria-label="Copy heading and permalink for Definition 3.14: injective">🔗</a></div>
+</article>
+<div class="para" id="x3nullspace-2-11"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="x3nullspace-2-12" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="x3nullspace-2-12-1">Термин <em class="emphasis">один-к-одному</em> означает то же, что и инъективный.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<div class="para" id="x3nullspace-2-13">Мы могли бы перефразировать приведенное выше определение, сказав, что <span class="process-math">\(T\)</span> инъективно, если из <span class="process-math">\(u \ne v\)</span> следует, что <span class="process-math">\(Tu \ne Tv\)</span>. Таким образом, <span class="process-math">\(T\)</span> инъективен тогда и только тогда, когда он отображает разные входы в разные выходы.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x3nullspace-2-14">Следующий результат гласит, что мы можем проверить, является ли линейное отображение инъективным, проверив, является ли <span class="process-math">\(0\)</span> единственным вектором, который отображается в <span class="process-math">\(0\)</span>. В качестве простого применения этого результата мы видим, что из линейных отображений, нуль-пространства которых мы вычислили в <a href="x3nullspace.html#null" class="xref" data-knowl="./knowl/xref/null.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 3.12: нуль-пространство">Примере 3.12</a>, только умножение на <span class="process-math">\(x^2\)</span> является инъективным (за исключением того, что нулевое отображение инъективно в специальном случае <span class="process-math">\(V = \{0\}\)</span>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x12"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.15</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">инъективность <span class="process-math">\(\iff\)</span> нуль-пространство равно <span class="process-math">\(\{0\}\)</span>.</span>
+</h3>
+<div class="para" id="x12-2-1">Пусть <span class="process-math">\(T \in \Lc(V{},W)\)</span>. Тогда <span class="process-math">\(T\)</span> инъективен тогда и только тогда, когда <span class="process-math">\(\ker T = \{0\}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.15: injectivity \iff null space equals \{0\}"><a tabindex="-1" href="#x12" title="Copy heading and permalink for Theorem 3.15: инъективность \iff нуль-пространство равно \{0\}" aria-label="Copy heading and permalink for Theorem 3.15: injectivity \iff null space equals \{0\}">🔗</a></div>
+</article>
+<details id="x3nullspace-2-16" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="x3nullspace-2-16-1">
+<div class="para">Предположим сначала, что <span class="process-math">\(T\)</span> инъективно. Мы хотим доказать, что <span class="process-math">\(\ker T = \{0\}\)</span>. Мы уже знаем, что <span class="process-math">\(\{0\} \subset \ker T\)</span> (по <a href="vslinear.html#zerotozero" class="xref" data-knowl="./knowl/xref/zerotozero.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.10: линейные отображения переводят 0 в 0">теореме 3.10</a>). Чтобы доказать включение в обратном направлении, предположим, что <span class="process-math">\(v \in \ker T{}\)</span>. Тогда</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/zerotozero.html" id="x3nullspace-2-16-1-6">
+\begin{equation*}
+T(v) = 0 = T(0).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-16-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x3nullspace-2-16-2">Поскольку <span class="process-math">\(T\)</span> инъективен, из приведенного выше уравнения следует, что <span class="process-math">\(v = 0\)</span>. Таким образом, можно сделать вывод, что <span class="process-math">\(\ker T = \{0\}\)</span> соответствует искомому.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-16-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="x3nullspace-2-16-3">
+<div class="para">Чтобы доказать импликацию в другом направлении, предположим теперь, что <span class="process-math">\(\ker T = \{0\}\)</span>. Мы хотим доказать, что <span class="process-math">\(T\)</span> инъективен. Для этого предположим <span class="process-math">\(u, v \in V\)</span> и <span class="process-math">\(Tu = Tv\)</span>. Тогда</div>
+<div class="displaymath process-math" id="x3nullspace-2-16-3-5">
+\begin{equation*}
+0 = Tu - Tv = T(u - v).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-16-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x3nullspace-2-16-4">Таким образом, <span class="process-math">\(u - v\)</span> находится в <span class="process-math">\(\ker T\)</span>, что равно <span class="process-math">\(\{0\}\)</span>. Отсюда <span class="process-math">\(u - v = 0\)</span>, откуда следует, что <span class="process-math">\(u = v\)</span>. Следовательно, <span class="process-math">\(T\)</span>, как и хотелось, инъективно.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-2-16-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.2.1.2"><a tabindex="-1" href="#x3nullspace-2-16" title="Copy heading and permalink for Proof 3.2.1.2" aria-label="Copy heading and permalink for Proof 3.2.1.2">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.2.1: Null Space and Injectivity"><a tabindex="-1" href="#x3nullspace-2" title="Copy heading and permalink for Subsection 3.2.1: Нуль-пространство и инъективность" aria-label="Copy heading and permalink for Subsection 3.2.1: Null Space and Injectivity">🔗</a></div>
+</section>
+<section class="subsection" id="x3nullspace-3">
+<h2 class="heading hide-type">
+<span class="type">Подраздел</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Образ и сюръективность</span>
+</h2>
+<div class="para" id="x3nullspace-3-2">Теперь мы даем имя множеству выходов линейного отображения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="definition definition-like" id="x3nullspace-3-3"><h3 class="heading">
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.16</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">образ.</span>
+</h3>
+<div class="para logical" id="x3nullspace-3-3-2-1">
+<div class="para">Для <span class="process-math">\(T \in \Lc(V{}, W)\)</span> <dfn class="terminology">образ</dfn> <span class="process-math">\(T\)</span> — это подмножество <span class="process-math">\(W\)</span>, состоящее из тех векторов, которые равны <span class="process-math">\(Tv\)</span> для некоторого <span class="process-math">\(v \in V\)</span>:</div>
+<div class="displaymath process-math" id="x3nullspace-3-3-2-1-8">
+\begin{equation*}
+\ran T = \{Tv: v \in V \}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.16: range"><a tabindex="-1" href="#x3nullspace-3-3" title="Copy heading and permalink for Definition 3.16: образ" aria-label="Copy heading and permalink for Definition 3.16: range">🔗</a></div>
+</article>
+<details id="range" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.17</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">образ.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="range-2-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="range-2-1-1">
+<li id="range-2-1-1-1">
+<div class="para" id="range-2-1-1-1-1">Если <span class="process-math">\(T\)</span> — нулевое отображение <span class="process-math">\(V\)</span> в <span class="process-math">\(W{}\)</span>, то есть <span class="process-math">\(Tv=0\)</span> для каждого <span class="process-math">\(v \in V{}\)</span>, то <span class="process-math">\(\ran T = \{0\}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#range-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#range-2-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="range-2-1-1-2">
+<div class="para logical" id="range-2-1-1-2-1">
+<div class="para">Предположим, <span class="process-math">\(T \in \Lc( \RR2, \R3 )\)</span> определяется <span class="process-math">\(T(x, y) = (2x, 5y, x + y)\)</span>. Тогда</div>
+<div class="displaymath process-math" id="range-2-1-1-2-1-3">
+\begin{equation*}
+\ran T = \{  (2x, 5y, x + y ): x, y \in \R{}  \}.
+\end{equation*}
+</div>
+<div class="para">Обратите внимание, что <span class="process-math">\(\ran T\)</span> — подпространство <span class="process-math">\(\R3\)</span>. Вскоре мы увидим, что образ каждого элемента <span class="process-math">\(\Lc(V{},W)\)</span> является подпространством <span class="process-math">\(W{}\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#range-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#range-2-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="range-2-1-1-3">
+<div class="para" id="range-2-1-1-3-1">Предположим, что <span class="process-math">\(D\in \Lc\bigl(\P(\R{})\bigr)\)</span> — отображение дифференцирования, определенное <span class="process-math">\(Dp = p'\!\)</span>. Поскольку для каждого многочлена <span class="process-math">\(q \in \P(\R{})\)</span> существует многочлен <span class="process-math">\(p \in \P(\R{})\)</span> такой, что <span class="process-math">\(p' = q\)</span>, образ <span class="process-math">\(D\)</span> есть <span class="process-math">\(\P(\R{})\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#range-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#range-2-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#range-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.17: range"><a tabindex="-1" href="#range" title="Copy heading and permalink for Example 3.17: образ" aria-label="Copy heading and permalink for Example 3.17: range">🔗</a></div>
+</article></details>
+<div class="para" id="x3nullspace-3-5">Следующий результат показывает, что образ каждого линейного отображения является подпространством векторного пространства, в которое оно отображается.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x3nullspace-3-6"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">образ является подпространством.</span>
+</h3>
+<div class="para" id="x3nullspace-3-6-2-1">Если <span class="process-math">\(T \in \Lc(V{},W)\)</span>, то <span class="process-math">\(\ran T\)</span> — подпространство <span class="process-math">\(W{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.18: the range is a subspace"><a tabindex="-1" href="#x3nullspace-3-6" title="Copy heading and permalink for Theorem 3.18: образ является подпространством" aria-label="Copy heading and permalink for Theorem 3.18: the range is a subspace">🔗</a></div>
+</article>
+<details id="x3nullspace-3-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="x3nullspace-3-7-1">Предположим, <span class="process-math">\(T \in \Lc(V{},W)\)</span>. Тогда <span class="process-math">\(T(0) = 0\)</span> (по <a href="vslinear.html#zerotozero" class="xref" data-knowl="./knowl/xref/zerotozero.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.10: линейные отображения переводят 0 в 0">Теореме 3.10</a>), откуда следует, что <span class="process-math">\(0 \in \ran T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="x3nullspace-3-7-2">
+<div class="para">Если <span class="process-math">\(w_1, w_2 \in \ran T\)</span>, то существует <span class="process-math">\(v_1, v_2 \in V\)</span> такой, что <span class="process-math">\(Tv_1 = w_1\)</span> и <span class="process-math">\(Tv_2 = w_2\)</span>. Таким образом</div>
+<div class="displaymath process-math" id="x3nullspace-3-7-2-5">
+\begin{equation*}
+T(v_1 + v_2) = Tv_1 + Tv_2 = w_1 + w_2.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x3nullspace-3-7-3">Следовательно, <span class="process-math">\(w_1 + w_2 \in \ran T{}\)</span>. Таким образом, <span class="process-math">\(\ran T\)</span> замкнуто относительно сложения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="x3nullspace-3-7-4">
+<div class="para">Если <span class="process-math">\(w \in \ran T\)</span> и <span class="process-math">\(\lambda \in \F{}{}\)</span>, то существует <span class="process-math">\(v \in V\)</span> такое, что <span class="process-math">\(Tv = w\)</span>. Таким образом</div>
+<div class="displaymath process-math" id="x3nullspace-3-7-4-5">
+\begin{equation*}
+T(\lambda v) = \lambda Tv = \lambda w.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x3nullspace-3-7-5">Следовательно, <span class="process-math">\(\lambda w \in \ran T{}\)</span>. Таким образом, <span class="process-math">\(\ran T\)</span> замкнуто относительно умножения на скаляр.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-7-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x3nullspace-3-7-6">Мы показали, что <span class="process-math">\(\ran T\)</span> содержит <span class="process-math">\(0\)</span> и замкнуто относительно сложения и умножения на скаляр. Таким образом, <span class="process-math">\(\ran T\)</span> является подпространством <span class="process-math">\(W\)</span> (по <a href="x1Subspaces.html#subspace" class="xref" data-knowl="./knowl/xref/subspace.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 1.34: условия для подпространства">теореме 1.34</a>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-7-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.2.2.1"><a tabindex="-1" href="#x3nullspace-3-7" title="Copy heading and permalink for Proof 3.2.2.1" aria-label="Copy heading and permalink for Proof 3.2.2.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="x3nullspace-3-8"><h3 class="heading">
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.19</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">сюръективный.</span>
+</h3>
+<div class="para" id="x3nullspace-3-8-2-1">Функция <span class="process-math">\(T\colon V \rightarrow W\)</span> называется <dfn class="terminology">сюръективной</dfn>, если ее образ равен <span class="process-math">\(W{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.19: surjective"><a tabindex="-1" href="#x3nullspace-3-8" title="Copy heading and permalink for Definition 3.19: сюръективный" aria-label="Copy heading and permalink for Definition 3.19: surjective">🔗</a></div>
+</article>
+<div class="para" id="x3nullspace-3-9"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x3nullspace-3-10">Чтобы проиллюстрировать приведенное выше определение, обратите внимание, что из образов, которые мы вычислили в <a href="x3nullspace.html#range" class="xref" data-knowl="./knowl/xref/range.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 3.17: образ">Примере 3.17</a>, только отображение дифференцирования является сюръективным (за исключением того, что нулевое отображение является сюръективным в специальном случае <span class="process-math">\(W = \{0\}\)</span>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="x3nullspace-3-11" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="x3nullspace-3-11-1">Некоторые люди используют термин <em class="emphasis">onto</em>, который означает то же самое, что и сюръектив.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<div class="para" id="x3nullspace-3-12">Является ли линейное отображение сюръективным, зависит от того, что мы называем векторным пространством, в которое оно отображается.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="x3nullspace-3-13" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.20</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">сюръективность зависит от целевого пространства.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="x3nullspace-3-13-2-1">Отображение дифференцирования <span class="process-math">\(D \in \Lc\bigl(\P{}_5(\R{})\bigr)\)</span>, определенное <span class="process-math">\(Dp = p'\)</span>, не является сюръективным, поскольку многочлен <span class="process-math">\(x^5\)</span> не входит в образ <span class="process-math">\(D\)</span>. Однако отображение дифференцирования <span class="process-math">\(S \in \Lc\bigl(\P{}_5(\R{}), \P{}_4(\R{})\bigr)\)</span>, определенное <span class="process-math">\(Sp = p'\)</span>, является сюръективным, поскольку его образ равен <span class="process-math">\(\P{}_4(\R{})\)</span>, который является векторным пространством, в которое отображается <span class="process-math">\(S\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-3-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.20: surjectivity depends on the target space"><a tabindex="-1" href="#x3nullspace-3-13" title="Copy heading and permalink for Example 3.20: сюръективность зависит от целевого пространства" aria-label="Copy heading and permalink for Example 3.20: surjectivity depends on the target space">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.2.2: Range and Surjectivity"><a tabindex="-1" href="#x3nullspace-3" title="Copy heading and permalink for Subsection 3.2.2: Образ и сюръективность" aria-label="Copy heading and permalink for Subsection 3.2.2: Range and Surjectivity">🔗</a></div>
+</section>
+<section class="subsection" id="x3nullspace-4">
+<h2 class="heading hide-type">
+<span class="type">Подраздел</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Основная теорема о линейных отображениях</span>
+</h2>
+<div class="para" id="x3nullspace-4-2">Следующий результат настолько важен, что получил драматическое название.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x3ab11"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.21</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">основная теорема о линейных отображениях.</span>
+</h3>
+<div class="para logical" id="x3ab11-2-1">
+<div class="para">Предположим, что <span class="process-math">\(V\)</span> конечномерен и <span class="process-math">\(T \in \Lc(V{},W)\)</span>. Тогда <span class="process-math">\(\ran T\)</span> конечномерна и</div>
+<div class="displaymath process-math" id="x3ab11-2-1-5">
+\begin{equation*}
+\dim V = \dim \ker T + \dim \ran T{}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3ab11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.21: fundamental theorem of linear maps"><a tabindex="-1" href="#x3ab11" title="Copy heading and permalink for Theorem 3.21: основная теорема о линейных отображениях" aria-label="Copy heading and permalink for Theorem 3.21: fundamental theorem of linear maps">🔗</a></div>
+</article>
+<details id="x3nullspace-4-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="x3nullspace-4-4-1">
+<div class="para">Пусть <span class="process-math">\(u_1, \dots, u_m\)</span> — базис <span class="process-math">\(\ker T\)</span>; таким образом <span class="process-math">\(\dim \ker T = m\)</span>. Линейно независимый список <span class="process-math">\(u_1, \dots,
+u_m\)</span> можно расширить до базиса</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x9.html" id="x3nullspace-4-4-1-5">
+\begin{equation*}
+u_1, \dots, u_m, v_1, \dots, v_n
+\end{equation*}
+</div>
+<div class="para">от <span class="process-math">\(V\)</span> (по <a href="bases.html#x9" class="xref" data-knowl="./knowl/xref/x9.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 2.32: каждый линейно независимый список расширяется до базиса">теореме 2.32</a>). Таким образом <span class="process-math">\(\dim V = m + n\)</span>. Для завершения доказательства нам нужно показать, что <span class="process-math">\(\ran T\)</span> конечномерна, а <span class="process-math">\(\dim \ran T =  n\)</span>. Мы сделаем это, доказав, что <span class="process-math">\(Tv_1, \dots, Tv_n\)</span> является базисом <span class="process-math">\(\ran T{}\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="x3nullspace-4-4-2">
+<div class="para">Пусть <span class="process-math">\(v \in V{}\)</span>. Поскольку <span class="process-math">\(u_1, \dots, u_m,  v_1, \dots,
+v_n\)</span> порождает <span class="process-math">\(V{}\)</span>, мы можем написать</div>
+<div class="displaymath process-math" id="x3nullspace-4-4-2-4">
+\begin{equation*}
+v = a_1 u_1 + \dots + a_m u_m + b_1 v_1 + \dots + b_n v_n,
+\end{equation*}
+</div>
+<div class="para">где <span class="process-math">\(a\)</span> и <span class="process-math">\(b\)</span> находятся в <span class="process-math">\(\F{}{}\)</span>. Применяя <span class="process-math">\(T\)</span> к обеим частям этого уравнения, получаем</div>
+<div class="displaymath process-math" id="x3nullspace-4-4-2-9">
+\begin{equation*}
+Tv = b_1 Tv_1 + \dots + b_n Tv_n,
+\end{equation*}
+</div>
+<div class="para">где члены формы <span class="process-math">\(Tu_k\)</span> исчезли, поскольку каждое <span class="process-math">\(u_k\)</span> находится в <span class="process-math">\(\ker T{}\)</span>. Из последнего уравнения следует, что список <span class="process-math">\(Tv_1, \dots, Tv_n\)</span> порождает <span class="process-math">\(\ran T{}\)</span>. В частности, <span class="process-math">\(\ran T\)</span> конечномерна.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="x3nullspace-4-4-3">
+<div class="para">Чтобы показать, что <span class="process-math">\(Tv_1, \dots, Tv_n\)</span> линейно независима, предположим, что <span class="process-math">\(c_1, \dots, c_n \in \F{}\)</span> и</div>
+<div class="displaymath process-math" id="x3nullspace-4-4-3-3">
+\begin{equation*}
+c_1 Tv_1 + \dots + c_n Tv_n = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="x3nullspace-4-4-4">
+<div class="para">Тогда</div>
+<div class="displaymath process-math" id="x3nullspace-4-4-4-1">
+\begin{equation*}
+T(c_1 v_1 + \dots + c_n v_n) = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="x3nullspace-4-4-5">
+<div class="para">Следовательно</div>
+<div class="displaymath process-math" id="x3nullspace-4-4-5-1">
+\begin{equation*}
+c_1 v_1 + \dots + c_n v_n \in \ker T{}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="x3nullspace-4-4-6">
+<div class="para">Поскольку <span class="process-math">\(u_1, \dots, u_m\)</span> порождает <span class="process-math">\(\ker T\)</span>, мы можем написать</div>
+<div class="displaymath process-math" id="x3nullspace-4-4-6-3">
+\begin{equation*}
+c_1 v_1 + \dots + c_n v_n = d_1 u_1 + \dots + d_m u_m,
+\end{equation*}
+</div>
+<div class="para">где <span class="process-math">\(d\)</span> находятся в <span class="process-math">\(\F{}{}\)</span>. Из этого уравнения следует, что все <span class="process-math">\(c\)</span> (и <span class="process-math">\(d\)</span>) являются <span class="process-math">\(0\)</span> (поскольку <span class="process-math">\(u_1, \dots, u_m, v_1, \dots,
+v_n\)</span> линейно независима). Таким образом, <span class="process-math">\(Tv_1, \dots, Tv_n\)</span> линейно независима и, следовательно, является базисом <span class="process-math">\(\ran T\)</span>, как и хотелось.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.2.3.1"><a tabindex="-1" href="#x3nullspace-4-4" title="Copy heading and permalink for Proof 3.2.3.1" aria-label="Copy heading and permalink for Proof 3.2.3.1">🔗</a></div>
+</article></details>
+<div class="para" id="x3nullspace-4-5">Теперь мы можем показать, что никакое линейное отображение конечномерного векторного пространства в «меньшее» векторное пространство не может быть инъективным, где «меньшее» измеряется размерностью.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x13"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.22</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">линейное отображение в пространство меньшей размерности не инъективно.</span>
+</h3>
+<div class="para" id="x13-2-1">Предположим, что <span class="process-math">\(V\)</span> и <span class="process-math">\(W\)</span> — конечномерные векторные пространства такие, что <span class="process-math">\(\dim V &gt; \dim W{}\)</span>. Тогда никакое линейное отображение из <span class="process-math">\(V\)</span> в <span class="process-math">\(W\)</span> не является инъективным.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.22: linear map to a lower-dimensional space is not injective"><a tabindex="-1" href="#x13" title="Copy heading and permalink for Theorem 3.22: линейное отображение в пространство меньшей размерности не инъективно" aria-label="Copy heading and permalink for Theorem 3.22: linear map to a lower-dimensional space is not injective">🔗</a></div>
+</article>
+<details id="x3nullspace-4-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="x3nullspace-4-7-1">
+<div class="para">Пусть <span class="process-math">\(T \in \Lc(V{},W)\)</span>. Тогда</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x3ab11.html ./knowl/xref/x2subdim.html ./knowl/xref/x12.html" id="x3nullspace-4-7-1-2">
+\begin{align*}
+\dim \ker T \amp = \dim V - \dim \ran T\\
+\amp \ge \dim V - \dim W\\
+\amp &gt; 0\text{,}
+\end{align*}
+</div>
+<div class="para">где первая строка выше взята из фундаментальной теоремы о линейных отображениях <a href="x3nullspace.html#x3ab11" class="xref" data-knowl="./knowl/xref/x3ab11.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.21: основная теорема о линейных отображениях">Теорема 3.21</a>, а вторая строка следует из <a href="dimension.html#x2subdim" class="xref" data-knowl="./knowl/xref/x2subdim.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 2.37: размерность подпространства">Теоремы 2.37</a>. Неравенство выше утверждает, что <span class="process-math">\(\dim \ker T &gt; 0\)</span>. Это означает, что <span class="process-math">\(\ker T\)</span> содержит векторы, отличные от <span class="process-math">\(0\)</span>. Таким образом, <span class="process-math">\(T\)</span> не инъективен (по <a href="x3nullspace.html#x12" class="xref" data-knowl="./knowl/xref/x12.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.15: инъективность \iff нуль-пространство равно \{0\}">теореме 3.15</a>).</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.2.3.2"><a tabindex="-1" href="#x3nullspace-4-7" title="Copy heading and permalink for Proof 3.2.3.2" aria-label="Copy heading and permalink for Proof 3.2.3.2">🔗</a></div>
+</article></details>
+<details id="x3nullspace-4-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.23</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">линейное отображение из <span class="process-math">\(\F4\)</span> в <span class="process-math">\(\F3\)</span> не инъективно.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="x3nullspace-4-8-2-1">
+<div class="para">Определим линейное отображение <span class="process-math">\(\fun T {\F4} {\F3}\)</span> формулой</div>
+<div class="displaymath process-math" id="x3nullspace-4-8-2-1-2">
+\begin{equation*}
+T(z_1, z_2, z_3, z_4) = (  \sqrt{7} z_1 + \pi z_2 + z_4, 97 z_1 + 3 z_2 + 2z_3, z_2 + 6z_3 + 7z_4  ).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="x3nullspace-4-8-2-2">Поскольку <span class="process-math">\(\dim \F4 &gt; \dim \FF3\)</span>, мы можем использовать <a href="x3nullspace.html#x13" class="xref" data-knowl="./knowl/xref/x13.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.22: линейное отображение в пространство меньшей размерности не инъективно">Теорему 3.22</a>, чтобы утверждать, что <span class="process-math">\(T\)</span> не инъективен, без каких-либо вычислений.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.23: linear map from  \F4 to \F3 is not injective"><a tabindex="-1" href="#x3nullspace-4-8" title="Copy heading and permalink for Example 3.23: линейное отображение из \F4 в \F3 не инъективно" aria-label="Copy heading and permalink for Example 3.23: linear map from  \F4 to \F3 is not injective">🔗</a></div>
+</article></details>
+<div class="para" id="x3nullspace-4-9">Следующий результат показывает, что никакое линейное отображение конечномерного векторного пространства в «большое» векторное пространство не может быть сюръективным, где «большее» измеряется размерностью.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x14"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.24</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">линейное отображение в многомерное пространство не является сюръективным.</span>
+</h3>
+<div class="para" id="x14-2-1">Предположим, что <span class="process-math">\(V\)</span> и <span class="process-math">\(W\)</span> — конечномерные векторные пространства такие, что <span class="process-math">\(\dim V \lt \dim W{}\)</span>. Тогда никакое линейное отображение из <span class="process-math">\(V\)</span> в <span class="process-math">\(W\)</span> не является сюръективным.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.24: linear map to a higher-dimensional space is not surjective"><a tabindex="-1" href="#x14" title="Copy heading and permalink for Theorem 3.24: линейное отображение в многомерное пространство не является сюръективным" aria-label="Copy heading and permalink for Theorem 3.24: linear map to a higher-dimensional space is not surjective">🔗</a></div>
+</article>
+<details id="x3nullspace-4-11" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="x3nullspace-4-11-1">
+<div class="para">Пусть <span class="process-math">\(T \in \Lc(V{},W)\)</span>. Тогда</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x3ab11.html" id="x3nullspace-4-11-1-2">
+\begin{align*}
+\dim \ran T \amp = \dim V - \dim \ker T\\
+\amp \le \dim V\\
+\amp \lt \dim W{}\text{,}
+\end{align*}
+</div>
+<div class="para">где приведенное выше равенство вытекает из фундаментальной теоремы о линейных отображениях <a href="x3nullspace.html#x3ab11" class="xref" data-knowl="./knowl/xref/x3ab11.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.21: основная теорема о линейных отображениях">Теорема 3.21</a>. Неравенство выше утверждает, что <span class="process-math">\(\dim \ran T \lt \dim W{}\)</span>. Это означает, что <span class="process-math">\(\ran T\)</span> не может равняться <span class="process-math">\(W{}\)</span>. Таким образом, <span class="process-math">\(T\)</span> не сюръективен.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.2.3.3"><a tabindex="-1" href="#x3nullspace-4-11" title="Copy heading and permalink for Proof 3.2.3.3" aria-label="Copy heading and permalink for Proof 3.2.3.3">🔗</a></div>
+</article></details>
+<div class="para" id="x3nullspace-4-12">Как мы скоро увидим, <a href="x3nullspace.html#x13" class="xref" data-knowl="./knowl/xref/x13.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.22: линейное отображение в пространство меньшей размерности не инъективно">Теорема 3.22</a> и <a href="x3nullspace.html#x14" class="xref" data-knowl="./knowl/xref/x14.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.24: линейное отображение в многомерное пространство не является сюръективным">Теорема 3.24</a> имеют важные следствия в теории линейных уравнений. Идея состоит в том, чтобы выразить вопросы о системах линейных уравнений в терминах линейных отображений. Начнем с перефразирования в терминах линейных отображений вопроса о том, имеет ли однородная система линейных уравнений ненулевое решение.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="x3nullspace-4-13" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="x3nullspace-4-13-1"><em class="emphasis">Однородный</em> в данном контексте означает, что постоянный член в правой части каждого приведенного ниже уравнения равен <span class="process-math">\(0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<div class="para logical" id="x3nullspace-4-14">
+<div class="para">Зафиксируйте целые положительные числа <span class="process-math">\(m\)</span> и <span class="process-math">\(n\)</span>, и пусть <span class="process-math">\(A_{j,k} \in \F{}\)</span> означает <span class="process-math">\(j = 1, \dots,
+m\)</span> и <span class="process-math">\(k = 1, \dots , n\)</span>. Рассмотрим однородную систему линейных уравнений</div>
+<div class="displaymath process-math" id="x3nullspace-4-14-6">
+\begin{align*}
+\sum_{k=1}^n A_{1,k} x_k \amp = 0\\
+\amp  \vdots\\
+\sum_{k=1}^n A_{m,k} x_k \amp = 0\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x3nullspace-4-15">Очевидно, что <span class="process-math">\(x_1 = \dots = x_n = 0\)</span> является решением приведенной выше системы уравнений; вопрос здесь в том, существуют ли какие-либо другие решения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="x3nullspace-4-16">
+<div class="para">Определите <span class="process-math">\(T\colon \F{n}  \rightarrow \F{m}\)</span> по</div>
+<div class="displaymath process-math" id="x3sim">
+\begin{equation}
+T(x_1, \dots, x_n) = ( \sum_{k=1}^n A_{1,k}   x_k, \dots, \sum_{k=1}^n A_{m,k}   x_k ).\tag{3.25}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x3nullspace-4-17">Уравнение <span class="process-math">\(T(x_1, \dots, x_n) = 0\)</span> (здесь <span class="process-math">\(0\)</span> — это нулевой элемент в <span class="process-math">\(\FF{m}\)</span>, а именно список всех <span class="process-math">\(0\)</span> длины <span class="process-math">\(m\)</span>) такое же, как и однородная система линейных уравнений, приведенная выше.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x3nullspace-4-18">Таким образом, мы хотим знать, является ли <span class="process-math">\(\ker T\)</span> строго большим, чем <span class="process-math">\(\{0\}\)</span>, что эквивалентно тому, что <span class="process-math">\(T\)</span> не является инъективным (по <a href="x3nullspace.html#x12" class="xref" data-knowl="./knowl/xref/x12.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.15: инъективность \iff нуль-пространство равно \{0\}">теореме 3.15</a>). Следующий результат дает важное условие неинъективности <span class="process-math">\(T\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x13a"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.26</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">однородная система линейных уравнений.</span>
+</h3>
+<div class="para" id="x13a-2-1">Однородная система линейных уравнений с большим количеством переменных, чем уравнений, имеет ненулевые решения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x13a-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.26: homogeneous system of linear equations"><a tabindex="-1" href="#x13a" title="Copy heading and permalink for Theorem 3.26: однородная система линейных уравнений" aria-label="Copy heading and permalink for Theorem 3.26: homogeneous system of linear equations">🔗</a></div>
+</article>
+<details id="x3nullspace-4-20" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="x3nullspace-4-20-1">Используйте обозначения и результаты приведенного выше обсуждения. Таким образом, <span class="process-math">\(T\)</span> является линейным отображением <span class="process-math">\(\F{n}\)</span> в <span class="process-math">\(\FF{m}\)</span>, и мы имеем однородную систему линейных уравнений <span class="process-math">\(m\)</span> с <span class="process-math">\(n\)</span> переменными <span class="process-math">\(x_1, \dots, x_n\)</span>. Из <a href="x3nullspace.html#x13" class="xref" data-knowl="./knowl/xref/x13.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.22: линейное отображение в пространство меньшей размерности не инъективно">Теоремы 3.22</a> мы видим, что <span class="process-math">\(T\)</span> не инъективен, если <span class="process-math">\(n &gt; m\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-20-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.2.3.4"><a tabindex="-1" href="#x3nullspace-4-20" title="Copy heading and permalink for Proof 3.2.3.4" aria-label="Copy heading and permalink for Proof 3.2.3.4">🔗</a></div>
+</article></details>
+<div class="para" id="x3nullspace-4-21">Пример приведенного выше результата: однородная система четырех линейных уравнений с пятью переменными имеет ненулевые решения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="x3nullspace-4-22">
+<div class="para">Теперь рассмотрим вопрос о том, не имеет ли система линейных уравнений решений при некотором выборе постоянных членов. Перефразируя этот вопрос в терминах линейного отображения, зафиксируйте целые положительные числа <span class="process-math">\(m\)</span> и <span class="process-math">\(n\)</span> и пусть <span class="process-math">\(A_{j,k} \in \F{}\)</span> для всех <span class="process-math">\(j = 1, \dots,
+m\)</span> и всех <span class="process-math">\(k = 1, \dots , n\)</span>. Для <span class="process-math">\(c_1, \dots, c_m \in \F{}{}\)</span> рассмотрим систему линейных уравнений</div>
+<div class="displaymath process-math" id="x3nullspace-4-22-7">
+\begin{align}
+\sum_{k=1}^n A_{1,k}   x_k \amp = c_1\notag\\
+\amp  \vdots\tag{3.27}\\
+\sum_{k=1}^n A_{m,k}   x_k \amp = c_m\text{.}\notag
+\end{align}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x3nullspace-4-23">При таких обозначениях возникает вопрос, существует ли такой выбор постоянных членов <span class="process-math">\(c_1, \dots,
+c_m \in \F{}\)</span>, при котором не существует решения приведенной выше системы.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="x3nullspace-4-24" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="x3nullspace-4-24-1"><a href="x3nullspace.html#x13a" class="xref" data-knowl="./knowl/xref/x13a.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.26: однородная система линейных уравнений">Результаты 3.26</a> и <a href="x3nullspace.html#x14a" class="xref" data-knowl="./knowl/xref/x14a.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.28: система линейных уравнений с большим количеством уравнений, чем переменных">Теорема 3.28</a>, которые сравнивают количество переменных и количество уравнений, также можно доказать с помощью исключения Гаусса. Принятый здесь абстрактный подход, по-видимому, обеспечивает более чистые доказательства.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-24-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<div class="para" id="x3nullspace-4-25"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x3nullspace-4-26">Определите <span class="process-math">\(T\colon \F{n} \rightarrow \F{m}\)</span>, как в <a href="x3nullspace.html#x3sim" class="xref" data-knowl="./knowl/xref/x3sim.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 3.25">(3.25)</a>. Уравнение <span class="process-math">\(T(x_1, \dots, x_n) \!= \!(c_1, \dots,
+c_m)\)</span> совпадает с системой уравнений <a href="x3nullspace.html#x3nullspace-4-22-7" class="xref" data-knowl="./knowl/xref/x3inhomeq.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 3.27">(3.27)</a>. Таким образом, мы хотим знать, является ли <span class="process-math">\(\ran T \ne \FF{m}\)</span>. Следовательно, мы можем перефразировать наш вопрос об отсутствии решения для некоторого выбора <span class="process-math">\(c_1, \dots,
+c_m \in \F{}\)</span> следующим образом: какое условие гарантирует, что <span class="process-math">\(T\)</span> не является сюръективным? Следующий результат дает одно из таких условий.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x14a"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.28</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">система линейных уравнений с большим количеством уравнений, чем переменных.</span>
+</h3>
+<div class="para" id="x14a-2-1">Система линейных уравнений, в которой уравнений больше, чем переменных, не имеет решения при некотором выборе постоянных членов.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x14a-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.28: system of linear equations with more equations than variables"><a tabindex="-1" href="#x14a" title="Copy heading and permalink for Theorem 3.28: система линейных уравнений с большим количеством уравнений, чем переменных" aria-label="Copy heading and permalink for Theorem 3.28: system of linear equations with more equations than variables">🔗</a></div>
+</article>
+<details id="x3nullspace-4-28" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="x3nullspace-4-28-1">Используйте обозначения из обсуждения выше. Таким образом, <span class="process-math">\(T\)</span> — линейное отображение <span class="process-math">\(\F{n}\)</span> в <span class="process-math">\(\FF{m}\)</span>, и мы имеем систему уравнений <span class="process-math">\(m\)</span> с <span class="process-math">\(n\)</span> переменными <span class="process-math">\(x_1, \dots, x_n\)</span>; см. <a href="x3nullspace.html#x3nullspace-4-22-7" class="xref" data-knowl="./knowl/xref/x3inhomeq.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 3.27">(3.27)</a>. Если <span class="process-math">\(n \lt m\)</span>, то из <a href="x3nullspace.html#x14" class="xref" data-knowl="./knowl/xref/x14.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.24: линейное отображение в многомерное пространство не является сюръективным">Теоремы 3.24</a> следует, что <span class="process-math">\(T\)</span> не сюръективен. Как обсуждалось выше, это показывает, что если в системе линейных уравнений больше уравнений, чем переменных, то для некоторого выбора постоянных членов не существует решения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-28-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.2.3.5"><a tabindex="-1" href="#x3nullspace-4-28" title="Copy heading and permalink for Proof 3.2.3.5" aria-label="Copy heading and permalink for Proof 3.2.3.5">🔗</a></div>
+</article></details>
+<div class="para" id="x3nullspace-4-29">Пример приведенного выше результата: система пяти линейных уравнений с четырьмя переменными не имеет решения при некотором выборе постоянных членов.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<section class="exercises" id="x3nullspace-4-30">
+<h3 class="heading hide-type">
+<span class="type">Упражнения</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Упражнения</span>
+</h3>
+<article class="exercise exercise-like" id="x3nullspace-4-30-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-2-1-1">Приведите пример линейного отображения <span class="process-math">\(T\)</span> с <span class="process-math">\(\dim \ker T = 3\)</span> и <span class="process-math">\(\dim \ran T = 2\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.1"><a tabindex="-1" href="#x3nullspace-4-30-2" title="Copy heading and permalink for Exercise 3.2.3.1" aria-label="Copy heading and permalink for Exercise 3.2.3.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-3"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-3-1-1">Предположим, что <span class="process-math">\(S, T \in \Lc(V)\)</span> таковы, что <span class="process-math">\(\ran S \subset \ker T{}\)</span>. Докажите, что <span class="process-math">\((ST)^2 = 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.2"><a tabindex="-1" href="#x3nullspace-4-30-3" title="Copy heading and permalink for Exercise 3.2.3.2" aria-label="Copy heading and permalink for Exercise 3.2.3.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-4"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="x3nullspace-4-30-4-1-1">
+<div class="para">Предположим, <span class="process-math">\(v_1, \dots, v_m\)</span> — список векторов из <span class="process-math">\(V{}\)</span>. Определите <span class="process-math">\(T \in \Lc( \FF{m}, V )\)</span> по</div>
+<div class="displaymath process-math" id="x3nullspace-4-30-4-1-1-4">
+\begin{equation*}
+T(z_1, \dots, z_m) = z_1 v_1 + \dots + z_m v_m.
+\end{equation*}
+</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x3nullspace-4-30-4-1-1-5">
+<li id="x3nullspace-4-30-4-1-1-5-1">
+<div class="para" id="x3nullspace-4-30-4-1-1-5-1-1">Какое свойство матрицы <span class="process-math">\(T\)</span> соответствует тому, что <span class="process-math">\(v_1, \dots,
+v_m\)</span> порождает <span class="process-math">\(V\)</span>?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-4-1-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.3.3.a"><a tabindex="-1" href="#x3nullspace-4-30-4-1-1-5-1" title="Copy heading and permalink for Item 3.2.3.3.a" aria-label="Copy heading and permalink for Item 3.2.3.3.a">🔗</a></div>
+</li>
+<li id="x3nullspace-4-30-4-1-1-5-2">
+<div class="para" id="x3nullspace-4-30-4-1-1-5-2-1">Какое свойство <span class="process-math">\(T\)</span> соответствует линейной независимости списка <span class="process-math">\(v_1, \dots,
+v_m\)</span>?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-4-1-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.3.3.b"><a tabindex="-1" href="#x3nullspace-4-30-4-1-1-5-2" title="Copy heading and permalink for Item 3.2.3.3.b" aria-label="Copy heading and permalink for Item 3.2.3.3.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.3"><a tabindex="-1" href="#x3nullspace-4-30-4" title="Copy heading and permalink for Exercise 3.2.3.3" aria-label="Copy heading and permalink for Exercise 3.2.3.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-5"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-5-1-1">Покажите, что <span class="process-math">\(\{ T \in \Lc( \RR{5}, \R4 ): \dim \ker T &gt; 2 \}\)</span> не является подпространством <span class="process-math">\(\Lc( \RR{5}, \R4 )\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.4"><a tabindex="-1" href="#x3nullspace-4-30-5" title="Copy heading and permalink for Exercise 3.2.3.4" aria-label="Copy heading and permalink for Exercise 3.2.3.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-6"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-6-1-1">Приведите пример <span class="process-math">\(T \in \Lc( \R{4} )\)</span> такого, что <span class="process-math">\(\ran T = \ker T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.5"><a tabindex="-1" href="#x3nullspace-4-30-6" title="Copy heading and permalink for Exercise 3.2.3.5" aria-label="Copy heading and permalink for Exercise 3.2.3.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-7"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-7-1-1">Докажите, что не существует <span class="process-math">\(T \in \Lc( \R{5} )\)</span> такого, что <span class="process-math">\(\ran T = \ker T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.6"><a tabindex="-1" href="#x3nullspace-4-30-7" title="Copy heading and permalink for Exercise 3.2.3.6" aria-label="Copy heading and permalink for Exercise 3.2.3.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-8"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-8-1-1">Предположим, что <span class="process-math">\(V\)</span> и <span class="process-math">\(W\)</span> конечномерны с <span class="process-math">\(2 \le \dim V \le \dim W{}\)</span>. Покажите, что <span class="process-math">\(\{ T \in \Lc(V{}, W) : T \text{ не инъективно } \}\)</span> не является подпространством <span class="process-math">\(\Lc(V{}, W)\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.7"><a tabindex="-1" href="#x3nullspace-4-30-8" title="Copy heading and permalink for Exercise 3.2.3.7" aria-label="Copy heading and permalink for Exercise 3.2.3.7">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-9"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-9-1-1">Предположим, что <span class="process-math">\(V\)</span> и <span class="process-math">\(W\)</span> конечномерны с <span class="process-math">\(\dim V \ge \dim W \ge 2\)</span>. Покажите, что <span class="process-math">\(\{ T \in \Lc(V{}, W) : T \text{ не сюръективно } \}\)</span> не является подпространством <span class="process-math">\(\Lc(V{}, W)\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.8"><a tabindex="-1" href="#x3nullspace-4-30-9" title="Copy heading and permalink for Exercise 3.2.3.8" aria-label="Copy heading and permalink for Exercise 3.2.3.8">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3001"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3001-1-1">Предположим, что <span class="process-math">\(T \in \Lc(V{},W)\)</span> инъективен и <span class="process-math">\(v_1, \dots,
+v_n\)</span> линейно независим в <span class="process-math">\(V{}\)</span>. Докажите, что <span class="process-math">\(Tv_1, \dots, Tv_n\)</span> линейно независима в <span class="process-math">\(W{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3001-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.9"><a tabindex="-1" href="#x3001" title="Copy heading and permalink for Exercise 3.2.3.9" aria-label="Copy heading and permalink for Exercise 3.2.3.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3spanrange"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3spanrange-1-1">Предположим, <span class="process-math">\(v_1, \dots,
+v_n\)</span> порождает <span class="process-math">\(V\)</span> и <span class="process-math">\(T \in \Lc(V{},W)\)</span>. Покажите, что <span class="process-math">\(Tv_1, \dots, Tv_n\)</span> порождает <span class="process-math">\(\ran T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3spanrange-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.10"><a tabindex="-1" href="#x3spanrange" title="Copy heading and permalink for Exercise 3.2.3.10" aria-label="Copy heading and permalink for Exercise 3.2.3.10">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-12"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="x3nullspace-4-30-12-1-1">
+<div class="para">Предположим, что <span class="process-math">\(V\)</span> конечномерен и что <span class="process-math">\(T \in \Lc(V{},W)\)</span>. Докажите, что существует подпространство <span class="process-math">\(U\)</span> в <span class="process-math">\(V\)</span> такое, что</div>
+<div class="displaymath process-math" id="x3nullspace-4-30-12-1-1-5">
+\begin{equation*}
+U \cap \ker T = \{0\} \andd \ran T = \{Tu:u\in U\}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.11"><a tabindex="-1" href="#x3nullspace-4-30-12" title="Copy heading and permalink for Exercise 3.2.3.11" aria-label="Copy heading and permalink for Exercise 3.2.3.11">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-13"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="x3nullspace-4-30-13-1-1">
+<div class="para">Предположим, что <span class="process-math">\(T\)</span> — линейное отображение <span class="process-math">\(\F{4}\)</span> в <span class="process-math">\(\F{2}\)</span> такое, что</div>
+<div class="displaymath process-math" id="x3nullspace-4-30-13-1-1-4">
+\begin{equation*}
+\ker T = \{ (x_1, x_2, x_3, x_4) \in \F{4}: x_1 = 5 x_2 \ and\  x_3 = 7 x_4  \}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="x3nullspace-4-30-13-1-2">Докажите, что <span class="process-math">\(T\)</span> сюръективно.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-13-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.12"><a tabindex="-1" href="#x3nullspace-4-30-13" title="Copy heading and permalink for Exercise 3.2.3.12" aria-label="Copy heading and permalink for Exercise 3.2.3.12">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-14"><h4 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-14-1-1">Предположим, что <span class="process-math">\(U\)</span> — трехмерное подпространство <span class="process-math">\(\R{8}\)</span> и что <span class="process-math">\(T\)</span> — линейное отображение из <span class="process-math">\(\R{8}\)</span> в <span class="process-math">\(\R{5}\)</span> такое, что <span class="process-math">\(\ker T = U\)</span>. Докажите, что <span class="process-math">\(T\)</span> сюръективно.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.13"><a tabindex="-1" href="#x3nullspace-4-30-14" title="Copy heading and permalink for Exercise 3.2.3.13" aria-label="Copy heading and permalink for Exercise 3.2.3.13">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-15"><h4 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-15-1-1">Докажите, что не существует линейного отображения из <span class="process-math">\(\F{5}\)</span> в <span class="process-math">\(\F{2}\)</span>, нуль-пространство которого равно <span class="process-math">\(\{ (x_1, x_2, x_3, x_4, x_5) \in \F{5}: x_1 = 3 x_2 \ and\ x_3 = x_4 = x_5 \}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.14"><a tabindex="-1" href="#x3nullspace-4-30-15" title="Copy heading and permalink for Exercise 3.2.3.14" aria-label="Copy heading and permalink for Exercise 3.2.3.14">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-16"><h4 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-16-1-1">Предположим, что существует линейное отображение на <span class="process-math">\(V\)</span>, нуль-пространство и образ которого конечномерны. Докажите, что <span class="process-math">\(V\)</span> конечномерна.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.15"><a tabindex="-1" href="#x3nullspace-4-30-16" title="Copy heading and permalink for Exercise 3.2.3.15" aria-label="Copy heading and permalink for Exercise 3.2.3.15">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-17"><h4 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-17-1-1">Предположим, что <span class="process-math">\(V\)</span> и <span class="process-math">\(W\)</span> конечномерны. Докажите, что существует инъективное линейное отображение из <span class="process-math">\(V\)</span> в <span class="process-math">\(W\)</span> тогда и только тогда, когда <span class="process-math">\(\dim V \le \dim W{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.16"><a tabindex="-1" href="#x3nullspace-4-30-17" title="Copy heading and permalink for Exercise 3.2.3.16" aria-label="Copy heading and permalink for Exercise 3.2.3.16">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-18"><h4 class="heading"><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-18-1-1">Предположим, что <span class="process-math">\(V\)</span> и <span class="process-math">\(W\)</span> конечномерны. Докажите, что существует сюръективное линейное отображение <span class="process-math">\(V\)</span> на <span class="process-math">\(W\)</span> тогда и только тогда, когда <span class="process-math">\(\dim V \ge \dim W{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.17"><a tabindex="-1" href="#x3nullspace-4-30-18" title="Copy heading and permalink for Exercise 3.2.3.17" aria-label="Copy heading and permalink for Exercise 3.2.3.17">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-19"><h4 class="heading"><span class="codenumber">18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-19-1-1">Предположим, что <span class="process-math">\(V\)</span> и <span class="process-math">\(W\)</span> конечномерны и что <span class="process-math">\(U\)</span> — подпространство в <span class="process-math">\(V{}\)</span>. Докажите, что существует <span class="process-math">\(T \in \Lc(V{},W)\)</span> такое, что <span class="process-math">\(\ker T = U\)</span> тогда и только тогда, когда <span class="process-math">\(\dim U \ge \dim V - \dim W{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.18"><a tabindex="-1" href="#x3nullspace-4-30-19" title="Copy heading and permalink for Exercise 3.2.3.18" aria-label="Copy heading and permalink for Exercise 3.2.3.18">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-20"><h4 class="heading"><span class="codenumber">19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-20-1-1">Предположим, что <span class="process-math">\(W\)</span> конечномерен и <span class="process-math">\(T \in \Lc(V{},W)\)</span>. Докажите, что <span class="process-math">\(T\)</span> инъективен тогда и только тогда, когда существует <span class="process-math">\(S \in \Lc(W{}, V)\)</span> такой, что <span class="process-math">\(ST\)</span> является тождественным оператором на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.19"><a tabindex="-1" href="#x3nullspace-4-30-20" title="Copy heading and permalink for Exercise 3.2.3.19" aria-label="Copy heading and permalink for Exercise 3.2.3.19">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-21"><h4 class="heading"><span class="codenumber">20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-21-1-1">Предположим, что <span class="process-math">\(W\)</span> конечномерен и <span class="process-math">\(T \in \Lc(V{},W)\)</span>. Докажите, что <span class="process-math">\(T\)</span> сюръективен тогда и только тогда, когда существует <span class="process-math">\(S \in \Lc(W{}, V)\)</span> такой, что <span class="process-math">\(TS\)</span> является тождественным оператором на <span class="process-math">\(W{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.20"><a tabindex="-1" href="#x3nullspace-4-30-21" title="Copy heading and permalink for Exercise 3.2.3.20" aria-label="Copy heading and permalink for Exercise 3.2.3.20">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3diminv"><h4 class="heading"><span class="codenumber">21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="x3diminv-1-1">
+<div class="para">Предположим, что <span class="process-math">\(V\)</span> конечномерно, <span class="process-math">\(T \in \Lc(V{}, W)\)</span> и <span class="process-math">\(U\)</span> — подпространство <span class="process-math">\(W{}\)</span>. Докажите, что <span class="process-math">\(\{ v \in V: Tv \in U \}\)</span> — подпространство <span class="process-math">\(V\)</span> и</div>
+<div class="displaymath process-math" id="x3diminv-1-1-7">
+\begin{equation*}
+\dim \{ v \in V: Tv \in U \} = \dim \ker T + \dim (U \cap \ran T).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3diminv-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.21"><a tabindex="-1" href="#x3diminv" title="Copy heading and permalink for Exercise 3.2.3.21" aria-label="Copy heading and permalink for Exercise 3.2.3.21">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-23"><h4 class="heading"><span class="codenumber">22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="x3nullspace-4-30-23-1-1">
+<div class="para">Предположим, что <span class="process-math">\(U\)</span> и <span class="process-math">\(V\)</span> — конечномерные векторные пространства, а <span class="process-math">\(S \in \Lc(V{}, W)\)</span> и <span class="process-math">\(T \in \Lc(U, V)\)</span>. Докажите, что</div>
+<div class="displaymath process-math" id="x3nullspace-4-30-23-1-1-5">
+\begin{equation*}
+\dim \ker ST \le \dim \ker S + \dim \ker T{}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.22"><a tabindex="-1" href="#x3nullspace-4-30-23" title="Copy heading and permalink for Exercise 3.2.3.22" aria-label="Copy heading and permalink for Exercise 3.2.3.22">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x5dimST"><h4 class="heading"><span class="codenumber">23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="x5dimST-1-1">
+<div class="para">Предположим, что <span class="process-math">\(U\)</span> и <span class="process-math">\(V\)</span> — конечномерные векторные пространства, а <span class="process-math">\(S \in \Lc(V{}, W)\)</span> и <span class="process-math">\(T \in \Lc(U, V)\)</span>. Докажите, что</div>
+<div class="displaymath process-math" id="x5dimST-1-1-5">
+\begin{equation*}
+\dim \ran ST \le \min \{\dim \ran S, \dim \ran T\}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x5dimST-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.23"><a tabindex="-1" href="#x5dimST" title="Copy heading and permalink for Exercise 3.2.3.23" aria-label="Copy heading and permalink for Exercise 3.2.3.23">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-25"><h4 class="heading"><span class="codenumber">24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="x3nullspace-4-30-25-1-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x3nullspace-4-30-25-1-1-1">
+<li id="x3nullspace-4-30-25-1-1-1-1">
+<div class="para" id="x3nullspace-4-30-25-1-1-1-1-1">Предположим, что <span class="process-math">\(\dim V = 5\)</span> и <span class="process-math">\(S, T \in \Lc(V)\)</span> таковы, что <span class="process-math">\(ST = 0\)</span>. Докажите, что <span class="process-math">\(\dim \ran TS \le 2\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-25-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.3.24.a"><a tabindex="-1" href="#x3nullspace-4-30-25-1-1-1-1" title="Copy heading and permalink for Item 3.2.3.24.a" aria-label="Copy heading and permalink for Item 3.2.3.24.a">🔗</a></div>
+</li>
+<li id="x3nullspace-4-30-25-1-1-1-2">
+<div class="para" id="x3nullspace-4-30-25-1-1-1-2-1">Приведите пример <span class="process-math">\(S, T \in \Lc( \F5 )\)</span> с <span class="process-math">\(ST = 0\)</span> и <span class="process-math">\(\dim \ran TS = 2\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-25-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.3.24.b"><a tabindex="-1" href="#x3nullspace-4-30-25-1-1-1-2" title="Copy heading and permalink for Item 3.2.3.24.b" aria-label="Copy heading and permalink for Item 3.2.3.24.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-25-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.24"><a tabindex="-1" href="#x3nullspace-4-30-25" title="Copy heading and permalink for Exercise 3.2.3.24" aria-label="Copy heading and permalink for Exercise 3.2.3.24">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="kerT1"><h4 class="heading"><span class="codenumber">25<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="kerT1-1-1">Предположим, что <span class="process-math">\(W\)</span> конечномерен и <span class="process-math">\(S, T \in \Lc(V{}, W)\)</span>. Докажите, что <span class="process-math">\(\ker S \subset \ker T\)</span> тогда и только тогда, когда существует <span class="process-math">\(E \in \Lc(W)\)</span> такой, что <span class="process-math">\(T = E S\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#kerT1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.25"><a tabindex="-1" href="#kerT1" title="Copy heading and permalink for Exercise 3.2.3.25" aria-label="Copy heading and permalink for Exercise 3.2.3.25">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-27"><h4 class="heading"><span class="codenumber">26<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-27-1-1">Предположим, что <span class="process-math">\(V\)</span> конечномерен и <span class="process-math">\(S, T \in \Lc(V{}, W)\)</span>. Докажите, что <span class="process-math">\(\ran S \subset \ran T\)</span> тогда и только тогда, когда существует <span class="process-math">\(E \in \Lc(V)\)</span> такой, что <span class="process-math">\(S = T E\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-27-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.26"><a tabindex="-1" href="#x3nullspace-4-30-27" title="Copy heading and permalink for Exercise 3.2.3.26" aria-label="Copy heading and permalink for Exercise 3.2.3.26">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-28"><h4 class="heading"><span class="codenumber">27<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-28-1-1">Предположим <span class="process-math">\(P \in \Lc(V)\)</span> и <span class="process-math">\(P^2 = P\)</span>. Докажите, что <span class="process-math">\(V = \ker P \oplus \ran P\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-28-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.27"><a tabindex="-1" href="#x3nullspace-4-30-28" title="Copy heading and permalink for Exercise 3.2.3.27" aria-label="Copy heading and permalink for Exercise 3.2.3.27">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3polydeg"><h4 class="heading"><span class="codenumber">28<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3polydeg-1-1">Предположим, что <span class="process-math">\(D \in \Lc\bigl(\P(\R{})\bigr)\)</span> таков, что <span class="process-math">\(\deg Dp = (\deg p) - 1\)</span> для любого непостоянного многочлена <span class="process-math">\(p \in \P(\R{})\)</span>. Докажите, что <span class="process-math">\(D\)</span> сюръективно.  Примечание. Обозначение <span class="process-math">\(D\)</span> используется выше, чтобы напомнить вам о преобразовании дифференцирования, которое переводит полином <span class="process-math">\(p\)</span> в <span class="process-math">\(p'\!\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3polydeg-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.28"><a tabindex="-1" href="#x3polydeg" title="Copy heading and permalink for Exercise 3.2.3.28" aria-label="Copy heading and permalink for Exercise 3.2.3.28">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-30"><h4 class="heading"><span class="codenumber">29<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-30-1-1">Предположим, <span class="process-math">\(p \in \P(\R{})\)</span>. Докажите, что существует многочлен <span class="process-math">\(q \in \P(\R{})\)</span> такой, что <span class="process-math">\(5 q'' + 3 q' = p\)</span>. Примечание. Это упражнение можно выполнить и без линейной алгебры, но интереснее выполнять его с использованием линейной алгебры.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-30-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.29"><a tabindex="-1" href="#x3nullspace-4-30-30" title="Copy heading and permalink for Exercise 3.2.3.29" aria-label="Copy heading and permalink for Exercise 3.2.3.29">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-31"><h4 class="heading"><span class="codenumber">30<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="x3nullspace-4-30-31-1-1">
+<div class="para">Предположим <span class="process-math">\(\phi \in \Lc(V{}, \F{})\)</span> и <span class="process-math">\(\phi \ne 0\)</span>. Предположим, <span class="process-math">\(u \in V\)</span> не принадлежит <span class="process-math">\(\ker \phi\)</span>. Докажите, что</div>
+<div class="displaymath process-math" id="x3nullspace-4-30-31-1-1-5">
+\begin{equation*}
+V = \ker \phi \oplus \{au: a \in \F{}\}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-31-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.30"><a tabindex="-1" href="#x3nullspace-4-30-31" title="Copy heading and permalink for Exercise 3.2.3.30" aria-label="Copy heading and permalink for Exercise 3.2.3.30">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-32"><h4 class="heading"><span class="codenumber">31<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-32-1-1">Предположим, что <span class="process-math">\(V\)</span> конечномерно, <span class="process-math">\(X\)</span> — подпространство <span class="process-math">\(V{}\)</span> и <span class="process-math">\(Y\)</span> — конечномерное подпространство <span class="process-math">\(W{}\)</span>. Докажите, что существует <span class="process-math">\(T \in \Lc(V, W)\)</span> такое, что <span class="process-math">\(\ker T = X\)</span> и <span class="process-math">\(\ran T = Y\)</span> тогда и только тогда, когда <span class="process-math">\(\dim X + \dim Y = \dim V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-32-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.31"><a tabindex="-1" href="#x3nullspace-4-30-32" title="Copy heading and permalink for Exercise 3.2.3.31" aria-label="Copy heading and permalink for Exercise 3.2.3.31">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3nullspace-4-30-33"><h4 class="heading"><span class="codenumber">32<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x3nullspace-4-30-33-1-1">Предположим, что <span class="process-math">\(V\)</span> конечномерен с <span class="process-math">\(\dim V &gt; 1\)</span>. Покажите, что если <span class="process-math">\(\fun \phi {\!\Lc(V)\!} {\F{}}\)</span> — линейное отображение такое, что <span class="process-math">\(\phi(ST) = \phi(S) \phi(T)\)</span> для всех <span class="process-math">\(S, T \in \Lc(V)\)</span>, то <span class="process-math">\(\phi = 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-33-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="solutions">
+<details id="x3nullspace-4-30-33-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Подсказка</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="x3nullspace-4-30-33-2-1">Описание двусторонних идеалов <span class="process-math">\(\Lc(V)\)</span>, данное в <a href="vslinear.html#ideals" class="xref" data-knowl="./knowl/xref/ideals.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 3.1.2.17">Упражнении 3.1.2.17</a> в <a href="vslinear.html" class="internal" title="Раздел 3.1: Векторное пространство линейных отображений">Разделе 3.1</a>, может оказаться полезным.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3nullspace-4-30-33-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 3.2.3.32.1"><a tabindex="-1" href="#x3nullspace-4-30-33-2" title="Copy heading and permalink for Hint 3.2.3.32.1" aria-label="Copy heading and permalink for Hint 3.2.3.32.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.32"><a tabindex="-1" href="#x3nullspace-4-30-33" title="Copy heading and permalink for Exercise 3.2.3.32" aria-label="Copy heading and permalink for Exercise 3.2.3.32">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3complexMap"><h4 class="heading"><span class="codenumber">33<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="x3complexMap-1-1">
+<div class="para">Предположим, что <span class="process-math">\(V\)</span> и <span class="process-math">\(W\)</span> — вещественные векторные пространства и <span class="process-math">\(T \in \Lc(V{}, W)\)</span>. Определите <span class="process-math">\(\fun {T{}_{\C{}}} {V{}_{\C{}}} {W{}_{\C{}}}\)</span> по</div>
+<div class="displaymath process-math" id="x3complexMap-1-1-7">
+\begin{equation*}
+T{}_{\C{}}(u + iv) = Tu + iTv
+\end{equation*}
+</div>
+<div class="para">для всех <span class="process-math">\(u, v \in V{}\)</span>.</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x3complexMap-1-1-9">
+<li id="x3complexMap-1-1-9-1">
+<div class="para" id="x3complexMap-1-1-9-1-1">Покажите, что <span class="process-math">\(T{}_{\C{}}\)</span> — (комплексное) линейное отображение <span class="process-math">\(V{}_{\C{}}\)</span> в <span class="process-math">\(W{}_{\C{}}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3complexMap-1-1-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.3.33.a"><a tabindex="-1" href="#x3complexMap-1-1-9-1" title="Copy heading and permalink for Item 3.2.3.33.a" aria-label="Copy heading and permalink for Item 3.2.3.33.a">🔗</a></div>
+</li>
+<li id="x3complexMap-1-1-9-2">
+<div class="para" id="x3complexMap-1-1-9-2-1">Покажите, что <span class="process-math">\(T{}_{\C{}}\)</span> инъективно тогда и только тогда, когда <span class="process-math">\(T\)</span> инъективно.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3complexMap-1-1-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.3.33.b"><a tabindex="-1" href="#x3complexMap-1-1-9-2" title="Copy heading and permalink for Item 3.2.3.33.b" aria-label="Copy heading and permalink for Item 3.2.3.33.b">🔗</a></div>
+</li>
+<li id="x3complexMap-1-1-9-3">
+<div class="para" id="x3complexMap-1-1-9-3-1">Покажите, что <span class="process-math">\(\ran T{}_{\C{}} = W{}_{\C{}}\)</span> тогда и только тогда, когда <span class="process-math">\(\ran T = W{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3complexMap-1-1-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.2.3.33.c"><a tabindex="-1" href="#x3complexMap-1-1-9-3" title="Copy heading and permalink for Item 3.2.3.33.c" aria-label="Copy heading and permalink for Item 3.2.3.33.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3complexMap-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="x3complexMap-1-2">Примечание. Определение комплексификации <span class="process-math">\(V{}_{\C{}}\)</span> см. в <a href="x1DefVS.html#x1VC" class="xref" data-knowl="./knowl/xref/x1VC.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пункт 1.2.8.b">Упражнении 1.2.8.b</a> в <a href="x1DefVS.html" class="internal" title="Раздел 1.2: Определение векторного пространства">Разделе 1.2</a>. Линейное отображение <span class="process-math">\(T{}_{\C{}}\)</span> называется <dfn class="terminology">комплексификацией</dfn> линейного отображения <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3complexMap-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.2.3.33"><a tabindex="-1" href="#x3complexMap" title="Copy heading and permalink for Exercise 3.2.3.33" aria-label="Copy heading and permalink for Exercise 3.2.3.33">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercises 3.2.3: Exercises"><a tabindex="-1" href="#x3nullspace-4-30" title="Copy heading and permalink for Exercises 3.2.3: Упражнения" aria-label="Copy heading and permalink for Exercises 3.2.3: Exercises">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.2.3: Fundamental Theorem of Linear Maps"><a tabindex="-1" href="#x3nullspace-4" title="Copy heading and permalink for Subsection 3.2.3: Основная теорема о линейных отображениях" aria-label="Copy heading and permalink for Subsection 3.2.3: Fundamental Theorem of Linear Maps">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 3.2: Null Spaces and Ranges"><a tabindex="-1" href="#x3nullspace" title="Copy heading and permalink for Section 3.2: Нуль-пространства и образы" aria-label="Copy heading and permalink for Section 3.2: Null Spaces and Ranges">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="vslinear.html" title="Назад"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Назад</span></a><a class="top-button button" href="#" title="В начало"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">В начало</span></a><a class="next-button button" href="matrices.html" title="Далее"><span class="name">Далее</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" alt="Runestone Academy logo" src="data:image/png;base64,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"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" alt="MathJax logo" src="data:image/png;base64,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"></a>
+</div>
+</body>
+</html>

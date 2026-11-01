@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h2 class="heading">
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.123</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">аннулятор двумерного подпространства в <span class="process-math">\(\R5\)</span>.</span>
+</h2>
+<div class="para logical">
+<div class="para">Обозначим через <span class="process-math">\(e_1, e_2, e_3, e_4, e_5\)</span> стандартный базис <span class="process-math">\(\R5\)</span>; пусть <span class="process-math">\(\phi_1, \phi_2, \phi_3, \phi_4,\phi_5 \in {( \R5 )}'\!\)</span> обозначает двойственный базис <span class="process-math">\(e_1, e_2, e_3, e_4, e_5\)</span>. Предположим</div>
+<div class="displaymath process-math">
+\begin{equation*}
+U = \Span(e_1, e_2) = \{ (x_1, x_2, 0, 0, 0) \in \R5: x_1, x_2 \in \R{} \}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#annih-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para">Мы хотим показать, что <span class="process-math">\(U^0 = \Span(\phi_3, \phi_4, \phi_5)\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#annih-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> 
+<div class="para">Напомним (см. <a href="duals.html#dualstandard" class="xref" data-knowl="./knowl/xref/dualstandard.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 3.113: двойственный базис к стандартному базису пространства \F{n}">Пример 3.113</a>), что <span class="process-math">\(\phi_j\)</span> — это линейный функционал от <span class="process-math">\(\R5\)</span>, который выбирает координату <span class="process-math">\(j^\nth\)</span>: <span class="process-math">\(\phi_j(x_1, x_2, x_3, x_4, x_5) = x_j\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#annih-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> 
+<div class="para logical">
+<div class="para">Сначала предположим, что <span class="process-math">\(\phi \in \Span(\phi_3, \phi_4, \phi_5)\)</span>. Тогда существуют <span class="process-math">\(c_3, c_4, c_5 \in \R{}\)</span> такие, что <span class="process-math">\(\phi = c_3 \phi_3 + c_4 \phi_4 + c_5 \phi_5\)</span>. Если <span class="process-math">\((x_1, x_2, 0, 0, 0) \in U\)</span>, то</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(x_1, x_2, 0, 0, 0) = (c_3 \phi_3 + c_4 \phi_4 + c_5 \phi_5)(x_1, x_2, 0, 0, 0) = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#annih-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para">Таким образом, <span class="process-math">\(\phi \in U^0{}\)</span>. Таким образом, мы показали, что <span class="process-math">\(\Span(\phi_3, \phi_4, \phi_5) \subset U^0{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#annih-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> 
+<div class="para logical">
+<div class="para">Чтобы показать включение в другом направлении, предположим, что <span class="process-math">\(\phi \in U^0{}\)</span>. Поскольку двойственный базис является базисом <span class="process-math">\({( \R5 )}'\!\)</span>, существует <span class="process-math">\(c_1, c_2, c_3, c_4, c_5 \in \R{}\)</span> такой, что <span class="process-math">\(\phi = c_1 \phi_1 + c_2 \phi_2 + c_3 \phi_3 + c_4 \phi_4 + c_5 \phi_5\)</span>. Поскольку <span class="process-math">\(e_1 \in U\)</span> и <span class="process-math">\(\phi \in U^0{}\)</span>, у нас есть</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = \phi(e_1) = (c_1 \phi_1 + c_2 \phi_2 + c_3 \phi_3 + c_4 \phi_4 + c_5 \phi_5)(e_1) = c_1.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#annih-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para">Аналогично, <span class="process-math">\(e_2 \in U\)</span> и, следовательно, <span class="process-math">\(c_2 = 0\)</span>. Следовательно, <span class="process-math">\(\phi = c_3 \phi_3 + c_4 \phi_4 + c_5 \phi_5\)</span>. Таким образом, <span class="process-math">\(\phi \in \Span(\phi_3, \phi_4, \phi_5)\)</span>, который показывает, что <span class="process-math">\(U^0 \subset \Span(\phi_3, \phi_4, \phi_5)\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#annih-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> 
+<div class="para">Таким образом, <span class="process-math">\(U^0 = \Span(\phi_3, \phi_4, \phi_5)\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#annih-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.123: the annihilator of a two-dimensional subspace of  \R5"><a tabindex="-1" href="#annih" title="Copy heading and permalink for Example 3.123: аннулятор двумерного подпространства в \R5" aria-label="Copy heading and permalink for Example 3.123: the annihilator of a two-dimensional subspace of  \R5">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="duals.html#annih">В контексте</a></span>
+</body>
+</html>

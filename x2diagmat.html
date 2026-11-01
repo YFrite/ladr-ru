@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="ru" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Коммутирующие операторы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="_static/pretext/fonts/material-symbols-outlined.css">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+</style>
+<link rel="stylesheet" type="text/css" href="external/customcss.css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Линейная алгебра: верный подход">
+<meta property="og:title" content="Линейная алгебра: верный подход">
+<meta property="book:title" content="Линейная алгебра: верный подход">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.55"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.55"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.dd07797f77620576.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.11d27cdc38930c2c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Перейти к основному содержимому</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Линейная алгебра: верный подход</span></a></div>
+<p class="byline">Шелдон Акслер</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Содержание"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Содержание</span></button><a class="index-button button" href="backmatter-5.html" title="Предметный указатель"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Указатель</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Поиск по книге"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Поиск</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Поисковый запрос" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Поисковый запрос"><button aria-label="Закрыть" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Результаты поиска: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>Ничего не найдено.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Читать вслух" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Читать вслух</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Предыдущее предложение"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Воспроизвести"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Следующее предложение"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Продолжить<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Настройки чтения"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Настройки чтения вслух</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Закрыть"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Голос</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Скорость чтения</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Свёрнутое содержимое</span></label><select id="ptx-read-aloud-asides"><option value="skip">Объявлять, не читать</option>
+<option value="read">Читать автоматически</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Следить за текстом (автопрокрутка)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Автоматически переходить на следующую страницу</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Настройки отображения"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Настройки отображения</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Настройки отображения</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Закрыть"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Межстрочный интервал</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Размер шрифта</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Тема</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>Системная</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Светлая</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Тёмная</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Специальные возможности</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Показывать постоянные ссылки</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Сбросить всё</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="diagmat.html" title="Назад"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Назад</span></a><a class="up-button button" href="eigs.html" title="Наверх"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Наверх</span></a><a class="next-button button" href="InnerProductSpaces.html" title="Далее"><span class="name">Далее</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tensor}{\otimes}
+\newcommand{\F}[1]{\symbf{F}^{#1}}
+\newcommand{\andd}{\quad \text{и} \quad}
+\newcommand{\orr}{\quad \text{или} \quad}
+\newcommand{\butt}{\quad \text{но} \quad}
+\newcommand{\fun}[3]{#1 \colon #2 \to #3}
+\newcommand{\nth}{{\text{-й}}}
+\newcommand{\C}[1]{\symbf{C}^{#1}}
+\newcommand{\F}[1]{\symbf{F}^{#1}}
+\newcommand{\R}[1]{\symbf{R}^{#1}}
+\newcommand{\CC}[1]{\symbf{C}^{#1}}
+\newcommand{\FF}[1]{\symbf{F}^{#1}}
+\newcommand{\RR}[1]{\symbf{R}^{#1}}
+\newcommand{\A}{\symcal{A}}
+\newcommand{\B}{\symcal{B}}
+\newcommand{\E}{\symcal{E}}
+\newcommand{\CF}{\symcal{F}}
+\newcommand{\Lc}{\symcal{L}}
+\newcommand{\M}{\symcal{M}}
+\newcommand{\P}{\symcal{P}}
+\newcommand{\sm}{\backslash}
+\newcommand{\Space}{}
+\newcommand{\pound}[1]{#1^{\#}}
+\DeclareMathOperator{\ran}{range}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\perm}{perm}
+\DeclareMathOperator{\vol}{volume}
+\DeclareMathOperator{\ker}{null}
+\newcommand{\tran}[1]{#1^{\text{t}}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Содержание" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Линейная алгебра: верный подход</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="author.html" class="internal"><span class="title">Об авторе</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="forStudents.html" class="internal"><span class="title">Предисловие для студентов</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="forInstructors.html" class="internal"><span class="title">Предисловие для преподавателей</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgments.html" class="internal"><span class="title">Благодарности</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="VectorSpaces.html" class="internal"><span class="codenumber">1</span> <span class="title">Векторные пространства</span></a></div>
+<ul id="ptx-toc-group-VectorSpaces" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="VectorSpaces-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Rn_and_Cn.html" class="internal"><span class="codenumber">1.1</span> <span class="title"><span class="process-math">\(\R n\)</span> и <span class="process-math">\(\C n\)</span></span></a></div>
+<ul id="ptx-toc-group-Rn_and_Cn" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Rn_and_Cn.html#Rn_and_Cn-2" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Комплексные числа</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Rn_and_Cn.html#Rn_and_Cn-3" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Списки</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Rn_and_Cn.html#Rn_and_Cn-4" class="internal"><span class="codenumber">1.1.3</span> <span class="title"><span class="process-math">\(\F n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="Rn_and_Cn.html#fields" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Отступление о полях</span></a></div>
+<ul id="ptx-toc-group-fields" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Rn_and_Cn.html#fields-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x1DefVS.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Определение векторного пространства</span></a></div>
+<ul id="ptx-toc-group-x1DefVS" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x1DefVS.html#x1DefVS-46" class="internal"><span class="codenumber">1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x1Subspaces.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Подпространства</span></a></div>
+<ul id="ptx-toc-group-x1Subspaces" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x1Subspaces.html#x1Subspaces-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Суммы подпространств</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x1Subspaces.html#x1Subspaces-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Прямые суммы</span></a></div>
+<ul id="ptx-toc-group-x1Subspaces-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x1Subspaces.html#x1Subspaces-4-18" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="fin-dimVS.html" class="internal"><span class="codenumber">2</span> <span class="title">Конечномерные векторные пространства</span></a></div>
+<ul id="ptx-toc-group-fin-dimVS" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="fin-dimVS-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x2spli.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Линейная оболочка и линейная независимость</span></a></div>
+<ul id="ptx-toc-group-x2spli" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x2spli.html#x2spli-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Линейные комбинации и линейная оболочка</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x2spli.html#x2spli-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Линейная независимость</span></a></div>
+<ul id="ptx-toc-group-x2spli-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x2spli.html#x2spli-4-26" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="bases.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Базисы</span></a></div>
+<ul id="ptx-toc-group-bases" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="bases.html#bases-26" class="internal"><span class="codenumber">2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="dimension.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Размерность</span></a></div>
+<ul id="ptx-toc-group-dimension" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="dimension.html#dimension-30" class="internal"><span class="codenumber">2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="LinearMaps.html" class="internal"><span class="codenumber">3</span> <span class="title">Линейные отображения</span></a></div>
+<ul id="ptx-toc-group-LinearMaps" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="LinearMaps-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="vslinear.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Векторное пространство линейных отображений</span></a></div>
+<ul id="ptx-toc-group-vslinear" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="vslinear.html#vslinear-2" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Определение и примеры линейных отображений</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="vslinear.html#vslinear-3" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Алгебраические операции на <span class="process-math">\(\Lc(V, W)\)</span></span></a></div>
+<ul id="ptx-toc-group-vslinear-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vslinear.html#vslinear-3-20" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x3nullspace.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Нуль-пространства и образы</span></a></div>
+<ul id="ptx-toc-group-x3nullspace" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-2" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Нуль-пространство и инъективность</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-3" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Образ и сюръективность</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-4" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Основная теорема о линейных отображениях</span></a></div>
+<ul id="ptx-toc-group-x3nullspace-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-4-30" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="matrices.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Матрицы</span></a></div>
+<ul id="ptx-toc-group-matrices" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices.html#matrices-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Представление линейного отображения матрицей</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices.html#matrices-3" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Сложение матриц и умножение на скаляр</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices.html#matrices-4" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Умножение матриц</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="matrices.html#matrices-5" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Столбцово-строчная факторизация и ранг матрицы</span></a></div>
+<ul id="ptx-toc-group-matrices-5" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="matrices.html#x3think2" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="invertible.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Обратимость и изоморфизмы</span></a></div>
+<ul id="ptx-toc-group-invertible" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="invertible.html#invertible-2" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Обратимые линейные отображения</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="invertible.html#invertible-3" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Изоморфные векторные пространства</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="invertible.html#invertible-4" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Линейные отображения как умножение матриц</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="invertible.html#invertible-5" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Замена базиса</span></a></div>
+<ul id="ptx-toc-group-invertible-5" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="invertible.html#invertible-5-27" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="pq.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Произведения и факторпространства векторных пространств</span></a></div>
+<ul id="ptx-toc-group-pq" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="pq.html#pq-2" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Произведения векторных пространств</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="pq.html#pq-3" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Факторпространства</span></a></div>
+<ul id="ptx-toc-group-pq-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="pq.html#pq-3-29" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="duals.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Двойственность</span></a></div>
+<ul id="ptx-toc-group-duals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="duals.html#duals-2" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Двойственное пространство и двойственное отображение</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="duals.html#duals-3" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Нуль-пространство и образ двойственного отображения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="duals.html#duals-4" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Матрица двойственного отображения</span></a></div>
+<ul id="ptx-toc-group-duals-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="duals.html#duals-4-9" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="polynomials.html" class="internal"><span class="codenumber">4</span> <span class="title">Многочлены</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="eigs.html" class="internal"><span class="codenumber">5</span> <span class="title">Собственные значения и собственные векторы</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-eigs">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="eigs-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x5invar.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Инвариантные подпространства</span></a></div>
+<ul id="ptx-toc-group-x5invar" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x5invar.html#x5invar-2" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Собственные значения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x5invar.html#x5invar-3" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Многочлены от операторов</span></a></div>
+<ul id="ptx-toc-group-x5invar-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x5invar.html#x5invar-3-19" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="eigenuppertri.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Минимальный многочлен</span></a></div>
+<ul id="ptx-toc-group-eigenuppertri" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-2" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Существование собственных значений в комплексных векторных пространствах</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-3" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Собственные значения и минимальный многочлен</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-4" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Собственные значения в нечётномерных вещественных векторных пространствах</span></a></div>
+<ul id="ptx-toc-group-eigenuppertri-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-4-10" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x4utm.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Верхнетреугольные матрицы</span></a></div>
+<ul id="ptx-toc-group-x4utm" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x4utm.html#x4utm-40" class="internal"><span class="codenumber">5.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="diagmat.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Диагонализируемые операторы</span></a></div>
+<ul id="ptx-toc-group-diagmat" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="diagmat.html#diagmat-2" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Диагональные матрицы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="diagmat.html#diagmat-3" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Условия диагонализируемости</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="diagmat.html#diagmat-4" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Теорема Гершгорина о кругах</span></a></div>
+<ul id="ptx-toc-group-diagmat-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="diagmat.html#diagmat-4-12" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="x2diagmat.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Коммутирующие операторы</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-x2diagmat"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x2diagmat.html#x2diagmat-30" class="internal"><span class="codenumber">5.5</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="InnerProductSpaces.html" class="internal"><span class="codenumber">6</span> <span class="title">Пространства со скалярным произведением</span></a></div>
+<ul id="ptx-toc-group-InnerProductSpaces" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="InnerProductSpaces-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x6ipn.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Скалярные произведения и нормы</span></a></div>
+<ul id="ptx-toc-group-x6ipn" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x6ipn.html#x6ipn-2" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Скалярные произведения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x6ipn.html#x6ipn-3" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Нормы</span></a></div>
+<ul id="ptx-toc-group-x6ipn-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x6ipn.html#x6ipn-3-41" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="orthobases.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Ортонормированные базисы</span></a></div>
+<ul id="ptx-toc-group-orthobases" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="orthobases.html#orthobases-2" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Ортонормированные списки и процесс Грама — Шмидта</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="orthobases.html#orthobases-3" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Линейные функционалы на пространствах со скалярным произведением</span></a></div>
+<ul id="ptx-toc-group-orthobases-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="orthobases.html#orthobases-3-16" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="OrthoMin.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Ортогональные дополнения и задачи минимизации</span></a></div>
+<ul id="ptx-toc-group-OrthoMin" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-2" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Ортогональные дополнения</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-3" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Задачи минимизации</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-4" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Псевдообратное отображение</span></a></div>
+<ul id="ptx-toc-group-OrthoMin-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-4-27" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="opsinner.html" class="internal"><span class="codenumber">7</span> <span class="title">Операторы в пространствах со скалярным произведением</span></a></div>
+<ul id="ptx-toc-group-opsinner" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="opsinner-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="selfadjoint_normal.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Самосопряжённые и нормальные операторы</span></a></div>
+<ul id="ptx-toc-group-selfadjoint_normal" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-2" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Сопряжённые операторы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-3" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Самосопряжённые операторы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-4" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Нормальные операторы</span></a></div>
+<ul id="ptx-toc-group-selfadjoint_normal-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-4-18" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SpectralTheorem.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Спектральная теорема</span></a></div>
+<ul id="ptx-toc-group-SpectralTheorem" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SpectralTheorem.html#SpectralTheorem-3" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Вещественная спектральная теорема</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="SpectralTheorem.html#SpectralTheorem-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Комплексная спектральная теорема</span></a></div>
+<ul id="ptx-toc-group-SpectralTheorem-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="SpectralTheorem.html#SpectralTheorem-4-10" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="POIUO.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Положительные операторы</span></a></div>
+<ul id="ptx-toc-group-POIUO" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="POIUO.html#POIUO-21" class="internal"><span class="codenumber">7.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x3QR.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Изометрии, унитарные операторы и факторизация матриц</span></a></div>
+<ul id="ptx-toc-group-x3QR" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3QR.html#x3QR-2" class="internal"><span class="codenumber">7.4.1</span> <span class="title">Изометрии</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3QR.html#x3QR-3" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Унитарные операторы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3QR.html#x3QR-4" class="internal"><span class="codenumber">7.4.3</span> <span class="title">QR-разложение</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x3QR.html#x3QR-5" class="internal"><span class="codenumber">7.4.4</span> <span class="title">Разложение Холецкого</span></a></div>
+<ul id="ptx-toc-group-x3QR-5" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x3QR.html#x3QR-5-13" class="internal"><span class="codenumber">7.4.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x2SVD.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Сингулярное разложение</span></a></div>
+<ul id="ptx-toc-group-x2SVD" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x2SVD.html#x2SVD-2" class="internal"><span class="codenumber">7.5.1</span> <span class="title">Сингулярные числа</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x2SVD.html#x2SVD-3" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Сингулярное разложение для линейных отображений и матриц</span></a></div>
+<ul id="ptx-toc-group-x2SVD-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x2SVD.html#x2SVD-3-22" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x9SVD.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Следствия сингулярного разложения</span></a></div>
+<ul id="ptx-toc-group-x9SVD" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-2" class="internal"><span class="codenumber">7.6.1</span> <span class="title">Нормы линейных отображений</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-3" class="internal"><span class="codenumber">7.6.2</span> <span class="title">Аппроксимация линейными отображениями с образом меньшей размерности</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-4" class="internal"><span class="codenumber">7.6.3</span> <span class="title">Полярное разложение</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-5" class="internal"><span class="codenumber">7.6.4</span> <span class="title">Действие операторов на эллипсоиды и параллелепипеды</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-6" class="internal"><span class="codenumber">7.6.5</span> <span class="title">Объём через сингулярные числа</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x9SVD.html#x9SVD-7" class="internal"><span class="codenumber">7.6.6</span> <span class="title">Свойства оператора, определяемые его собственными значениями</span></a></div>
+<ul id="ptx-toc-group-x9SVD-7" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-7-5" class="internal"><span class="codenumber">7.6.6</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="operators_complex_vs.html" class="internal"><span class="codenumber">8</span> <span class="title">Операторы в комплексных векторных пространствах</span></a></div>
+<ul id="ptx-toc-group-operators_complex_vs" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="operators_complex_vs-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="geneig.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Корневые векторы и нильпотентные операторы</span></a></div>
+<ul id="ptx-toc-group-geneig" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geneig.html#geneig-2" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Нуль-пространства степеней оператора</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geneig.html#geneig-3" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Корневые (обобщённые собственные) векторы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="geneig.html#geneig-4" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Нильпотентные операторы</span></a></div>
+<ul id="ptx-toc-group-geneig-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geneig.html#geneig-4-15" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="decompop.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Разложение в прямую сумму корневых подпространств</span></a></div>
+<ul id="ptx-toc-group-decompop" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="decompop.html#decompop-2" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Корневые (обобщённые собственные) подпространства</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="decompop.html#decompop-3" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Кратность собственного значения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="decompop.html#decompop-4" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Блочно-диагональные матрицы</span></a></div>
+<ul id="ptx-toc-group-decompop-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="decompop.html#decompop-4-10" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x8geneigde.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Следствия разложения на корневые подпространства</span></a></div>
+<ul id="ptx-toc-group-x8geneigde" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x8geneigde.html#x8geneigde-2" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Квадратные корни из операторов</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x8geneigde.html#Jordan" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Жорданова форма</span></a></div>
+<ul id="ptx-toc-group-Jordan" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x8geneigde.html#Jordan-19" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x7trace.html" class="internal"><span class="codenumber">8.4</span> <span class="title">След: связь между матрицами и операторами</span></a></div>
+<ul id="ptx-toc-group-x7trace" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x7trace.html#x7trace-36" class="internal"><span class="codenumber">8.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="MultLATensors.html" class="internal"><span class="codenumber">9</span> <span class="title">Полилинейная алгебра и определители</span></a></div>
+<ul id="ptx-toc-group-MultLATensors" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="MultLATensors-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="bilin_quad.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Билинейные и квадратичные формы</span></a></div>
+<ul id="ptx-toc-group-bilin_quad" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-2" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Билинейные формы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-3" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Симметричные билинейные формы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-4" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Квадратичные формы</span></a></div>
+<ul id="ptx-toc-group-bilin_quad-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-4-15" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="alt_multi.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Кососимметрические полилинейные формы</span></a></div>
+<ul id="ptx-toc-group-alt_multi" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="alt_multi.html#alt_multi-2" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Полилинейные формы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="alt_multi.html#alt_multi-3" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Кососимметрические полилинейные формы и перестановки</span></a></div>
+<ul id="ptx-toc-group-alt_multi-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="alt_multi.html#alt_multi-3-27" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x9det.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Определители</span></a></div>
+<ul id="ptx-toc-group-x9det" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9det.html#x9det-2" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Определение определителя</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x9det.html#x9det-3" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Свойства определителей</span></a></div>
+<ul id="ptx-toc-group-x9det-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x9det.html#x9det-3-65" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x9TensorSect.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Тензорные произведения</span></a></div>
+<ul id="ptx-toc-group-x9TensorSect" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-2" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Тензорное произведение двух векторных пространств</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-3" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Тензорное произведение пространств со скалярным произведением</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-4" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Тензорное произведение нескольких векторных пространств</span></a></div>
+<ul id="ptx-toc-group-x9TensorSect-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-4-25" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Приложения и указатель</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="photocredits.html" class="internal"><span class="codenumber">1</span> <span class="title">Источники фотографий</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="typesetting.html" class="internal"><span class="codenumber">2</span> <span class="title">Колофон: заметки о вёрстке</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretextplus.html" class="internal"><span class="codenumber">3</span> <span class="title">Колофон: веб-версия</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Предметный указатель</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="x2diagmat">
+<h1 class="heading hide-type">
+<span class="type">Раздел</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Коммутирующие операторы</span>
+</h1>
+<article class="definition definition-like" id="x2diagmat-2"><h2 class="heading">
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.71</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">коммутирование.</span>
+</h2>
+<div class="para logical" id="x2diagmat-2-2-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x2diagmat-2-2-1-2">
+<li id="x2diagmat-2-2-1-2-1">
+<div class="para" id="x2diagmat-2-2-1-2-1-1">Два оператора <span class="process-math">\(S\)</span> и <span class="process-math">\(T\)</span> в одном векторном пространстве <dfn class="terminology">коммутируют</dfn>, если <span class="process-math">\(ST = TS\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-2-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#x2diagmat-2-2-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="x2diagmat-2-2-1-2-2">
+<div class="para" id="x2diagmat-2-2-1-2-2-1">Две квадратные матрицы <span class="process-math">\(A\)</span> и <span class="process-math">\(B\)</span> одинакового размера <dfn class="terminology">коммутируют</dfn>, если <span class="process-math">\(AB = BA\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-2-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#x2diagmat-2-2-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 5.71: commute"><a tabindex="-1" href="#x2diagmat-2" title="Copy heading and permalink for Definition 5.71: коммутирование" aria-label="Copy heading and permalink for Definition 5.71: commute">🔗</a></div>
+</article>
+<div class="para" id="x2diagmat-3">Например, если <span class="process-math">\(I\)</span> — тождественный оператор на <span class="process-math">\(V\)</span> и <span class="process-math">\(\lambda \in \F{}{}\)</span>, то <span class="process-math">\(\lambda I\)</span> коммутирует с каждым оператором на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x2diagmat-4">Другой пример: если <span class="process-math">\(T\)</span> — оператор, то <span class="process-math">\(T^2\)</span> и <span class="process-math">\(T^3\)</span> коммутируют. В более общем смысле, если <span class="process-math">\(p, q \in \P(\F{})\)</span>, то <span class="process-math">\(p(T)\)</span> и <span class="process-math">\(q(T)\)</span> коммутируют [см. <a href="x5invar.html#multprop" class="xref" data-knowl="./knowl/xref/multprop.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.17: мультипликативные свойства">Теорему 5.17</a>(b)] .<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="PD" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.72</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">операторы частного дифференцирования коммутируют.</span>
+</h2></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="PD-2-1">
+<div class="para">Предположим, что <span class="process-math">\(m\)</span> — целое неотрицательное число. Обозначим через <span class="process-math">\(\P\!_m{}(\CC2, \C{})\)</span> комплексное векторное пространство многочленов (с коэффициентами из <span class="process-math">\(\C{}\)</span>) от двух переменных степени не выше <span class="process-math">\(m\)</span> с обычными операциями сложения и умножения на скаляр функций со значениями <span class="process-math">\(\C{}\)</span>. Таким образом, элементами <span class="process-math">\(\P\!_m{}(\CC2, \C{})\)</span> являются функции <span class="process-math">\(p\)</span> от <span class="process-math">\(\C2\)</span> до <span class="process-math">\(\C{}\)</span> вида</div>
+<div class="displaymath process-math" id="x2p">
+\begin{equation}
+p(w,z) = \sum_{j+k \le m} a_{j,k} w^j z^k\!,\tag{5.73}
+\end{equation}
+</div>
+<div class="para">где индексы <span class="process-math">\(j\)</span> и <span class="process-math">\(k\)</span> принимают все неотрицательные целые значения такие, что <span class="process-math">\(j + k \le m\)</span>, каждый <span class="process-math">\(a_{j,k}\)</span> находится в <span class="process-math">\(\C{}\)</span>, а <span class="process-math">\(w^j z^k\)</span> обозначает функцию на <span class="process-math">\(\C2\)</span>, определенную <span class="process-math">\((w, z) \mapsto w^j z^k\!\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#PD-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="PD-2-2">
+<div class="para">Определим операторы <span class="process-math">\(D_w, D_z \in \Lc( \P\!_m{}(\CC2, \C{}) )\)</span> по</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x2p.html" id="PD-2-2-2">
+\begin{equation*}
+D_w p = \frac{ \partial p}{\partial w} = \sum_{j+k \le m} j a_{j,k} w^{j-1} z^k \andd D_z p = \frac{ \partial p}{\partial z} = \sum_{j+k \le m} k a_{j,k} w^j z^{k-1}\!,
+\end{equation*}
+</div>
+<div class="para">где <span class="process-math">\(p\)</span> соответствует <a href="x2diagmat.html#x2p" class="xref" data-knowl="./knowl/xref/x2p.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 5.73">(5.73)</a>. Операторы <span class="process-math">\(D_w\)</span> и <span class="process-math">\(D_z\)</span> называются операторами частного дифференцирования, поскольку каждый из этих операторов дифференцирует по одной из переменных, притворяясь, что другая переменная является константой.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#PD-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="PD-2-3">
+<div class="para">Операторы <span class="process-math">\(D_w\)</span> и <span class="process-math">\(D_z\)</span> коммутируют, поскольку если <span class="process-math">\(p\)</span> такой же, как в <a href="x2diagmat.html#x2p" class="xref" data-knowl="./knowl/xref/x2p.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 5.73">(5.73)</a>, то</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x2p.html" id="PD-2-3-5">
+\begin{equation*}
+(D_w D_z)p = \sum_{j+k \le m} j k a_{j,k} w^{j-1} z^{k-1} = (D_z D_w)p.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#PD-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="PD-2-4">Уравнение <span class="process-math">\(D_w D_z = D_z D_w\)</span> на <span class="process-math">\(\P\!_m{}(\CC2, \C{})\)</span> иллюстрирует более общий результат о том, что порядок частного дифференцирования не имеет значения для хороших функций.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#PD-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 5.72: partial differentiation operators commute"><a tabindex="-1" href="#PD" title="Copy heading and permalink for Example 5.72: операторы частного дифференцирования коммутируют" aria-label="Copy heading and permalink for Example 5.72: partial differentiation operators commute">🔗</a></div>
+</article></details>
+<details id="x2diagmat-6" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Примечание</span></h2></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="x2diagmat-6-1">Все 214 358 881 (что равно <span class="process-math">\(11^8\)</span>) упорядоченных пар рассматриваемых матриц размером <span class="process-math">\(2\)</span> на <span class="process-math">\(2\)</span> были проверены компьютером и обнаружили, что только 674 609 из этих упорядоченных пар матриц коммутируют.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<div class="para" id="x2diagmat-7">Коммутирующие матрицы необычны. Например, существует 214 358 881 упорядоченная пара матриц размера <span class="process-math">\(2\)</span> на <span class="process-math">\(2\)</span>, все элементы которых являются целыми числами в интервале <span class="process-math">\([-5,5]\)</span>. Лишь около 0,3% этих упорядоченных пар матриц коммутируют.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x2diagmat-8">Следующий результат показывает, что два оператора коммутируют тогда и только тогда, когда их матрицы (относительно одного и того же базиса) коммутируют.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x3comm"><h2 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.74</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">коммутирующие операторы соответствуют коммутирующим матрицам.</span>
+</h2>
+<div class="para" id="x3comm-2-1">Предположим, <span class="process-math">\(S, T \in \Lc(V)\)</span> и <span class="process-math">\(v_1, \ldots,
+v_n\)</span> — базис <span class="process-math">\(V{}\)</span>. Тогда <span class="process-math">\(S\)</span> и <span class="process-math">\(T\)</span> коммутируют тогда и только тогда, когда <span class="process-math">\(\M( S, (v_1, \ldots,
+v_n) )\)</span> и <span class="process-math">\(\M( T, (v_1, \ldots, v_n) )\)</span> коммутируют.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3comm-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.74: commuting operators correspond to commuting matrices"><a tabindex="-1" href="#x3comm" title="Copy heading and permalink for Theorem 5.74: коммутирующие операторы соответствуют коммутирующим матрицам" aria-label="Copy heading and permalink for Theorem 5.74: commuting operators correspond to commuting matrices">🔗</a></div>
+</article>
+<details id="x2diagmat-10" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="x2diagmat-10-1">
+<div class="para">У нас есть</div>
+<div class="displaymath process-math" id="x2diagmat-10-1-1">
+\begin{align*}
+S \text{ и }  T \text{ коммутируют }  \amp  \iff ST = TS\\
+\amp \iff \M(ST) = \M(TS)\\
+\amp \iff \M(S) \M(T) = \M(T) \M(S)\\
+\amp  \iff \M(S) \text{ и }  \M(T) \text{ коммутируют } \text{,}
+\end{align*}
+</div>
+<div class="para">по желанию.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.5.1"><a tabindex="-1" href="#x2diagmat-10" title="Copy heading and permalink for Proof 5.5.1" aria-label="Copy heading and permalink for Proof 5.5.1">🔗</a></div>
+</article></details>
+<div class="para" id="x2diagmat-11">Следующий результат показывает, что если два оператора коммутируют, то каждое собственное пространство одного оператора инвариантно относительно другого оператора. Этот результат, который мы будем использовать несколько раз, является одной из основных причин, почему пара коммутирующих операторов ведет себя лучше, чем пара некоммутирующих операторов.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x2ComInv"><h2 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.75</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">собственное пространство инвариантно относительно коммутирующего оператора.</span>
+</h2>
+<div class="para" id="x2ComInv-2-1">Предположим, что <span class="process-math">\(S, T \in \Lc(V)\)</span> коммутируют, а <span class="process-math">\(\lambda \in \F{}{}\)</span>. Тогда <span class="process-math">\(E(\lambda, S)\)</span> инвариантен относительно <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2ComInv-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.75: eigenspace is invariant under commuting operator"><a tabindex="-1" href="#x2ComInv" title="Copy heading and permalink for Theorem 5.75: собственное пространство инвариантно относительно коммутирующего оператора" aria-label="Copy heading and permalink for Theorem 5.75: eigenspace is invariant under commuting operator">🔗</a></div>
+</article>
+<details id="x2diagmat-13" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="x2diagmat-13-1">
+<div class="para">Предположим, <span class="process-math">\(v \in E(\lambda, S)\)</span>. Тогда</div>
+<div class="displaymath process-math" id="x2diagmat-13-1-2">
+\begin{equation*}
+S( Tv ) = (ST)v = (TS)v = T(Sv) = T(\lambda v) = \lambda Tv.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x2diagmat-13-2">Уравнение выше показывает, что <span class="process-math">\(Tv \in E(\lambda, S)\)</span>. Таким образом, <span class="process-math">\(E(\lambda, S)\)</span> инвариантен относительно <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-13-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.5.2"><a tabindex="-1" href="#x2diagmat-13" title="Copy heading and permalink for Proof 5.5.2" aria-label="Copy heading and permalink for Proof 5.5.2">🔗</a></div>
+</article></details>
+<div class="para" id="x2diagmat-14">Предположим, у нас есть два оператора, каждый из которых диагонализуем. Если мы хотим выполнять вычисления с участием обоих операторов (например, с использованием их суммы), то мы хотим, чтобы два оператора были диагонализуемы по одному и тому же базису, что, согласно следующему результату, возможно, когда два оператора коммутируют.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x8SimDiag"><h2 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.76</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">совместная диагонализируемость <span class="process-math">\(\iff\)</span> коммутативность.</span>
+</h2>
+<div class="para" id="x8SimDiag-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8SimDiag-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.76: simultaneous diagonalizability  \iff commutativity"><a tabindex="-1" href="#x8SimDiag" title="Copy heading and permalink for Theorem 5.76: совместная диагонализируемость \iff коммутативность" aria-label="Copy heading and permalink for Theorem 5.76: simultaneous diagonalizability  \iff commutativity">🔗</a></div>
+</article>
+<div class="para" id="x2diagmat-16">{ Два диагонализируемых оператора в одном и том же векторном пространстве имеют диагональные матрицы относительно одного и того же базиса тогда и только тогда, когда эти два оператора коммутируют.}<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="x2diagmat-17" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="x2diagmat-17-1">Предположим сначала, что <span class="process-math">\(S, T \in \Lc(V)\)</span> имеет диагональные матрицы относительно одного и того же базиса. Произведением двух диагональных матриц одинакового размера называется диагональная матрица, полученная умножением соответствующих элементов двух диагоналей. Таким образом, любые две диагональные матрицы одного размера коммутируют. Таким образом, <span class="process-math">\(S\)</span> и <span class="process-math">\(T\)</span> коммутируют согласно <a href="x2diagmat.html#x3comm" class="xref" data-knowl="./knowl/xref/x3comm.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.74: коммутирующие операторы соответствуют коммутирующим матрицам">теореме 5.74</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-17-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="x2diagmat-17-2">
+<div class="para">Чтобы доказать импликацию в другом направлении, предположим теперь, что <span class="process-math">\(S, T \in \Lc(V)\)</span> — диагонализуемые операторы, которые коммутируют. Обозначим через <span class="process-math">\(\lambda_1, \ldots, \lambda_m\)</span> различные собственные значения матрицы <span class="process-math">\(S\)</span>. Поскольку <span class="process-math">\(S\)</span> диагонализуемо, <a href="diagmat.html#x427" class="xref" data-knowl="./knowl/xref/x427.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.55: условия, эквивалентные диагонализуемости">Теорема 5.55</a>(c) показывает, что</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x427.html" id="VdirSum">
+\begin{equation}
+V = E(\lambda_1, S) \oplus \cdots \oplus E(\lambda_m, S).\tag{5.77}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-17-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x2diagmat-17-3">Для каждого <span class="process-math">\(k = 1, \ldots, m\)</span> подпространство <span class="process-math">\(E(\lambda_k, S)\)</span> инвариантно относительно <span class="process-math">\(T\)</span> (по <a href="x2diagmat.html#x2ComInv" class="xref" data-knowl="./knowl/xref/x2ComInv.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.75: собственное пространство инвариантно относительно коммутирующего оператора">теореме 5.75</a>). Поскольку <span class="process-math">\(T\)</span> диагонализуемо, из <a href="diagmat.html#x5RestrictDi" class="xref" data-knowl="./knowl/xref/x5RestrictDi.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.65: ограничение диагонализуемого оператора на инвариантное подпространство">теоремы 5.65</a> следует, что <span class="process-math">\(T|_{E(\lambda_k, S)}\)</span> диагонализуемо для каждого <span class="process-math">\(k\)</span>. Следовательно, для каждого <span class="process-math">\(k=1, \ldots, m\)</span> существует базис <span class="process-math">\(E(\lambda_k, S)\)</span>, состоящий из собственных векторов <span class="process-math">\(T{}\)</span>. Объединение этих базисов вместе дает базис <span class="process-math">\(V\)</span> (из-за <a href="x2diagmat.html#VdirSum" class="xref" data-knowl="./knowl/xref/VdirSum.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 5.77">(5.77)</a>), где каждый вектор в этом базисе является собственным вектором как <span class="process-math">\(S\)</span>, так и <span class="process-math">\(T{}\)</span>. Таким образом, <span class="process-math">\(S\)</span> и <span class="process-math">\(T\)</span> имеют диагональные матрицы относительно этого базиса, как и хотелось.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-17-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.5.3"><a tabindex="-1" href="#x2diagmat-17" title="Copy heading and permalink for Proof 5.5.3" aria-label="Copy heading and permalink for Proof 5.5.3">🔗</a></div>
+</article></details>
+<div class="para" id="x2diagmat-18">См. <a href="x2diagmat.html#x3Diag" class="xref" data-knowl="./knowl/xref/x3Diag.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 5.5.2">Упражнение 5.5.2</a>, чтобы узнать о расширении приведенного выше результата для более чем двух операторов.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x2diagmat-19">Предположим, что <span class="process-math">\(V\)</span> — конечномерное ненулевое комплексное векторное пространство. Тогда каждый оператор на <span class="process-math">\(V\)</span> имеет собственный вектор (см. <a href="eigenuppertri.html#x151" class="xref" data-knowl="./knowl/xref/x151.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.19: существование собственных значений">Теорему 5.19</a>). Следующий результат показывает, что если два оператора в <span class="process-math">\(V\)</span> коммутируют, то в <span class="process-math">\(V\)</span> существует вектор, который является собственным вектором для обоих операторов (но два коммутирующих оператора могут не иметь общего собственного значения). Распространение следующего результата на более чем два оператора см. в <a href="x2diagmat.html#x4ManyOps" class="xref" data-knowl="./knowl/xref/x4ManyOps.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 5.5.9">Упражнении 5.5.9</a>(a).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x2common"><h2 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.78</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">общий собственный вектор для коммутирующих операторов.</span>
+</h2>
+<div class="para" id="x2common-2-1">Каждая пара коммутирующих операторов в конечномерном ненулевом комплексном векторном пространстве имеет общий собственный вектор.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2common-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.78: common eigenvector for commuting operators"><a tabindex="-1" href="#x2common" title="Copy heading and permalink for Theorem 5.78: общий собственный вектор для коммутирующих операторов" aria-label="Copy heading and permalink for Theorem 5.78: common eigenvector for commuting operators">🔗</a></div>
+</article>
+<details id="x2diagmat-21" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="x2diagmat-21-1">Предположим, что <span class="process-math">\(V\)</span> — конечномерное ненулевое комплексное векторное пространство и <span class="process-math">\(S, T \in \Lc(V)\)</span> коммутационно. Пусть <span class="process-math">\(\lambda\)</span> — собственное значение <span class="process-math">\(S\)</span> (<a href="eigenuppertri.html#x151" class="xref" data-knowl="./knowl/xref/x151.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.19: существование собственных значений">Теорема 5.19</a> говорит нам, что <span class="process-math">\(S\)</span> действительно имеет собственное значение). Таким образом, <span class="process-math">\(E(\lambda, S) \ne \{ 0 \}\)</span>. Кроме того, <span class="process-math">\(E(\lambda, S)\)</span> инвариантен относительно <span class="process-math">\(T\)</span> (согласно <a href="x2diagmat.html#x2ComInv" class="xref" data-knowl="./knowl/xref/x2ComInv.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.75: собственное пространство инвариантно относительно коммутирующего оператора">теореме 5.75</a>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-21-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x2diagmat-21-2">Таким образом, <span class="process-math">\(T|_{E(\lambda, S)}\)</span> имеет собственный вектор (снова используя <a href="eigenuppertri.html#x151" class="xref" data-knowl="./knowl/xref/x151.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.19: существование собственных значений">теорему 5.19</a>), который является собственным вектором как для <span class="process-math">\(S\)</span>, так и для <span class="process-math">\(T\)</span>, что завершает доказательство.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-21-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.5.4"><a tabindex="-1" href="#x2diagmat-21" title="Copy heading and permalink for Proof 5.5.4" aria-label="Copy heading and permalink for Proof 5.5.4">🔗</a></div>
+</article></details>
+<details id="x2diagmat-22" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.79</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">общий собственный вектор для операторов частного дифференцирования.</span>
+</h2></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="x2diagmat-22-2-1">
+<div class="para">Пусть <span class="process-math">\(\P\!_m{}(\CC2, \C{})\)</span> будет таким же, как в <a href="x2diagmat.html#PD" class="xref" data-knowl="./knowl/xref/PD.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 5.72: операторы частного дифференцирования коммутируют">Примере 5.72</a>, и пусть <span class="process-math">\(D_w, D_z \in \Lc( \P\!_m{}(\CC2, \C{}) )\)</span> — коммутирующие операторы частного дифференцирования в этом примере. Как вы можете убедиться, <span class="process-math">\(0\)</span> — единственное собственное значение каждого из этих операторов. Также</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PD.html" id="x2diagmat-22-2-1-5">
+\begin{align*}
+E(0, D_w) \amp = \{  \sum_{k=0}^m a_k z^k: a_0, \ldots, a_m \in \C{} \},\\
+E(0, D_z) \amp = \{  \sum_{j=0}^m c_j w^j: c_0, \ldots, c_m \in \C{} \}\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-22-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="x2diagmat-22-2-2">Пересечение этих двух собственных пространств представляет собой множество общих собственных векторов двух операторов. Поскольку <span class="process-math">\(E(0, D_w) \cap E(0, D_z)\)</span> — это множество постоянных функций, мы видим, что <span class="process-math">\(D_w\)</span> и <span class="process-math">\(D_z\)</span> действительно имеют общий собственный вектор, как и обещает <a href="x2diagmat.html#x2common" class="xref" data-knowl="./knowl/xref/x2common.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.78: общий собственный вектор для коммутирующих операторов">Теорема 5.78</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-22-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 5.79: common eigenvector for partial differentiation operators"><a tabindex="-1" href="#x2diagmat-22" title="Copy heading and permalink for Example 5.79: общий собственный вектор для операторов частного дифференцирования" aria-label="Copy heading and permalink for Example 5.79: common eigenvector for partial differentiation operators">🔗</a></div>
+</article></details>
+<div class="para" id="x2diagmat-23">Следующий результат расширяет <a href="x4utm.html#a226" class="xref" data-knowl="./knowl/xref/a226.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.47: если \symbf{F} = \symbf{C}, то каждый оператор на V имеет верхнетреугольную матрицу">теорему 5.47</a> (существование базиса, дающего верхнетреугольную матрицу) на два коммутирующих оператора.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x2commute"><h2 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.80</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">коммутирующие операторы одновременно триангуляризуемы сверху.</span>
+</h2>
+<div class="para" id="x2commute-2-1">Предположим, что <span class="process-math">\(V\)</span> — конечномерное комплексное векторное пространство, а <span class="process-math">\(S, T\)</span> — коммутирующие операторы на <span class="process-math">\(V{}\)</span>. Тогда существует базис <span class="process-math">\(V\)</span>, относительно которого и <span class="process-math">\(S\)</span>, и <span class="process-math">\(T\)</span> имеют верхнетреугольные матрицы.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2commute-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.80: commuting operators are simultaneously upper triangularizable"><a tabindex="-1" href="#x2commute" title="Copy heading and permalink for Theorem 5.80: коммутирующие операторы одновременно триангуляризуемы сверху" aria-label="Copy heading and permalink for Theorem 5.80: commuting operators are simultaneously upper triangularizable">🔗</a></div>
+</article>
+<details id="x2diagmat-25" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="x2diagmat-25-1">Пусть <span class="process-math">\(n = \dim V{}\)</span>. Мы будем использовать индукцию по <span class="process-math">\(n\)</span>. Желаемый результат справедлив, если <span class="process-math">\(n = 1\)</span>, поскольку все матрицы <span class="process-math">\(1\)</span> на <span class="process-math">\(1\)</span> являются верхнетреугольными. Теперь предположим, что <span class="process-math">\(n &gt; 1\)</span>, и желаемый результат справедлив для всех комплексных векторных пространств размерностью <span class="process-math">\(n-1\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-25-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="x2diagmat-25-2">
+<div class="para">Пусть <span class="process-math">\(v_1\)</span> — любой общий собственный вектор <span class="process-math">\(S\)</span> и <span class="process-math">\(T\)</span> (с использованием <a href="x2diagmat.html#x2common" class="xref" data-knowl="./knowl/xref/x2common.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.78: общий собственный вектор для коммутирующих операторов">теоремы 5.78</a>). Отсюда <span class="process-math">\(Sv_1 \in \Span(v_1)\)</span> и <span class="process-math">\(Tv_1 \in \Span(v_1)\)</span>. Пусть <span class="process-math">\(W\)</span> — подпространство <span class="process-math">\(V\)</span> такое, что</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x2common.html" id="x2diagmat-25-2-10">
+\begin{equation*}
+V = \Span(v_1) \oplus W;
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-25-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="x2diagmat-25-3">
+<div class="para">о существовании <span class="process-math">\(W{}\)</span> см. <a href="bases.html#a220" class="xref" data-knowl="./knowl/xref/a220.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 2.33: каждое подпространство в V дополняется до прямой суммы, равной V">теорему 2.33</a>. Определите линейное отображение <span class="process-math">\(\fun P V W\)</span> по формуле</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/a220.html" id="x2diagmat-25-3-5">
+\begin{equation*}
+P(a v_1 + w) = w
+\end{equation*}
+</div>
+<div class="para">для каждого <span class="process-math">\(a \in \C{}\)</span> и каждого <span class="process-math">\(w \in W{}\)</span>. Определите <span class="process-math">\(\hat S, \hat T \in \Lc(W)\)</span> по</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/a220.html" id="x2diagmat-25-3-9">
+\begin{equation*}
+\hat S w = P(Sw) \andd \hat T w = P(Tw)
+\end{equation*}
+</div>
+<div class="para">для каждого <span class="process-math">\(w \in W{}\)</span>. Чтобы применить нашу гипотезу индукции к <span class="process-math">\(\hat S\)</span> и <span class="process-math">\(\hat T\)</span>, мы должны сначала показать, что эти два оператора на <span class="process-math">\(W\)</span> коммутируют. Для этого предположим <span class="process-math">\(w \in W{}\)</span>. Тогда существует <span class="process-math">\(a \in \C{}\)</span> такое, что</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/a220.html" id="x2diagmat-25-3-16">
+\begin{equation*}
+( \hat S \hat T )w = \hat S (  P(Tw)  ) = \hat S (Tw - av_1) = P (  S(Tw - a v_1)  ) = P (  (ST) w  ),
+\end{equation*}
+</div>
+<div class="para">где последнее равенство выполнено, поскольку <span class="process-math">\(v_1\)</span> — собственный вектор <span class="process-math">\(S\)</span> и <span class="process-math">\(Pv_1 = 0\)</span>. Аналогично,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/a220.html" id="x2diagmat-25-3-20">
+\begin{equation*}
+( \hat T \hat S )w = P (  (TS) w  ).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-25-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x2diagmat-25-4">Поскольку операторы <span class="process-math">\(S\)</span> и <span class="process-math">\(T\)</span> коммутируют, последние два отображаемых уравнения показывают, что <span class="process-math">\(( \hat S \hat T )w = ( \hat T \hat S )w\)</span>. Следовательно, <span class="process-math">\(\hat S\)</span> и <span class="process-math">\(\hat T\)</span> коммутируют.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-25-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x2diagmat-25-5">Таким образом, мы можем использовать нашу гипотезу индукции, чтобы утверждать, что существует базис <span class="process-math">\(v_2, \ldots,
+v_n\)</span> матрицы <span class="process-math">\(W\)</span> такой, что <span class="process-math">\(\hat S\)</span> и <span class="process-math">\(\hat T\)</span> имеют верхнетреугольные матрицы относительно этого базиса. Список <span class="process-math">\(v_1, \ldots, v_n\)</span> является базисом <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-25-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="x2diagmat-25-6">
+<div class="para">Если <span class="process-math">\(k \in \{ 2, \ldots, n \}\)</span>, то существует <span class="process-math">\(a_k, b_k \in \C{}\)</span> такое, что</div>
+<div class="displaymath process-math" id="x2diagmat-25-6-3">
+\begin{equation*}
+Sv_k =  a_k v_1 + \hat S v_k \andd Tv_k = b_k v_1 + \hat T v_k.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-25-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="x2diagmat-25-7">
+<div class="para">Поскольку <span class="process-math">\(\hat S\)</span> и <span class="process-math">\(\hat T\)</span> имеют верхнетреугольные матрицы относительно <span class="process-math">\(v_2, \ldots,
+v_n\)</span>, мы знаем, что <span class="process-math">\(\hat S v_k \in \Span(v_2, \ldots,
+v_k)\)</span> и <span class="process-math">\(\hat T v_k \in \Span(v_2, \ldots, v_k)\)</span>. Следовательно, из приведенных выше уравнений следует, что</div>
+<div class="displaymath process-math" id="x2diagmat-25-7-6">
+\begin{equation*}
+Sv_k \in \Span(v_1, \ldots, v_k) \andd Tv_k \in \Span(v_1, \ldots, v_k).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-25-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x2diagmat-25-8">Таким образом, <span class="process-math">\(S\)</span> и <span class="process-math">\(T\)</span> имеют верхнетреугольные матрицы относительно <span class="process-math">\(v_1, \ldots, v_n\)</span>, как и хотелось.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-25-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.5.5"><a tabindex="-1" href="#x2diagmat-25" title="Copy heading and permalink for Proof 5.5.5" aria-label="Copy heading and permalink for Proof 5.5.5">🔗</a></div>
+</article></details>
+<div class="para" id="x2diagmat-26"><a href="x2diagmat.html#x4ManyOps" class="xref" data-knowl="./knowl/xref/x4ManyOps.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 5.5.9">Упражнение 5.5.9</a>(b) расширяет приведенный выше результат на более чем два оператора.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x2diagmat-27">В общем случае невозможно определить собственные значения суммы или произведения двух операторов по собственным значениям двух операторов. Однако следующий результат показывает, что когда два оператора ездят на работу, происходит что-то приятное.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x2EigenSum"><h2 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.81</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">собственные значения суммы и произведения коммутирующих операторов.</span>
+</h2>
+<div class="para logical" id="x2EigenSum-2-1">
+<div class="para">Предположим, что <span class="process-math">\(V\)</span> — конечномерное комплексное векторное пространство, а <span class="process-math">\(S, T\)</span> — коммутирующие операторы на <span class="process-math">\(V{}\)</span>. Тогда</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x2EigenSum-2-1-4">
+<li id="x2EigenSum-2-1-4-1">
+<div class="para" id="x2EigenSum-2-1-4-1-1">каждое собственное значение <span class="process-math">\(S + T\)</span> является собственным значением <span class="process-math">\(S\)</span> плюс собственное значение <span class="process-math">\(T\)</span>,<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2EigenSum-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#x2EigenSum-2-1-4-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="x2EigenSum-2-1-4-2">
+<div class="para" id="x2EigenSum-2-1-4-2-1">каждое собственное значение <span class="process-math">\(ST\)</span> является собственным значением <span class="process-math">\(S\)</span>, умноженным на собственное значение <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2EigenSum-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#x2EigenSum-2-1-4-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2EigenSum-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.81: eigenvalues of sum and product of commuting operators"><a tabindex="-1" href="#x2EigenSum" title="Copy heading and permalink for Theorem 5.81: собственные значения суммы и произведения коммутирующих операторов" aria-label="Copy heading and permalink for Theorem 5.81: eigenvalues of sum and product of commuting operators">🔗</a></div>
+</article>
+<details id="x2diagmat-29" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="x2diagmat-29-1">
+<div class="para">Существует базис <span class="process-math">\(V\)</span>, относительно которого и <span class="process-math">\(S\)</span>, и <span class="process-math">\(T\)</span> имеют верхнетреугольные матрицы (по <a href="x2diagmat.html#x2commute" class="xref" data-knowl="./knowl/xref/x2commute.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.80: коммутирующие операторы одновременно триангуляризуемы сверху">теореме 5.80</a>). Что касается этого основания,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x2commute.html ./knowl/xref/x101.html ./knowl/xref/x3matproduct.html" id="x2diagmat-29-1-5">
+\begin{equation*}
+\M(S+T) = \M(S) + \M(T) \andd \M(ST) = \M(S) \M(T),
+\end{equation*}
+</div>
+<div class="para">как указано в <a href="matrices.html#x101" class="xref" data-knowl="./knowl/xref/x101.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.35: матрица суммы линейных отображений">Теореме 3.35</a> и <a href="matrices.html#x3matproduct" class="xref" data-knowl="./knowl/xref/x3matproduct.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.43: матрица произведения линейных отображений">Теореме 3.43</a>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-29-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="x2diagmat-29-2">Определение сложения матриц показывает, что каждый элемент на диагонали <span class="process-math">\(\M(S+T)\)</span> равен сумме соответствующих элементов на диагоналях <span class="process-math">\(\M(S)\)</span> и <span class="process-math">\(\M(T)\)</span>. Аналогично, поскольку <span class="process-math">\(\M(S)\)</span> и <span class="process-math">\(\M(T)\)</span> являются верхнетреугольными матрицами, определение умножения матриц показывает, что каждый элемент на диагонали <span class="process-math">\(\M(ST)\)</span> равен произведению соответствующих элементов на диагоналях <span class="process-math">\(\M(S)\)</span> и <span class="process-math">\(\M(T)\)</span>. Кроме того, <span class="process-math">\(\M(S+T)\)</span> и <span class="process-math">\(\M(ST)\)</span> являются верхнетреугольными матрицами (см. <a href="x4utm.html#x2AB" class="xref" data-knowl="./knowl/xref/x2AB.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 5.3.2">Упражнение 5.3.2</a> в <a href="x4utm.html" class="internal" title="Раздел 5.3: Верхнетреугольные матрицы">Раздел 5.3</a>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-29-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x2diagmat-29-3">Каждый элемент на диагонали <span class="process-math">\(\M(S)\)</span> является собственным значением <span class="process-math">\(S\)</span>, а каждый элемент на диагонали <span class="process-math">\(\M(T)\)</span> является собственным значением <span class="process-math">\(T\)</span> (по <a href="x4utm.html#a221" class="xref" data-knowl="./knowl/xref/a221.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.41: определение собственных значений по верхнетреугольной матрице">теореме 5.41</a>). Каждое собственное значение <span class="process-math">\(S+T\)</span> находится на диагонали <span class="process-math">\(\M(S+T)\)</span>, а каждое собственное значение <span class="process-math">\(ST\)</span> находится на диагонали <span class="process-math">\(\M(ST)\)</span> (эти утверждения следуют из <a href="x4utm.html#a221" class="xref" data-knowl="./knowl/xref/a221.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.41: определение собственных значений по верхнетреугольной матрице">теоремы 5.41</a>). Объединив все это вместе, мы приходим к выводу, что каждое собственное значение <span class="process-math">\(S + T\)</span> является собственным значением <span class="process-math">\(S\)</span> плюс собственным значением <span class="process-math">\(T\)</span>, а каждое собственное значение <span class="process-math">\(ST\)</span> является собственным значением <span class="process-math">\(S\)</span>, умноженным на собственное значение <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-29-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x2diagmat-29-4"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-29-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.5.6"><a tabindex="-1" href="#x2diagmat-29" title="Copy heading and permalink for Proof 5.5.6" aria-label="Copy heading and permalink for Proof 5.5.6">🔗</a></div>
+</article></details>
+<section class="exercises" id="x2diagmat-30">
+<h2 class="heading hide-type">
+<span class="type">Упражнения</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Упражнения</span>
+</h2>
+<article class="exercise exercise-like" id="x2diagmat-30-2"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="x2diagmat-30-2-1-1">Приведите пример двух коммутирующих операторов <span class="process-math">\(S, T\)</span> на <span class="process-math">\(\F4\)</span>, таких, что существует подпространство <span class="process-math">\(\F4\)</span>, инвариантное относительно <span class="process-math">\(S\)</span>, но не относительно <span class="process-math">\(T\)</span>, и существует подпространство <span class="process-math">\(\F4\)</span>, инвариантное относительно <span class="process-math">\(T\)</span>, но не относительно <span class="process-math">\(S\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-30-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.1"><a tabindex="-1" href="#x2diagmat-30-2" title="Copy heading and permalink for Exercise 5.5.1" aria-label="Copy heading and permalink for Exercise 5.5.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x3Diag"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="x3Diag-1-1">Предположим, что <span class="process-math">\(\E\)</span> — подмножество <span class="process-math">\(\Lc(V)\)</span> и каждый элемент <span class="process-math">\(\E\)</span> диагонализуем. Докажите, что существует базис <span class="process-math">\(V\)</span>, относительно которого каждый элемент <span class="process-math">\(\E\)</span> имеет диагональную матрицу тогда и только тогда, когда каждая пара элементов <span class="process-math">\(\E\)</span> коммутирует.  Примечание. Это упражнение расширяет <a href="x2diagmat.html#x8SimDiag" class="xref" data-knowl="./knowl/xref/x8SimDiag.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.76: совместная диагонализируемость \iff коммутативность">теорему 5.76</a>, в которой рассматривается случай, когда <span class="process-math">\(\E\)</span> содержит только два элемента. В этом упражнении <span class="process-math">\(\E\)</span> может содержать любое количество элементов, а <span class="process-math">\(\E\)</span> может даже представлять собой бесконечное множество.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x3Diag-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.2"><a tabindex="-1" href="#x3Diag" title="Copy heading and permalink for Exercise 5.5.2" aria-label="Copy heading and permalink for Exercise 5.5.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x2diagmat-30-4"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para logical" id="x2diagmat-30-4-1-1">
+<div class="para">Предположим, что <span class="process-math">\(S, T \in \Lc(V)\)</span> таковы, что <span class="process-math">\(ST = TS\)</span>. Предположим <span class="process-math">\(p \in \P(\F{})\)</span>.</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x2diagmat-30-4-1-1-4">
+<li id="x2diagmat-30-4-1-1-4-1">
+<div class="para" id="x2diagmat-30-4-1-1-4-1-1">Докажите, что <span class="process-math">\(\ker p(S)\)</span> инвариантен относительно <span class="process-math">\(T\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-30-4-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.5.3.a"><a tabindex="-1" href="#x2diagmat-30-4-1-1-4-1" title="Copy heading and permalink for Item 5.5.3.a" aria-label="Copy heading and permalink for Item 5.5.3.a">🔗</a></div>
+</li>
+<li id="x2diagmat-30-4-1-1-4-2">
+<div class="para" id="x2diagmat-30-4-1-1-4-2-1">Докажите, что <span class="process-math">\(\ran p(S)\)</span> инвариантен относительно <span class="process-math">\(T\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-30-4-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.5.3.b"><a tabindex="-1" href="#x2diagmat-30-4-1-1-4-2" title="Copy heading and permalink for Item 5.5.3.b" aria-label="Copy heading and permalink for Item 5.5.3.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-30-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="x2diagmat-30-4-1-2">Примечание. См. <a href="x5invar.html#x130" class="xref" data-knowl="./knowl/xref/x130.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.18: нуль-пространство и образ p(T) инвариантны относительно T">Теорему 5.18</a> для специального случая <span class="process-math">\(S = T\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-30-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.3"><a tabindex="-1" href="#x2diagmat-30-4" title="Copy heading and permalink for Exercise 5.5.3" aria-label="Copy heading and permalink for Exercise 5.5.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x2diagmat-30-5"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="x2diagmat-30-5-1-1">Докажите или приведите контрпример: Если <span class="process-math">\(A\)</span> — диагональная матрица, а <span class="process-math">\(B\)</span> — верхнетреугольная матрица того же размера, что и <span class="process-math">\(A\)</span>, то <span class="process-math">\(A\)</span> и <span class="process-math">\(B\)</span> коммутируют.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-30-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.4"><a tabindex="-1" href="#x2diagmat-30-5" title="Copy heading and permalink for Exercise 5.5.4" aria-label="Copy heading and permalink for Exercise 5.5.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x5dualcom"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="x5dualcom-1-1">Докажите, что пара операторов в конечномерном векторном пространстве коммутирует тогда и только тогда, когда коммутируют их двойственные операторы. Примечание. См. <a href="duals.html#DualMap" class="xref" data-knowl="./knowl/xref/DualMap.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Определение 3.118: двойственное (сопряжённое) отображение, T'">Определение 3.118</a> для определения двойственного оператора.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x5dualcom-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.5"><a tabindex="-1" href="#x5dualcom" title="Copy heading and permalink for Exercise 5.5.5" aria-label="Copy heading and permalink for Exercise 5.5.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x2diagmat-30-7"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para logical" id="x2diagmat-30-7-1-1">
+<div class="para">Предположим, что <span class="process-math">\(V\)</span> — ненулевое конечномерное комплексное векторное пространство и <span class="process-math">\(S, T \in \Lc(V)\)</span> коммутативно. Докажите, что существует <span class="process-math">\(\alpha , \lambda \in \C{}\)</span> такое, что</div>
+<div class="displaymath process-math" id="x2diagmat-30-7-1-1-4">
+\begin{equation*}
+\ran (S - \alpha  I) + \ran (T - \lambda I) \ne V{}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-30-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.6"><a tabindex="-1" href="#x2diagmat-30-7" title="Copy heading and permalink for Exercise 5.5.6" aria-label="Copy heading and permalink for Exercise 5.5.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x2diagmat-30-8"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="x2diagmat-30-8-1-1">Предположим, что <span class="process-math">\(V\)</span> — комплексное векторное пространство, <span class="process-math">\(S \in \Lc(V)\)</span> диагонализуемо и <span class="process-math">\(T \in \Lc(V)\)</span> коммутирует с <span class="process-math">\(S\)</span>. Докажите, что существует базис <span class="process-math">\(V\)</span> такой, что <span class="process-math">\(S\)</span> имеет диагональную матрицу относительно этого базиса, а <span class="process-math">\(T\)</span> имеет верхнетреугольную матрицу относительно этого базиса.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-30-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.7"><a tabindex="-1" href="#x2diagmat-30-8" title="Copy heading and permalink for Exercise 5.5.7" aria-label="Copy heading and permalink for Exercise 5.5.7">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x2diagmat-30-9"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="x2diagmat-30-9-1-1">Предположим, что <span class="process-math">\(m = 3\)</span> в <a href="x2diagmat.html#PD" class="xref" data-knowl="./knowl/xref/PD.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 5.72: операторы частного дифференцирования коммутируют">Примере 5.72</a> и <span class="process-math">\(D_x, D_y\)</span> — коммутирующие операторы частного дифференцирования на <span class="process-math">\(\P\!_3{}( \R2 )\)</span> из этого примера. Найдите базис <span class="process-math">\(\P\!_3{}( \R2 )\)</span>, относительно которого <span class="process-math">\(D_x\)</span> и <span class="process-math">\(D_y\)</span> имеют верхнетреугольную матрицу.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-30-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.8"><a tabindex="-1" href="#x2diagmat-30-9" title="Copy heading and permalink for Exercise 5.5.8" aria-label="Copy heading and permalink for Exercise 5.5.8">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x4ManyOps"><h3 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para logical" id="x4ManyOps-1-1">
+<div class="para">Предположим, что <span class="process-math">\(V\)</span> — конечномерное ненулевое комплексное векторное пространство. Предположим, что <span class="process-math">\(\E \subset \Lc(V)\)</span> таков, что <span class="process-math">\(S\)</span> и <span class="process-math">\(T\)</span> коммутируют для всех <span class="process-math">\(S, T \in \E\)</span>.</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x4ManyOps-1-1-6">
+<li id="x4ManyOps-1-1-6-1">
+<div class="para" id="x4ManyOps-1-1-6-1-1">Докажите, что в <span class="process-math">\(V\)</span> существует вектор, который является собственным вектором для каждого элемента <span class="process-math">\(\E\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x4ManyOps-1-1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.5.9.a"><a tabindex="-1" href="#x4ManyOps-1-1-6-1" title="Copy heading and permalink for Item 5.5.9.a" aria-label="Copy heading and permalink for Item 5.5.9.a">🔗</a></div>
+</li>
+<li id="x4ManyOps-1-1-6-2">
+<div class="para" id="x4ManyOps-1-1-6-2-1">Докажите, что существует базис <span class="process-math">\(V\)</span>, относительно которого каждый элемент <span class="process-math">\(\E\)</span> имеет верхнетреугольную матрицу.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x4ManyOps-1-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5.5.9.b"><a tabindex="-1" href="#x4ManyOps-1-1-6-2" title="Copy heading and permalink for Item 5.5.9.b" aria-label="Copy heading and permalink for Item 5.5.9.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x4ManyOps-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="x4ManyOps-1-2">Примечание. Это упражнение расширяет <a href="x2diagmat.html#x2common" class="xref" data-knowl="./knowl/xref/x2common.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.78: общий собственный вектор для коммутирующих операторов">Теорему 5.78</a> и <a href="x2diagmat.html#x2commute" class="xref" data-knowl="./knowl/xref/x2commute.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.80: коммутирующие операторы одновременно триангуляризуемы сверху">Теорему 5.80</a>, в которых рассматривается случай, когда <span class="process-math">\(\E\)</span> содержит только два элемента. В этом упражнении <span class="process-math">\(\E\)</span> может содержать любое количество элементов, а <span class="process-math">\(\E\)</span> может даже быть бесконечным множеством.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x4ManyOps-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.9"><a tabindex="-1" href="#x4ManyOps" title="Copy heading and permalink for Exercise 5.5.9" aria-label="Copy heading and permalink for Exercise 5.5.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x2diagmat-30-11"><h3 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="x2diagmat-30-11-1-1">Приведите пример двух коммутирующих операторов <span class="process-math">\(S, T\)</span> в конечномерном вещественном векторном пространстве, у которых <span class="process-math">\(S+T\)</span> имеет собственное значение, не равное собственному значению <span class="process-math">\(S\)</span> плюс собственное значение <span class="process-math">\(T\)</span>, а <span class="process-math">\(ST\)</span> имеет собственное значение, не равное собственному значению <span class="process-math">\(S\)</span>, умноженному на собственное значение <span class="process-math">\(T{}\)</span>.  Примечание. Это упражнение показывает, что <a href="x2diagmat.html#x2EigenSum" class="xref" data-knowl="./knowl/xref/x2EigenSum.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.81: собственные значения суммы и произведения коммутирующих операторов">теорема 5.81</a> не справедлива для вещественных векторных пространств.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x2diagmat-30-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.10"><a tabindex="-1" href="#x2diagmat-30-11" title="Copy heading and permalink for Exercise 5.5.10" aria-label="Copy heading and permalink for Exercise 5.5.10">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercises 5.5: Exercises"><a tabindex="-1" href="#x2diagmat-30" title="Copy heading and permalink for Exercises 5.5: Упражнения" aria-label="Copy heading and permalink for Exercises 5.5: Exercises">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 5.5: Commuting Operators"><a tabindex="-1" href="#x2diagmat" title="Copy heading and permalink for Section 5.5: Коммутирующие операторы" aria-label="Copy heading and permalink for Section 5.5: Commuting Operators">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="diagmat.html" title="Назад"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Назад</span></a><a class="top-button button" href="#" title="В начало"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">В начало</span></a><a class="next-button button" href="InnerProductSpaces.html" title="Далее"><span class="name">Далее</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" alt="Runestone Academy logo" src="data:image/png;base64,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"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" alt="MathJax logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAABgFBMVEUZlkYjHiBJpFaJu4h1s3cmIySYwpZnrGstmUvW5dOqy6ZGRkZaqWIAAAAhHB2307McFxk4oFA4NzfJ3MVRV1GIiYl2eHbl7eKhxp3B2L1HmVTh6t2qq6oVoUtpaGlOZ1G0tbSSl5M7RTowiUtNdlN+t4BwlnEUmkaNqYwAfwEIp09riGwVl0gUmkcUmkctnErr8ec5dEc8V0FOh1fExcMAf383VTo5ZkZdsWVAPj9BPkBdg2FammFVqlUUmkciIB9/f38Afz8A/wA+P0A+SEFIpllJpVpPqWYDhSUOm0YVqj8A/38A//8pnEYomkc6oVA6oE9gXV9ps3V//3////8QCw0AXAAAagAAfBAAixcAghQLiy4NjC4AjUYVlD8RkCwckjgqYDk/fz8qlTwillE8n1A2pFJAQT9fX2BAn1NCo1ZEq2Z/gYBnrW9rtHZ3wIaAf4CAin+BnX+eoKCAtn+/4b3//wDj8d8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACl+HKkAAAAgHRSTlP+//7+/v/+/v7+///+AP/+//7//v////7////+//7///////////9o/wMH/yyzzWn+/////wL/////////A0v/AgQB//+0y60pEgwCATFLssT/zQIB/wsMLwszFkwSDEps/wRtFr1j///cZMn/3Ln0////////Af8AAAAAAAAAADN3ZZgAAAl5SURBVHjatZqJd9q4FodtjMAgbIyQHSDYxkCAhJC1aSZtX+fNTJeZebMvb9/3fV/+/XclL5JsmfacSe85aU5S5/fdTVeSD4aT27cc57s//OPLL5qWZEdHR02ttSXrFdZovHj+249/wMUyM7LvN45z/Ku/tv7Tubg4YHbYyWzIbTwe97l1cxuNWqkVvuTsxvPzn3BBGQDE8y/6/wP1Q7COZKp+jmiV1C05uOZbL86LIIxM//3nfaZ+kJkKyePISYX7UjKV5DV7n546JwLwX+dnzc6BsHIUhT4A+nJ6BOGoVJ1m4xPn3RzwS2dtHQjvq/oFYdzX578K6LUb5847KeBL58cWFFUJQKs/zmusAZT7i7XUJyANgG877zdBcJ//KUC0UDVDVrl/edOegjgDvOgcdg6Ful5+LOm/JqD32TEAbpzzLkge5tapWuq+BiD0/62NAMpwY3z1o790Cv1OR68/VtdY63VKAPqNP/z6K8P5eb8keHjB/5UAr1jDuiZKARCC8b2XJf2LYRJR6s8K/bGqrwXURND4zU+N7/+tM1QACfE8jyCPTmX9/QHUAhofG+d9FRB4LkL+NAmQGQ3z9CgBiAq0rE17tdHoC8C58bJf0kfI+/1sOp1Nyde40NcF0LK2GIHhbW0JGo1PjT8NZcDGNJHp4SnYDHse7tcGYLU2GBGMCTiEV0c1ATQ+M3rDsdB/QDxkmibkfzYLkIu8oLbCrRWTxzhI/hWYaFsHGBhNEcGQJcg0OcGnkCtAbPpdvb5FmD6hLJuBZ271+gwwFhEMcQZA0EiIhe9FAOjqEkQR0/cCDjBdtNoDyId9Z5bpAwGcBwHkEUvxP99oWgnXh2aeQTvceVCHekC/ACQFABAu4YStdom1Yo/9L3geBQF24WlIUrvSQxzQ1wNMkxGI9zutPq8AqJouJNPjScXKIH0dACcgb8MyPxopS6y18ggmbppMhDiAtDUZKgE2KsCERnxk0n4rU5YAAQCgTNKjAiDrq4BhF5dCAAJCSXFIEYAYQYUVXwpArwrI22jc+UcpBMgSJFdMt2LKYQAoz0I/6QIAQBsAwmiJ4EKDeEFXGp/pkIMJRFylI8zHdYCuDIAkmWnVhG+muR2p07n1T0RUAA+ALwRVnwMkQn/cjWEVuwoDujFQpz8rAVa88DD4vl0uV3qAZN3+hpKUIQjIiy15A7aICoBFuQxgLn2OyfVbir4GAD9aq5gqDDaRk4LQbAVuvgpELyDqJwE2l68A8PUKvxhtthS5ouLIQ7GV52mLhD6bFqybYej5lJikreqXAWycpQMB/t0ESCIALVgx+fZS6DN5aKgomU0D/B6Ese1VAL2RAJRX1EbqWsQQmFJKvEd8CqUrERE4gMwSSnhbPS4lqAToVhYsDE2llmyyMZ9dPs/ZsAqmD8B58h6bixp9Bmh1a/Q5gW9sIgo+2lyXfyESJQ9mPsV868z0dYBROvH7o7I863gLe65bmh8QCshjf8adx9ygXI+bVX0OaKX63ao8I2yIOnUQ00d30ZQ5TzJ5VpRls7cX0NWoc8IqYluWcD6t64NpxDPP7Q55ZqzVlwHZKFNmAreAEZCY4OD81MeF82xrduv0GcBKAVXh3DZxEGRZgpkQzIazCAt10Hdz/X2Aen3LWtEg4J0P+aEHF8NU/lEWA/zSpb0afQGw9lkcBZ97KD1p+NA53G9FH6S0+gVgXwBNa4XTJCG21Wdpz7/n+kCoA1j7AuCn2qM48mmaokwWZemHonuZ/qChBzQYoCaA/FWLRSEENvn44AT5YnVBUPMnqRJYHWA0qneeW2yiIFsMsAw8VKwu+GHeK/TtQR2gtU+92aQYu1EQpY3Ej2N590NRhP82mB7Qspr73kFhGiGTZgDI0l3W/fwwNCn0OaASBACaVqu5x9owGEBaApBsuKn6XN42jIEGYO3Vj3zWinmK+IGSsPSwil+X/DfA7Cpgv34CznokkOcRWNq0k6p+icAA9epNWGFMn98CiHQ7ye9Bc0U/AyiEfQDQJ/6G6UMFAmpWDRaxRl8h7AFw/YQXk+mjyr6WE+yBKq8QagFtpp9wfU/VR6VDdcO2KwBB0AP4Wz3Q97k+Tm9h0gFJPlW6lGfIKJktAG2tsfxwfZf4Un3ZEY8oxwDkzieDin5BqANAfwZc33RhHcsHPHI9WWJTIaDYDsMaQg0gX1/5lVm6VPHWXypMhOa3i0GoJdRFMKd+riHSzxIUp5FP5nkQbJH4sMnNf7Eox2FzwEAXAMU+8pCmK7PhMxk0aEaAVe77fvLnCDa5+e3SNiTIoAbQXD4KdPog9jAbPvZgEBcxUJ8h/Igd+Nz5pSETGKBXtieZPhJXwXSQvm0uxfAUBA/7qUE7wLNzqacGAKjot9kRHbHiisMWctPx/2QgZsNgWWQpDcJP/o7ZCzOFUAU0nhCXH9G9Yj6L/SuVz2aPILgedB03ynoiDpU0la1HPZddA6Iof3uUHc+hxg1b6EM9CwIg7lJEZIJni72AxiSmNEbRrHixkL6bA9eu8smWDYcwNt8u7okI1iYvBHKvBnsBzK7xLCoaCcLmJywzLuTzNM9daUi5mEUBNwqykAGTyaQKuPKnyrWAFVkCiMUk70MmIIIELkXeZSgtt8mkipjMpwkp7wAFQMpweJsnKUsUYZPdjY0yoMRY0qkaQQpYViezrfrBEmXWAARj0niIpzNaAaDr6mBWQ0g3bNgkbD0gYwwYYOqXJ4WLNHPfWCC3OlJiGWBXjQOmpfdfyH1m6OxZ9RZqXkqAgQYweEgA4KsbPfgVavTDZTmVUGmpTbUAe4mS6VRaCenEWWgjWJQPHMi8lf9fC7Dn7KV0gpSt8SrUAux5KZXKtDPO9IAF3FZnMgDitg29XcqbR2manhk7PQAIhGLlvdpljb5hXxWHADbj53Imd8a6BgAErxh2iF3l6wJgBMRfwiD27VZZ6GvjNDSq4uLP+G4GX+iyXh8evZzDHGKPPSw1wqnx4S6s/bMFJdwvQuPFPn2OiOmzymPh7kPDWYd7/sxeXF8vFob9Cvn02eoJMlw7xkcnZ6Hxhiw8O/nIuNkbwjcErJ0bwzk+flMhhGfHxw4AnFPjjRBC49RhAOc7ztM3E8FTkOYfGnjHWd9/DKGxzj804DjvQgzhfes/FR97cJwT53QX3iMiDHfKBzcY4Xh9dl+IMDxbH2f6xYdnjh3ng/XuPhIVGrv1B1xQAbAgnJPT9e7sm8mf7danJ07uPtj/AWFeRaMe9pxOAAAAAElFTkSuQmCC"></a>
+</div>
+</body>
+</html>

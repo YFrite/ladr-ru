@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="ru" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Корневые векторы и нильпотентные операторы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="_static/pretext/fonts/material-symbols-outlined.css">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+</style>
+<link rel="stylesheet" type="text/css" href="external/customcss.css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Линейная алгебра: верный подход">
+<meta property="og:title" content="Линейная алгебра: верный подход">
+<meta property="book:title" content="Линейная алгебра: верный подход">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.55"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.55"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.dd07797f77620576.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.11d27cdc38930c2c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Перейти к основному содержимому</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Линейная алгебра: верный подход</span></a></div>
+<p class="byline">Шелдон Акслер</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Содержание"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Содержание</span></button><a class="index-button button" href="backmatter-5.html" title="Предметный указатель"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Указатель</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Поиск по книге"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Поиск</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Поисковый запрос" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Поисковый запрос"><button aria-label="Закрыть" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Результаты поиска: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>Ничего не найдено.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Читать вслух" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Читать вслух</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Предыдущее предложение"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Воспроизвести"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Следующее предложение"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Продолжить<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Настройки чтения"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Настройки чтения вслух</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Закрыть"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Голос</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Скорость чтения</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Свёрнутое содержимое</span></label><select id="ptx-read-aloud-asides"><option value="skip">Объявлять, не читать</option>
+<option value="read">Читать автоматически</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Следить за текстом (автопрокрутка)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Автоматически переходить на следующую страницу</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Настройки отображения"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Настройки отображения</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Настройки отображения</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Закрыть"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Межстрочный интервал</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Размер шрифта</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Тема</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>Системная</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Светлая</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Тёмная</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Специальные возможности</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Показывать постоянные ссылки</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Сбросить всё</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="operators_complex_vs-2.html" title="Назад"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Назад</span></a><a class="up-button button" href="operators_complex_vs.html" title="Наверх"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Наверх</span></a><a class="next-button button" href="decompop.html" title="Далее"><span class="name">Далее</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tensor}{\otimes}
+\newcommand{\F}[1]{\symbf{F}^{#1}}
+\newcommand{\andd}{\quad \text{и} \quad}
+\newcommand{\orr}{\quad \text{или} \quad}
+\newcommand{\butt}{\quad \text{но} \quad}
+\newcommand{\fun}[3]{#1 \colon #2 \to #3}
+\newcommand{\nth}{{\text{-й}}}
+\newcommand{\C}[1]{\symbf{C}^{#1}}
+\newcommand{\F}[1]{\symbf{F}^{#1}}
+\newcommand{\R}[1]{\symbf{R}^{#1}}
+\newcommand{\CC}[1]{\symbf{C}^{#1}}
+\newcommand{\FF}[1]{\symbf{F}^{#1}}
+\newcommand{\RR}[1]{\symbf{R}^{#1}}
+\newcommand{\A}{\symcal{A}}
+\newcommand{\B}{\symcal{B}}
+\newcommand{\E}{\symcal{E}}
+\newcommand{\CF}{\symcal{F}}
+\newcommand{\Lc}{\symcal{L}}
+\newcommand{\M}{\symcal{M}}
+\newcommand{\P}{\symcal{P}}
+\newcommand{\sm}{\backslash}
+\newcommand{\Space}{}
+\newcommand{\pound}[1]{#1^{\#}}
+\DeclareMathOperator{\ran}{range}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\perm}{perm}
+\DeclareMathOperator{\vol}{volume}
+\DeclareMathOperator{\ker}{null}
+\newcommand{\tran}[1]{#1^{\text{t}}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Содержание" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Линейная алгебра: верный подход</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="author.html" class="internal"><span class="title">Об авторе</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="forStudents.html" class="internal"><span class="title">Предисловие для студентов</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="forInstructors.html" class="internal"><span class="title">Предисловие для преподавателей</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgments.html" class="internal"><span class="title">Благодарности</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="VectorSpaces.html" class="internal"><span class="codenumber">1</span> <span class="title">Векторные пространства</span></a></div>
+<ul id="ptx-toc-group-VectorSpaces" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="VectorSpaces-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Rn_and_Cn.html" class="internal"><span class="codenumber">1.1</span> <span class="title"><span class="process-math">\(\R n\)</span> и <span class="process-math">\(\C n\)</span></span></a></div>
+<ul id="ptx-toc-group-Rn_and_Cn" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Rn_and_Cn.html#Rn_and_Cn-2" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Комплексные числа</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Rn_and_Cn.html#Rn_and_Cn-3" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Списки</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Rn_and_Cn.html#Rn_and_Cn-4" class="internal"><span class="codenumber">1.1.3</span> <span class="title"><span class="process-math">\(\F n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="Rn_and_Cn.html#fields" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Отступление о полях</span></a></div>
+<ul id="ptx-toc-group-fields" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Rn_and_Cn.html#fields-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x1DefVS.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Определение векторного пространства</span></a></div>
+<ul id="ptx-toc-group-x1DefVS" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x1DefVS.html#x1DefVS-46" class="internal"><span class="codenumber">1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x1Subspaces.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Подпространства</span></a></div>
+<ul id="ptx-toc-group-x1Subspaces" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x1Subspaces.html#x1Subspaces-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Суммы подпространств</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x1Subspaces.html#x1Subspaces-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Прямые суммы</span></a></div>
+<ul id="ptx-toc-group-x1Subspaces-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x1Subspaces.html#x1Subspaces-4-18" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="fin-dimVS.html" class="internal"><span class="codenumber">2</span> <span class="title">Конечномерные векторные пространства</span></a></div>
+<ul id="ptx-toc-group-fin-dimVS" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="fin-dimVS-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x2spli.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Линейная оболочка и линейная независимость</span></a></div>
+<ul id="ptx-toc-group-x2spli" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x2spli.html#x2spli-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Линейные комбинации и линейная оболочка</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x2spli.html#x2spli-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Линейная независимость</span></a></div>
+<ul id="ptx-toc-group-x2spli-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x2spli.html#x2spli-4-26" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="bases.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Базисы</span></a></div>
+<ul id="ptx-toc-group-bases" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="bases.html#bases-26" class="internal"><span class="codenumber">2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="dimension.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Размерность</span></a></div>
+<ul id="ptx-toc-group-dimension" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="dimension.html#dimension-30" class="internal"><span class="codenumber">2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="LinearMaps.html" class="internal"><span class="codenumber">3</span> <span class="title">Линейные отображения</span></a></div>
+<ul id="ptx-toc-group-LinearMaps" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="LinearMaps-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="vslinear.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Векторное пространство линейных отображений</span></a></div>
+<ul id="ptx-toc-group-vslinear" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="vslinear.html#vslinear-2" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Определение и примеры линейных отображений</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="vslinear.html#vslinear-3" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Алгебраические операции на <span class="process-math">\(\Lc(V, W)\)</span></span></a></div>
+<ul id="ptx-toc-group-vslinear-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vslinear.html#vslinear-3-20" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x3nullspace.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Нуль-пространства и образы</span></a></div>
+<ul id="ptx-toc-group-x3nullspace" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-2" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Нуль-пространство и инъективность</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-3" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Образ и сюръективность</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-4" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Основная теорема о линейных отображениях</span></a></div>
+<ul id="ptx-toc-group-x3nullspace-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x3nullspace.html#x3nullspace-4-30" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="matrices.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Матрицы</span></a></div>
+<ul id="ptx-toc-group-matrices" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices.html#matrices-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Представление линейного отображения матрицей</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices.html#matrices-3" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Сложение матриц и умножение на скаляр</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices.html#matrices-4" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Умножение матриц</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="matrices.html#matrices-5" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Столбцово-строчная факторизация и ранг матрицы</span></a></div>
+<ul id="ptx-toc-group-matrices-5" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="matrices.html#x3think2" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="invertible.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Обратимость и изоморфизмы</span></a></div>
+<ul id="ptx-toc-group-invertible" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="invertible.html#invertible-2" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Обратимые линейные отображения</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="invertible.html#invertible-3" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Изоморфные векторные пространства</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="invertible.html#invertible-4" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Линейные отображения как умножение матриц</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="invertible.html#invertible-5" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Замена базиса</span></a></div>
+<ul id="ptx-toc-group-invertible-5" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="invertible.html#invertible-5-27" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="pq.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Произведения и факторпространства векторных пространств</span></a></div>
+<ul id="ptx-toc-group-pq" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="pq.html#pq-2" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Произведения векторных пространств</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="pq.html#pq-3" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Факторпространства</span></a></div>
+<ul id="ptx-toc-group-pq-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="pq.html#pq-3-29" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="duals.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Двойственность</span></a></div>
+<ul id="ptx-toc-group-duals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="duals.html#duals-2" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Двойственное пространство и двойственное отображение</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="duals.html#duals-3" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Нуль-пространство и образ двойственного отображения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="duals.html#duals-4" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Матрица двойственного отображения</span></a></div>
+<ul id="ptx-toc-group-duals-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="duals.html#duals-4-9" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="polynomials.html" class="internal"><span class="codenumber">4</span> <span class="title">Многочлены</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="eigs.html" class="internal"><span class="codenumber">5</span> <span class="title">Собственные значения и собственные векторы</span></a></div>
+<ul id="ptx-toc-group-eigs" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="eigs-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x5invar.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Инвариантные подпространства</span></a></div>
+<ul id="ptx-toc-group-x5invar" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x5invar.html#x5invar-2" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Собственные значения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x5invar.html#x5invar-3" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Многочлены от операторов</span></a></div>
+<ul id="ptx-toc-group-x5invar-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x5invar.html#x5invar-3-19" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="eigenuppertri.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Минимальный многочлен</span></a></div>
+<ul id="ptx-toc-group-eigenuppertri" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-2" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Существование собственных значений в комплексных векторных пространствах</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-3" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Собственные значения и минимальный многочлен</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-4" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Собственные значения в нечётномерных вещественных векторных пространствах</span></a></div>
+<ul id="ptx-toc-group-eigenuppertri-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="eigenuppertri.html#eigenuppertri-4-10" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x4utm.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Верхнетреугольные матрицы</span></a></div>
+<ul id="ptx-toc-group-x4utm" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x4utm.html#x4utm-40" class="internal"><span class="codenumber">5.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="diagmat.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Диагонализируемые операторы</span></a></div>
+<ul id="ptx-toc-group-diagmat" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="diagmat.html#diagmat-2" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Диагональные матрицы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="diagmat.html#diagmat-3" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Условия диагонализируемости</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="diagmat.html#diagmat-4" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Теорема Гершгорина о кругах</span></a></div>
+<ul id="ptx-toc-group-diagmat-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="diagmat.html#diagmat-4-12" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x2diagmat.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Коммутирующие операторы</span></a></div>
+<ul id="ptx-toc-group-x2diagmat" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x2diagmat.html#x2diagmat-30" class="internal"><span class="codenumber">5.5</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="InnerProductSpaces.html" class="internal"><span class="codenumber">6</span> <span class="title">Пространства со скалярным произведением</span></a></div>
+<ul id="ptx-toc-group-InnerProductSpaces" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="InnerProductSpaces-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x6ipn.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Скалярные произведения и нормы</span></a></div>
+<ul id="ptx-toc-group-x6ipn" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x6ipn.html#x6ipn-2" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Скалярные произведения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x6ipn.html#x6ipn-3" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Нормы</span></a></div>
+<ul id="ptx-toc-group-x6ipn-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x6ipn.html#x6ipn-3-41" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="orthobases.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Ортонормированные базисы</span></a></div>
+<ul id="ptx-toc-group-orthobases" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="orthobases.html#orthobases-2" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Ортонормированные списки и процесс Грама — Шмидта</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="orthobases.html#orthobases-3" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Линейные функционалы на пространствах со скалярным произведением</span></a></div>
+<ul id="ptx-toc-group-orthobases-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="orthobases.html#orthobases-3-16" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="OrthoMin.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Ортогональные дополнения и задачи минимизации</span></a></div>
+<ul id="ptx-toc-group-OrthoMin" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-2" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Ортогональные дополнения</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-3" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Задачи минимизации</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-4" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Псевдообратное отображение</span></a></div>
+<ul id="ptx-toc-group-OrthoMin-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="OrthoMin.html#OrthoMin-4-27" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="opsinner.html" class="internal"><span class="codenumber">7</span> <span class="title">Операторы в пространствах со скалярным произведением</span></a></div>
+<ul id="ptx-toc-group-opsinner" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="opsinner-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="selfadjoint_normal.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Самосопряжённые и нормальные операторы</span></a></div>
+<ul id="ptx-toc-group-selfadjoint_normal" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-2" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Сопряжённые операторы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-3" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Самосопряжённые операторы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-4" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Нормальные операторы</span></a></div>
+<ul id="ptx-toc-group-selfadjoint_normal-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="selfadjoint_normal.html#selfadjoint_normal-4-18" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SpectralTheorem.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Спектральная теорема</span></a></div>
+<ul id="ptx-toc-group-SpectralTheorem" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SpectralTheorem.html#SpectralTheorem-3" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Вещественная спектральная теорема</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="SpectralTheorem.html#SpectralTheorem-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Комплексная спектральная теорема</span></a></div>
+<ul id="ptx-toc-group-SpectralTheorem-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="SpectralTheorem.html#SpectralTheorem-4-10" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="POIUO.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Положительные операторы</span></a></div>
+<ul id="ptx-toc-group-POIUO" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="POIUO.html#POIUO-21" class="internal"><span class="codenumber">7.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x3QR.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Изометрии, унитарные операторы и факторизация матриц</span></a></div>
+<ul id="ptx-toc-group-x3QR" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3QR.html#x3QR-2" class="internal"><span class="codenumber">7.4.1</span> <span class="title">Изометрии</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3QR.html#x3QR-3" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Унитарные операторы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x3QR.html#x3QR-4" class="internal"><span class="codenumber">7.4.3</span> <span class="title">QR-разложение</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x3QR.html#x3QR-5" class="internal"><span class="codenumber">7.4.4</span> <span class="title">Разложение Холецкого</span></a></div>
+<ul id="ptx-toc-group-x3QR-5" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x3QR.html#x3QR-5-13" class="internal"><span class="codenumber">7.4.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x2SVD.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Сингулярное разложение</span></a></div>
+<ul id="ptx-toc-group-x2SVD" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x2SVD.html#x2SVD-2" class="internal"><span class="codenumber">7.5.1</span> <span class="title">Сингулярные числа</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x2SVD.html#x2SVD-3" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Сингулярное разложение для линейных отображений и матриц</span></a></div>
+<ul id="ptx-toc-group-x2SVD-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x2SVD.html#x2SVD-3-22" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x9SVD.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Следствия сингулярного разложения</span></a></div>
+<ul id="ptx-toc-group-x9SVD" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-2" class="internal"><span class="codenumber">7.6.1</span> <span class="title">Нормы линейных отображений</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-3" class="internal"><span class="codenumber">7.6.2</span> <span class="title">Аппроксимация линейными отображениями с образом меньшей размерности</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-4" class="internal"><span class="codenumber">7.6.3</span> <span class="title">Полярное разложение</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-5" class="internal"><span class="codenumber">7.6.4</span> <span class="title">Действие операторов на эллипсоиды и параллелепипеды</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-6" class="internal"><span class="codenumber">7.6.5</span> <span class="title">Объём через сингулярные числа</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x9SVD.html#x9SVD-7" class="internal"><span class="codenumber">7.6.6</span> <span class="title">Свойства оператора, определяемые его собственными значениями</span></a></div>
+<ul id="ptx-toc-group-x9SVD-7" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x9SVD.html#x9SVD-7-5" class="internal"><span class="codenumber">7.6.6</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="operators_complex_vs.html" class="internal"><span class="codenumber">8</span> <span class="title">Операторы в комплексных векторных пространствах</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-operators_complex_vs">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="operators_complex_vs-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="geneig.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Корневые векторы и нильпотентные операторы</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-geneig">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geneig.html#geneig-2" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Нуль-пространства степеней оператора</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geneig.html#geneig-3" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Корневые (обобщённые собственные) векторы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="geneig.html#geneig-4" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Нильпотентные операторы</span></a></div>
+<ul id="ptx-toc-group-geneig-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geneig.html#geneig-4-15" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="decompop.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Разложение в прямую сумму корневых подпространств</span></a></div>
+<ul id="ptx-toc-group-decompop" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="decompop.html#decompop-2" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Корневые (обобщённые собственные) подпространства</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="decompop.html#decompop-3" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Кратность собственного значения</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="decompop.html#decompop-4" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Блочно-диагональные матрицы</span></a></div>
+<ul id="ptx-toc-group-decompop-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="decompop.html#decompop-4-10" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x8geneigde.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Следствия разложения на корневые подпространства</span></a></div>
+<ul id="ptx-toc-group-x8geneigde" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x8geneigde.html#x8geneigde-2" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Квадратные корни из операторов</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x8geneigde.html#Jordan" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Жорданова форма</span></a></div>
+<ul id="ptx-toc-group-Jordan" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x8geneigde.html#Jordan-19" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x7trace.html" class="internal"><span class="codenumber">8.4</span> <span class="title">След: связь между матрицами и операторами</span></a></div>
+<ul id="ptx-toc-group-x7trace" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x7trace.html#x7trace-36" class="internal"><span class="codenumber">8.4</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="MultLATensors.html" class="internal"><span class="codenumber">9</span> <span class="title">Полилинейная алгебра и определители</span></a></div>
+<ul id="ptx-toc-group-MultLATensors" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="MultLATensors-2.html" class="internal"><span class="title">Введение</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="bilin_quad.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Билинейные и квадратичные формы</span></a></div>
+<ul id="ptx-toc-group-bilin_quad" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-2" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Билинейные формы</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-3" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Симметричные билинейные формы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-4" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Квадратичные формы</span></a></div>
+<ul id="ptx-toc-group-bilin_quad-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="bilin_quad.html#bilin_quad-4-15" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="alt_multi.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Кососимметрические полилинейные формы</span></a></div>
+<ul id="ptx-toc-group-alt_multi" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="alt_multi.html#alt_multi-2" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Полилинейные формы</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="alt_multi.html#alt_multi-3" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Кососимметрические полилинейные формы и перестановки</span></a></div>
+<ul id="ptx-toc-group-alt_multi-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="alt_multi.html#alt_multi-3-27" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x9det.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Определители</span></a></div>
+<ul id="ptx-toc-group-x9det" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9det.html#x9det-2" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Определение определителя</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x9det.html#x9det-3" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Свойства определителей</span></a></div>
+<ul id="ptx-toc-group-x9det-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x9det.html#x9det-3-65" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="x9TensorSect.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Тензорные произведения</span></a></div>
+<ul id="ptx-toc-group-x9TensorSect" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-2" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Тензорное произведение двух векторных пространств</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-3" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Тензорное произведение пространств со скалярным произведением</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-4" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Тензорное произведение нескольких векторных пространств</span></a></div>
+<ul id="ptx-toc-group-x9TensorSect-4" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="x9TensorSect.html#x9TensorSect-4-25" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Упражнения</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Приложения и указатель</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="photocredits.html" class="internal"><span class="codenumber">1</span> <span class="title">Источники фотографий</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="typesetting.html" class="internal"><span class="codenumber">2</span> <span class="title">Колофон: заметки о вёрстке</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretextplus.html" class="internal"><span class="codenumber">3</span> <span class="title">Колофон: веб-версия</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Предметный указатель</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="geneig">
+<h1 class="heading hide-type">
+<span class="type">Раздел</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Корневые векторы и нильпотентные операторы</span>
+</h1>
+<section class="subsection" id="geneig-2">
+<h2 class="heading hide-type">
+<span class="type">Подраздел</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Нуль-пространства степеней оператора</span>
+</h2>
+<div class="para" id="geneig-2-2">Мы начнем эту главу с изучения нуль-пространств степеней оператора.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x76"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">последовательность увеличения нулевых пробелов.</span>
+</h3>
+<div class="para logical" id="x76-2-1">
+<div class="para">Предположим, <span class="process-math">\(T \in \Lc(V)\)</span>. Тогда</div>
+<div class="displaymath process-math" id="x76-2-1-2">
+\begin{equation*}
+\{0\} = \ker T^0 \subset \ker T^1 \subset \cdots \subset \ker T^k \subset \ker T^{k+1} \subset \dotsb .
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x76-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.1: sequence of increasing null spaces"><a tabindex="-1" href="#x76" title="Copy heading and permalink for Theorem 8.1: последовательность увеличения нулевых пробелов" aria-label="Copy heading and permalink for Theorem 8.1: sequence of increasing null spaces">🔗</a></div>
+</article>
+<details id="geneig-2-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="geneig-2-4-1">Предположим, что <span class="process-math">\(k\)</span> — целое неотрицательное число и <span class="process-math">\(v \in \ker T^k\!\)</span>. Тогда <span class="process-math">\(T^k v = 0\)</span>, откуда следует, что <span class="process-math">\(T^{k+1} v = T( T^kv ) = T(0) = 0\)</span>. Таким образом, <span class="process-math">\(v \in \ker T^{k+1}\!\)</span>. Отсюда <span class="process-math">\(\ker T^k \subset \ker T^{k+1}\!\)</span>, как и хотелось.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 8.1.1.1"><a tabindex="-1" href="#geneig-2-4" title="Copy heading and permalink for Proof 8.1.1.1" aria-label="Copy heading and permalink for Proof 8.1.1.1">🔗</a></div>
+</article></details>
+<details id="geneig-2-5" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="geneig-2-5-1">Аналогичные результаты по уменьшению последовательности образов см. в <a href="geneig.html#range1" class="xref" data-knowl="./knowl/xref/range1.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 8.1.3.6">Упражнениях 8.1.3.6</a>, <a href="geneig.html#range2" class="xref" data-knowl="./knowl/xref/range2.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 8.1.3.7">Упражнения 8.1.3.7</a> и <a href="geneig.html#range3" class="xref" data-knowl="./knowl/xref/range3.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 8.1.3.8">Упражнения 8.1.3.8</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<div class="para" id="geneig-2-6">Следующий результат утверждает, что если два последовательных члена в приведенной выше последовательности подпространств равны, то все последующие члены в последовательности равны.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="a113"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">равенство в последовательности нулевых пробелов.</span>
+</h3>
+<div class="para logical" id="a113-2-1">
+<div class="para">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span> и <span class="process-math">\(m\)</span> — целое неотрицательное число такое, что</div>
+<div class="displaymath process-math" id="a113-2-1-3">
+\begin{equation*}
+\ker T^m = \ker T^{m+1}\!.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#a113-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="a113-2-2">
+<div class="para">Тогда</div>
+<div class="displaymath process-math" id="a113-2-2-1">
+\begin{equation*}
+\ker T^m = \ker T^{m+1} = \ker T^{m+2} = \ker T^{m+3} = \dotsb .
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#a113-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.2: equality in the sequence of null spaces"><a tabindex="-1" href="#a113" title="Copy heading and permalink for Theorem 8.2: равенство в последовательности нулевых пробелов" aria-label="Copy heading and permalink for Theorem 8.2: equality in the sequence of null spaces">🔗</a></div>
+</article>
+<details id="geneig-2-8" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="geneig-2-8-1">
+<div class="para">Пусть <span class="process-math">\(k\)</span> — целое положительное число. Мы хотим доказать это</div>
+<div class="displaymath process-math" id="geneig-2-8-1-2">
+\begin{equation*}
+\ker T^{m+k} = \ker T^{m + k + 1}\!.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="geneig-2-8-2">Из <a href="geneig.html#x76" class="xref" data-knowl="./knowl/xref/x76.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.1: последовательность увеличения нулевых пробелов">Теоремы 8.1</a> мы уже знаем, что <span class="process-math">\(\ker T^{m+k} \subset \ker T^{m + k + 1}\!\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="geneig-2-8-3">
+<div class="para">Чтобы доказать включение в обратном направлении, предположим <span class="process-math">\(v \in \ker T^{m+ k+1}\!\)</span>. Тогда</div>
+<div class="displaymath process-math" id="geneig-2-8-3-2">
+\begin{equation*}
+T^{m+1} ( T^k v ) = T^{m+k+1}v =0.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="geneig-2-8-4">
+<div class="para">Следовательно</div>
+<div class="displaymath process-math" id="geneig-2-8-4-1">
+\begin{equation*}
+T^k v \in \ker T^{m+1} = \ker T^m\!.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-8-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="geneig-2-8-5">Таким образом, <span class="process-math">\(T^{m+k} v = T^m( T^k v ) = 0\)</span>, а это означает, что <span class="process-math">\(v \in \ker T^{m+k}\!\)</span>. Отсюда следует, что <span class="process-math">\(\ker T^{m + k+1} \subset \ker T^{m+k}\!\)</span>, что завершает доказательство.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-8-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 8.1.1.2"><a tabindex="-1" href="#geneig-2-8" title="Copy heading and permalink for Proof 8.1.1.2" aria-label="Copy heading and permalink for Proof 8.1.1.2">🔗</a></div>
+</article></details>
+<div class="para" id="geneig-2-9">Приведенный выше результат поднимает вопрос о том, существует ли такое неотрицательное целое число <span class="process-math">\(m\)</span>, что <span class="process-math">\(\ker T^m = \ker T^{m+1}\!\)</span>. Следующий результат показывает, что это равенство справедливо, по крайней мере, когда <span class="process-math">\(m\)</span> равно размерности векторного пространства, в котором работает <span class="process-math">\(T\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x23"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">нулевые пробелы перестают расти.</span>
+</h3>
+<div class="para logical" id="x23-2-1">
+<div class="para">Предположим, <span class="process-math">\(T \in \Lc(V)\)</span>. Тогда</div>
+<div class="displaymath process-math" id="x23-2-1-2">
+\begin{equation*}
+\ker T^{\dim V} = \ker T^{\dim V + 1} = \ker T^{\dim V + 2} = \dotsb .
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x23-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.3: null spaces stop growing"><a tabindex="-1" href="#x23" title="Copy heading and permalink for Theorem 8.3: нулевые пробелы перестают расти" aria-label="Copy heading and permalink for Theorem 8.3: null spaces stop growing">🔗</a></div>
+</article>
+<details id="geneig-2-11" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="geneig-2-11-1">
+<div class="para">Нам нужно только доказать, что <span class="process-math">\(\ker T^{\dim V} = \ker T^{\dim V + 1}\)</span> (по <a href="geneig.html#a113" class="xref" data-knowl="./knowl/xref/a113.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.2: равенство в последовательности нулевых пробелов">теореме 8.2</a>). Предположим, это неправда. Тогда по <a href="geneig.html#x76" class="xref" data-knowl="./knowl/xref/x76.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.1: последовательность увеличения нулевых пробелов">Теореме 8.1</a> и <a href="geneig.html#a113" class="xref" data-knowl="./knowl/xref/a113.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.2: равенство в последовательности нулевых пробелов">Теореме 8.2</a> имеем</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/a113.html ./knowl/xref/x76.html ./knowl/xref/a113.html" id="geneig-2-11-1-5">
+\begin{equation*}
+\{0\} = \ker T^0 \subsetneq \ker T^1 \subsetneq \dots \subsetneq \ker T^{\dim V} \subsetneq \ker T^{\dim V + 1}\!,
+\end{equation*}
+</div>
+<div class="para">где символ <span class="process-math">\(\subsetneq\)</span> означает «содержится, но не равен». При каждом строгом включении в приведенной выше цепочке размерность увеличивается как минимум на <span class="process-math">\(1\)</span>. Таким образом, <span class="process-math">\(\dim \ker T^{\dim V + 1} \ge \dim V+ 1\)</span> — противоречие, поскольку подпространство в <span class="process-math">\(V\)</span> не может иметь размерность большую, чем <span class="process-math">\(\dim V{}\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 8.1.1.3"><a tabindex="-1" href="#geneig-2-11" title="Copy heading and permalink for Proof 8.1.1.3" aria-label="Copy heading and permalink for Proof 8.1.1.3">🔗</a></div>
+</article></details>
+<div class="para" id="geneig-2-12">Неправда, что <span class="process-math">\(V = \ker T \oplus \ran T\)</span> для каждого <span class="process-math">\(T \in \Lc(V)\)</span>. Однако следующий результат может оказаться полезной заменой.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x8nulloplusran"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(V\)</span> есть прямая сумма <span class="process-math">\(\ker T^{\dim V}\)</span> и <span class="process-math">\(\ran T^{\dim V}\)</span>.</span>
+</h3>
+<div class="para logical" id="x8nulloplusran-2-1">
+<div class="para">Предположим, <span class="process-math">\(T \in \Lc(V)\)</span>. Тогда</div>
+<div class="displaymath process-math" id="x8nulloplusran-2-1-3">
+\begin{equation*}
+V = \ker T^{\dim V} \oplus \ran T^{\dim V}\!.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8nulloplusran-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.4: V is the direct sum of  \ker T^{\dim V} and  \ran T^{\dim V}"><a tabindex="-1" href="#x8nulloplusran" title="Copy heading and permalink for Theorem 8.4: V есть прямая сумма \ker T^{\dim V} и \ran T^{\dim V}" aria-label="Copy heading and permalink for Theorem 8.4: V is the direct sum of  \ker T^{\dim V} and  \ran T^{\dim V}">🔗</a></div>
+</article>
+<details id="geneig-2-14" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="geneig-2-14-1">
+<div class="para">Пусть <span class="process-math">\(n = \dim V{}\)</span>. Сначала мы покажем, что</div>
+<div class="displaymath process-math" id="nullran">
+\begin{equation}
+( \ker T^n ) \cap ( \ran T^n ) = \{0\}.\tag{8.5}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="geneig-2-14-2">Предположим, <span class="process-math">\(v \in ( \ker T^n ) \cap ( \ran T^n )\)</span>. Тогда <span class="process-math">\(T^n v = 0\)</span> и существует <span class="process-math">\(u \in V\)</span> такой, что <span class="process-math">\(v = T^n u\)</span>. Применение <span class="process-math">\(T^n\)</span> к обеим частям последнего уравнения показывает, что <span class="process-math">\(T^n v = T^{2n} u\)</span>. Отсюда <span class="process-math">\(T^{2n} u = 0\)</span>, откуда следует, что <span class="process-math">\(T^n u = 0\)</span> (по <a href="geneig.html#x23" class="xref" data-knowl="./knowl/xref/x23.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.3: нулевые пробелы перестают расти">теореме 8.3</a>). Таким образом, <span class="process-math">\(v = T^n u = 0\)</span> завершает доказательство <a href="geneig.html#nullran" class="xref" data-knowl="./knowl/xref/nullran.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 8.5">(8.5)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="geneig-2-14-3">
+<div class="para">Теперь из <a href="geneig.html#nullran" class="xref" data-knowl="./knowl/xref/nullran.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 8.5">(8.5)</a> следует, что <span class="process-math">\(\ker T^n + \ran T^n\)</span> — прямая сумма (по <a href="x1Subspaces.html#x219" class="xref" data-knowl="./knowl/xref/x219.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 1.46: прямая сумма двух подпространств">теореме 1.46</a>). Кроме того,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/nullran.html ./knowl/xref/x219.html ./knowl/xref/x3directsumdim.html ./knowl/xref/x3ab11.html ./knowl/xref/x2subfull.html" id="geneig-2-14-3-4">
+\begin{equation*}
+\dim( \ker T^n \oplus \ran T^n ) = \dim \ker T^n + \dim \ran T^n = \dim V{},
+\end{equation*}
+</div>
+<div class="para">где первое равенство выше вытекает из <a href="pq.html#x3directsumdim" class="xref" data-knowl="./knowl/xref/x3directsumdim.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.94: Сумма является прямой суммой тогда и только тогда, когда измерения складываются">Теоремы 3.94</a>, а второе равенство вытекает из фундаментальной теоремы о линейных отображениях <a href="x3nullspace.html#x3ab11" class="xref" data-knowl="./knowl/xref/x3ab11.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.21: основная теорема о линейных отображениях">Теорема 3.21</a>. Из приведенного выше уравнения следует, что <span class="process-math">\(\ker T^n \oplus \ran T^n = V{}\)</span> (см. <a href="dimension.html#x2subfull" class="xref" data-knowl="./knowl/xref/x2subfull.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 2.39: подпространство полной размерности равно всему пространству">теорему 2.39</a>), как и хотелось.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-14-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 8.1.1.4"><a tabindex="-1" href="#geneig-2-14" title="Copy heading and permalink for Proof 8.1.1.4" aria-label="Copy heading and permalink for Proof 8.1.1.4">🔗</a></div>
+</article></details>
+<div class="para" id="geneig-2-15">Чтобы улучшить приведенный выше результат, см. <a href="geneig.html#x8notnil" class="xref" data-knowl="./knowl/xref/x8notnil.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 8.1.3.19">Упражнение 8.1.3.19</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="geneig-2-16" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\F3 = \ker T^3 \oplus \ran T^3\)</span> для <span class="process-math">\(T \in \Lc(\F3)\)</span>.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="geneig-2-16-2-1">
+<div class="para">Предположим, что <span class="process-math">\(T \in \Lc(\F{3})\)</span> определяется формулой</div>
+<div class="displaymath process-math" id="geneig-2-16-2-1-2">
+\begin{equation*}
+T(z_1, z_2, z_3) = (4z_2, 0, 5z_3).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="geneig-2-16-2-2">
+<div class="para">Затем <span class="process-math">\(\ker T = \{ (z_1, 0, 0):
+z_1 \in \F{} \}\)</span> и <span class="process-math">\(\ran T = \{ (z_1, 0, z_3):
+z_1, z_3 \in \F{} \}\)</span>. Таким образом, <span class="process-math">\(\ker T \cap \ran T \ne \{0\}\)</span>. Следовательно, <span class="process-math">\(\ker T + \ran T\)</span> не является прямой суммой. Также обратите внимание, что <span class="process-math">\(\ker T + \ran T \ne \FF3\)</span>. Однако у нас есть <span class="process-math">\(T^3(z_1, z_2, z_3) = (0, 0, 125z_3)\)</span>. Таким образом мы видим, что</div>
+<div class="displaymath process-math" id="geneig-2-16-2-2-7">
+\begin{equation*}
+\ker T^3 = \{ (z_1, z_2, 0): z_1, z_2 \in \F{} \} \andd \ran T^3 = \{ (0, 0, z_3): z_3 \in \F{} \}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-16-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="geneig-2-16-2-3">Следовательно, <span class="process-math">\(\FF3 = \ker T^3 \oplus \ran T^3{}\)</span>, как и ожидалось согласно <a href="geneig.html#x8nulloplusran" class="xref" data-knowl="./knowl/xref/x8nulloplusran.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.4: V есть прямая сумма \ker T^{\dim V} и \ran T^{\dim V}">теореме 8.4</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-2-16-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 8.6: \F3 = \ker T^3 \oplus \ran T^3 for T \in \Lc(\F3)"><a tabindex="-1" href="#geneig-2-16" title="Copy heading and permalink for Example 8.6: \F3 = \ker T^3 \oplus \ran T^3 для T \in \Lc(\F3)" aria-label="Copy heading and permalink for Example 8.6: \F3 = \ker T^3 \oplus \ran T^3 for T \in \Lc(\F3)">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 8.1.1: Null Spaces of Powers of an Operator"><a tabindex="-1" href="#geneig-2" title="Copy heading and permalink for Subsection 8.1.1: Нуль-пространства степеней оператора" aria-label="Copy heading and permalink for Subsection 8.1.1: Null Spaces of Powers of an Operator">🔗</a></div>
+</section>
+<section class="subsection" id="geneig-3">
+<h2 class="heading hide-type">
+<span class="type">Подраздел</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Корневые (обобщённые собственные) векторы</span>
+</h2>
+<div class="para" id="geneig-3-2">У некоторых операторов недостаточно собственных векторов, чтобы дать хорошее описание их поведения. Таким образом, в этом подразделе мы вводим понятие обобщенных собственных векторов, которые будут играть важную роль в нашем описании структуры оператора.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="geneig-3-3">
+<div class="para">Чтобы понять, почему нам нужно нечто большее, чем собственные векторы, давайте рассмотрим вопрос описания оператора путем разложения его области определения на инвариантные подпространства. Исправьте <span class="process-math">\(T \in \Lc(V)\)</span>. Мы пытаемся описать <span class="process-math">\(T\)</span>, находя «хорошее» разложение в прямую сумму</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x427.html ./knowl/xref/x427.html" id="geneig-3-3-4">
+\begin{equation*}
+V = V{}_1 \oplus \dots \oplus V{}_n,
+\end{equation*}
+</div>
+<div class="para">где каждое <span class="process-math">\(V{}_k\)</span> — это подпространство <span class="process-math">\(V\)</span>, инвариантное относительно <span class="process-math">\(T{}\)</span>. Простейшие возможные ненулевые инвариантные подпространства одномерны. Разложение, описанное выше, в котором каждое <span class="process-math">\(V{}_k\)</span> является одномерным подпространством <span class="process-math">\(V\)</span>, инвариантным относительно <span class="process-math">\(T\)</span>, возможно тогда и только тогда, когда <span class="process-math">\(V\)</span> имеет базис, состоящий из собственных векторов <span class="process-math">\(T\)</span> (см. <a href="diagmat.html#x427" class="xref" data-knowl="./knowl/xref/x427.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.55: условия, эквивалентные диагонализуемости">Теорему 5.55</a>). Это происходит тогда и только тогда, когда <span class="process-math">\(V\)</span> имеет разложение в собственном пространстве.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x427.html ./knowl/xref/x427.html" id="x429">
+\begin{equation}
+V = E(\lambda_1, T) \oplus \dots \oplus E(\lambda_m, T),\tag{8.7}
+\end{equation}
+</div>
+<div class="para">где <span class="process-math">\(\lambda_1, \dots, \lambda_m\)</span> — различные собственные значения <span class="process-math">\(T\)</span> (см. <a href="diagmat.html#x427" class="xref" data-knowl="./knowl/xref/x427.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.55: условия, эквивалентные диагонализуемости">теорему 5.55</a>).</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="geneig-3-4">Спектральная теорема из предыдущей главы показывает, что если <span class="process-math">\(V\)</span> является пространством со скалярным произведением, то разложение вида <a href="geneig.html#x429" class="xref" data-knowl="./knowl/xref/x429.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 8.7">(8.7)</a> справедливо для каждого самосопряженного оператора, если <span class="process-math">\(\F{} = \R{}\)</span>, и для каждого нормального оператора, если <span class="process-math">\(\F{} = \C{}\)</span>, поскольку операторы этих типов имеют достаточно собственных векторов, чтобы сформировать базис <span class="process-math">\(V\)</span> (см. <a href="SpectralTheorem.html#x86" class="xref" data-knowl="./knowl/xref/x86.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 7.29: вещественная спектральная теорема">Теорему 7.29</a> и <a href="SpectralTheorem.html#x85" class="xref" data-knowl="./knowl/xref/x85.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 7.31: комплексная спектральная теорема">Теорему 7.31</a>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="geneig-3-5">Однако разложение вида <a href="geneig.html#x429" class="xref" data-knowl="./knowl/xref/x429.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 8.7">(8.7)</a> может не выполняться для более общих операторов даже в комплексном векторном пространстве. Пример был дан оператором в <a href="diagmat.html#x428" class="xref" data-knowl="./knowl/xref/x428.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 5.57: оператор, который не является диагонализуемым">Примере 5.57</a>, у которого недостаточно собственных векторов для выполнения <a href="geneig.html#x429" class="xref" data-knowl="./knowl/xref/x429.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 8.7">(8.7)</a>. Обобщенные собственные векторы и обобщенные собственные пространства, которые мы сейчас введем, исправят эту ситуацию.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="definition definition-like" id="geneig-3-6"><h3 class="heading">
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">обобщенный собственный вектор.</span>
+</h3>
+<div class="para logical" id="geneig-3-6-2-1">
+<div class="para">Предположим, <span class="process-math">\(T \in \Lc(V)\)</span> и <span class="process-math">\(\lambda\)</span> — собственное значение <span class="process-math">\(T{}\)</span>. Вектор <span class="process-math">\(v \in V\)</span> называется <dfn class="terminology">обобщенным собственным вектором</dfn> вектора <span class="process-math">\(T\)</span>, соответствующим <span class="process-math">\(\lambda\)</span>, если <span class="process-math">\(v \ne 0\)</span> и</div>
+<div class="displaymath process-math" id="geneig-3-6-2-1-13">
+\begin{equation*}
+(T - \lambda I)^k v = 0
+\end{equation*}
+</div>
+<div class="para">для некоторого натурального числа <span class="process-math">\(k\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 8.8: generalized eigenvector"><a tabindex="-1" href="#geneig-3-6" title="Copy heading and permalink for Definition 8.8: обобщенный собственный вектор" aria-label="Copy heading and permalink for Definition 8.8: generalized eigenvector">🔗</a></div>
+</article>
+<details id="geneig-3-7" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="geneig-3-7-1">Обобщенные собственные значения не определены, поскольку это не приведет ни к чему новому. Причина: если <span class="process-math">\((T - \lambda I)^k\)</span> не инъективно для некоторого натурального числа <span class="process-math">\(k\)</span>, то <span class="process-math">\(T - \lambda I\)</span> не инъективно и, следовательно, <span class="process-math">\(\lambda\)</span> является собственным значением <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<div class="para logical" id="geneig-3-8">
+<div class="para">Ненулевой вектор <span class="process-math">\(v \in V\)</span> является обобщенным собственным вектором <span class="process-math">\(T\)</span>, соответствующим <span class="process-math">\(\lambda\)</span> тогда и только тогда, когда</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x76.html ./knowl/xref/x23.html" id="geneig-3-8-4">
+\begin{equation*}
+(T - \lambda I)^{\dim V} v = 0,
+\end{equation*}
+</div>
+<div class="para">как следует из применения <a href="geneig.html#x76" class="xref" data-knowl="./knowl/xref/x76.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.1: последовательность увеличения нулевых пробелов">Теоремы 8.1</a> и <a href="geneig.html#x23" class="xref" data-knowl="./knowl/xref/x23.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.3: нулевые пробелы перестают расти">Теоремы 8.3</a> к оператору <span class="process-math">\(T  - \lambda I\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="geneig-3-9">Как мы знаем, у оператора в комплексном векторном пространстве может не хватить собственных векторов, чтобы сформировать базис области. Следующий результат показывает, что в комплексном векторном пространстве для этого достаточно обобщенных собственных векторов.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x28"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">базис обобщенных собственных векторов.</span>
+</h3>
+<div class="para" id="x28-2-1">Предположим <span class="process-math">\(\F{} = \C{}\)</span> и <span class="process-math">\(T \in \Lc(V)\)</span>. Тогда существует базис <span class="process-math">\(V\)</span>, состоящий из обобщенных собственных векторов <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x28-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.9: a basis of generalized eigenvectors"><a tabindex="-1" href="#x28" title="Copy heading and permalink for Theorem 8.9: базис обобщенных собственных векторов" aria-label="Copy heading and permalink for Theorem 8.9: a basis of generalized eigenvectors">🔗</a></div>
+</article>
+<details id="geneig-3-11" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="geneig-3-11-1">Пусть <span class="process-math">\(n = \dim V{}\)</span>. Мы будем использовать индукцию по <span class="process-math">\(n\)</span>. Для начала заметим, что желаемый результат справедлив, если <span class="process-math">\(n=1\)</span>, поскольку тогда каждый ненулевой вектор в <span class="process-math">\(V\)</span> является собственным вектором <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="geneig-3-11-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Примечание</span></h4></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="geneig-3-11-2-1">На этом этапе мы используем гипотезу о том, что <span class="process-math">\(\F{} = \C{}\)</span>, потому что если <span class="process-math">\(\F{} = \R{}\)</span>, то <span class="process-math">\(T\)</span> может не иметь собственных значений.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<div class="para logical" id="geneig-3-11-3">
+<div class="para">Теперь предположим, что <span class="process-math">\(n &gt; 1\)</span> и желаемый результат справедливы для всех меньших значений <span class="process-math">\(\dim V{}\)</span>. Пусть <span class="process-math">\(\lambda\)</span> — собственное значение <span class="process-math">\(T{}\)</span>. Применение <a href="geneig.html#x8nulloplusran" class="xref" data-knowl="./knowl/xref/x8nulloplusran.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.4: V есть прямая сумма \ker T^{\dim V} и \ran T^{\dim V}">теоремы 8.4</a> к <span class="process-math">\(T - \lambda I\)</span> показывает, что</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x8nulloplusran.html" id="geneig-3-11-3-7">
+\begin{equation*}
+V = \ker(T - \lambda I)^n \oplus \ran (T - \lambda I)^n{}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-11-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="geneig-3-11-4">Если <span class="process-math">\(\ker(T - \lambda I)^n = V{}\)</span>, то каждый ненулевой вектор из <span class="process-math">\(V\)</span> является обобщенным собственным вектором <span class="process-math">\(T\)</span>, и, следовательно, в этом случае существует базис <span class="process-math">\(V\)</span>, состоящий из обобщенных собственных векторов <span class="process-math">\(T{}\)</span>. Следовательно, мы можем предположить, что <span class="process-math">\(\ker(T - \lambda I)^n \ne V{}\)</span>, из чего следует, что <span class="process-math">\(\ran (T - \lambda I)^n \ne \{ 0 \}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-11-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="geneig-3-11-5">
+<div class="para">Кроме того, <span class="process-math">\(\ker(T - \lambda I)^n \ne \{ 0 \}\)</span>, поскольку <span class="process-math">\(\lambda\)</span> является собственным значением <span class="process-math">\(T{}\)</span>. Таким образом, мы имеем</div>
+<div class="displaymath process-math" id="geneig-3-11-5-4">
+\begin{equation*}
+0 \lt  \dim \ran(T - \lambda I)^n \lt  n.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-11-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="geneig-3-11-6">Более того, <span class="process-math">\(\ran(T - \lambda I)^n\)</span> инвариантен относительно <span class="process-math">\(T\)</span> [согласно <a href="x5invar.html#x130" class="xref" data-knowl="./knowl/xref/x130.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.18: нуль-пространство и образ p(T) инвариантны относительно T">теореме 5.18</a> с <span class="process-math">\(p(z) = (z - \lambda)^n\)</span>]. Пусть <span class="process-math">\(S \in \Lc( \ran(T - \lambda I)^n )\)</span> равно <span class="process-math">\(T\)</span>, ограниченному <span class="process-math">\(\ran(T - \lambda I)^n{}\)</span>. Из нашего предположения индукции, примененного к оператору <span class="process-math">\(S\)</span>, следует, что существует базис оператора <span class="process-math">\(\ran(T - \lambda I)^n\)</span>, состоящий из обобщенных собственных векторов оператора <span class="process-math">\(S\)</span>, которые, конечно, являются обобщенными собственными векторами оператора <span class="process-math">\(T{}\)</span>. Присоединение этого базиса <span class="process-math">\(\ran(T - \lambda I)^n\)</span> к базису <span class="process-math">\(\ker(T - \lambda I)^n\)</span> дает базис <span class="process-math">\(V\)</span>, состоящий из обобщенных собственных векторов <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-11-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 8.1.2.1"><a tabindex="-1" href="#geneig-3-11" title="Copy heading and permalink for Proof 8.1.2.1" aria-label="Copy heading and permalink for Proof 8.1.2.1">🔗</a></div>
+</article></details>
+<div class="para" id="geneig-3-12">Если <span class="process-math">\(\F{} = \R{}\)</span> и <span class="process-math">\(\dim V &gt; 1\)</span>, то некоторые операторы на <span class="process-math">\(V\)</span> обладают тем свойством, что существует базис <span class="process-math">\(V\)</span>, состоящий из обобщенных собственных векторов оператора, а другие операторы (в отличие от того, что происходит при <span class="process-math">\(\F{}=\C{}\)</span>) этим свойством не обладают. См. <a href="geneig.html#x8geneigb" class="xref" data-knowl="./knowl/xref/x8geneigb.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 8.1.3.11">Упражнение 8.1.3.11</a>, чтобы узнать необходимое и достаточное условие, определяющее, обладает ли оператор этим свойством.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="x8exgeneig" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">корневые векторы оператора на <span class="process-math">\(\C3\)</span>.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="x8exgeneig-2-1">
+<div class="para">Определите <span class="process-math">\(T \in \Lc( \C{3} )\)</span> по</div>
+<div class="displaymath process-math" id="x8exgeneig-2-1-2">
+\begin{equation*}
+T(z_1, z_2, z_3) = (4z_2, 0, 5z_3)
+\end{equation*}
+</div>
+<div class="para">для каждого <span class="process-math">\((z_1, z_2, z_3) \in \CC3\)</span>. Обычное использование определения собственного значения показывает, что собственными значениями <span class="process-math">\(T\)</span> являются <span class="process-math">\(0\)</span> и <span class="process-math">\(5\)</span>. При этом собственные векторы, соответствующие собственному значению <span class="process-math">\(0\)</span>, являются ненулевыми векторами формы <span class="process-math">\((z_1, 0, 0)\)</span>, а собственные векторы, соответствующие собственному значению <span class="process-math">\(5\)</span>, являются ненулевыми векторами формы <span class="process-math">\((0, 0, z_3)\)</span>. Следовательно, у этого оператора недостаточно собственных векторов чтобы породить область определения <span class="process-math">\(\CC3\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8exgeneig-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="x8exgeneig-2-2">Мы вычисляем это <span class="process-math">\(T^3(z_1, z_2, z_3) = (0, 0, 125 z_3)\)</span>. Таким образом, из <a href="geneig.html#x76" class="xref" data-knowl="./knowl/xref/x76.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.1: последовательность увеличения нулевых пробелов">Теоремы 8.1</a> и <a href="geneig.html#x23" class="xref" data-knowl="./knowl/xref/x23.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.3: нулевые пробелы перестают расти">Теоремы 8.3</a> следует, что обобщенные собственные векторы <span class="process-math">\(T\)</span>, соответствующие собственному значению <span class="process-math">\(0\)</span>, являются ненулевыми векторами формы <span class="process-math">\((z_1, z_2, 0)\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8exgeneig-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> 
+<div class="para" id="x8exgeneig-2-3">У нас также есть <span class="process-math">\((T-5I)^3(z_1, z_2, z_3) = (-125z_1 + 300z_2, -125z_2, 0)\)</span>. Таким образом, обобщенные собственные векторы оператора <span class="process-math">\(T\)</span>, соответствующие собственному значению <span class="process-math">\(5\)</span>, являются ненулевыми векторами вида <span class="process-math">\((0,0,z_3)\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8exgeneig-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> 
+<div class="para" id="x8exgeneig-2-4">В приведенных выше абзацах показано, что каждый из стандартных базисных векторов <span class="process-math">\(\C3\)</span> является обобщенным собственным вектором <span class="process-math">\(T{}\)</span>. Таким образом, <span class="process-math">\(\C3\)</span> действительно имеет базис, состоящий из обобщенных собственных векторов <span class="process-math">\(T{}\)</span>, как и обещает <a href="geneig.html#x28" class="xref" data-knowl="./knowl/xref/x28.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.9: базис обобщенных собственных векторов">Теорема 8.9</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8exgeneig-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 8.10: generalized eigenvectors of an operator on  \C3"><a tabindex="-1" href="#x8exgeneig" title="Copy heading and permalink for Example 8.10: корневые векторы оператора на \C3" aria-label="Copy heading and permalink for Example 8.10: generalized eigenvectors of an operator on  \C3">🔗</a></div>
+</article></details>
+<div class="para" id="geneig-3-14">Если <span class="process-math">\(v\)</span> — собственный вектор <span class="process-math">\(T \in \Lc(V)\)</span>, то соответствующее собственное значение <span class="process-math">\(\lambda\)</span> однозначно определяется уравнением <span class="process-math">\(Tv = \lambda v\)</span>, которому может удовлетворять только один <span class="process-math">\(\lambda \in \F{}\)</span> (поскольку <span class="process-math">\(v\ne 0\)</span>). Однако если <span class="process-math">\(v\)</span> — обобщенный собственный вектор <span class="process-math">\(T\)</span>, то неочевидно, что уравнению <span class="process-math">\((T - \lambda I)^{\dim V}v = 0\)</span> может удовлетворять только один <span class="process-math">\(\lambda \in \F{}{}\)</span>. К счастью, следующий результат говорит нам, что с этим вопросом все в порядке.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x8intgeneig"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">обобщенный собственный вектор соответствует единственному собственному значению.</span>
+</h3>
+<div class="para" id="x8intgeneig-2-1">Предположим, <span class="process-math">\(T \in \Lc(V)\)</span>. Тогда каждому обобщенному собственному вектору <span class="process-math">\(T\)</span> соответствует только одно собственное значение <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8intgeneig-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.11: generalized eigenvector corresponds to a unique eigenvalue"><a tabindex="-1" href="#x8intgeneig" title="Copy heading and permalink for Theorem 8.11: обобщенный собственный вектор соответствует единственному собственному значению" aria-label="Copy heading and permalink for Theorem 8.11: generalized eigenvector corresponds to a unique eigenvalue">🔗</a></div>
+</article>
+<details id="geneig-3-16" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="geneig-3-16-1">
+<div class="para">Предположим, что <span class="process-math">\(v \in V\)</span> — обобщенный собственный вектор матрицы <span class="process-math">\(T\)</span>, соответствующий собственным значениям <span class="process-math">\(\alpha\)</span> и <span class="process-math">\(\lambda\)</span> матрицы <span class="process-math">\(T{}\)</span>. Пусть <span class="process-math">\(m\)</span> — наименьшее целое положительное число такое, что <span class="process-math">\((T - \alpha  I)^m v = 0\)</span>. Пусть <span class="process-math">\(n = \dim V{}\)</span>. Тогда</div>
+<div class="displaymath process-math" id="geneig-3-16-1-9">
+\begin{align*}
+0 \amp  = (T - \lambda I)^n v\\
+\amp  = (  (T - \alpha  I) + (\alpha  - \lambda) I  )^n v\\
+\amp  = \sum_{k=0}^n b_k (\alpha  - \lambda)^{n-k} (T - \alpha  I)^k v\text{,}
+\end{align*}
+</div>
+<div class="para">где <span class="process-math">\(b_0 = 1\)</span> и значения остальных биномиальных коэффициентов <span class="process-math">\(b_k\)</span> не имеют значения. Примените оператор <span class="process-math">\((T - \alpha  I)^{m-1}\)</span> к обеим частям приведенного выше уравнения, получив</div>
+<div class="displaymath process-math" id="geneig-3-16-1-13">
+\begin{equation*}
+0 = (\alpha  - \lambda)^n (T - \alpha  I)^{m-1} v.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-16-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="geneig-3-16-2">Поскольку <span class="process-math">\((T - \alpha I)^{m-1} v \ne 0\)</span>, из приведенного выше уравнения следует, что <span class="process-math">\(\alpha = \lambda\)</span>, как и хотелось.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-16-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 8.1.2.2"><a tabindex="-1" href="#geneig-3-16" title="Copy heading and permalink for Proof 8.1.2.2" aria-label="Copy heading and permalink for Proof 8.1.2.2">🔗</a></div>
+</article></details>
+<div class="para" id="geneig-3-17">Ранее мы видели <a href="x5invar.html#x26" class="xref" data-knowl="./knowl/xref/x26.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.11: линейно независимые собственные векторы">Теорему 5.11</a>, что собственные векторы, соответствующие различным собственным значениям, линейно независимы. Теперь мы докажем аналогичный результат для обобщенных собственных векторов, доказательство которого примерно соответствует схеме доказательства этого предыдущего результата.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="genind"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">линейно независимые обобщенные собственные векторы.</span>
+</h3>
+<div class="para" id="genind-2-1">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span>. Тогда каждый список обобщенных собственных векторов <span class="process-math">\(T\)</span>, соответствующих различным собственным значениям <span class="process-math">\(T\)</span>, линейно независим.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#genind-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.12: linearly independent generalized eigenvectors"><a tabindex="-1" href="#genind" title="Copy heading and permalink for Theorem 8.12: линейно независимые обобщенные собственные векторы" aria-label="Copy heading and permalink for Theorem 8.12: linearly independent generalized eigenvectors">🔗</a></div>
+</article>
+<details id="geneig-3-19" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="geneig-3-19-1">
+<div class="para">Предположим, что желаемый результат неверен. Тогда существует наименьшее целое положительное число <span class="process-math">\(m\)</span> такое, что существует линейно зависимый список <span class="process-math">\(v_1, \ldots,
+v_m\)</span> обобщенных собственных векторов <span class="process-math">\(T\)</span>, соответствующий различным собственным значениям <span class="process-math">\(\lambda_1, \ldots, \lambda_m\)</span> <span class="process-math">\(T\)</span> (заметим, что <span class="process-math">\(m\ge 2\)</span>, поскольку обобщенный собственный вектор по определению не равен нулю). Таким образом, существуют <span class="process-math">\(a_1, \ldots,
+a_m \in \F{}{}\)</span>, ни одно из которых не является <span class="process-math">\(0\)</span> (из-за минимальности <span class="process-math">\(m\)</span>), такие, что</div>
+<div class="displaymath process-math" id="geneig-3-19-1-10">
+\begin{equation*}
+a_1 v_1 + \cdots + a_m v_m = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-19-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="geneig-3-19-2">
+<div class="para">Пусть <span class="process-math">\(n = \dim V{}\)</span>. Примените <span class="process-math">\((T - \lambda_m I)^n\)</span> к обеим частям приведенного выше уравнения, получив</div>
+<div class="displaymath process-math" id="x8gene">
+\begin{equation}
+a_1 (T - \lambda_m I)^n v_1 + \cdots + a_{m-1} (T - \lambda_m I)^n v_{m-1} = 0.\tag{8.13}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-19-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="geneig-3-19-3">
+<div class="para">Предположим, <span class="process-math">\(k \in \{ 1, \ldots, m-1 \}\)</span>. Тогда</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x8intgeneig.html" id="geneig-3-19-3-2">
+\begin{equation*}
+(T - \lambda_m I)^n v_k \ne 0
+\end{equation*}
+</div>
+<div class="para">поскольку в противном случае <span class="process-math">\(v_k\)</span> был бы обобщенным собственным вектором <span class="process-math">\(T\)</span>, соответствующим различным собственным значениям <span class="process-math">\(\lambda_k\)</span> и <span class="process-math">\(\lambda_m\)</span>, что противоречило бы <a href="geneig.html#x8intgeneig" class="xref" data-knowl="./knowl/xref/x8intgeneig.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.11: обобщенный собственный вектор соответствует единственному собственному значению">теореме 8.11</a>. Однако,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x8intgeneig.html" id="geneig-3-19-3-8">
+\begin{equation*}
+(T - \lambda_k I)^n (  (T - \lambda_m I)^n v_k  ) = (T - \lambda_m I)^n (  (T - \lambda_k I)^n v_k  ) = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-19-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="geneig-3-19-4">
+<div class="para">Таким образом, последние два отображаемых уравнения показывают, что <span class="process-math">\((T - \lambda_m I)^n v_k\)</span> является обобщенным собственным вектором <span class="process-math">\(T\)</span>, соответствующим собственному значению <span class="process-math">\(\lambda_k\)</span>. Следовательно</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x8gene.html" id="geneig-3-19-4-4">
+\begin{equation*}
+(T - \lambda_m I)^n v_1, \ldots, (T - \lambda_m I)^n v_{m-1}
+\end{equation*}
+</div>
+<div class="para">является линейно зависимым списком (по <a href="geneig.html#x8gene" class="xref" data-knowl="./knowl/xref/x8gene.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 8.13">(8.13)</a>) обобщенных собственных векторов <span class="process-math">\(m-1\)</span>, соответствующих различным собственным значениям, что противоречит минимальности <span class="process-math">\(m\)</span>. Это противоречие завершает доказательство.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-3-19-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 8.1.2.3"><a tabindex="-1" href="#geneig-3-19" title="Copy heading and permalink for Proof 8.1.2.3" aria-label="Copy heading and permalink for Proof 8.1.2.3">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 8.1.2: Generalized Eigenvectors"><a tabindex="-1" href="#geneig-3" title="Copy heading and permalink for Subsection 8.1.2: Корневые (обобщённые собственные) векторы" aria-label="Copy heading and permalink for Subsection 8.1.2: Generalized Eigenvectors">🔗</a></div>
+</section>
+<section class="subsection" id="geneig-4">
+<h2 class="heading hide-type">
+<span class="type">Подраздел</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Нильпотентные операторы</span>
+</h2>
+<article class="definition definition-like" id="geneig-4-2"><h3 class="heading">
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.14</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">нильпотент.</span>
+</h3>
+<div class="para" id="geneig-4-2-2-1">Оператор называется <dfn class="terminology">нильпотентным</dfn>, если некоторая его степень равна <span class="process-math">\(0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 8.14: nilpotent"><a tabindex="-1" href="#geneig-4-2" title="Copy heading and permalink for Definition 8.14: нильпотент" aria-label="Copy heading and permalink for Definition 8.14: nilpotent">🔗</a></div>
+</article>
+<div class="para" id="geneig-4-3">Таким образом, оператор <span class="process-math">\(T \in \Lc(V)\)</span> нильпотентен тогда и только тогда, когда каждый ненулевой вектор из <span class="process-math">\(V\)</span> является обобщенным собственным вектором оператора <span class="process-math">\(T\)</span>, соответствующим собственному значению <span class="process-math">\(0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<details id="x8nil" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.15</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">нильпотентные операторы.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="x8nil-2-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x8nil-2-1-1">
+<li id="x8nil-2-1-1-1">
+<div class="para logical" id="x8nil-2-1-1-1-1">
+<div class="para">Оператор <span class="process-math">\(T \in \Lc( \F{4} )\)</span>, определяемый формулой</div>
+<div class="displaymath process-math" id="x8nil-2-1-1-1-1-2">
+\begin{equation*}
+T(z_1, z_2, z_3, z_4) = (0, 0, z_1, z_2)
+\end{equation*}
+</div>
+<div class="para">нильпотентна, поскольку <span class="process-math">\(T^2 = 0\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8nil-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#x8nil-2-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="x8nil-2-1-1-2">
+<div class="para logical" id="x8nil-2-1-1-2-1">
+<div class="para">Оператор на <span class="process-math">\(\F3\)</span>, матрица которого (относительно стандартного базиса) равна</div>
+<div class="displaymath process-math" id="x8nil-2-1-1-2-1-2">
+\begin{equation*}
+\begin{pmatrix}-3 \amp  9 \amp  0 \\ -7 \amp  9 \amp  6 \\ 4 \amp  0 \amp  -6 \end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">нильпотентна, как можно показать, возведя в куб приведенную выше матрицу и получив нулевую матрицу.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8nil-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#x8nil-2-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="x8nil-2-1-1-3">
+<div class="para" id="x8nil-2-1-1-3-1">Оператор дифференцирования на <span class="process-math">\(\P{}_m(\R{})\)</span> нильпотентен, поскольку производная <span class="process-math">\((m + 1)^{\nth}\)</span> каждого многочлена степени не выше <span class="process-math">\(m\)</span> равна <span class="process-math">\(0\)</span>. Обратите внимание, что в этом пространстве размерности <span class="process-math">\(m + 1\)</span> нам нужно возвести нильпотентный оператор в степень <span class="process-math">\(m + 1\)</span>, чтобы получить оператор <span class="process-math">\(0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8nil-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#x8nil-2-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8nil-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 8.15: nilpotent operators"><a tabindex="-1" href="#x8nil" title="Copy heading and permalink for Example 8.15: нильпотентные операторы" aria-label="Copy heading and permalink for Example 8.15: nilpotent operators">🔗</a></div>
+</article></details>
+<details id="geneig-4-5" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="geneig-4-5-1">Латинское слово <em class="emphasis">nil</em> означает «ничто» или «нуль», а латинское слово <em class="emphasis">potens</em> означает «имеющий степень (силу)». Таким образом, <em class="emphasis">нильпотентный</em> буквально означает «имеющий степень, равную нулю».<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</aside></details>
+<div class="para" id="geneig-4-6">Следующий результат показывает, что при возведении нильпотентного оператора в степень нам никогда не нужно использовать степень, превышающую размерность пространства. Чтобы получить более сильный результат, см. <a href="geneig.html#nilrange" class="xref" data-knowl="./knowl/xref/nilrange.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 8.1.3.18">Упражнение 8.1.3.18</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="x181"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.16</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">нильпотентный оператор в степени размерности области определения равен <span class="process-math">\(0\)</span>.</span>
+</h3>
+<div class="para" id="x181-2-1">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span> нильпотентна. Потом <span class="process-math">\(T^{\dim V} = 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x181-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.16: nilpotent operator raised to dimension of domain is 0"><a tabindex="-1" href="#x181" title="Copy heading and permalink for Theorem 8.16: нильпотентный оператор в степени размерности области определения равен 0" aria-label="Copy heading and permalink for Theorem 8.16: nilpotent operator raised to dimension of domain is 0">🔗</a></div>
+</article>
+<details id="geneig-4-8" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="geneig-4-8-1">Поскольку <span class="process-math">\(T\)</span> нильпотентна, существует целое положительное число <span class="process-math">\(k\)</span> такое, что <span class="process-math">\(T^k = 0\)</span>. Таким образом, <span class="process-math">\(\ker T^k = V{}\)</span>. Теперь из <a href="geneig.html#x76" class="xref" data-knowl="./knowl/xref/x76.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.1: последовательность увеличения нулевых пробелов">Теоремы 8.1</a> и <a href="geneig.html#x23" class="xref" data-knowl="./knowl/xref/x23.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.3: нулевые пробелы перестают расти">Теоремы 8.3</a> следует, что <span class="process-math">\(\ker T^{\dim V} = V{}\)</span>. Таким образом, <span class="process-math">\(T^{\dim V} = 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 8.1.3.1"><a tabindex="-1" href="#geneig-4-8" title="Copy heading and permalink for Proof 8.1.3.1" aria-label="Copy heading and permalink for Proof 8.1.3.1">🔗</a></div>
+</article></details>
+<article class="theorem theorem-like" id="x8eignil"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.17</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">собственные значения нильпотентного оператора.</span>
+</h3>
+<div class="para logical" id="x8eignil-2-1">
+<div class="para">Предположим, <span class="process-math">\(T \in \Lc(V)\)</span>.</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x8eignil-2-1-2">
+<li id="x8eignil-2-1-2-1">
+<div class="para" id="x8eignil-2-1-2-1-1">Если <span class="process-math">\(T\)</span> нильпотентна, то <span class="process-math">\(0\)</span> — собственное значение <span class="process-math">\(T\)</span> и <span class="process-math">\(T\)</span> не имеет других собственных значений.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8eignil-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#x8eignil-2-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="x8eignil-2-1-2-2">
+<div class="para" id="x8eignil-2-1-2-2-1">Если <span class="process-math">\(\F{} = \C{}\)</span> и <span class="process-math">\(0\)</span> — единственное собственное значение <span class="process-math">\(T\)</span>, то <span class="process-math">\(T\)</span> нильпотентно.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8eignil-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#x8eignil-2-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8eignil-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.17: eigenvalues of nilpotent operator"><a tabindex="-1" href="#x8eignil" title="Copy heading and permalink for Theorem 8.17: собственные значения нильпотентного оператора" aria-label="Copy heading and permalink for Theorem 8.17: eigenvalues of nilpotent operator">🔗</a></div>
+</article>
+<details id="geneig-4-10" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="geneig-4-10-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="geneig-4-10-1-1">
+<li id="geneig-4-10-1-1-1">
+<div class="para logical" id="geneig-4-10-1-1-1-1">
+<div class="para">Чтобы доказать (а), предположим, что <span class="process-math">\(T\)</span> нильпотентна. Следовательно, существует целое положительное число <span class="process-math">\(m\)</span> такое, что <span class="process-math">\(T^m = 0\)</span>. Это означает, что <span class="process-math">\(T\)</span> не инъективен. Таким образом, <span class="process-math">\(0\)</span> является собственным значением <span class="process-math">\(T{}\)</span>. Чтобы показать, что у <span class="process-math">\(T\)</span> нет других собственных значений, предположим, что <span class="process-math">\(\lambda\)</span> является собственным значением <span class="process-math">\(T{}\)</span>. Тогда существует ненулевой вектор <span class="process-math">\(v \in V\)</span> такой, что</div>
+<div class="displaymath process-math" id="geneig-4-10-1-1-1-1-12">
+\begin{equation*}
+\lambda v = Tv.
+\end{equation*}
+</div>
+<div class="para">Многократное применение <span class="process-math">\(T\)</span> к обеим частям этого уравнения показывает, что</div>
+<div class="displaymath process-math" id="geneig-4-10-1-1-1-1-14">
+\begin{equation*}
+\lambda^m v = T^m v = 0.
+\end{equation*}
+</div>
+<div class="para">Таким образом, <span class="process-math">\(\lambda = 0\)</span> по желанию.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-10-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#geneig-4-10-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="geneig-4-10-1-1-2">
+<div class="para" id="geneig-4-10-1-1-2-1">Предположим, что <span class="process-math">\(\F{} = \C{}\)</span> и <span class="process-math">\(0\)</span> — единственное собственное значение <span class="process-math">\(T{}\)</span>. По <a href="eigenuppertri.html#x136" class="xref" data-knowl="./knowl/xref/x136.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.27: собственные значения являются нулями минимального многочлена">Теореме 5.27</a>(b) минимальный полином <span class="process-math">\(T\)</span> равен <span class="process-math">\(z^m\)</span> для некоторого натурального числа <span class="process-math">\(m\)</span>. Таким образом, <span class="process-math">\(T^m = 0\)</span>. Следовательно, <span class="process-math">\(T\)</span> нильпотентен.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-10-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#geneig-4-10-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 8.1.3.2"><a tabindex="-1" href="#geneig-4-10" title="Copy heading and permalink for Proof 8.1.3.2" aria-label="Copy heading and permalink for Proof 8.1.3.2">🔗</a></div>
+</article></details>
+<div class="para" id="geneig-4-11"><a href="geneig.html#Nil1" class="xref" data-knowl="./knowl/xref/Nil1.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 8.1.3.23">Упражнение 8.1.3.23</a> показывает, что гипотеза о том, что <span class="process-math">\(\F{} = \C{}\)</span> нельзя удалить в (b) приведенного выше результата.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="geneig-4-12">Учитывая оператор на <span class="process-math">\(V{}\)</span>, мы хотим найти базис <span class="process-math">\(V\)</span> такой, чтобы матрица оператора по отношению к этому базису была как можно более простой, то есть матрица содержала много <span class="process-math">\(0\)</span>. Следующий результат показывает, что если <span class="process-math">\(T\)</span> нильпотентно, то мы можем выбрать базис <span class="process-math">\(V\)</span> так, чтобы матрица <span class="process-math">\(T\)</span> по этому базису имела более половины своих элементов, равных <span class="process-math">\(0\)</span>. Позже в этой главе мы сделаем еще лучше.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="theorem theorem-like" id="a33"><h3 class="heading">
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">минимальный полином и верхнетреугольная матрица нильпотентного оператора.</span>
+</h3>
+<div class="para logical" id="a33-2-1">
+<div class="para">Предположим, <span class="process-math">\(T \in \Lc(V)\)</span>. Тогда следующие утверждения эквивалентны.</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="a33-2-1-4">
+<li id="a33-2-1-4-1">
+<div class="para" id="a33-2-1-4-1-1"><span class="process-math">\(T\)</span> нильпотентен.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#a33-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#a33-2-1-4-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="a33-2-1-4-2">
+<div class="para" id="a33-2-1-4-2-1">Минимальным полиномом <span class="process-math">\(T\)</span> является <span class="process-math">\(z^m\)</span> для некоторого натурального числа <span class="process-math">\(m\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#a33-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#a33-2-1-4-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="a33-2-1-4-3">
+<div class="para logical" id="a33-2-1-4-3-1">
+<div class="para">Существует базис <span class="process-math">\(V\)</span>, относительно которого матрица <span class="process-math">\(T\)</span> имеет вид</div>
+<div class="displaymath process-math" id="a33-2-1-4-3-1-3">
+\begin{equation*}
+\begin{pmatrix}0 \amp  \amp  * \\ \amp  \ddots \amp  \\ 0 \amp  \amp  0 \end{pmatrix} ,
+\end{equation*}
+</div>
+<div class="para">где все элементы на диагонали и ниже равны <span class="process-math">\(0\)</span>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#a33-2-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#a33-2-1-4-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#a33-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 8.18: minimal polynomial and upper-triangular matrix of nilpotent operator"><a tabindex="-1" href="#a33" title="Copy heading and permalink for Theorem 8.18: минимальный полином и верхнетреугольная матрица нильпотентного оператора" aria-label="Copy heading and permalink for Theorem 8.18: minimal polynomial and upper-triangular matrix of nilpotent operator">🔗</a></div>
+</article>
+<details id="geneig-4-14" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="geneig-4-14-1">Предположим, что (а) выполнено, поэтому <span class="process-math">\(T\)</span> нильпотентна. Таким образом, существует целое положительное число <span class="process-math">\(n\)</span> такое, что <span class="process-math">\(T^n = 0\)</span>. Теперь из <a href="eigenuppertri.html#x140" class="xref" data-knowl="./knowl/xref/x140.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.29: q(T) = 0 \iff q делится на минимальный многочлен">теоремы 5.29</a> следует, что <span class="process-math">\(z^n\)</span> является полиномиально кратным минимальному многочлену <span class="process-math">\(T{}\)</span>. Таким образом, минимальный полином <span class="process-math">\(T\)</span> равен <span class="process-math">\(z^m\)</span> для некоторого натурального числа <span class="process-math">\(m\)</span>, что доказывает, что из (a) следует (b).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="geneig-4-14-2">Теперь предположим, что (b) выполнено, поэтому минимальный полином <span class="process-math">\(T\)</span> равен <span class="process-math">\(z^m\)</span> для некоторого натурального числа <span class="process-math">\(m\)</span>. Согласно <a href="eigenuppertri.html#x136" class="xref" data-knowl="./knowl/xref/x136.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.27: собственные значения являются нулями минимального многочлена">Теореме 5.27</a>(a) это означает, что <span class="process-math">\(0\)</span> (который является единственным нулем <span class="process-math">\(z^m\)</span>) является единственным собственным значением <span class="process-math">\(T{}\)</span>. Из этого также следует, согласно <a href="x4utm.html#x5necsuf" class="xref" data-knowl="./knowl/xref/x5necsuf.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.44: необходимое и достаточное условие существования верхнетреугольной матрицы">Теореме 5.44</a>, что существует базис <span class="process-math">\(V\)</span>, относительно которого матрица <span class="process-math">\(T\)</span> является верхнетреугольной. Из этого также следует, согласно <a href="x4utm.html#a221" class="xref" data-knowl="./knowl/xref/a221.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.41: определение собственных значений по верхнетреугольной матрице">Теореме 5.41</a>, что все элементы на диагонали этой матрицы равны <span class="process-math">\(0\)</span>, доказывая, что из (b) следует (c).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="geneig-4-14-3">Теперь предположим, что (c) выполнено. Тогда из <a href="x4utm.html#x4polyut" class="xref" data-knowl="./knowl/xref/x4polyut.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.40: уравнение, удовлетворяемое оператором с верхнетреугольной матрицей">Теоремы 5.40</a> следует, что <span class="process-math">\(T^{\dim V} = 0\)</span>. Таким образом, <span class="process-math">\(T\)</span> нильпотентен, что доказывает, что из (c) следует (a).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-14-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 8.1.3.3"><a tabindex="-1" href="#geneig-4-14" title="Copy heading and permalink for Proof 8.1.3.3" aria-label="Copy heading and permalink for Proof 8.1.3.3">🔗</a></div>
+</article></details>
+<section class="exercises" id="geneig-4-15">
+<h3 class="heading hide-type">
+<span class="type">Упражнения</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Упражнения</span>
+</h3>
+<article class="exercise exercise-like" id="geneig-4-15-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="geneig-4-15-2-1-1">Предположим, <span class="process-math">\(T \in \Lc(V)\)</span>. Докажите, что если <span class="process-math">\(\dim \ker T^4 = 8\)</span> и <span class="process-math">\(\dim \ker T^6 = 9\)</span>, то <span class="process-math">\(\dim \ker T^m = 9\)</span> для всех целых чисел <span class="process-math">\(m \ge 5\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.1"><a tabindex="-1" href="#geneig-4-15-2" title="Copy heading and permalink for Exercise 8.1.3.1" aria-label="Copy heading and permalink for Exercise 8.1.3.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x8linind"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x8linind-1-1">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span>, <span class="process-math">\(m\)</span> — целое положительное число, <span class="process-math">\(v \in V\)</span> и <span class="process-math">\(T^{m-1} v \ne 0\)</span>, но <span class="process-math">\(T^m v = 0\)</span>. Докажите, что <span class="process-math">\(v, Tv, T^2 v, \dots, T^{m-1} v\)</span> линейно независима. Примечание. Результат этого упражнения используется при доказательстве <a href="x8geneigde.html#x452" class="xref" data-knowl="./knowl/xref/x452.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.45: каждый нильпотентный оператор имеет жордановый базис">теоремы 8.45</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8linind-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.2"><a tabindex="-1" href="#x8linind" title="Copy heading and permalink for Exercise 8.1.3.2" aria-label="Copy heading and permalink for Exercise 8.1.3.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-4"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="geneig-4-15-4-1-1">
+<div class="para">Предположим, <span class="process-math">\(T \in \Lc(V)\)</span>. Докажите, что</div>
+<div class="displaymath process-math" id="geneig-4-15-4-1-1-2">
+\begin{equation*}
+V = \ker T \oplus \ran T \iff \ker T^2 = \ker T{}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.3"><a tabindex="-1" href="#geneig-4-15-4" title="Copy heading and permalink for Exercise 8.1.3.3" aria-label="Copy heading and permalink for Exercise 8.1.3.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-5"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="geneig-4-15-5-1-1">
+<div class="para">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span>, <span class="process-math">\(\lambda \in \F{}{}\)</span> и <span class="process-math">\(m\)</span> — целое положительное число такое, что минимальный полином <span class="process-math">\(T\)</span> является полиномиальным кратным <span class="process-math">\((z - \lambda)^m\!\)</span>. Докажите, что</div>
+<div class="displaymath process-math" id="geneig-4-15-5-1-1-6">
+\begin{equation*}
+\dim \ker(T - \lambda I)^m \ge m.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.4"><a tabindex="-1" href="#geneig-4-15-5" title="Copy heading and permalink for Exercise 8.1.3.4" aria-label="Copy heading and permalink for Exercise 8.1.3.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-6"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="geneig-4-15-6-1-1">
+<div class="para">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span> и <span class="process-math">\(m\)</span> — целое положительное число. Докажите, что</div>
+<div class="displaymath process-math" id="geneig-4-15-6-1-1-3">
+\begin{equation*}
+\dim \ker T^m \le m \dim \ker T.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="geneig-4-15-6-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Подсказка</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="geneig-4-15-6-2-1"><a href="x3nullspace.html#x3diminv" class="xref" data-knowl="./knowl/xref/x3diminv.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 3.2.3.21">Упражнение 3.2.3.21</a> из <a href="x3nullspace.html" class="internal" title="Раздел 3.2: Нуль-пространства и образы">Раздел 3.2</a> может оказаться полезным.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 8.1.3.5.1"><a tabindex="-1" href="#geneig-4-15-6-2" title="Copy heading and permalink for Hint 8.1.3.5.1" aria-label="Copy heading and permalink for Hint 8.1.3.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.5"><a tabindex="-1" href="#geneig-4-15-6" title="Copy heading and permalink for Exercise 8.1.3.5" aria-label="Copy heading and permalink for Exercise 8.1.3.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="range1"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="range1-1-1">
+<div class="para">Предположим, <span class="process-math">\(T \in \Lc(V)\)</span>. Покажи это</div>
+<div class="displaymath process-math" id="range1-1-1-3">
+\begin{equation*}
+V = \ran T^0 \supset \ran T^1 \supset \cdots \supset \ran T^k \supset \ran T^{k+1} \supset \dotsb .
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#range1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.6"><a tabindex="-1" href="#range1" title="Copy heading and permalink for Exercise 8.1.3.6" aria-label="Copy heading and permalink for Exercise 8.1.3.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="range2"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="range2-1-1">
+<div class="para">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span> и <span class="process-math">\(m\)</span> — целое неотрицательное число такое, что</div>
+<div class="displaymath process-math" id="range2-1-1-3">
+\begin{equation*}
+\ran T^m = \ran T^{m+1}\!.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#range2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="range2-1-2">Докажите, что <span class="process-math">\(\ran T^k = \ran T^m\)</span> для всех <span class="process-math">\(k &gt; m\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#range2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.7"><a tabindex="-1" href="#range2" title="Copy heading and permalink for Exercise 8.1.3.7" aria-label="Copy heading and permalink for Exercise 8.1.3.7">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="range3"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="range3-1-1">
+<div class="para">Предположим, <span class="process-math">\(T \in \Lc(V)\)</span>. Докажите, что</div>
+<div class="displaymath process-math" id="range3-1-1-2">
+\begin{equation*}
+\ran T^{\dim V} = \ran T^{\dim V + 1} = \ran T^{\dim V + 2} = \dotsb .
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#range3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.8"><a tabindex="-1" href="#range3" title="Copy heading and permalink for Exercise 8.1.3.8" aria-label="Copy heading and permalink for Exercise 8.1.3.8">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="kerran"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="kerran-1-1">
+<div class="para">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span> и <span class="process-math">\(m\)</span> — целое неотрицательное число. Докажите, что</div>
+<div class="displaymath process-math" id="kerran-1-1-3">
+\begin{equation*}
+\ker T^m = \ker T^{m+1} \iff \ran T^m = \ran T^{m+1}\!.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#kerran-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.9"><a tabindex="-1" href="#kerran" title="Copy heading and permalink for Exercise 8.1.3.9" aria-label="Copy heading and permalink for Exercise 8.1.3.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-11"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="geneig-4-15-11-1-1">Определите <span class="process-math">\(T \in \Lc( \C{2} )\)</span> через <span class="process-math">\(T(w,z) = (z,0)\)</span>. Найдите все обобщенные собственные векторы <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.10"><a tabindex="-1" href="#geneig-4-15-11" title="Copy heading and permalink for Exercise 8.1.3.10" aria-label="Copy heading and permalink for Exercise 8.1.3.10">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x8geneigb"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x8geneigb-1-1">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span>. Докажите, что существует базис <span class="process-math">\(V\)</span>, состоящий из обобщенных собственных векторов <span class="process-math">\(T\)</span>, тогда и только тогда, когда минимальный многочлен <span class="process-math">\(T\)</span> равен <span class="process-math">\((z-\lambda_1) \cdots (z-\lambda_m)\)</span> для некоторого <span class="process-math">\(\lambda_1, \ldots, \lambda_m \in \F{}{}\)</span>.  Примечание. Предположим, что <span class="process-math">\(\F{} = \R{}\)</span>, поскольку случай <span class="process-math">\(\F{} = \C{}\)</span> следует из <a href="eigenuppertri.html#x136" class="xref" data-knowl="./knowl/xref/x136.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.27: собственные значения являются нулями минимального многочлена">Теоремы 5.27</a> (b) и <a href="geneig.html#x28" class="xref" data-knowl="./knowl/xref/x28.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.9: базис обобщенных собственных векторов">Теоремы 8.9</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8geneigb-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> 
+<div class="para" id="x8geneigb-1-2">В этом упражнении утверждается, что условие существования базиса <span class="process-math">\(V\)</span>, состоящего из обобщенных собственных векторов <span class="process-math">\(T\)</span>, такое же, как и условие существования базиса, относительно которого <span class="process-math">\(T\)</span> имеет верхнетреугольную матрицу (см. <a href="x4utm.html#x5necsuf" class="xref" data-knowl="./knowl/xref/x5necsuf.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.44: необходимое и достаточное условие существования верхнетреугольной матрицы">Теорема 5.44</a>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8geneigb-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> 
+<div class="para" id="x8geneigb-1-3"><em class="emphasis">Внимание!</em> Если <span class="process-math">\(T\)</span> имеет верхнетреугольную матрицу относительно базиса <span class="process-math">\(v_1, \ldots,
+v_n\)</span> матрицы <span class="process-math">\(V{}\)</span>, то <span class="process-math">\(v_1\)</span> является собственным вектором матрицы <span class="process-math">\(T\)</span>, но не обязательно верно, что <span class="process-math">\(v_2, \ldots,
+v_n\)</span> являются обобщенными собственными векторами матрицы <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8geneigb-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.11"><a tabindex="-1" href="#x8geneigb" title="Copy heading and permalink for Exercise 8.1.3.11" aria-label="Copy heading and permalink for Exercise 8.1.3.11">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-13"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="geneig-4-15-13-1-1">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span> таков, что каждый ненулевой вектор из <span class="process-math">\(V\)</span> является обобщенным собственным вектором <span class="process-math">\(T{}\)</span>. Докажите, что существует <span class="process-math">\(\lambda \in \F{}\)</span> такое, что <span class="process-math">\(T - \lambda I\)</span> нильпотентна.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.12"><a tabindex="-1" href="#geneig-4-15-13" title="Copy heading and permalink for Exercise 8.1.3.12" aria-label="Copy heading and permalink for Exercise 8.1.3.12">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-14"><h4 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="geneig-4-15-14-1-1">Предположим, что <span class="process-math">\(S, T \in \Lc(V)\)</span> и <span class="process-math">\(ST\)</span> нильпотентны. Докажите, что <span class="process-math">\(TS\)</span> нильпотентна.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.13"><a tabindex="-1" href="#geneig-4-15-14" title="Copy heading and permalink for Exercise 8.1.3.13" aria-label="Copy heading and permalink for Exercise 8.1.3.13">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-15"><h4 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="geneig-4-15-15-1-1">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span> нильпотентен и <span class="process-math">\(T \ne 0\)</span>. Докажите, что <span class="process-math">\(T\)</span> недиагонализуема.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.14"><a tabindex="-1" href="#geneig-4-15-15" title="Copy heading and permalink for Exercise 8.1.3.14" aria-label="Copy heading and permalink for Exercise 8.1.3.14">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x425"><h4 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x425-1-1">Предположим <span class="process-math">\(\F{} = \C{}\)</span> и <span class="process-math">\(T \in \Lc(V)\)</span>. Докажите, что <span class="process-math">\(T\)</span> диагонализуемо тогда и только тогда, когда каждый обобщенный собственный вектор <span class="process-math">\(T\)</span> является собственным вектором <span class="process-math">\(T{}\)</span>.  Примечание. Для <span class="process-math">\(\F{} = \C{}\)</span> это упражнение добавляет еще одну эквивалентность к списку условий диагонализуемости в <a href="diagmat.html#x427" class="xref" data-knowl="./knowl/xref/x427.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.55: условия, эквивалентные диагонализуемости">теореме 5.55</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x425-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.15"><a tabindex="-1" href="#x425" title="Copy heading and permalink for Exercise 8.1.3.15" aria-label="Copy heading and permalink for Exercise 8.1.3.15">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-17"><h4 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="geneig-4-15-17-1-1">
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="geneig-4-15-17-1-1-1">
+<li id="geneig-4-15-17-1-1-1-1">
+<div class="para" id="geneig-4-15-17-1-1-1-1-1">Приведите пример нильпотентных операторов <span class="process-math">\(S, T\)</span> в одном и том же векторном пространстве, таких что ни <span class="process-math">\(S+T\)</span>, ни <span class="process-math">\(ST\)</span> не являются нильпотентными.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-17-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.1.3.16.a"><a tabindex="-1" href="#geneig-4-15-17-1-1-1-1" title="Copy heading and permalink for Item 8.1.3.16.a" aria-label="Copy heading and permalink for Item 8.1.3.16.a">🔗</a></div>
+</li>
+<li id="geneig-4-15-17-1-1-1-2">
+<div class="para" id="geneig-4-15-17-1-1-1-2-1">Предположим, что <span class="process-math">\(S, T \in \Lc(V)\)</span> нильпотентны и <span class="process-math">\(ST = TS\)</span>. Докажите, что <span class="process-math">\(S + T\)</span> и <span class="process-math">\(ST\)</span> нильпотентны.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-17-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.1.3.16.b"><a tabindex="-1" href="#geneig-4-15-17-1-1-1-2" title="Copy heading and permalink for Item 8.1.3.16.b" aria-label="Copy heading and permalink for Item 8.1.3.16.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.16"><a tabindex="-1" href="#geneig-4-15-17" title="Copy heading and permalink for Exercise 8.1.3.16" aria-label="Copy heading and permalink for Exercise 8.1.3.16">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-18"><h4 class="heading"><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="geneig-4-15-18-1-1">
+<div class="para">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span> нильпотентна и <span class="process-math">\(m\)</span> — целое положительное число такое, что <span class="process-math">\(T^m = 0\)</span>.</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="geneig-4-15-18-1-1-4">
+<li id="geneig-4-15-18-1-1-4-1">
+<div class="para" id="geneig-4-15-18-1-1-4-1-1">Докажите, что <span class="process-math">\(I-T\)</span> обратима и что <span class="process-math">\((I - T)^{-1} = I + T + \dots + T^{m-1}\!\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-18-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.1.3.17.a"><a tabindex="-1" href="#geneig-4-15-18-1-1-4-1" title="Copy heading and permalink for Item 8.1.3.17.a" aria-label="Copy heading and permalink for Item 8.1.3.17.a">🔗</a></div>
+</li>
+<li id="geneig-4-15-18-1-1-4-2">
+<div class="para" id="geneig-4-15-18-1-1-4-2-1">Объясните, как вы догадались бы о приведенной выше формуле.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-18-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.1.3.17.b"><a tabindex="-1" href="#geneig-4-15-18-1-1-4-2" title="Copy heading and permalink for Item 8.1.3.17.b" aria-label="Copy heading and permalink for Item 8.1.3.17.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.17"><a tabindex="-1" href="#geneig-4-15-18" title="Copy heading and permalink for Exercise 8.1.3.17" aria-label="Copy heading and permalink for Exercise 8.1.3.17">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="nilrange"><h4 class="heading"><span class="codenumber">18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="nilrange-1-1">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span> нильпотентна. Докажите, что <span class="process-math">\(T^{1 + \dim \ran T} = 0\)</span>. Примечание. Если <span class="process-math">\(\dim \ran T \lt \dim V - 1\)</span>, то это упражнение улучшает <a href="geneig.html#x181" class="xref" data-knowl="./knowl/xref/x181.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.16: нильпотентный оператор в степени размерности области определения равен 0">теорему 8.16</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#nilrange-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.18"><a tabindex="-1" href="#nilrange" title="Copy heading and permalink for Exercise 8.1.3.18" aria-label="Copy heading and permalink for Exercise 8.1.3.18">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x8notnil"><h4 class="heading"><span class="codenumber">19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="x8notnil-1-1">
+<div class="para">Предположим, что <span class="process-math">\(T\in \Lc(V)\)</span> не нильпотентна. Покажи это</div>
+<div class="displaymath process-math" id="x8notnil-1-1-2">
+\begin{equation*}
+V = \ker T^{\dim V-1} \oplus \ran T^{\dim V-1}\!.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8notnil-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="x8notnil-1-2">Примечание. Для операторов, которые не являются нильпотентными, это упражнение улучшает <a href="geneig.html#x8nulloplusran" class="xref" data-knowl="./knowl/xref/x8nulloplusran.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.4: V есть прямая сумма \ker T^{\dim V} и \ran T^{\dim V}">теорему 8.4</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8notnil-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.19"><a tabindex="-1" href="#x8notnil" title="Copy heading and permalink for Exercise 8.1.3.19" aria-label="Copy heading and permalink for Exercise 8.1.3.19">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-21"><h4 class="heading"><span class="codenumber">20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="geneig-4-15-21-1-1">Предположим, что <span class="process-math">\(V\)</span> — пространство со скалярным произведением, а <span class="process-math">\(T \in \Lc(V)\)</span> — нормальное и нильпотентное. Докажите, что <span class="process-math">\(T = 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.20"><a tabindex="-1" href="#geneig-4-15-21" title="Copy heading and permalink for Exercise 8.1.3.20" aria-label="Copy heading and permalink for Exercise 8.1.3.20">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="x8nullTk"><h4 class="heading"><span class="codenumber">21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="x8nullTk-1-1">Предположим, что <span class="process-math">\(T \in \Lc(V)\)</span> таков, что <span class="process-math">\(\ker T^{\dim V - 1} \ne \ker T^{\dim V}\!\)</span>. Докажите, что <span class="process-math">\(T\)</span> нильпотентно и что <span class="process-math">\(\dim \ker T^k = k\)</span> для любого целого числа <span class="process-math">\(k\)</span> с <span class="process-math">\(0 \le k \le \dim V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8nullTk-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.21"><a tabindex="-1" href="#x8nullTk" title="Copy heading and permalink for Exercise 8.1.3.21" aria-label="Copy heading and permalink for Exercise 8.1.3.21">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-23"><h4 class="heading"><span class="codenumber">22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="geneig-4-15-23-1-1">Предположим, что <span class="process-math">\(T \in \Lc( \C{5} )\)</span> таков, что <span class="process-math">\(\ran T^4 \ne \ran T^5{}\)</span>. Докажите, что <span class="process-math">\(T\)</span> нильпотентна.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.22"><a tabindex="-1" href="#geneig-4-15-23" title="Copy heading and permalink for Exercise 8.1.3.22" aria-label="Copy heading and permalink for Exercise 8.1.3.22">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="Nil1"><h4 class="heading"><span class="codenumber">23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="Nil1-1-1">Приведите пример оператора <span class="process-math">\(T\)</span> в конечномерном вещественном векторном пространстве такого, что <span class="process-math">\(0\)</span> — единственное собственное значение оператора <span class="process-math">\(T\)</span>, но <span class="process-math">\(T\)</span> не нильпотентен. Примечание. Это упражнение показывает, что импликация (b) <span class="process-math">\(\implies\)</span> (a) в <a href="geneig.html#x8eignil" class="xref" data-knowl="./knowl/xref/x8eignil.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.17: собственные значения нильпотентного оператора">Теореме 8.17</a> не выполняется без гипотезы о том, что <span class="process-math">\(\F{} = \C{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Nil1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.23"><a tabindex="-1" href="#Nil1" title="Copy heading and permalink for Exercise 8.1.3.23" aria-label="Copy heading and permalink for Exercise 8.1.3.23">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-25"><h4 class="heading"><span class="codenumber">24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="geneig-4-15-25-1-1">Для каждого элемента в <a href="geneig.html#x8nil" class="xref" data-knowl="./knowl/xref/x8nil.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 8.15: нильпотентные операторы">Примере 8.15</a> найдите базис векторного пространства области определения такой, что матрица нильпотентного оператора относительно этого базиса имеет верхнетреугольную форму, обещанную <a href="geneig.html#a33" class="xref" data-knowl="./knowl/xref/a33.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.18: минимальный полином и верхнетреугольная матрица нильпотентного оператора">Теоремой 8.18</a>(c).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-25-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.24"><a tabindex="-1" href="#geneig-4-15-25" title="Copy heading and permalink for Exercise 8.1.3.24" aria-label="Copy heading and permalink for Exercise 8.1.3.24">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="geneig-4-15-26"><h4 class="heading"><span class="codenumber">25<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="geneig-4-15-26-1-1">Предположим, что <span class="process-math">\(V\)</span> — пространство со скалярным произведением и <span class="process-math">\(T \in \Lc(V)\)</span> нильпотентно. Покажите, что существует ортонормированный базис <span class="process-math">\(V\)</span>, относительно которого матрица <span class="process-math">\(T\)</span> имеет верхнетреугольную форму, обещанную <a href="geneig.html#a33" class="xref" data-knowl="./knowl/xref/a33.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.18: минимальный полином и верхнетреугольная матрица нильпотентного оператора">теоремой 8.18</a>(c).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#geneig-4-15-26-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.1.3.25"><a tabindex="-1" href="#geneig-4-15-26" title="Copy heading and permalink for Exercise 8.1.3.25" aria-label="Copy heading and permalink for Exercise 8.1.3.25">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercises 8.1.3: Exercises"><a tabindex="-1" href="#geneig-4-15" title="Copy heading and permalink for Exercises 8.1.3: Упражнения" aria-label="Copy heading and permalink for Exercises 8.1.3: Exercises">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Subsection 8.1.3: Nilpotent Operators"><a tabindex="-1" href="#geneig-4" title="Copy heading and permalink for Subsection 8.1.3: Нильпотентные операторы" aria-label="Copy heading and permalink for Subsection 8.1.3: Nilpotent Operators">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 8.1: Generalized Eigenvectors and Nilpotent Operators"><a tabindex="-1" href="#geneig" title="Copy heading and permalink for Section 8.1: Корневые векторы и нильпотентные операторы" aria-label="Copy heading and permalink for Section 8.1: Generalized Eigenvectors and Nilpotent Operators">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="operators_complex_vs-2.html" title="Назад"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Назад</span></a><a class="top-button button" href="#" title="В начало"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">В начало</span></a><a class="next-button button" href="decompop.html" title="Далее"><span class="name">Далее</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" alt="Runestone Academy logo" src="data:image/png;base64,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"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" alt="MathJax logo" src="data:image/png;base64,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"></a>
+</div>
+</body>
+</html>
