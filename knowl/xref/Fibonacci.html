@@ -22,45 +22,45 @@
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
 </h2>
 <div class="para logical">
-<div class="para"><dfn class="terminology">Последовательность Фибоначчи</dfn> <span class="process-math">\(F_0, F_1, F_2, \dots\)</span> определяется формулой</div>
+<div class="para"><dfn class="terminology">Последовательность Фибоначчи</dfn> <span class="process-math">\(F_0, F_1, F_2, \dots\)</span> определяется соотношениями</div>
 <div class="displaymath process-math">
 \begin{equation*}
-F_0 = 0,\ F_1 = 1, \text{ и } F_n = F_{n-2} + F_{n-1} \textit{ for\ } n \ge 2.
+F_0 = 0,\ F_1 = 1, \text{ и } F_n = F_{n-2} + F_{n-1} \textit{ при\ } n \ge 2.
 \end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Fibonacci-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical">
-<div class="para">Определите <span class="process-math">\(T \in \Lc( \R2 )\)</span> через <span class="process-math">\(T(x, y) = (y, x+y)\)</span>.</div>
+<div class="para">Определим отображение <span class="process-math">\(T \in \Lc( \R2 )\)</span> формулой <span class="process-math">\(T(x, y) = (y, x+y)\)</span>.</div>
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="Fibonacci-1-2-3">
 <li>
-<div class="para">Покажите, что <span class="process-math">\(T^n(0, 1) = (F_n, F_{n+1})\)</span> для каждого неотрицательного целого числа <span class="process-math">\(n\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Fibonacci-1-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para">Покажите, что <span class="process-math">\(T^n(0, 1) = (F_n, F_{n+1})\)</span> для каждого целого неотрицательного числа <span class="process-math">\(n\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Fibonacci-1-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item 5.4.3.21.a"><a tabindex="-1" href="#Fibonacci-1-2-3-1" title="Copy heading and permalink for Item 5.4.3.21.a" aria-label="Copy heading and permalink for Item 5.4.3.21.a">🔗</a></div>
 </li>
 <li>
-<div class="para">Найдите собственные значения <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Fibonacci-1-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para">Найдите собственные значения оператора <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Fibonacci-1-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item 5.4.3.21.b"><a tabindex="-1" href="#Fibonacci-1-2-3-2" title="Copy heading and permalink for Item 5.4.3.21.b" aria-label="Copy heading and permalink for Item 5.4.3.21.b">🔗</a></div>
 </li>
 <li>
-<div class="para">Найдите базис <span class="process-math">\(\R2\)</span>, состоящий из собственных векторов <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Fibonacci-1-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para">Найдите базис пространства <span class="process-math">\(\R2\)</span>, состоящий из собственных векторов оператора <span class="process-math">\(T{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Fibonacci-1-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item 5.4.3.21.c"><a tabindex="-1" href="#Fibonacci-1-2-3-3" title="Copy heading and permalink for Item 5.4.3.21.c" aria-label="Copy heading and permalink for Item 5.4.3.21.c">🔗</a></div>
 </li>
 <li>
 <div class="para logical">
-<div class="para">Используйте решение (c) для вычисления <span class="process-math">\(T^n(0, 1)\)</span>. Сделайте вывод, что</div>
+<div class="para">Используя решение пункта (c), вычислите <span class="process-math">\(T^n(0, 1)\)</span>. Выведите отсюда, что</div>
 <div class="displaymath process-math">
 \begin{equation*}
 F_n = \frac{1}{\sqrt{5}} \Biggl[ \left(  \frac{1 + \sqrt{5}}{2}  \right)^{\!n} - \left(  \frac{1 - \sqrt{5}}{2}  \right)^{\!n} \Biggr]
 \end{equation*}
 </div>
-<div class="para">для каждого неотрицательного целого числа <span class="process-math">\(n\)</span>.</div>
+<div class="para">для каждого целого неотрицательного числа <span class="process-math">\(n\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Fibonacci-1-2-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item 5.4.3.21.d"><a tabindex="-1" href="#Fibonacci-1-2-3-4" title="Copy heading and permalink for Item 5.4.3.21.d" aria-label="Copy heading and permalink for Item 5.4.3.21.d">🔗</a></div>
 </li>
 <li>
 <div class="para logical">
-<div class="para">Используйте (d), чтобы сделать вывод, что если <span class="process-math">\(n\)</span> — неотрицательное целое число, то число Фибоначчи <span class="process-math">\(F_n\)</span> — это целое число, ближайшее к</div>
+<div class="para">Используя пункт (d), докажите, что при любом целом неотрицательном <span class="process-math">\(n\)</span> число Фибоначчи <span class="process-math">\(F_n\)</span> равно ближайшему целому числу к</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{1}{\sqrt{5}}  \left(  \frac{1 + \sqrt{5}}{2}  \right)^{\!n}.
@@ -74,7 +74,7 @@ F_n = \frac{1}{\sqrt{5}} \Biggl[ \left(  \frac{1 + \sqrt{5}}{2}  \right)^{\!n} -
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#Fibonacci-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical">
-<div class="para">Примечание. Каждый <span class="process-math">\(F_n\)</span> представляет собой неотрицательное целое число, хотя правая часть формулы (d) не выглядит как целое число. Число</div>
+<div class="para">Примечание: каждое число <span class="process-math">\(F_n\)</span> является целым неотрицательным, хотя правая часть формулы из пункта (d) на первый взгляд совсем не похожа на целое число. Число</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{1 + \sqrt{5}}{2}

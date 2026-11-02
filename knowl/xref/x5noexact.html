@@ -19,10 +19,10 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h2 class="heading">
-<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.28</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Оператор, собственные значения которого невозможно найти точно.</span>
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.28</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Оператор, собственные значения которого нельзя найти точно.</span>
 </h2>
 <div class="para logical">
-<div class="para">Пусть <span class="process-math">\(T \in \Lc(  \C{5}  )\)</span> — оператор, определяемый формулой</div>
+<div class="para">Пусть <span class="process-math">\(T \in \Lc(  \C{5}  )\)</span> — оператор, заданный формулой</div>
 <div class="displaymath process-math">
 \begin{equation*}
 T(z_1, z_2, z_3, z_4, z_5) = (-3z_5, z_1 + 6z_5, z_2, z_3, z_4).
@@ -31,7 +31,7 @@ T(z_1, z_2, z_3, z_4, z_5) = (-3z_5, z_1 + 6z_5, z_2, z_3, z_4).
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x5noexact-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical">
-<div class="para">Матрица <span class="process-math">\(T\)</span> относительно стандартного базиса <span class="process-math">\(\C5\)</span> — это матрица <span class="process-math">\(5\)</span> на <span class="process-math">\(5\)</span> в <a href="eigenuppertri.html#x141" class="xref" data-knowl="./knowl/xref/x141.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 5.26: минимальный многочлен оператора на \F5">Примере 5.26</a>. Как мы показали в этом примере, минимальный многочлен <span class="process-math">\(T\)</span> — это многочлен</div>
+<div class="para">Матрица оператора <span class="process-math">\(T\)</span> в стандартном базисе пространства <span class="process-math">\(\C5\)</span> представляет собой матрицу размера <span class="process-math">\(5\)</span> на <span class="process-math">\(5\)</span> из <a href="eigenuppertri.html#x141" class="xref" data-knowl="./knowl/xref/x141.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 5.26: минимальный многочлен оператора на \F5">Примера 5.26</a>. Как было показано в том примере, минимальным многочленом оператора <span class="process-math">\(T\)</span> является многочлен</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x141.html">
 \begin{equation*}
 3 - 6z + z^5{}.
@@ -39,9 +39,9 @@ T(z_1, z_2, z_3, z_4, z_5) = (-3z_5, z_1 + 6z_5, z_2, z_3, z_4).
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x5noexact-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para">Ни один нуль приведенного выше многочлена не может быть выражен с помощью рациональных чисел, корней рациональных чисел и обычных правил арифметики (доказательство этого вывело бы нас значительно за рамки линейной алгебры). Поскольку нули приведенного выше многочлена являются собственными значениями <span class="process-math">\(T\)</span> [согласно <a href="eigenuppertri.html#x136" class="xref" data-knowl="./knowl/xref/x136.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.27: собственные значения являются нулями минимального многочлена">Теореме 5.27</a>(a)] , мы не можем найти точное выражение для любого собственного значения <span class="process-math">\(T\)</span> в любой знакомой форме.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x5noexact-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> 
+<div class="para">Ни один корень этого многочлена нельзя выразить через рациональные числа с помощью извлечения корней и обычных арифметических действий (доказательство этого факта увело бы нас далеко за пределы линейной алгебры). Поскольку корни этого многочлена суть собственные значения оператора <span class="process-math">\(T\)</span> [по <a href="eigenuppertri.html#x136" class="xref" data-knowl="./knowl/xref/x136.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.27: собственные значения — это корни минимального многочлена">Теореме 5.27</a>(a)], мы не можем записать точное выражение ни для одного собственного значения оператора <span class="process-math">\(T\)</span> в каком-либо привычном виде.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x5noexact-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> 
 <div class="para logical">
-<div class="para">Численные методы, которые мы не будем здесь обсуждать, показывают, что нули приведенного выше многочлена и, следовательно, собственные значения <span class="process-math">\(T\)</span> представляют собой примерно следующие пять комплексных чисел:</div>
+<div class="para">Численные методы, на которых мы здесь останавливаться не будем, показывают, что корнями этого многочлена, а значит, и собственными значениями оператора <span class="process-math">\(T\)</span>, приближённо являются следующие пять комплексных чисел:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 -1.67,  0.51,  1.40,  -0.12 + 1.59i,  -0.12 - 1.59i.
@@ -49,8 +49,8 @@ T(z_1, z_2, z_3, z_4, z_5) = (-3z_5, z_1 + 6z_5, z_2, z_3, z_4).
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x5noexact-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para">Обратите внимание, что два невещественных нуля этого многочлена являются комплексно-сопряженными друг с другом, как и следовало ожидать для многочлена с действительными коэффициентами (см. <a href="polynomials.html#x170" class="xref" data-knowl="./knowl/xref/x170.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.14: многочлены с действительными коэффициентами имеют невещественные нули в парах">Теорему 4.14</a>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x5noexact-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 5.28: An operator whose eigenvalues cannot be found exactly"><a tabindex="-1" href="#x5noexact" title="Copy heading and permalink for Example 5.28: Оператор, собственные значения которого невозможно найти точно" aria-label="Copy heading and permalink for Example 5.28: An operator whose eigenvalues cannot be found exactly">🔗</a></div>
+<div class="para">Заметим, что два невещественных корня этого многочлена комплексно сопряжены друг другу, как и должно быть у многочлена с вещественными коэффициентами (см. <a href="polynomials.html#x170" class="xref" data-knowl="./knowl/xref/x170.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.14: невещественные корни многочлена с вещественными коэффициентами входят сопряжёнными парами">Теорему 4.14</a>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x5noexact-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 5.28: An operator whose eigenvalues cannot be found exactly"><a tabindex="-1" href="#x5noexact" title="Copy heading and permalink for Example 5.28: Оператор, собственные значения которого нельзя найти точно" aria-label="Copy heading and permalink for Example 5.28: An operator whose eigenvalues cannot be found exactly">🔗</a></div>
 </article><span class="incontext"><a class="internal" href="eigenuppertri.html#x5noexact">В контексте</a></span>
 </body>
 </html>

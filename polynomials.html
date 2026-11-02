@@ -550,43 +550,43 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading">
 <span class="type">Глава</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Многочлены</span>
 </h1>
-<div class="para" id="polynomials-2">Эта глава содержит материал о полиномах, которые мы будем использовать для исследования линейных отображений векторного пространства в себя. Многие результаты этой главы вам уже знакомы по другим курсам; они включены сюда для полноты картины.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="polynomials-3">Поскольку эта глава не посвящена линейной алгебре, ваш преподаватель может пройти ее быстро. Вас не могут попросить тщательно изучить все доказательства. Однако убедитесь, что вы хотя бы прочитали и поняли формулировки всех результатов в этой главе — они будут использоваться в последующих главах.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="polynomials-4">Эта глава начинается с краткого обсуждения алгебраических свойств комплексных чисел. Затем мы доказываем, что непостоянный многочлен не может иметь больше нулей, чем его степень. Мы также даем основанное на линейной алгебре доказательство алгоритма деления многочленов, которое стоит прочитать, даже если вы уже знакомы с доказательством, не использующим линейную алгебру.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="polynomials-5">Как мы увидим, основная теорема алгебры приводит к факторизации каждого многочлена на множители степени один, если скалярное поле равно <span class="process-math">\(\C{}\)</span>, или на множители степени не выше двух, если скалярное поле равно <span class="process-math">\(\R{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<article class="assemblage assemblage-like" id="polynomials-6"><h2 class="heading"><span class="title">Предположения для этой главы.</span></h2>
+<div class="para" id="polynomials-2">В этой главе собран материал о многочленах, который понадобится нам для исследования линейных отображений векторного пространства в себя. Многие результаты этой главы уже знакомы вам из других курсов; здесь они приводятся для полноты изложения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-3">Поскольку эта глава не относится непосредственно к линейной алгебре, преподаватель может пройти её бегло, не требуя от вас детального разбора всех доказательств. Тем не менее обязательно прочитайте и усвойте формулировки всех результатов этой главы — они будут использоваться в дальнейшем.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-4">Глава начинается с краткого обзора алгебраических свойств комплексных чисел. Затем мы докажем, что непостоянный многочлен не может иметь больше корней, чем его степень. Мы также приведём основанное на методах линейной алгебры доказательство теоремы о делении с остатком для многочленов, с которым стоит познакомиться, даже если вам уже известно доказательство, не использующее линейную алгебру.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-5">Как мы увидим, основная теорема алгебры приводит к разложению любого многочлена на множители первой степени, если полем скаляров является <span class="process-math">\(\C{}\)</span>, или на множители степени не выше второй, если полем скаляров является <span class="process-math">\(\R{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<article class="assemblage assemblage-like" id="polynomials-6"><h2 class="heading"><span class="title">Соглашения, принятые в этой главе.</span></h2>
 <div class="para logical" id="polynomials-6-2">
 <ul class="disc" id="polynomials-6-2-1">
 <li id="polynomials-6-2-1-1">
-<div class="para" id="p-derived-polynomials-6-2-1-1"><span class="process-math">\(\F{}\)</span> обозначает <span class="process-math">\(\R{}\)</span> или <span class="process-math">\(\C{}\)</span>.</div>
+<div class="para" id="p-derived-polynomials-6-2-1-1">Символ <span class="process-math">\(\F{}\)</span> обозначает поле <span class="process-math">\(\R{}\)</span> или <span class="process-math">\(\C{}\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#polynomials-6-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Assemblage: Assumptions for this chapter"><a tabindex="-1" href="#polynomials-6" title="Copy heading and permalink for Assemblage: Предположения для этой главы" aria-label="Copy heading and permalink for Assemblage: Assumptions for this chapter">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: Assumptions for this chapter"><a tabindex="-1" href="#polynomials-6" title="Copy heading and permalink for Assemblage: Соглашения, принятые в этой главе" aria-label="Copy heading and permalink for Assemblage: Assumptions for this chapter">🔗</a></div>
 </article><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;">
 <img src="external/KhayamR.jpg" class="contained" alt="described in detail following the image" aria-describedby="polynomials-7-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="polynomials-7-description">
-<div class="para" id="polynomials-7-1-1">Белокаменная статуя Омара Хайяма, сидящего, бородатого, с книгой на коленях, перед голыми деревьями.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-7-1-1">Белокаменная статуя сидящего бородатого Омара Хайяма с книгой на коленях на фоне деревьев без листвы.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 </div></details>
 </div>
 <blockquote class="blockquote" id="polynomials-8">
-<div class="para" id="polynomials-8-1"><em class="emphasis">Статуя математика и поэта Омара Хайяма (1048–1131), чья книга по алгебре, написанная в 1070 году, содержала первое серьезное исследование кубических многочленов.</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-8-1"><em class="emphasis">Статуя математика и поэта Омара Хайяма (1048–1131), чей трактат по алгебре, написанный в 1070 году, содержал первое серьёзное исследование кубических многочленов.</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Quotation"><a tabindex="-1" href="#polynomials-8" title="Copy heading and permalink for Quotation" aria-label="Copy heading and permalink for Quotation">🔗</a></div>
 </blockquote>
-<div class="para" id="polynomials-9">Прежде чем обсуждать полиномы с комплексными или действительными коэффициентами, нам нужно узнать немного больше о комплексных числах.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-9">Прежде чем переходить к обсуждению многочленов с комплексными или вещественными коэффициентами, нам нужно немного подробнее познакомиться с комплексными числами.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="definition definition-like" id="polynomials-10"><h2 class="heading">
 <span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">вещественная часть, <span class="process-math">\(\re z\)</span>, мнимая часть, <span class="process-math">\(\im z\)</span>.</span>
 </h2>
 <div class="para logical" id="polynomials-10-2-1">
-<div class="para">Предположим <span class="process-math">\(z = a + bi\)</span>, где <span class="process-math">\(a\)</span> и <span class="process-math">\(b\)</span> — действительные числа.</div>
+<div class="para">Пусть <span class="process-math">\(z = a + bi\)</span>, где <span class="process-math">\(a\)</span> и <span class="process-math">\(b\)</span> — вещественные числа.</div>
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="polynomials-10-2-1-4">
 <li id="polynomials-10-2-1-4-1">
-<div class="para" id="polynomials-10-2-1-4-1-1"><dfn class="terminology">действительная часть</dfn> <span class="process-math">\(z\)</span>, обозначаемая <span class="process-math">\(\re z\)</span>, определяется <span class="process-math">\(\re z = a\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-10-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-10-2-1-4-1-1"><dfn class="terminology">Вещественная часть</dfn> комплексного числа <span class="process-math">\(z\)</span> обозначается через <span class="process-math">\(\re z\)</span> и определяется равенством <span class="process-math">\(\re z = a\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-10-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#polynomials-10-2-1-4-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="polynomials-10-2-1-4-2">
-<div class="para" id="polynomials-10-2-1-4-2-1"><dfn class="terminology">Мнимая часть</dfn> <span class="process-math">\(z\)</span>, обозначаемая <span class="process-math">\(\im z\)</span>, определяется <span class="process-math">\(\im z = b\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-10-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-10-2-1-4-2-1"><dfn class="terminology">Мнимая часть</dfn> комплексного числа <span class="process-math">\(z\)</span> обозначается через <span class="process-math">\(\im z\)</span> и определяется равенством <span class="process-math">\(\im z = b\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-10-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#polynomials-10-2-1-4-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
@@ -595,7 +595,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" aria-hidden="true" data-description="Definition 4.1: real part,  \re z imaginary part,  \im z"><a tabindex="-1" href="#polynomials-10" title="Copy heading and permalink for Definition 4.1: вещественная часть, \re z, мнимая часть, \im z" aria-label="Copy heading and permalink for Definition 4.1: real part,  \re z imaginary part,  \im z">🔗</a></div>
 </article>
 <div class="para logical" id="polynomials-11">
-<div class="para">Таким образом, для любого комплексного числа <span class="process-math">\(z\)</span> имеем</div>
+<div class="para">Таким образом, для любого комплексного числа <span class="process-math">\(z\)</span> справедливо равенство</div>
 <div class="displaymath process-math" id="polynomials-11-2">
 \begin{equation*}
 z = \re z +  (\im z)i.
@@ -607,11 +607,11 @@ z = \re z +  (\im z)i.
 <span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">комплексное сопряжение, <span class="process-math">\(\bar{z}\)</span>, модуль, <span class="process-math">\(|z|\)</span>.</span>
 </h2>
 <div class="para logical" id="polynomials-12-2-1">
-<div class="para">Предположим, <span class="process-math">\(z \in \C{}\)</span>.</div>
+<div class="para">Пусть <span class="process-math">\(z \in \C{}\)</span>.</div>
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="polynomials-12-2-1-2">
 <li id="polynomials-12-2-1-2-1">
 <div class="para logical" id="polynomials-12-2-1-2-1-1">
-<div class="para"><dfn class="terminology">Комплексно-сопряженное</dfn> <span class="process-math">\(z \in \C{}\)</span>, обозначаемое <span class="process-math">\(\bar{z}\)</span>, определяется формулой</div>
+<div class="para"><dfn class="terminology">Комплексно сопряжённым</dfn> к числу <span class="process-math">\(z \in \C{}\)</span> называется число, обозначаемое через <span class="process-math">\(\bar{z}\)</span> и определяемое формулой</div>
 <div class="displaymath process-math" id="polynomials-12-2-1-2-1-1-6">
 \begin{equation*}
 \bar{z} = \re z - (\im z)i.
@@ -623,7 +623,7 @@ z = \re z +  (\im z)i.
 </li>
 <li id="polynomials-12-2-1-2-2">
 <div class="para logical" id="polynomials-12-2-1-2-2-1">
-<div class="para"><dfn class="terminology">Модуль (абсолютная величина)</dfn> комплексного числа <span class="process-math">\(z\)</span>, обозначаемый через <span class="process-math">\(|z|\)</span>, определяется формулой</div>
+<div class="para"><dfn class="terminology">Модуль</dfn> (или абсолютная величина) комплексного числа <span class="process-math">\(z\)</span> обозначается через <span class="process-math">\(|z|\)</span> и определяется формулой</div>
 <div class="displaymath process-math" id="polynomials-12-2-1-2-2-1-6">
 \begin{equation*}
 |z| = \sqrt{(\re z)^2 + (\im z)^2}.
@@ -639,11 +639,11 @@ z = \re z +  (\im z)i.
 <div class="autopermalink" aria-hidden="true" data-description="Definition 4.2: complex conjugate, \bar{z} absolute value, |z|"><a tabindex="-1" href="#polynomials-12" title="Copy heading and permalink for Definition 4.2: комплексное сопряжение, \bar{z}, модуль, |z|" aria-label="Copy heading and permalink for Definition 4.2: complex conjugate, \bar{z} absolute value, |z|">🔗</a></div>
 </article>
 <details id="polynomials-13" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
-<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">действительная и мнимая часть, комплексно-сопряженная величина, абсолютная величина.</span>
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">вещественная и мнимая части, комплексно сопряжённое число, модуль.</span>
 </h2></summary>
 <article class="example example-like knowl__content">
 <div class="para logical" id="polynomials-13-2-1">
-<div class="para">Предположим, <span class="process-math">\(z = 3 + 2i\)</span>. Тогда</div>
+<div class="para">Действительно, пусть <span class="process-math">\(z = 3 + 2i\)</span>. Тогда</div>
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="polynomials-13-2-1-2">
 <li id="polynomials-13-2-1-2-1">
 <div class="para" id="polynomials-13-2-1-2-1-1"><span class="process-math">\(\re z = 3\)</span> и <span class="process-math">\(\im z = 2\)</span>;<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-13-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
@@ -664,20 +664,20 @@ z = \re z +  (\im z)i.
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 4.3: real and imaginary part, complex conjugate, absolute value"><a tabindex="-1" href="#polynomials-13" title="Copy heading and permalink for Example 4.3: действительная и мнимая часть, комплексно-сопряженная величина, абсолютная величина" aria-label="Copy heading and permalink for Example 4.3: real and imaginary part, complex conjugate, absolute value">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 4.3: real and imaginary part, complex conjugate, absolute value"><a tabindex="-1" href="#polynomials-13" title="Copy heading and permalink for Example 4.3: вещественная и мнимая части, комплексно сопряжённое число, модуль" aria-label="Copy heading and permalink for Example 4.3: real and imaginary part, complex conjugate, absolute value">🔗</a></div>
 </article></details>
-<div class="para" id="polynomials-14">Отождествление комплексного числа <span class="process-math">\(z \in \C{}\)</span> с упорядоченной парой <span class="process-math">\((\re z, \im z) \in \R2\)</span> идентифицирует <span class="process-math">\(\C{}\)</span> с <span class="process-math">\(\RR2\)</span>. Обратите внимание, что <span class="process-math">\(\C{}\)</span> — это одномерное комплексное векторное пространство, но мы также можем думать о <span class="process-math">\(\C{}\)</span> (отождествляемом с <span class="process-math">\(\R2\)</span>) как о двумерном вещественном векторном пространстве.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="polynomials-15">Абсолютное значение каждого комплексного числа является неотрицательным числом. В частности, если <span class="process-math">\(z \in \C{}\)</span>, то <span class="process-math">\(\lvert z \rvert\)</span> равно расстоянию от начала координат в <span class="process-math">\(\R2\)</span> до точки <span class="process-math">\((\re z, \im z) \in \RR2\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-14">Отождествление комплексного числа <span class="process-math">\(z \in \C{}\)</span> с упорядоченной парой <span class="process-math">\((\re z, \im z) \in \R2\)</span> позволяет отождествить <span class="process-math">\(\C{}\)</span> с <span class="process-math">\(\RR2\)</span>. Заметим, что <span class="process-math">\(\C{}\)</span> является одномерным комплексным векторным пространством, однако <span class="process-math">\(\C{}\)</span> (отождествлённое с <span class="process-math">\(\R2\)</span>) можно рассматривать и как двумерное вещественное векторное пространство.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-15">Модуль каждого комплексного числа является неотрицательным числом. А именно, если <span class="process-math">\(z \in \C{}\)</span>, то <span class="process-math">\(\lvert z \rvert\)</span> равен расстоянию от начала координат в <span class="process-math">\(\R2\)</span> до точки <span class="process-math">\((\re z, \im z) \in \RR2\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <details id="polynomials-16" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Примечание</span></h2></summary>
 <aside class="aside aside-like knowl__content">
-<div class="para" id="polynomials-16-1">Вы должны убедиться, что <span class="process-math">\(z = \bar{z}\)</span> тогда и только тогда, когда <span class="process-math">\(z\)</span> является действительным числом.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-16-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-16-1">Проверьте самостоятельно, что <span class="process-math">\(z = \bar{z}\)</span> тогда и только тогда, когда <span class="process-math">\(z\)</span> — вещественное число.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-16-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 </aside></details>
-<div class="para" id="polynomials-17">Действительная и мнимая части, комплексно-сопряженное значение и абсолютное значение имеют свойства, перечисленные в следующем многочастном результате.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-17">Вещественная и мнимая части, комплексное сопряжение и модуль обладают свойствами, перечисленными в следующем утверждении.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="propcomplex"><h2 class="heading">
 <span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">свойства комплексных чисел.</span>
 </h2>
 <div class="para logical" id="propcomplex-2-1">
-<div class="para">Предположим, <span class="process-math">\(w, z \in \C{}\)</span>. Тогда имеют место следующие равенства и неравенства.</div>
+<div class="para">Пусть <span class="process-math">\(w, z \in \C{}\)</span>. Тогда выполняются следующие равенства и неравенства.</div>
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="propcomplex-2-1-2">
 <li id="propcomplex-2-1-2-1">
 <span class="heading li--heading"><span class="title li--heading-title">сумма <span class="process-math">\(z\)</span> и <span class="process-math">\(\bar{z}\)</span>.</span></span>
@@ -706,11 +706,11 @@ z = \re z +  (\im z)i.
 <div class="autopermalink" aria-hidden="true" data-description="Item d: additivity and multiplicativity of complex conjugate"><a tabindex="-1" href="#propcomplex-2-1-2-4" title="Copy heading and permalink for Item d: аддитивность и мультипликативность комплексного сопряжения" aria-label="Copy heading and permalink for Item d: additivity and multiplicativity of complex conjugate">🔗</a></div>
 </li>
 <li id="propcomplex-2-1-2-5">
-<span class="heading li--heading"><span class="title li--heading-title">двойной комплексно-сопряженный.</span></span>
+<span class="heading li--heading"><span class="title li--heading-title">двойное комплексное сопряжение.</span></span>
 <div class="para" id="propcomplex-2-1-2-5-2">
 <span class="process-math">\(\overline{\bar{z}} = z\text{.}\)</span>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#propcomplex-2-1-2-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item e: double complex conjugate"><a tabindex="-1" href="#propcomplex-2-1-2-5" title="Copy heading and permalink for Item e: двойной комплексно-сопряженный" aria-label="Copy heading and permalink for Item e: double complex conjugate">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item e: double complex conjugate"><a tabindex="-1" href="#propcomplex-2-1-2-5" title="Copy heading and permalink for Item e: двойное комплексное сопряжение" aria-label="Copy heading and permalink for Item e: double complex conjugate">🔗</a></div>
 </li>
 <li id="propcomplex-2-1-2-6">
 <span class="heading li--heading"><span class="title li--heading-title">вещественная и мнимая части ограничены величиной <span class="process-math">\(|z|\)</span>.</span></span>
@@ -718,22 +718,22 @@ z = \re z +  (\im z)i.
 <div class="autopermalink" aria-hidden="true" data-description="Item f: real and imaginary parts are bounded by |z|"><a tabindex="-1" href="#propcomplex-2-1-2-6" title="Copy heading and permalink for Item f: вещественная и мнимая части ограничены величиной |z|" aria-label="Copy heading and permalink for Item f: real and imaginary parts are bounded by |z|">🔗</a></div>
 </li>
 <li id="propcomplex-2-1-2-7">
-<span class="heading li--heading"><span class="title li--heading-title">абсолютное значение комплексно-сопряженного.</span></span>
+<span class="heading li--heading"><span class="title li--heading-title">модуль комплексно сопряжённого числа.</span></span>
 <div class="para" id="propcomplex-2-1-2-7-2">
 <span class="process-math">\(\lvert \bar{z} \rvert = |z|\text{.}\)</span>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#propcomplex-2-1-2-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item g: absolute value of the complex conjugate"><a tabindex="-1" href="#propcomplex-2-1-2-7" title="Copy heading and permalink for Item g: абсолютное значение комплексно-сопряженного" aria-label="Copy heading and permalink for Item g: absolute value of the complex conjugate">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item g: absolute value of the complex conjugate"><a tabindex="-1" href="#propcomplex-2-1-2-7" title="Copy heading and permalink for Item g: модуль комплексно сопряжённого числа" aria-label="Copy heading and permalink for Item g: absolute value of the complex conjugate">🔗</a></div>
 </li>
 <li id="propcomplex-2-1-2-8">
-<span class="heading li--heading"><span class="title li--heading-title">мультипликативность абсолютной величины.</span></span>
+<span class="heading li--heading"><span class="title li--heading-title">мультипликативность модуля.</span></span>
 <div class="para" id="propcomplex-2-1-2-8-2">
 <span class="process-math">\(|wz| = |w| |z|\text{.}\)</span>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#propcomplex-2-1-2-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item h: multiplicativity of absolute value"><a tabindex="-1" href="#propcomplex-2-1-2-8" title="Copy heading and permalink for Item h: мультипликативность абсолютной величины" aria-label="Copy heading and permalink for Item h: multiplicativity of absolute value">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item h: multiplicativity of absolute value"><a tabindex="-1" href="#propcomplex-2-1-2-8" title="Copy heading and permalink for Item h: мультипликативность модуля" aria-label="Copy heading and permalink for Item h: multiplicativity of absolute value">🔗</a></div>
 </li>
 <li id="propcomplex-2-1-2-9">
 <span class="heading li--heading"><span class="title li--heading-title">неравенство треугольника.</span></span>
-<div class="para" id="propcomplex-2-1-2-9-2">ТреугольникНеравенство.png <span class="process-math">\(|w + z| \le |w| + |z|\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#propcomplex-2-1-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="propcomplex-2-1-2-9-2">TriangleInequality.png <span class="process-math">\(|w + z| \le |w| + |z|\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#propcomplex-2-1-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item i: triangle inequality"><a tabindex="-1" href="#propcomplex-2-1-2-9" title="Copy heading and permalink for Item i: неравенство треугольника" aria-label="Copy heading and permalink for Item i: triangle inequality">🔗</a></div>
 </li>
 </ol>
@@ -743,12 +743,12 @@ z = \re z +  (\im z)i.
 </article>
 <details id="polynomials-19" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Примечание</span></h2></summary>
 <aside class="aside aside-like knowl__content">
-<div class="para" id="polynomials-19-1">Геометрическая интерпретация неравенства треугольника: длина каждой стороны треугольника меньше или равна сумме длин двух других сторон.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-19-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-19-1">Геометрическая интерпретация неравенства треугольника: длина каждой стороны треугольника не превосходит суммы длин двух других его сторон.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-19-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 </aside></details>
 <details id="polynomials-20" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="polynomials-20-1">
-<div class="para">За исключением последнего пункта, рутинная проверка приведенных выше утверждений предоставляется читателю. Для проверки неравенства треугольника имеем</div>
+<div class="para">За исключением последнего пункта, несложная проверка приведённых выше утверждений предоставляется читателю. Чтобы доказать неравенство треугольника, запишем цепочку соотношений:</div>
 <div class="displaymath process-math" id="polynomials-20-1-1">
 \begin{align*}
 |w + z|^2 \amp = (w + z)(\bar{w} + \bar{z})\\
@@ -764,29 +764,29 @@ z = \re z +  (\im z)i.
 </div>
 <details id="polynomials-20-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
 <aside class="aside aside-like knowl__content">
-<div class="para" id="polynomials-20-2-1">См. <a href="polynomials.html#x4reverse" class="xref" data-knowl="./knowl/xref/x4reverse.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 2">Упражнение 2</a>, чтобы узнать о неравенстве обратного треугольника.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-20-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-20-2-1">Обратное неравенство треугольника рассматривается в <a href="polynomials.html#x4reverse" class="xref" data-knowl="./knowl/xref/x4reverse.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 2">Упражнении 2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-20-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 </aside></details>
-<div class="para" id="polynomials-20-3">Извлечение квадратных корней теперь дает искомое неравенство <span class="process-math">\(|w + z| \le |w| + |z|\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-20-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-20-3">Извлекая квадратный корень, получаем требуемое неравенство <span class="process-math">\(|w + z| \le |w| + |z|\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-20-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 4.1"><a tabindex="-1" href="#polynomials-20" title="Copy heading and permalink for Proof 4.1" aria-label="Copy heading and permalink for Proof 4.1">🔗</a></div>
 </article></details>
-<section class="paragraphs" id="polynomials-21"><h2 class="heading"><span class="title">Нули полиномов.</span></h2>
+<section class="paragraphs" id="polynomials-21"><h2 class="heading"><span class="title">Корни многочленов.</span></h2>
 <div class="para logical" id="polynomials-21-2">
-<div class="para">Напомним, что функция <span class="process-math">\(p \colon \F{} \to \F{}\)</span> называется многочленом степени <span class="process-math">\(m\)</span>, если существует <span class="process-math">\(a_0, \dots,
-a_m \in \F{}\)</span> с <span class="process-math">\(a_m \ne 0\)</span> такая, что</div>
+<div class="para">Напомним, что функция <span class="process-math">\(p \colon \F{} \to \F{}\)</span> называется многочленом степени <span class="process-math">\(m\)</span>, если существуют такие <span class="process-math">\(a_0, \dots,
+a_m \in \F{}\)</span>, где <span class="process-math">\(a_m \ne 0\)</span>, что</div>
 <div class="displaymath process-math" id="polynomials-21-2-5">
 \begin{equation*}
 p(z) = a_0 + a_1 z + \cdots + a_m z^m
 \end{equation*}
 </div>
-<div class="para">для всех <span class="process-math">\(z \in \F{}{}\)</span>. Полином мог бы иметь более одной степени, если бы представление <span class="process-math">\(p\)</span> в приведенной выше форме не было единственным. Наша первая задача — показать, что этого не может быть.</div>
+<div class="para">для всех <span class="process-math">\(z \in \F{}{}\)</span>. Многочлен мог бы иметь несколько различных степеней, если бы представление <span class="process-math">\(p\)</span> в указанном виде не было единственным. Наша первая задача — показать, что это невозможно.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="polynomials-21-3">Решения уравнения <span class="process-math">\(p(z) = 0\)</span> играют решающую роль при изучении многочлена <span class="process-math">\(p \in \P(\F{})\)</span>. Поэтому эти решения имеют особое название.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-21-3">Решения уравнения <span class="process-math">\(p(z) = 0\)</span> играют важнейшую роль при изучении многочлена <span class="process-math">\(p \in \P(\F{})\)</span>, поэтому они носят специальное название.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="definition definition-like" id="polynomials-21-4"><h3 class="heading">
-<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">ноль многочлена.</span>
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">корень многочлена.</span>
 </h3>
 <div class="para logical" id="polynomials-21-4-2-1">
-<div class="para">Число <span class="process-math">\(\lambda \in \F{}\)</span> называется <dfn class="terminology">нулем</dfn> (или <dfn class="terminology">корнем</dfn>) многочлена <span class="process-math">\(p \in \P(\F{})\)</span>, если</div>
+<div class="para">Число <span class="process-math">\(\lambda \in \F{}\)</span> называется <dfn class="terminology">корнем</dfn> (или <dfn class="terminology">нулём</dfn>) многочлена <span class="process-math">\(p \in \P(\F{})\)</span>, если</div>
 <div class="displaymath process-math" id="polynomials-21-4-2-1-6">
 \begin{equation*}
 p(\lambda) = 0.
@@ -794,14 +794,14 @@ p(\lambda) = 0.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 4.5: zero of a polynomial"><a tabindex="-1" href="#polynomials-21-4" title="Copy heading and permalink for Definition 4.5: ноль многочлена" aria-label="Copy heading and permalink for Definition 4.5: zero of a polynomial">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 4.5: zero of a polynomial"><a tabindex="-1" href="#polynomials-21-4" title="Copy heading and permalink for Definition 4.5: корень многочлена" aria-label="Copy heading and permalink for Definition 4.5: zero of a polynomial">🔗</a></div>
 </article>
-<div class="para" id="polynomials-21-5">Следующий результат — это ключевой инструмент, который мы будем использовать, чтобы показать, что степень многочлена уникальна.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-21-5">Следующий результат служит ключевым инструментом для доказательства однозначности определения степени многочлена.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x460"><h3 class="heading">
-<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">каждый нуль многочлена соответствует множителю первой степени.</span>
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">каждому корню многочлена соответствует линейный множитель.</span>
 </h3>
 <div class="para logical" id="x460-2-1">
-<div class="para">Предположим, что <span class="process-math">\(m\)</span> — целое положительное число, а <span class="process-math">\(p \in \P(\F{})\)</span> — многочлен степени <span class="process-math">\(m\)</span>. Предположим <span class="process-math">\(\lambda \in \F{}{}\)</span>. Тогда <span class="process-math">\(p(\lambda) = 0\)</span> тогда и только тогда, когда существует многочлен <span class="process-math">\(q \in \P(\F{})\)</span> степени <span class="process-math">\(m-1\)</span> такой, что</div>
+<div class="para">Пусть <span class="process-math">\(m\)</span> — целое положительное число и <span class="process-math">\(p \in \P(\F{})\)</span> — многочлен степени <span class="process-math">\(m\)</span>. Пусть <span class="process-math">\(\lambda \in \F{}{}\)</span>. Тогда равенство <span class="process-math">\(p(\lambda) = 0\)</span> выполняется в том и только том случае, когда существует такой многочлен <span class="process-math">\(q \in \P(\F{})\)</span> степени <span class="process-math">\(m-1\)</span>, что</div>
 <div class="displaymath process-math" id="x460-2-1-9">
 \begin{equation*}
 p(z) = (z-\lambda)q(z)
@@ -810,12 +810,12 @@ p(z) = (z-\lambda)q(z)
 <div class="para">для каждого <span class="process-math">\(z \in \F{}{}\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x460-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 4.6: each zero of a polynomial corresponds to a degree-one factor"><a tabindex="-1" href="#x460" title="Copy heading and permalink for Theorem 4.6: каждый нуль многочлена соответствует множителю первой степени" aria-label="Copy heading and permalink for Theorem 4.6: each zero of a polynomial corresponds to a degree-one factor">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 4.6: each zero of a polynomial corresponds to a degree-one factor"><a tabindex="-1" href="#x460" title="Copy heading and permalink for Theorem 4.6: каждому корню многочлена соответствует линейный множитель" aria-label="Copy heading and permalink for Theorem 4.6: each zero of a polynomial corresponds to a degree-one factor">🔗</a></div>
 </article>
 <details id="polynomials-21-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="polynomials-21-7-1">
-<div class="para">Сначала предположим, что <span class="process-math">\(p(\lambda) = 0\)</span>. Пусть <span class="process-math">\(a_0, a_1, \ldots, a_m \in \F{}\)</span> таково, что</div>
+<div class="para">Предположим сначала, что <span class="process-math">\(p(\lambda) = 0\)</span>. Пусть <span class="process-math">\(a_0, a_1, \ldots, a_m \in \F{}\)</span> таковы, что</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x4zm.html" id="polynomials-21-7-1-3">
 \begin{equation*}
 p(z) = a_0 + a_1 z + \cdots + a_m z^m
@@ -827,70 +827,70 @@ p(z) = a_0 + a_1 z + \cdots + a_m z^m
 p(z) = p(z) - p(\lambda) = a_1(z-\lambda) + \cdots + a_m ( z^m - \lambda^m )\tag{4.7}
 \end{equation}
 </div>
-<div class="para">для всех <span class="process-math">\(z \in \F{}{}\)</span>. Для каждого <span class="process-math">\(k \in \{ 1, \ldots, m \}\)</span> уравнение</div>
+<div class="para">для всех <span class="process-math">\(z \in \F{}{}\)</span>. При каждом <span class="process-math">\(k \in \{ 1, \ldots, m \}\)</span> равенство</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x4zm.html" id="polynomials-21-7-1-8">
 \begin{equation*}
 z^k - \lambda^k =  (z - \lambda) \sum_{j=1}^{k} \lambda^{j-1} z^{k-j}
 \end{equation*}
 </div>
-<div class="para">показывает, что <span class="process-math">\(z^k - \lambda^k\)</span> равно <span class="process-math">\(z - \lambda\)</span>, умноженному на некоторый многочлен степени <span class="process-math">\(k-1\)</span>. Таким образом, <a href="polynomials.html#x4zm" class="xref" data-knowl="./knowl/xref/x4zm.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 4.7">(4.7)</a> показывает, что <span class="process-math">\(p\)</span> равно <span class="process-math">\(z - \lambda\)</span>, умноженному на некоторый многочлен степени <span class="process-math">\(m-1\)</span>, как и хотелось.</div>
+<div class="para">показывает, что выражение <span class="process-math">\(z^k - \lambda^k\)</span> равно произведению <span class="process-math">\(z - \lambda\)</span> на некоторый многочлен степени <span class="process-math">\(k-1\)</span>. Следовательно, из <a href="polynomials.html#x4zm" class="xref" data-knowl="./knowl/xref/x4zm.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 4.7">(4.7)</a> вытекает, что <span class="process-math">\(p\)</span> равен произведению <span class="process-math">\(z - \lambda\)</span> на некоторый многочлен степени <span class="process-math">\(m-1\)</span>, что и требовалось доказать.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="polynomials-21-7-2">Чтобы доказать импликацию в другом направлении, предположим теперь, что существует многочлен <span class="process-math">\(q \in \P(\F{})\)</span> такой, что <span class="process-math">\(p(z) = (z - \lambda) q(z)\)</span> для любого <span class="process-math">\(z \in \F{}{}\)</span>. Потом <span class="process-math">\(p(\lambda) = (\lambda - \lambda) q(\lambda) = 0\)</span> по желанию.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-21-7-2">Для доказательства обратной импликации предположим теперь, что существует многочлен <span class="process-math">\(q \in \P(\F{})\)</span>, для которого <span class="process-math">\(p(z) = (z - \lambda) q(z)\)</span> при всех <span class="process-math">\(z \in \F{}{}\)</span>. Тогда <span class="process-math">\(p(\lambda) = (\lambda - \lambda) q(\lambda) = 0\)</span>, что и требовалось доказать.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 1"><a tabindex="-1" href="#polynomials-21-7" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div>
 </article></details>
-<div class="para" id="polynomials-21-8">Теперь мы можем доказать, что у многочленов не так уж много нулей.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-21-8">Теперь мы можем доказать, что многочлен не может иметь слишком много корней.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x4polyzero"><h3 class="heading">
 <span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">многочлен степени <span class="process-math">\(m\)</span> имеет не более <span class="process-math">\(m\)</span> корней.</span>
 </h3>
-<div class="para" id="x4polyzero-2-1">Предположим, что <span class="process-math">\(m\)</span> — целое положительное число, а <span class="process-math">\(p \in \P(\F{})\)</span> — многочлен степени <span class="process-math">\(m\)</span>. Тогда <span class="process-math">\(p\)</span> имеет не более <span class="process-math">\(m\)</span> нулей в <span class="process-math">\(\F{}{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x4polyzero-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x4polyzero-2-1">Пусть <span class="process-math">\(m\)</span> — целое положительное число и <span class="process-math">\(p \in \P(\F{})\)</span> — многочлен степени <span class="process-math">\(m\)</span>. Тогда <span class="process-math">\(p\)</span> имеет не более <span class="process-math">\(m\)</span> корней в <span class="process-math">\(\F{}{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x4polyzero-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Theorem 4.8: degree  m implies at most  m zeros"><a tabindex="-1" href="#x4polyzero" title="Copy heading and permalink for Theorem 4.8: многочлен степени m имеет не более m корней" aria-label="Copy heading and permalink for Theorem 4.8: degree  m implies at most  m zeros">🔗</a></div>
 </article>
 <details id="polynomials-21-10" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
-<div class="para" id="polynomials-21-10-1">Мы будем использовать индукцию по <span class="process-math">\(m\)</span>. Желаемый результат справедлив, если <span class="process-math">\(m = 1\)</span>, потому что если <span class="process-math">\(a_1 \ne 0\)</span>, то многочлен <span class="process-math">\(a_0 + a_1 z\)</span> имеет только один нуль (который равен <span class="process-math">\(-a_0 / a_1\)</span>). Итак, предположим, что <span class="process-math">\(m &gt; 1\)</span> и желаемый результат верен для <span class="process-math">\(m-1\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-21-10-1">Применим индукцию по <span class="process-math">\(m\)</span>. При <span class="process-math">\(m = 1\)</span> утверждение справедливо, поскольку при <span class="process-math">\(a_1 \ne 0\)</span> многочлен <span class="process-math">\(a_0 + a_1 z\)</span> имеет единственный корень (равный <span class="process-math">\(-a_0 / a_1\)</span>). Поэтому предположим, что <span class="process-math">\(m &gt; 1\)</span> и что утверждение уже доказано для <span class="process-math">\(m-1\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="polynomials-21-10-2">
-<div class="para">Если <span class="process-math">\(p\)</span> не имеет нулей в <span class="process-math">\(\F{}{}\)</span>, то желаемый результат верен, и мы закончили. Итак, предположим, что <span class="process-math">\(p\)</span> имеет нулевое <span class="process-math">\(\lambda \in \F{}{}\)</span>. По <a href="polynomials.html#x460" class="xref" data-knowl="./knowl/xref/x460.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.6: каждый нуль многочлена соответствует множителю первой степени">Теореме 4.6</a> существует многочлен <span class="process-math">\(q \in \P(\F{})\)</span> степени <span class="process-math">\(m-1\)</span> такой, что</div>
+<div class="para">Если <span class="process-math">\(p\)</span> не имеет корней в <span class="process-math">\(\F{}{}\)</span>, то утверждение выполнено и доказательство на этом завершено. Пусть теперь <span class="process-math">\(p\)</span> имеет корень <span class="process-math">\(\lambda \in \F{}{}\)</span>. По <a href="polynomials.html#x460" class="xref" data-knowl="./knowl/xref/x460.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.6: каждому корню многочлена соответствует линейный множитель">Теореме 4.6</a> существует такой многочлен <span class="process-math">\(q \in \P(\F{})\)</span> степени <span class="process-math">\(m-1\)</span>, что</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x460.html" id="polynomials-21-10-2-8">
 \begin{equation*}
 p(z) = (z - \lambda) q(z)
 \end{equation*}
 </div>
-<div class="para">для каждого <span class="process-math">\(z \in \F{}{}\)</span>. Наша гипотеза индукции означает, что <span class="process-math">\(q\)</span> имеет не более <span class="process-math">\(m-1\)</span> нулей в <span class="process-math">\(\F{}{}\)</span>. Уравнение выше показывает, что нули <span class="process-math">\(p\)</span> в <span class="process-math">\(\F{}\)</span> в точности являются нулями <span class="process-math">\(q\)</span> в <span class="process-math">\(\F{}\)</span> вместе с <span class="process-math">\(\lambda\)</span>. Таким образом, <span class="process-math">\(p\)</span> имеет не более <span class="process-math">\(m\)</span> нулей в <span class="process-math">\(\F{}{}\)</span>.</div>
+<div class="para">для каждого <span class="process-math">\(z \in \F{}{}\)</span>. По предположению индукции многочлен <span class="process-math">\(q\)</span> имеет не более <span class="process-math">\(m-1\)</span> корней в <span class="process-math">\(\F{}{}\)</span>. Из приведённого выше равенства видно, что корнями многочлена <span class="process-math">\(p\)</span> в <span class="process-math">\(\F{}\)</span> являются в точности корни многочлена <span class="process-math">\(q\)</span> в <span class="process-math">\(\F{}\)</span>, а также число <span class="process-math">\(\lambda\)</span>. Следовательно, <span class="process-math">\(p\)</span> имеет не более <span class="process-math">\(m\)</span> корней в <span class="process-math">\(\F{}{}\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 2"><a tabindex="-1" href="#polynomials-21-10" title="Copy heading and permalink for Proof 2" aria-label="Copy heading and permalink for Proof 2">🔗</a></div>
 </article></details>
-<div class="para" id="polynomials-21-11">Из приведенного выше результата следует, что коэффициенты многочлена определены однозначно (поскольку, если бы многочлен имел два разных множества коэффициентов, то вычитание двух представлений многочлена дало бы многочлен с некоторыми ненулевыми коэффициентами, но с бесконечным количеством нулей). В частности, степень многочлена определяется однозначно.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-21-11">Из доказанной теоремы следует, что коэффициенты многочлена определяются однозначно (действительно, если бы многочлен имел два различных набора коэффициентов, то разность двух таких представлений давала бы многочлен с ненулевыми коэффициентами, имеющий бесконечно много корней). В частности, корректно и однозначно определена степень многочлена.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <details id="polynomials-21-12" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
 <aside class="aside aside-like knowl__content">
-<div class="para" id="polynomials-21-12-1">Объявлено, что полином <span class="process-math">\(0\)</span> имеет степень <span class="process-math">\(-\infty\)</span>, поэтому для различных разумных результатов, таких как <span class="process-math">\(\deg(p q) = \deg p + \deg q\)</span>, не требуются исключения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-21-12-1">Степень нулевого многочлена <span class="process-math">\(0\)</span> по определению полагается равной <span class="process-math">\(-\infty\)</span>, чтобы не делать оговорок об исключительных случаях в естественных соотношениях вроде <span class="process-math">\(\deg(p q) = \deg p + \deg q\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 </aside></details>
-<div class="para" id="polynomials-21-13">Напомним, что степень полинома <span class="process-math">\(0\)</span> определяется как <span class="process-math">\(-\infty\)</span>. При необходимости используйте ожидаемую арифметику с <span class="process-math">\(-\infty\)</span>. Например, <span class="process-math">\(-\infty \lt m\)</span> и <span class="process-math">\(-\infty + m = -\infty\)</span> для каждого целого числа <span class="process-math">\(m\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Zeros of Polynomials"><a tabindex="-1" href="#polynomials-21" title="Copy heading and permalink for Paragraphs: Нули полиномов" aria-label="Copy heading and permalink for Paragraphs: Zeros of Polynomials">🔗</a></div>
+<div class="para" id="polynomials-21-13">Напомним, что степень нулевого многочлена <span class="process-math">\(0\)</span> по определению равна <span class="process-math">\(-\infty\)</span>. При необходимости с символом <span class="process-math">\(-\infty\)</span> действуют по естественным арифметическим правилам: например, <span class="process-math">\(-\infty \lt m\)</span> и <span class="process-math">\(-\infty + m = -\infty\)</span> для любого целого числа <span class="process-math">\(m\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-21-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Zeros of Polynomials"><a tabindex="-1" href="#polynomials-21" title="Copy heading and permalink for Paragraphs: Корни многочленов" aria-label="Copy heading and permalink for Paragraphs: Zeros of Polynomials">🔗</a></div>
 </section>
-<section class="paragraphs" id="polynomials-22"><h2 class="heading"><span class="title">Алгоритм деления многочленов.</span></h2>
+<section class="paragraphs" id="polynomials-22"><h2 class="heading"><span class="title">Деление с остатком для многочленов.</span></h2>
 <div class="para logical" id="polynomials-22-2">
-<div class="para">Если <span class="process-math">\(p\)</span> и <span class="process-math">\(s\)</span> — целые неотрицательные числа с <span class="process-math">\(s \ne 0\)</span>, то существуют целые неотрицательные числа <span class="process-math">\(q\)</span> и <span class="process-math">\(r\)</span> такие, что</div>
+<div class="para">Если <span class="process-math">\(p\)</span> и <span class="process-math">\(s\)</span> — целые неотрицательные числа, причём <span class="process-math">\(s \ne 0\)</span>, то существуют такие целые неотрицательные числа <span class="process-math">\(q\)</span> и <span class="process-math">\(r\)</span>, что</div>
 <div class="displaymath process-math" id="polynomials-22-2-6">
 \begin{equation*}
 p = sq + r
 \end{equation*}
 </div>
-<div class="para">и <span class="process-math">\(r \lt  s\)</span>. Подумайте о делении <span class="process-math">\(p\)</span> на <span class="process-math">\(s\)</span> и получении частного <span class="process-math">\(q\)</span> с остатком <span class="process-math">\(r\)</span>. Наш следующий результат дает аналогичный результат для полиномов. Таким образом, следующий результат часто называют алгоритмом деления многочленов, хотя, как здесь сказано, на самом деле это не алгоритм, а просто полезный результат.</div>
+<div class="para">и <span class="process-math">\(r \lt  s\)</span>. Здесь <span class="process-math">\(q\)</span> и <span class="process-math">\(r\)</span> можно рассматривать как неполное частное и остаток от деления <span class="process-math">\(p\)</span> на <span class="process-math">\(s\)</span>. Следующая теорема даёт аналогичное утверждение для многочленов. В англоязычной литературе её часто называют «алгоритмом деления многочленов» (а в русскоязычной — теоремой о делении с остатком), хотя в приведённой здесь формулировке это вовсе не алгоритм, а просто полезная теорема существования и единственности.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="polynomials-22-3" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
 <aside class="aside aside-like knowl__content">
-<div class="para" id="polynomials-22-3-1">Думайте об алгоритме деления многочленов как о получении полинома-остатка <span class="process-math">\(r\)</span>, когда многочлен <span class="process-math">\(p\)</span> делится на многочлен <span class="process-math">\(s\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-22-3-1">Будем рассматривать теорему о делении с остатком для многочленов как утверждение о получении многочлена-остатка <span class="process-math">\(r\)</span> при делении многочлена <span class="process-math">\(p\)</span> на многочлен <span class="process-math">\(s\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 </aside></details>
-<div class="para" id="polynomials-22-4">Алгоритм деления многочленов можно доказать без использования какой-либо линейной алгебры. Однако, как и полагается в учебнике по линейной алгебре, приведенное здесь доказательство использует методы линейной алгебры и хорошо использует базис <span class="process-math">\(\P{}_n(\F{})\)</span>, который представляет собой <span class="process-math">\((n+1)\)</span>-мерное векторное пространство многочленов с коэффициентами из <span class="process-math">\(\F{}\)</span> и степени не выше <span class="process-math">\(n\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-22-4">Теорему о делении с остатком для многочленов можно доказать и без привлечения линейной алгебры. Однако, как и подобает учебнику по линейной алгебре, приводимое здесь доказательство опирается на линейно-алгебраические методы и изящно использует базис пространства <span class="process-math">\(\P{}_n(\F{})\)</span> — <span class="process-math">\((n+1)\)</span>-мерного векторного пространства многочленов с коэффициентами из <span class="process-math">\(\F{}\)</span> степени не выше <span class="process-math">\(n\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x121"><h3 class="heading">
-<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">алгоритм деления многочленов.</span>
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">теорема о делении с остатком для многочленов.</span>
 </h3>
 <div class="para logical" id="x121-2-1">
-<div class="para">Предположим, что <span class="process-math">\(p, s \in \P(\F{})\)</span> с <span class="process-math">\(s \ne 0\)</span>. Тогда существуют единственные многочлены <span class="process-math">\(q,
-r \in \P(\F{})\)</span> такие, что</div>
+<div class="para">Пусть <span class="process-math">\(p, s \in \P(\F{})\)</span>, причём <span class="process-math">\(s \ne 0\)</span>. Тогда существуют единственные многочлены <span class="process-math">\(q,
+r \in \P(\F{})\)</span>, такие что</div>
 <div class="displaymath process-math" id="x121-2-1-5">
 \begin{equation*}
 p = sq + r
@@ -899,11 +899,11 @@ p = sq + r
 <div class="para">и <span class="process-math">\(\deg r \lt  \deg s\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x121-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 4.9: division algorithm for polynomials"><a tabindex="-1" href="#x121" title="Copy heading and permalink for Theorem 4.9: алгоритм деления многочленов" aria-label="Copy heading and permalink for Theorem 4.9: division algorithm for polynomials">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 4.9: division algorithm for polynomials"><a tabindex="-1" href="#x121" title="Copy heading and permalink for Theorem 4.9: теорема о делении с остатком для многочленов" aria-label="Copy heading and permalink for Theorem 4.9: division algorithm for polynomials">🔗</a></div>
 </article>
 <details id="polynomials-22-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
-<div class="para" id="polynomials-22-6-1">Пусть <span class="process-math">\(n = \deg p\)</span> и пусть <span class="process-math">\(m = \deg s\)</span>. Если <span class="process-math">\(n \lt m\)</span>, то возьмите <span class="process-math">\(q = 0\)</span> и <span class="process-math">\(r = p\)</span>, чтобы получить искомое уравнение <span class="process-math">\(p = sq + r\)</span> с <span class="process-math">\(\deg r \lt \deg s\)</span>. Таким образом, мы теперь предполагаем, что <span class="process-math">\(n \ge m\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-22-6-1">Положим <span class="process-math">\(n = \deg p\)</span> и <span class="process-math">\(m = \deg s\)</span>. Если <span class="process-math">\(n \lt m\)</span>, то достаточно взять <span class="process-math">\(q = 0\)</span> и <span class="process-math">\(r = p\)</span>, чтобы получить требуемое равенство <span class="process-math">\(p = sq + r\)</span> при условии <span class="process-math">\(\deg r \lt \deg s\)</span>. Поэтому далее будем считать, что <span class="process-math">\(n \ge m\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="polynomials-22-6-2">
 <div class="para">Список</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x4basis.html ./knowl/xref/x4basis.html ./knowl/xref/x75.html" id="x4basis">
@@ -911,13 +911,13 @@ p = sq + r
 1, z, \ldots, z^{m-1}, s, zs, \ldots, z^{n-m} s\tag{4.10}
 \end{equation}
 </div>
-<div class="para">линейно независим в <span class="process-math">\(\P{}_n(\F{})\)</span>, поскольку каждый многочлен в этом списке имеет разную степень. Кроме того, список <a href="polynomials.html#x4basis" class="xref" data-knowl="./knowl/xref/x4basis.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 4.10">(4.10)</a> имеет длину <span class="process-math">\(n+1\)</span>, равную <span class="process-math">\(\dim \P{}_n(\F{})\)</span>. Следовательно, <a href="polynomials.html#x4basis" class="xref" data-knowl="./knowl/xref/x4basis.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 4.10">(4.10)</a> является базисом <span class="process-math">\(\P{}_n(\F{})\)</span> [по <a href="dimension.html#x75" class="xref" data-knowl="./knowl/xref/x75.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 2.38: линейно независимый список нужной длины является базисом">теореме 2.38</a>].</div>
+<div class="para">линейно независим в <span class="process-math">\(\P{}_n(\F{})\)</span>, поскольку все многочлены в этом списке имеют попарно различные степени. Кроме того, длина списка <a href="polynomials.html#x4basis" class="xref" data-knowl="./knowl/xref/x4basis.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 4.10">(4.10)</a> равна <span class="process-math">\(n+1\)</span>, что совпадает с <span class="process-math">\(\dim \P{}_n(\F{})\)</span>. Следовательно, список <a href="polynomials.html#x4basis" class="xref" data-knowl="./knowl/xref/x4basis.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 4.10">(4.10)</a> является базисом пространства <span class="process-math">\(\P{}_n(\F{})\)</span> [по <a href="dimension.html#x75" class="xref" data-knowl="./knowl/xref/x75.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 2.38: линейно независимый список надлежащей длины является базисом">Теореме 2.38</a>].</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="polynomials-22-6-3">
-<div class="para">Поскольку <span class="process-math">\(p \in \P{}_n(\F{})\)</span> и <a href="polynomials.html#x4basis" class="xref" data-knowl="./knowl/xref/x4basis.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 4.10">(4.10)</a> являются базисом <span class="process-math">\(\P{}_n(\F{})\)</span>, существуют единственные константы <span class="process-math">\(a_0, a_1, \ldots,
+<div class="para">Поскольку <span class="process-math">\(p \in \P{}_n(\F{})\)</span> и <a href="polynomials.html#x4basis" class="xref" data-knowl="./knowl/xref/x4basis.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 4.10">(4.10)</a> — базис пространства <span class="process-math">\(\P{}_n(\F{})\)</span>, существуют единственные константы <span class="process-math">\(a_0, a_1, \ldots,
 a_{m-1} \in \F{}\)</span> и <span class="process-math">\(b_0, b_1, \ldots,
-b_{n-m} \in \F{}\)</span> такие, что</div>
+b_{n-m} \in \F{}\)</span>, такие что</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x4basis.html" id="polynomials-22-6-3-6">
 \begin{align}
 p \amp = a_0 + a_1 z + \cdots + a_{m-1} z^{m-1} + b_0 s + b_1  zs + \cdots + b_{n-m}z^{n-m} s\tag{4.11}\\
@@ -926,32 +926,32 @@ p \amp = a_0 + a_1 z + \cdots + a_{m-1} z^{m-1} + b_0 s + b_1  zs + \cdots + b_{
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="polynomials-22-6-4">Используя <span class="process-math">\(r\)</span> и <span class="process-math">\(q\)</span>, определенные выше, мы видим, что <span class="process-math">\(p\)</span> можно записать как <span class="process-math">\(p=sq+r\)</span> с <span class="process-math">\(\deg r \lt \deg s\)</span> по желанию.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="polynomials-22-6-5">Единственность <span class="process-math">\(q,
-r \in \P(\F{})\)</span>, удовлетворяющая этим условиям, следует из единственности констант <span class="process-math">\(a_0, a_1, \ldots,
+<div class="para" id="polynomials-22-6-4">Определив многочлены <span class="process-math">\(r\)</span> и <span class="process-math">\(q\)</span> указанным выше образом, мы видим, что <span class="process-math">\(p\)</span> записывается в виде <span class="process-math">\(p=sq+r\)</span>, где <span class="process-math">\(\deg r \lt \deg s\)</span>, что и требовалось.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-22-6-5">Единственность многочленов <span class="process-math">\(q,
+r \in \P(\F{})\)</span>, удовлетворяющих этим условиям, вытекает из единственности набора констант <span class="process-math">\(a_0, a_1, \ldots,
 a_{m-1} \in \F{}\)</span> и <span class="process-math">\(b_0, b_1, \ldots,
-b_{n-m} \in \F{}\)</span>, удовлетворяющих <a href="polynomials.html#polynomials-22-6-3-6" class="xref" data-knowl="./knowl/xref/x4unique.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 4.11">(4.11)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+b_{n-m} \in \F{}\)</span>, удовлетворяющих равенству <a href="polynomials.html#polynomials-22-6-3-6" class="xref" data-knowl="./knowl/xref/x4unique.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 4.11">(4.11)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-22-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 1"><a tabindex="-1" href="#polynomials-22-6" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div>
-</article></details><div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Division Algorithm for Polynomials"><a tabindex="-1" href="#polynomials-22" title="Copy heading and permalink for Paragraphs: Алгоритм деления многочленов" aria-label="Copy heading and permalink for Paragraphs: Division Algorithm for Polynomials">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Division Algorithm for Polynomials"><a tabindex="-1" href="#polynomials-22" title="Copy heading and permalink for Paragraphs: Деление с остатком для многочленов" aria-label="Copy heading and permalink for Paragraphs: Division Algorithm for Polynomials">🔗</a></div>
 </section>
 <section class="paragraphs" id="polynomials-23"><h2 class="heading"><span class="title">Разложение многочленов на множители над <span class="process-math">\(\C{}\)</span>.</span></h2>
 <details id="polynomials-23-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
 <aside class="aside aside-like knowl__content">
-<div class="para" id="polynomials-23-2-1">Основная теорема алгебры — это теорема существования. Его доказательство не приводит к методу нахождения нулей. Квадратная формула явно дает нули для многочленов степени  <span class="process-math">\(2\)</span>. Аналогичные, но более сложные формулы существуют для полиномов степени <span class="process-math">\(3\)</span> и <span class="process-math">\(4\)</span>. Для полиномов степени <span class="process-math">\(5\)</span> и выше таких формул не существует.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-23-2-1">Основная теорема алгебры — это теорема существования. Её доказательство не даёт конструктивного метода нахождения корней. Формула корней квадратного уравнения явно выражает корни многочленов степени <span class="process-math">\(2\)</span>. Аналогичные, но более громоздкие формулы существуют для многочленов степеней <span class="process-math">\(3\)</span> и <span class="process-math">\(4\)</span>. Для многочленов степени <span class="process-math">\(5\)</span> и выше таких формул (в радикалах) не существует.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 </aside></details>
-<div class="para" id="polynomials-23-3">Мы одновременно обрабатывали полиномы с комплексными коэффициентами и полиномы с действительными коэффициентами, полагая <span class="process-math">\(\F{}\)</span> обозначать <span class="process-math">\(\R{}\)</span> или <span class="process-math">\(\C{}\)</span>. Теперь мы увидим различия между этими двумя случаями. Сначала мы рассматриваем полиномы с комплексными коэффициентами. Затем мы будем использовать эти результаты для доказательства соответствующих результатов для многочленов с действительными коэффициентами.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="polynomials-23-4">Наше доказательство основной теоремы алгебры неявно использует результат о том, что непрерывная вещественная функция на замкнутом круге в <span class="process-math">\(\R 2\)</span> достигает минимального значения. Поиск в Интернете может привести вас к нескольким другим доказательствам фундаментальной теоремы алгебры. Доказательство с использованием теоремы Лиувилля особенно удобно, если вы знакомы с аналитическими функциями. Все доказательства фундаментальной теоремы алгебры требуют некоторого анализа, поскольку результат неверен, если <span class="process-math">\(\C{}\)</span> заменить, например, множеством чисел вида <span class="process-math">\(c + di\)</span>, где <span class="process-math">\(c,
+<div class="para" id="polynomials-23-3">До сих пор мы рассматривали многочлены с комплексными коэффициентами и многочлены с вещественными коэффициентами параллельно, обозначая через <span class="process-math">\(\F{}\)</span> поле <span class="process-math">\(\R{}\)</span> или <span class="process-math">\(\C{}\)</span>. Теперь мы увидим различия между этими двумя случаями. Сначала мы изучим многочлены с комплексными коэффициентами, а затем воспользуемся полученными результатами для доказательства соответствующих теорем о многочленах с вещественными коэффициентами.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-23-4">Наше доказательство основной теоремы алгебры неявно опирается на теорему о том, что непрерывная вещественнозначная функция на замкнутом круге в <span class="process-math">\(\R 2\)</span> достигает своего наименьшего значения. В интернете можно найти и множество других доказательств основной теоремы алгебры. Доказательство, использующее теорему Лиувилля, особенно изящно, если вы знакомы с теорией аналитических функций. Любое доказательство основной теоремы алгебры неизбежно использует те или иные средства математического анализа, поскольку само утверждение перестаёт быть верным, если заменить <span class="process-math">\(\C{}\)</span>, например, множеством чисел вида <span class="process-math">\(c + di\)</span>, где <span class="process-math">\(c,
 d\)</span> — рациональные числа.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="FTA1"><h3 class="heading">
-<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">основная теорема алгебры, первая версия.</span>
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">основная теорема алгебры (первая формулировка).</span>
 </h3>
-<div class="para" id="FTA1-2-1">Любой непостоянный многочлен с комплексными коэффициентами имеет нуль в <span class="process-math">\(\C{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#FTA1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 4.12: fundamental theorem of algebra, first version"><a tabindex="-1" href="#FTA1" title="Copy heading and permalink for Theorem 4.12: основная теорема алгебры, первая версия" aria-label="Copy heading and permalink for Theorem 4.12: fundamental theorem of algebra, first version">🔗</a></div>
+<div class="para" id="FTA1-2-1">Всякий непостоянный многочлен с комплексными коэффициентами имеет по крайней мере один корень в <span class="process-math">\(\C{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#FTA1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 4.12: fundamental theorem of algebra, first version"><a tabindex="-1" href="#FTA1" title="Copy heading and permalink for Theorem 4.12: основная теорема алгебры (первая формулировка)" aria-label="Copy heading and permalink for Theorem 4.12: fundamental theorem of algebra, first version">🔗</a></div>
 </article>
 <details id="polynomials-23-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="polynomials-23-6-1">
-<div class="para">Теорема Муавра, которую можно доказать с помощью индукции по <span class="process-math">\(k\)</span> и формул сложения косинуса и синуса, утверждает, что если <span class="process-math">\(k\)</span> — целое положительное число, а <span class="process-math">\(\theta \in \R{}\)</span>, то</div>
+<div class="para">Формула Муавра, которую можно доказать по индукции по <span class="process-math">\(k\)</span> с помощью формул косинуса и синуса суммы, утверждает, что для любого целого положительного числа <span class="process-math">\(k\)</span> и любого <span class="process-math">\(\theta \in \R{}\)</span> выполняется равенство</div>
 <div class="displaymath process-math" id="polynomials-23-6-1-5">
 \begin{equation*}
 (\cos \theta + i \sin \theta)^k = \cos k\theta + i \sin k\theta.
@@ -960,7 +960,7 @@ d\)</span> — рациональные числа.<div class="autopermalink" ar
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="polynomials-23-6-2">
-<div class="para">Предположим, что <span class="process-math">\(w \in \C{}\)</span> и <span class="process-math">\(k\)</span> — целое положительное число. Используя полярные координаты, мы знаем, что существуют <span class="process-math">\(r \ge 0\)</span> и <span class="process-math">\(\theta \in \R{}\)</span> такие, что</div>
+<div class="para">Пусть <span class="process-math">\(w \in \C{}\)</span> и <span class="process-math">\(k\)</span> — целое положительное число. Переходя к полярным координатам, мы знаем, что существуют такие <span class="process-math">\(r \ge 0\)</span> и <span class="process-math">\(\theta \in \R{}\)</span>, что</div>
 <div class="displaymath process-math" id="polynomials-23-6-2-5">
 \begin{equation*}
 r(\cos \theta + i \sin \theta) = w.
@@ -969,7 +969,7 @@ r(\cos \theta + i \sin \theta) = w.
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="polynomials-23-6-3">
-<div class="para">Из теоремы Муавра следует, что</div>
+<div class="para">Из формулы Муавра следует, что</div>
 <div class="displaymath process-math" id="polynomials-23-6-3-1">
 \begin{equation*}
 (  r^{1/k} ( \cos \tfrac{\theta}{k} + i \sin \tfrac{\theta}{k}  )  )^k = w.
@@ -977,10 +977,10 @@ r(\cos \theta + i \sin \theta) = w.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="polynomials-23-6-4">Таким образом, каждое комплексное число имеет корень <span class="process-math">\(k^\nth\)</span>, и этим фактом мы вскоре воспользуемся.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="polynomials-23-6-5">Предположим, что <span class="process-math">\(p\)</span> — непостоянный полином с комплексными коэффициентами и ненулевым членом <span class="process-math">\(c_m z^m\!\)</span> высшего порядка. Тогда <span class="process-math">\(|p(z)| \rightarrow \infty\)</span> как <span class="process-math">\(|z| \rightarrow \infty\)</span> (потому что <span class="process-math">\(\lvert p(z) \rvert /\lvert z^m \rvert \to \lvert c_m \rvert\)</span> как <span class="process-math">\(|z| \rightarrow \infty\)</span>). Таким образом, непрерывная функция <span class="process-math">\(z \mapsto \lvert p(z) \rvert\)</span> имеет глобальный минимум в некоторой точке <span class="process-math">\(\zeta \in \C{}\)</span>. Чтобы показать, что <span class="process-math">\(p(\zeta) = 0\)</span>, предположим, что <span class="process-math">\(p(\zeta) \ne 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-23-6-4">Таким образом, из любого комплексного числа можно извлечь корень степени <span class="process-math">\(k^\nth\)</span> — этим фактом мы вскоре воспользуемся.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-23-6-5">Пусть <span class="process-math">\(p\)</span> — непостоянный многочлен с комплексными коэффициентами и старшим ненулевым членом <span class="process-math">\(c_m z^m\!\)</span>. Тогда <span class="process-math">\(|p(z)| \rightarrow \infty\)</span> при <span class="process-math">\(|z| \rightarrow \infty\)</span> (поскольку <span class="process-math">\(\lvert p(z) \rvert /\lvert z^m \rvert \to \lvert c_m \rvert\)</span> при <span class="process-math">\(|z| \rightarrow \infty\)</span>). Следовательно, непрерывная функция <span class="process-math">\(z \mapsto \lvert p(z) \rvert\)</span> достигает глобального минимума в некоторой точке <span class="process-math">\(\zeta \in \C{}\)</span>. Чтобы показать, что <span class="process-math">\(p(\zeta) = 0\)</span>, предположим противное: пусть <span class="process-math">\(p(\zeta) \ne 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="polynomials-23-6-6">
-<div class="para">Определим новый полином <span class="process-math">\(q\)</span> с помощью</div>
+<div class="para">Определим новый многочлен <span class="process-math">\(q\)</span> формулой</div>
 <div class="displaymath process-math" id="polynomials-23-6-6-2">
 \begin{equation*}
 q(z) = \frac{p(z + \zeta)}{p(\zeta)}.
@@ -989,17 +989,17 @@ q(z) = \frac{p(z + \zeta)}{p(\zeta)}.
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-6-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="polynomials-23-6-7">
-<div class="para">Функция <span class="process-math">\(z \mapsto \lvert q(z) \rvert\)</span> имеет глобальное минимальное значение <span class="process-math">\(1\)</span> в точке <span class="process-math">\(z = 0\)</span>. Написать</div>
+<div class="para">Функция <span class="process-math">\(z \mapsto \lvert q(z) \rvert\)</span> имеет глобальный минимум, равный <span class="process-math">\(1\)</span>, который достигается в точке <span class="process-math">\(z = 0\)</span>. Запишем</div>
 <div class="displaymath process-math" id="polynomials-23-6-7-4">
 \begin{equation*}
 q(z) = 1 + a_k z^k + \dots + a_m z^m\!,
 \end{equation*}
 </div>
-<div class="para">где <span class="process-math">\(k\)</span> — наименьшее целое положительное число, коэффициент которого при <span class="process-math">\(z^k\)</span> отличен от нуля; другими словами, <span class="process-math">\(a_k \ne 0\)</span>.</div>
+<div class="para">где <span class="process-math">\(k\)</span> — наименьшее целое положительное число, при котором коэффициент при <span class="process-math">\(z^k\)</span> отличен от нуля; иными словами, <span class="process-math">\(a_k \ne 0\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="polynomials-23-6-8">
-<div class="para">Пусть <span class="process-math">\(\beta \in \C{}\)</span> таково, что <span class="process-math">\(\beta^k = -\dfrac{1}{a_k}\)</span>. Существует константа <span class="process-math">\(c &gt; 1\)</span> такая, что если <span class="process-math">\(t \in (0, 1)\)</span>, то</div>
+<div class="para">Выберем <span class="process-math">\(\beta \in \C{}\)</span> так, чтобы выполнялось равенство <span class="process-math">\(\beta^k = -\dfrac{1}{a_k}\)</span>. Существует такая константа <span class="process-math">\(c &gt; 1\)</span>, что при всех <span class="process-math">\(t \in (0, 1)\)</span> справедливо неравенство</div>
 <div class="displaymath process-math" id="polynomials-23-6-8-5">
 \begin{align*}
 \lvert q(t\beta) \rvert  \amp \le \lvert  1 + a_k t^k \beta^k  \rvert  + t^{k+1}c\\
@@ -1008,11 +1008,11 @@ q(z) = 1 + a_k z^k + \dots + a_m z^m\!,
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="polynomials-23-6-9">Таким образом, принимая <span class="process-math">\(t\)</span> за <span class="process-math">\(1/(2c)\)</span> в приведенном выше неравенстве, мы имеем <span class="process-math">\(\lvert q(t \beta) \rvert \lt 1\)</span>, что противоречит предположению, что глобальный минимум <span class="process-math">\(z \mapsto \lvert q(z) \rvert\)</span> равен <span class="process-math">\(1\)</span>. Это противоречие подразумевает, что <span class="process-math">\(p(\zeta) = 0\)</span>, показывая, что <span class="process-math">\(p\)</span> имеет нуль, как и хотелось.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-6-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-23-6-9">Полагая в этом неравенстве <span class="process-math">\(t\)</span> равным <span class="process-math">\(1/(2c)\)</span>, получаем <span class="process-math">\(\lvert q(t \beta) \rvert \lt 1\)</span>, что противоречит тому, что глобальный минимум функции <span class="process-math">\(z \mapsto \lvert q(z) \rvert\)</span> равен <span class="process-math">\(1\)</span>. Полученное противоречие означает, что <span class="process-math">\(p(\zeta) = 0\)</span>, т. е. многочлен <span class="process-math">\(p\)</span> имеет корень, что и требовалось доказать.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-6-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 1"><a tabindex="-1" href="#polynomials-23-6" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div>
 </article></details>
 <div class="para logical" id="polynomials-23-7">
-<div class="para">Компьютеры могут использовать умные численные методы для нахождения хороших приближений к нулям любого многочлена, даже если точные нули найти невозможно. Например, никто никогда не даст точную формулу для нуля многочлена <span class="process-math">\(p\)</span>, определяемого формулой</div>
+<div class="para">С помощью искусных численных методов компьютеры позволяют находить хорошие приближения к корням любого многочлена даже тогда, когда точные значения корней выразить невозможно. Например, никто и никогда не предъявит явной формулы (в радикалах) для корней многочлена <span class="process-math">\(p\)</span>, заданного равенством</div>
 <div class="displaymath process-math" id="polynomials-23-7-2">
 \begin{equation*}
 p(x) = x^5 - 5 x^4 - 6 x^3 + 17 x^2 + 4 x -7.
@@ -1020,13 +1020,13 @@ p(x) = x^5 - 5 x^4 - 6 x^3 + 17 x^2 + 4 x -7.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="polynomials-23-8">Однако компьютер может обнаружить, что нули <span class="process-math">\(p\)</span> примерно соответствуют пяти числам <span class="process-math">\(-1.87,\ -0.74,\ 0.62,\ 1.47,\ 5.51\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="polynomials-23-9">Первая версия основной теоремы алгебры приводит к следующему результату факторизации многочленов с комплексными коэффициентами. Обратите внимание, что в этой факторизации нули <span class="process-math">\(p\)</span> — это числа <span class="process-math">\(\lambda_1, \dots, \lambda_m\)</span>, которые являются единственными значениями <span class="process-math">\(z\)</span>, для которых правая часть уравнения в следующем результате равна <span class="process-math">\(0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-23-8">Однако компьютер легко находит приближённые значения пяти корней многочлена <span class="process-math">\(p\)</span>: это числа <span class="process-math">\(-1.87,\ -0.74,\ 0.62,\ 1.47,\ 5.51\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-23-9">Первая формулировка основной теоремы алгебры приводит к следующей теореме о разложении на множители многочленов с комплексными коэффициентами. Заметим, что в этом разложении корнями многочлена <span class="process-math">\(p\)</span> служат числа <span class="process-math">\(\lambda_1, \dots, \lambda_m\)</span> — это единственные значения переменной <span class="process-math">\(z\)</span>, при которых правая часть равенства в следующей теореме обращается в <span class="process-math">\(0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x4FTA2"><h3 class="heading">
-<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.13</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">основная теорема алгебры, вторая версия.</span>
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.13</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">основная теорема алгебры (вторая формулировка).</span>
 </h3>
 <div class="para logical" id="x4FTA2-2-1">
-<div class="para">Если <span class="process-math">\(p \in \P(\C{})\)</span> — непостоянный полином, то <span class="process-math">\(p\)</span> имеет единственную факторизацию (за исключением порядка множителей) вида</div>
+<div class="para">Если <span class="process-math">\(p \in \P(\C{})\)</span> — непостоянный многочлен, то <span class="process-math">\(p\)</span> единственным образом (с точностью до порядка сомножителей) раскладывается на множители в виде</div>
 <div class="displaymath process-math" id="x4FTA2-2-1-3">
 \begin{equation*}
 p(z) = c(z - \lambda_1) \dotsm (z - \lambda_m),
@@ -1035,35 +1035,35 @@ p(z) = c(z - \lambda_1) \dotsm (z - \lambda_m),
 <div class="para">где <span class="process-math">\(c, \lambda_1, \dots, \lambda_m \in \C{}\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x4FTA2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 4.13: fundamental theorem of algebra, second version"><a tabindex="-1" href="#x4FTA2" title="Copy heading and permalink for Theorem 4.13: основная теорема алгебры, вторая версия" aria-label="Copy heading and permalink for Theorem 4.13: fundamental theorem of algebra, second version">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 4.13: fundamental theorem of algebra, second version"><a tabindex="-1" href="#x4FTA2" title="Copy heading and permalink for Theorem 4.13: основная теорема алгебры (вторая формулировка)" aria-label="Copy heading and permalink for Theorem 4.13: fundamental theorem of algebra, second version">🔗</a></div>
 </article>
 <details id="polynomials-23-11" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
-<div class="para" id="polynomials-23-11-1">Пусть <span class="process-math">\(p \in \P(\C{})\)</span> и пусть <span class="process-math">\(m = \deg p\)</span>. Мы будем использовать индукцию по <span class="process-math">\(m\)</span>. Если <span class="process-math">\(m = 1\)</span>, то искомая факторизация существует и единственна. Итак, предположим, что <span class="process-math">\(m &gt; 1\)</span> и искомая факторизация существует и уникальна для всех многочленов степени <span class="process-math">\(m-1\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-23-11-1">Пусть <span class="process-math">\(p \in \P(\C{})\)</span> и <span class="process-math">\(m = \deg p\)</span>. Применим индукцию по <span class="process-math">\(m\)</span>. При <span class="process-math">\(m = 1\)</span> требуемое разложение существует и единственно. Предположим теперь, что <span class="process-math">\(m &gt; 1\)</span> и что требуемое разложение существует и единственно для всех многочленов степени <span class="process-math">\(m-1\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="polynomials-23-11-2">
-<div class="para">Сначала мы покажем, что искомая факторизация <span class="process-math">\(p\)</span> существует. По первой версии основной теоремы алгебры <a href="polynomials.html#FTA1" class="xref" data-knowl="./knowl/xref/FTA1.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.12: основная теорема алгебры, первая версия">Теорема 4.12</a> <span class="process-math">\(p\)</span> имеет нуль <span class="process-math">\(\lambda \in \C{}\)</span>. По <a href="polynomials.html#x460" class="xref" data-knowl="./knowl/xref/x460.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.6: каждый нуль многочлена соответствует множителю первой степени">Теореме 4.6</a> существует многочлен <span class="process-math">\(q\)</span> степени <span class="process-math">\(m-1\)</span> такой, что</div>
+<div class="para">Сначала докажем существование требуемого разложения для многочлена <span class="process-math">\(p\)</span>. Согласно первой формулировке основной теоремы алгебры (<a href="polynomials.html#FTA1" class="xref" data-knowl="./knowl/xref/FTA1.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.12: основная теорема алгебры (первая формулировка)">Теорема 4.12</a>), многочлен <span class="process-math">\(p\)</span> имеет корень <span class="process-math">\(\lambda \in \C{}\)</span>. По <a href="polynomials.html#x460" class="xref" data-knowl="./knowl/xref/x460.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.6: каждому корню многочлена соответствует линейный множитель">Теореме 4.6</a> существует такой многочлен <span class="process-math">\(q\)</span> степени <span class="process-math">\(m-1\)</span>, что</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/FTA1.html ./knowl/xref/x460.html" id="polynomials-23-11-2-8">
 \begin{equation*}
 p(z) = (z - \lambda) q(z)
 \end{equation*}
 </div>
-<div class="para">для всех <span class="process-math">\(z \in \C{}\)</span>. Наша гипотеза индукции подразумевает, что <span class="process-math">\(q\)</span> имеет желаемую факторизацию, которая при включении в приведенное выше уравнение дает желаемую факторизацию <span class="process-math">\(p\)</span>.</div>
+<div class="para">для всех <span class="process-math">\(z \in \C{}\)</span>. По предположению индукции для <span class="process-math">\(q\)</span> существует требуемое разложение, подставляя которое в выписанное выше равенство, мы получаем искомое разложение многочлена <span class="process-math">\(p\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="polynomials-23-11-3">
-<div class="para">Теперь переходим к вопросу уникальности. Число <span class="process-math">\(c\)</span> однозначно определяется как коэффициент при <span class="process-math">\(z^m\)</span> в <span class="process-math">\(p\)</span>. Итак, нам нужно только показать, что, кроме порядка, существует только один способ выбора <span class="process-math">\(\lambda_1, \dots, \lambda_m\)</span>. Если</div>
+<div class="para">Перейдём к доказательству единственности. Число <span class="process-math">\(c\)</span> однозначно определяется как коэффициент при <span class="process-math">\(z^m\)</span> в многочлене <span class="process-math">\(p\)</span>. Поэтому остаётся лишь показать, что набор чисел <span class="process-math">\(\lambda_1, \dots, \lambda_m\)</span> определяется однозначно с точностью до порядка. Если</div>
 <div class="displaymath process-math" id="polynomials-23-11-3-5">
 \begin{equation*}
 (z - \lambda_1) \dotsm (z - \lambda_m) = (z - \tau_1) \dotsm (z - \tau_m)
 \end{equation*}
 </div>
-<div class="para">для всех <span class="process-math">\(z \in \C{}\)</span>, то, поскольку левая часть приведенного выше уравнения равна <span class="process-math">\(0\)</span>, когда <span class="process-math">\(z = \lambda_1\)</span>, одно из <span class="process-math">\(\tau\)</span> в правой части равно <span class="process-math">\(\lambda_1\)</span>. Перемаркировав, можно считать, что <span class="process-math">\(\tau_1 = \lambda_1\)</span>. Теперь, если <span class="process-math">\(z  \ne \lambda_1\)</span>, мы можем разделить обе части приведенного выше уравнения на <span class="process-math">\(z - \lambda_1\)</span>, получив</div>
+<div class="para">при всех <span class="process-math">\(z \in \C{}\)</span>, то, поскольку при <span class="process-math">\(z = \lambda_1\)</span> левая часть этого равенства обращается в <span class="process-math">\(0\)</span>, одно из чисел <span class="process-math">\(\tau\)</span> в правой части должно равняться <span class="process-math">\(\lambda_1\)</span>. Перенумеровав при необходимости корни, можно считать, что <span class="process-math">\(\tau_1 = \lambda_1\)</span>. Теперь при <span class="process-math">\(z  \ne \lambda_1\)</span> разделим обе части равенства на <span class="process-math">\(z - \lambda_1\)</span> и получим</div>
 <div class="displaymath process-math" id="polynomials-23-11-3-14">
 \begin{equation*}
 (z - \lambda_2) \dotsm (z - \lambda_m) = (z - \tau_2) \dotsm (z - \tau_m)
 \end{equation*}
 </div>
-<div class="para">для всех <span class="process-math">\(z \in \C{}\)</span>, кроме, возможно, <span class="process-math">\(z = \lambda_1\)</span>. На самом деле приведенное выше уравнение справедливо для всех <span class="process-math">\(z \in \C{}\)</span>, потому что в противном случае, вычитая правую часть из левой, мы получили бы ненулевой многочлен, имеющий бесконечное количество нулей. Из приведенного выше уравнения и нашей гипотезы индукции следует, что, за исключением порядка, <span class="process-math">\(\lambda\)</span> такие же, как и <span class="process-math">\(\tau\)</span>, что завершает доказательство уникальности.</div>
+<div class="para">для всех <span class="process-math">\(z \in \C{}\)</span>, кроме, быть может, <span class="process-math">\(z = \lambda_1\)</span>. В действительности это равенство выполняется при всех <span class="process-math">\(z \in \C{}\)</span>, так как иначе, вычтя правую часть из левой, мы получили бы ненулевой многочлен, имеющий бесконечно много корней. Из полученного равенства по предположению индукции следует, что с точностью до порядка набор чисел <span class="process-math">\(\lambda\)</span> совпадает с набором чисел <span class="process-math">\(\tau\)</span>, что завершает доказательство единственности.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-23-11-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 2"><a tabindex="-1" href="#polynomials-23-11" title="Copy heading and permalink for Proof 2" aria-label="Copy heading and permalink for Proof 2">🔗</a></div>
@@ -1072,15 +1072,15 @@ p(z) = (z - \lambda) q(z)
 <section class="paragraphs" id="polynomials-24"><h2 class="heading"><span class="title">Разложение многочленов на множители над <span class="process-math">\(\R{}\)</span>.</span></h2>
 <details id="polynomials-24-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
 <aside class="aside aside-like knowl__content">
-<div class="para" id="polynomials-24-2-1">Как мы увидим в последующих главах, неспособность фундаментальной теоремы алгебры для <span class="process-math">\(\R{}\)</span> объясняет различия между линейной алгеброй в вещественных и комплексных векторных пространствах.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-24-2-1">Тот факт, что основная теорема алгебры неверна над полем <span class="process-math">\(\R{}\)</span>, служит главной причиной различий между линейной алгеброй в вещественных и в комплексных векторных пространствах, в чём мы неоднократно убедимся в последующих главах.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 </aside></details>
-<div class="para" id="polynomials-24-3">Многочлен с действительными коэффициентами может не иметь действительных нулей. Например, многочлен <span class="process-math">\(1 + x^2\)</span> не имеет действительных нулей.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="polynomials-24-4">Чтобы получить теорему о факторизации над <span class="process-math">\(\R{}\)</span>, мы воспользуемся нашей теоремой о факторизации над <span class="process-math">\(\C{}\)</span>. Начнем со следующего результата.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-24-3">Многочлен с вещественными коэффициентами может не иметь вещественных корней. Например, не имеет вещественных корней многочлен <span class="process-math">\(1 + x^2\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-24-4">Чтобы получить теорему о разложении многочленов на множители над полем <span class="process-math">\(\R{}\)</span>, мы воспользуемся уже доказанной теоремой о разложении над полем <span class="process-math">\(\C{}\)</span>. Начнём со следующего утверждения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x170"><h3 class="heading">
-<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.14</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">многочлены с действительными коэффициентами имеют невещественные нули в парах.</span>
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.14</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">невещественные корни многочлена с вещественными коэффициентами входят сопряжёнными парами.</span>
 </h3>
-<div class="para" id="x170-2-1">Предположим, что <span class="process-math">\(p \in \P(\C{})\)</span> — многочлен с вещественными коэффициентами. Если <span class="process-math">\(\lambda \in \C{}\)</span> является нулем <span class="process-math">\(p\)</span>, то и  <span class="process-math">\(\bar{\lambda}\)</span> тоже.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x170-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 4.14: polynomials with real coefficients have nonreal zeros in pairs"><a tabindex="-1" href="#x170" title="Copy heading and permalink for Theorem 4.14: многочлены с действительными коэффициентами имеют невещественные нули в парах" aria-label="Copy heading and permalink for Theorem 4.14: polynomials with real coefficients have nonreal zeros in pairs">🔗</a></div>
+<div class="para" id="x170-2-1">Пусть <span class="process-math">\(p \in \P(\C{})\)</span> — многочлен с вещественными коэффициентами. Если число <span class="process-math">\(\lambda \in \C{}\)</span> является корнем многочлена <span class="process-math">\(p\)</span>, то и сопряжённое число <span class="process-math">\(\bar{\lambda}\)</span> также является его корнем.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x170-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 4.14: polynomials with real coefficients have nonreal zeros in pairs"><a tabindex="-1" href="#x170" title="Copy heading and permalink for Theorem 4.14: невещественные корни многочлена с вещественными коэффициентами входят сопряжёнными парами" aria-label="Copy heading and permalink for Theorem 4.14: polynomials with real coefficients have nonreal zeros in pairs">🔗</a></div>
 </article>
 <details id="polynomials-24-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
@@ -1091,7 +1091,7 @@ p(z) = (z - \lambda) q(z)
 p(z) = a_0 + a_1 z + \dots + a_m z^m\!,
 \end{equation*}
 </div>
-<div class="para">где <span class="process-math">\(a_0, \dots, a_m\)</span> — действительные числа. Предположим, что <span class="process-math">\(\lambda \in \C{}\)</span> является нулем <span class="process-math">\(p\)</span>. Тогда</div>
+<div class="para">где <span class="process-math">\(a_0, \dots, a_m\)</span> — вещественные числа. Пусть <span class="process-math">\(\lambda \in \C{}\)</span> — корень многочлена <span class="process-math">\(p\)</span>. Тогда</div>
 <div class="displaymath process-math" id="polynomials-24-6-1-6">
 \begin{equation*}
 a_0 + a_1 \lambda + \dots + a_m \lambda^m = 0.
@@ -1100,41 +1100,41 @@ a_0 + a_1 \lambda + \dots + a_m \lambda^m = 0.
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="polynomials-24-6-2">
-<div class="para">Возьмите комплексно-сопряженное выражение обеих частей этого уравнения, получив</div>
+<div class="para">Возьмём комплексное сопряжение от обеих частей этого равенства; получим</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/propcomplex.html" id="polynomials-24-6-2-1">
 \begin{equation*}
 a_0 + a_1 \bar{\lambda} + \dots + a_m \bar{\lambda}^m = 0,
 \end{equation*}
 </div>
-<div class="para">где мы использовали основные свойства комплексно-сопряженного числа (см. <a href="polynomials.html#propcomplex" class="xref" data-knowl="./knowl/xref/propcomplex.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.4: свойства комплексных чисел">Теорему 4.4</a>). Уравнение выше показывает, что <span class="process-math">\(\bar{\lambda}\)</span> является нулем <span class="process-math">\(p\)</span>.</div>
+<div class="para">где мы воспользовались основными свойствами комплексного сопряжения (см. <a href="polynomials.html#propcomplex" class="xref" data-knowl="./knowl/xref/propcomplex.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.4: свойства комплексных чисел">Теорему 4.4</a>). Полученное равенство показывает, что <span class="process-math">\(\bar{\lambda}\)</span> — корень многочлена <span class="process-math">\(p\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 1"><a tabindex="-1" href="#polynomials-24-6" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div>
 </article></details>
 <details id="polynomials-24-7" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
 <aside class="aside aside-like knowl__content">
-<div class="para" id="polynomials-24-7-1">Подумайте о квадратной формуле в связи с приведенным ниже результатом.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-24-7-1">Сопоставьте следующее утверждение с формулой корней квадратного уравнения.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 </aside></details>
-<div class="para" id="polynomials-24-8">Нам нужна теорема факторизации для многочленов с действительными коэффициентами. Начнем со следующего результата.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-24-8">Наша цель — установить теорему о разложении на множители для многочленов с вещественными коэффициентами. Начнём со следующей леммы.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x171"><h3 class="heading">
-<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.15</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">факторизация квадратного многочлена.</span>
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.15</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">разложение квадратного трёхчлена на множители.</span>
 </h3>
 <div class="para logical" id="x171-2-1">
-<div class="para">Предположим, <span class="process-math">\(b, c \in \R{}\)</span>. Тогда имеет место полиномиальная факторизация вида</div>
+<div class="para">Пусть <span class="process-math">\(b, c \in \R{}\)</span>. Тогда разложение многочлена в виде</div>
 <div class="displaymath process-math" id="x171-2-1-2">
 \begin{equation*}
 x^2 + b x + c = (x - \lambda_1)(x - \lambda_2)
 \end{equation*}
 </div>
-<div class="para">с <span class="process-math">\(\lambda_1, \lambda_2 \in \R{}\)</span> тогда и только тогда, когда <span class="process-math">\(b^2 \ge 4 c\)</span>.</div>
+<div class="para">где <span class="process-math">\(\lambda_1, \lambda_2 \in \R{}\)</span>, существует тогда и только тогда, когда <span class="process-math">\(b^2 \ge 4 c\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x171-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 4.15: factorization of a quadratic polynomial"><a tabindex="-1" href="#x171" title="Copy heading and permalink for Theorem 4.15: факторизация квадратного многочлена" aria-label="Copy heading and permalink for Theorem 4.15: factorization of a quadratic polynomial">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 4.15: factorization of a quadratic polynomial"><a tabindex="-1" href="#x171" title="Copy heading and permalink for Theorem 4.15: разложение квадратного трёхчлена на множители" aria-label="Copy heading and permalink for Theorem 4.15: factorization of a quadratic polynomial">🔗</a></div>
 </article>
 <details id="polynomials-24-10" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="polynomials-24-10-1">
-<div class="para">Обратите внимание, что</div>
+<div class="para">Заметим, что</div>
 <div class="displaymath process-math" id="polynomials-24-10-1-1">
 \begin{equation*}
 x^2 + b x + c = ( x + \frac{b}{2} )^2 + ( c -\frac{b^2}{4} ).
@@ -1144,88 +1144,88 @@ x^2 + b x + c = ( x + \frac{b}{2} )^2 + ( c -\frac{b^2}{4} ).
 </div>
 <details id="polynomials-24-10-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Примечание</span></h4></summary>
 <aside class="aside aside-like knowl__content">
-<div class="para" id="polynomials-24-10-2-1">Приведённое выше равенство лежит в основе метода, называемого <dfn class="terminology">выделением полного квадрата</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-24-10-2-1">Это тождество лежит в основе приёма, называемого <dfn class="terminology">выделением полного квадрата</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 </aside></details>
-<div class="para" id="polynomials-24-10-3">Сначала предположим, что <span class="process-math">\(b^2 \lt 4 c\)</span>. Тогда правая часть приведенного выше уравнения положительна для каждого <span class="process-math">\(x \in \R{}\)</span>. Следовательно, многочлен <span class="process-math">\(x^2 + b x + c\)</span> не имеет действительных нулей и, следовательно, не может быть факторизован в форме <span class="process-math">\((x - \lambda_1)(x - \lambda_2)\)</span> с помощью <span class="process-math">\(\lambda_1, \lambda_2 \in \R{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-10-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-24-10-3">Предположим сначала, что <span class="process-math">\(b^2 \lt 4 c\)</span>. Тогда правая часть приведённого выше тождества строго положительна при всех <span class="process-math">\(x \in \R{}\)</span>. Следовательно, многочлен <span class="process-math">\(x^2 + b x + c\)</span> не имеет вещественных корней и потому не может быть разложен на множители вида <span class="process-math">\((x - \lambda_1)(x - \lambda_2)\)</span>, где <span class="process-math">\(\lambda_1, \lambda_2 \in \R{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-10-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="polynomials-24-10-4">
-<div class="para">Обратно, теперь предположим, что <span class="process-math">\(b^2 \ge 4 c\)</span>. Тогда существует вещественное число <span class="process-math">\(d\)</span> такое, что <span class="process-math">\(d^2 = \frac{b^2}{4} - c\)</span>. Из приведенного выше уравнения мы имеем</div>
+<div class="para">Обратно, пусть теперь <span class="process-math">\(b^2 \ge 4 c\)</span>. Тогда найдётся такое вещественное число <span class="process-math">\(d\)</span>, что <span class="process-math">\(d^2 = \frac{b^2}{4} - c\)</span>. Из выписанного выше тождества получаем</div>
 <div class="displaymath process-math" id="polynomials-24-10-4-4">
 \begin{align*}
 x^2 + b x + c \amp = ( x + \frac{b}{2} )^2 - d^2\\
 \amp = ( x + \frac{b}{2} + d ) ( x + \frac{b}{2} - d )\text{,}
 \end{align*}
 </div>
-<div class="para">что дает желаемую факторизацию.</div>
+<div class="para">что и даёт требуемое разложение.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-10-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 2"><a tabindex="-1" href="#polynomials-24-10" title="Copy heading and permalink for Proof 2" aria-label="Copy heading and permalink for Proof 2">🔗</a></div>
 </article></details>
 <div class="para logical" id="polynomials-24-11">
-<div class="para">Следующий результат дает факторизацию многочлена по <span class="process-math">\(\R{}\)</span>. Идея доказательства состоит в том, чтобы использовать вторую версию основной теоремы алгебры <a href="polynomials.html#x4FTA2" class="xref" data-knowl="./knowl/xref/x4FTA2.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.13: основная теорема алгебры, вторая версия">Теорема 4.13</a>, которая дает факторизацию <span class="process-math">\(p\)</span> как многочлен с комплексными коэффициентами. Комплексные, но недействительные нули <span class="process-math">\(p\)</span> идут парами; см. <a href="polynomials.html#x170" class="xref" data-knowl="./knowl/xref/x170.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.14: многочлены с действительными коэффициентами имеют невещественные нули в парах">Теорему 4.14</a>. Таким образом, если факторизация <span class="process-math">\(p\)</span> как элемента <span class="process-math">\(\P(\C{})\)</span> включает члены формы <span class="process-math">\((x - \lambda)\)</span>, где <span class="process-math">\(\lambda\)</span> — недействительное комплексное число, то <span class="process-math">\((x - \bar{\lambda})\)</span> также является членом факторизации. Перемножив эти два слагаемых, мы получим</div>
+<div class="para">Следующая теорема описывает разложение многочлена на множители над полем <span class="process-math">\(\R{}\)</span>. Идея доказательства состоит в том, чтобы воспользоваться второй формулировкой основной теоремы алгебры (<a href="polynomials.html#x4FTA2" class="xref" data-knowl="./knowl/xref/x4FTA2.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.13: основная теорема алгебры (вторая формулировка)">Теорема 4.13</a>), дающей разложение многочлена <span class="process-math">\(p\)</span> как многочлена с комплексными коэффициентами. Комплексные невещественные корни многочлена <span class="process-math">\(p\)</span> входят в разложение попарно (см. <a href="polynomials.html#x170" class="xref" data-knowl="./knowl/xref/x170.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.14: невещественные корни многочлена с вещественными коэффициентами входят сопряжёнными парами">Теорему 4.14</a>). Поэтому если в разложение многочлена <span class="process-math">\(p\)</span>, рассматриваемого как элемент пространства <span class="process-math">\(\P(\C{})\)</span>, входит множитель вида <span class="process-math">\((x - \lambda)\)</span> с невещественным комплексным числом <span class="process-math">\(\lambda\)</span>, то в это разложение входит и множитель <span class="process-math">\((x - \bar{\lambda})\)</span>. Перемножая эти два множителя, получаем</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x4FTA2.html ./knowl/xref/x170.html" id="polynomials-24-11-16">
 \begin{equation*}
 x^2 - 2(\re \lambda)x + |\lambda|^2,
 \end{equation*}
 </div>
-<div class="para">что является квадратичным членом требуемого вида.</div>
+<div class="para">что представляет собой квадратный трёхчлен требуемого вида.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="polynomials-24-12">Идея, изложенная в предыдущем абзаце, почти доказывает существование желаемой нами факторизации. Однако нам следует быть осторожными в одном моменте. Предположим, <span class="process-math">\(\lambda\)</span> — недействительное комплексное число, а <span class="process-math">\((x - \lambda)\)</span> — член факторизации <span class="process-math">\(p\)</span> как элемента <span class="process-math">\(\P(\C{})\)</span>. <a href="polynomials.html#x170" class="xref" data-knowl="./knowl/xref/x170.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.14: многочлены с действительными коэффициентами имеют невещественные нули в парах">Теорема 4.14</a> гарантирует, что <span class="process-math">\(( x - \bar{\lambda} )\)</span> также появляется в качестве члена при факторизации, но <a href="polynomials.html#x170" class="xref" data-knowl="./knowl/xref/x170.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.14: многочлены с действительными коэффициентами имеют невещественные нули в парах">Теорема 4.14</a> не утверждает, что эти два фактора появляются одинаковое количество раз, что необходимо для того, чтобы приведенная выше идея работала. Однако доказательство работает в обход этого пункта.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="polynomials-24-13">В следующем результате либо <span class="process-math">\(m\)</span>, либо <span class="process-math">\(M\)</span> может равняться <span class="process-math">\(0\)</span>. Числа <span class="process-math">\(\lambda_1, \dots, \lambda_m\)</span> являются в точности действительными нулями <span class="process-math">\(p\)</span>, поскольку это единственные действительные значения <span class="process-math">\(x\)</span>, для которых правая часть уравнения в следующем результате равна <span class="process-math">\(0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-24-12">Намеченная в предыдущем абзаце идея почти сразу даёт доказательство существования нужного разложения. Однако в одном месте требуется проявить аккуратность. Пусть <span class="process-math">\(\lambda\)</span> — невещественное комплексное число и <span class="process-math">\((x - \lambda)\)</span> — сомножитель в разложении многочлена <span class="process-math">\(p\)</span> как элемента пространства <span class="process-math">\(\P(\C{})\)</span>. <a href="polynomials.html#x170" class="xref" data-knowl="./knowl/xref/x170.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.14: невещественные корни многочлена с вещественными коэффициентами входят сопряжёнными парами">Теорема 4.14</a> гарантирует, что в этом разложении присутствует и сомножитель <span class="process-math">\(( x - \bar{\lambda} )\)</span>, однако в <a href="polynomials.html#x170" class="xref" data-knowl="./knowl/xref/x170.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.14: невещественные корни многочлена с вещественными коэффициентами входят сопряжёнными парами">Теореме 4.14</a> не утверждается, что оба этих сомножителя входят в разложение одинаковое число раз, как это необходимо для реализации описанной идеи. В приводимом ниже доказательстве эта трудность легко обходится.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-24-13">В следующей теореме любое из чисел <span class="process-math">\(m\)</span> или <span class="process-math">\(M\)</span> может равняться <span class="process-math">\(0\)</span>. Числа <span class="process-math">\(\lambda_1, \dots, \lambda_m\)</span> — это в точности вещественные корни многочлена <span class="process-math">\(p\)</span>, поскольку это единственные вещественные значения переменной <span class="process-math">\(x\)</span>, при которых правая часть равенства в следующей теореме обращается в <span class="process-math">\(0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x158"><h3 class="heading">
 <span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.16</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">разложение многочлена на множители над <span class="process-math">\(\R{}\)</span>.</span>
 </h3>
 <div class="para logical" id="x158-2-1">
-<div class="para">Предположим, что <span class="process-math">\(p \in \P(\R{})\)</span> — непостоянный полином. Тогда <span class="process-math">\(p\)</span> имеет единственную факторизацию (за исключением порядка множителей) вида</div>
+<div class="para">Пусть <span class="process-math">\(p \in \P(\R{})\)</span> — непостоянный многочлен. Тогда <span class="process-math">\(p\)</span> единственным образом (с точностью до порядка сомножителей) раскладывается на множители в виде</div>
 <div class="displaymath process-math" id="x158-2-1-3">
 \begin{equation*}
 p(x) = c(x - \lambda_1) \cdots(x - \lambda_m) ( x^2 + b_1 x + c_1 ) \cdots ( x^2 + b_M x + c_M ),
 \end{equation*}
 </div>
 <div class="para">где <span class="process-math">\(c, \lambda_1, \dots, \lambda_m, b_1, \dots, b_M, c_1, \dots,
-c_M\in \R{}\)</span>, где <span class="process-math">\({b_k}^{2} \lt  4c_k\)</span> для каждого <span class="process-math">\(k\)</span>.</div>
+c_M\in \R{}\)</span>, причём <span class="process-math">\({b_k}^{2} \lt  4c_k\)</span> для каждого <span class="process-math">\(k\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x158-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Theorem 4.16: factorization of a polynomial over \R{}"><a tabindex="-1" href="#x158" title="Copy heading and permalink for Theorem 4.16: разложение многочлена на множители над \R{}" aria-label="Copy heading and permalink for Theorem 4.16: factorization of a polynomial over \R{}">🔗</a></div>
 </article>
 <details id="polynomials-24-15" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
-<div class="para" id="polynomials-24-15-1">Сначала мы докажем, что искомая факторизация существует, а после этого докажем единственность.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-24-15-1">Сначала мы докажем существование требуемого разложения, а затем установим его единственность.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="polynomials-24-15-2">
-<div class="para">Думайте о <span class="process-math">\(p\)</span> как об элементе <span class="process-math">\(\P(\C{})\)</span>. Если все (комплексные) нули <span class="process-math">\(p\)</span> действительны, то мы имеем желаемую факторизацию по <a href="polynomials.html#x4FTA2" class="xref" data-knowl="./knowl/xref/x4FTA2.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.13: основная теорема алгебры, вторая версия">теореме 4.13</a>. Итак, предположим, что <span class="process-math">\(p\)</span> имеет ноль <span class="process-math">\(\lambda \in \C{}\)</span> с <span class="process-math">\(\lambda \notin \R{}\)</span>. По <a href="polynomials.html#x170" class="xref" data-knowl="./knowl/xref/x170.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.14: многочлены с действительными коэффициентами имеют невещественные нули в парах">Теореме 4.14</a> <span class="process-math">\(\bar{\lambda}\)</span> является нулем <span class="process-math">\(p\)</span>. Таким образом, мы можем написать</div>
+<div class="para">Будем рассматривать <span class="process-math">\(p\)</span> как элемент пространства <span class="process-math">\(\P(\C{})\)</span>. Если все (комплексные) корни многочлена <span class="process-math">\(p\)</span> вещественны, то требуемое разложение сразу следует из <a href="polynomials.html#x4FTA2" class="xref" data-knowl="./knowl/xref/x4FTA2.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.13: основная теорема алгебры (вторая формулировка)">Теоремы 4.13</a>. Предположим поэтому, что <span class="process-math">\(p\)</span> имеет корень <span class="process-math">\(\lambda \in \C{}\)</span>, где <span class="process-math">\(\lambda \notin \R{}\)</span>. По <a href="polynomials.html#x170" class="xref" data-knowl="./knowl/xref/x170.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.14: невещественные корни многочлена с вещественными коэффициентами входят сопряжёнными парами">Теореме 4.14</a> число <span class="process-math">\(\bar{\lambda}\)</span> также является корнем многочлена <span class="process-math">\(p\)</span>. Следовательно, мы можем записать</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x4FTA2.html ./knowl/xref/x170.html" id="polynomials-24-15-2-11">
 \begin{align*}
 p(x) \amp = (x - \lambda)( x - \bar{\lambda} )q(x)\\
 \amp = \bigl(x^2 - 2(\re \lambda)x + |\lambda|^2\bigr) q(x)
 \end{align*}
 </div>
-<div class="para">для некоторого многочлена <span class="process-math">\(q \in \P(\C{})\)</span> степени на две меньше степени <span class="process-math">\(p\)</span>. Если мы сможем доказать, что <span class="process-math">\(q\)</span> имеет действительные коэффициенты, то использование индукции по степени <span class="process-math">\(p\)</span> завершит доказательство существования части этого результата.</div>
+<div class="para">для некоторого многочлена <span class="process-math">\(q \in \P(\C{})\)</span>, степень которого на два меньше степени многочлена <span class="process-math">\(p\)</span>. Если мы докажем, что многочлен <span class="process-math">\(q\)</span> имеет вещественные коэффициенты, то применение индукции по степени многочлена <span class="process-math">\(p\)</span> завершит доказательство существования разложения.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-15-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="polynomials-24-15-3">
-<div class="para">Чтобы доказать, что <span class="process-math">\(q\)</span> имеет действительные коэффициенты, мы решаем приведенное выше уравнение для <span class="process-math">\(q\)</span>, получая</div>
+<div class="para">Чтобы доказать вещественность коэффициентов многочлена <span class="process-math">\(q\)</span>, выразим <span class="process-math">\(q\)</span> из приведённого выше равенства:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x4polyzero.html" id="polynomials-24-15-3-3">
 \begin{equation*}
 q(x) = \frac{p(x)}{x^2 - 2(\re \lambda)x + |\lambda|^2}
 \end{equation*}
 </div>
-<div class="para">для всех <span class="process-math">\(x \in \R{}\)</span>. Из приведенного выше уравнения следует, что <span class="process-math">\(q(x) \in \R{}\)</span> для всех <span class="process-math">\(x \in \R{}\)</span>. Написание</div>
+<div class="para">для всех <span class="process-math">\(x \in \R{}\)</span>. Отсюда следует, что <span class="process-math">\(q(x) \in \R{}\)</span> при всех <span class="process-math">\(x \in \R{}\)</span>. Записывая</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x4polyzero.html" id="polynomials-24-15-3-7">
 \begin{equation*}
 q(x) = a_0 + a_1 x + \dots + a_{n-2} x^{n-2}\!,
 \end{equation*}
 </div>
 <div class="para">где <span class="process-math">\(n = \deg p\)</span> и <span class="process-math">\(a_0, \dots,
-a_{n-2} \in \C{}\)</span>, таким образом, мы имеем</div>
+a_{n-2} \in \C{}\)</span>, получаем</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x4polyzero.html" id="polynomials-24-15-3-10">
 \begin{equation*}
 0 = \im q(x) = (\im a_0) + (\im a_1) x + \dots + (\im a_{n-2}) x^{n-2}
 \end{equation*}
 </div>
-<div class="para">для всех <span class="process-math">\(x \in \R{}\)</span>. Это означает, что все <span class="process-math">\(\im a_0, \dots, \im a_{n-2}\)</span> равны <span class="process-math">\(0\)</span> (по <a href="polynomials.html#x4polyzero" class="xref" data-knowl="./knowl/xref/x4polyzero.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.8: многочлен степени m имеет не более m корней">теореме 4.8</a>). Таким образом, все коэффициенты <span class="process-math">\(q\)</span> действительны, как и хотелось. Следовательно, желаемая факторизация существует.</div>
+<div class="para">для всех <span class="process-math">\(x \in \R{}\)</span>. Отсюда по <a href="polynomials.html#x4polyzero" class="xref" data-knowl="./knowl/xref/x4polyzero.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.8: многочлен степени m имеет не более m корней">Теореме 4.8</a> следует, что все числа <span class="process-math">\(\im a_0, \dots, \im a_{n-2}\)</span> равны <span class="process-math">\(0\)</span>. Таким образом, все коэффициенты многочлена <span class="process-math">\(q\)</span> вещественны, что и требовалось. Следовательно, искомое разложение существует.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-15-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="polynomials-24-15-4">Теперь обратимся к вопросу о единственности нашей факторизации. Множитель <span class="process-math">\(p\)</span> формы <span class="process-math">\(x^2 + b_k x + c_k\)</span> с <span class="process-math">\({b_k}^{2} \lt 4 c_k\)</span> можно однозначно записать как <span class="process-math">\((x - \lambda_k)( x - \overline{\lambda_k} )\)</span> с <span class="process-math">\(\lambda_k \in \C{}\)</span>. Немного подумав, вы увидите, что две разные факторизации <span class="process-math">\(p\)</span> как элемента <span class="process-math">\(\P(\R{})\)</span> приведут к двум разным факторизациям <span class="process-math">\(p\)</span> как элемента <span class="process-math">\(\P(\C{})\)</span>, что противоречит <a href="polynomials.html#x4FTA2" class="xref" data-knowl="./knowl/xref/x4FTA2.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.13: основная теорема алгебры, вторая версия">Теореме 4.13</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-15-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-24-15-4">Перейдём теперь к вопросу о единственности разложения. Каждый множитель многочлена <span class="process-math">\(p\)</span> вида <span class="process-math">\(x^2 + b_k x + c_k\)</span>, где <span class="process-math">\({b_k}^{2} \lt 4 c_k\)</span>, единственным образом записывается в виде <span class="process-math">\((x - \lambda_k)( x - \overline{\lambda_k} )\)</span>, где <span class="process-math">\(\lambda_k \in \C{}\)</span>. Несложно сообразить, что два различных разложения многочлена <span class="process-math">\(p\)</span> как элемента пространства <span class="process-math">\(\P(\R{})\)</span> привели бы к двум различным разложениям <span class="process-math">\(p\)</span> как элемента пространства <span class="process-math">\(\P(\C{})\)</span>, что противоречит <a href="polynomials.html#x4FTA2" class="xref" data-knowl="./knowl/xref/x4FTA2.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.13: основная теорема алгебры (вторая формулировка)">Теореме 4.13</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-24-15-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 3"><a tabindex="-1" href="#polynomials-24-15" title="Copy heading and permalink for Proof 3" aria-label="Copy heading and permalink for Proof 3">🔗</a></div>
 </article></details><div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Factorization of Polynomials over \R{}"><a tabindex="-1" href="#polynomials-24" title="Copy heading and permalink for Paragraphs: Разложение многочленов на множители над \R{}" aria-label="Copy heading and permalink for Paragraphs: Factorization of Polynomials over \R{}">🔗</a></div>
 </section>
@@ -1234,7 +1234,7 @@ a_{n-2} \in \C{}\)</span>, таким образом, мы имеем</div>
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="polynomials-25-2-1-1">
-<div class="para">Предположим, <span class="process-math">\(w, z \in \C{}\)</span>. Проверьте следующие равенства и неравенства.</div>
+<div class="para">Пусть <span class="process-math">\(w, z \in \C{}\)</span>. Проверьте следующие равенства и неравенства.</div>
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="polynomials-25-2-1-1-2">
 <li id="polynomials-25-2-1-1-2-1">
 <div class="para" id="polynomials-25-2-1-1-2-1-1">
@@ -1283,20 +1283,20 @@ a_{n-2} \in \C{}\)</span>, таким образом, мы имеем</div>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="polynomials-25-2-1-2">Примечание. Приведенные выше результаты представляют собой части <a href="polynomials.html#propcomplex" class="xref" data-knowl="./knowl/xref/propcomplex.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.4: свойства комплексных чисел">теоремы 4.4</a>, оставленные на усмотрение читателя.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-25-2-1-2">Примечание: приведённые выше соотношения — это те пункты <a href="polynomials.html#propcomplex" class="xref" data-knowl="./knowl/xref/propcomplex.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 4.4: свойства комплексных чисел">Теоремы 4.4</a>, доказательство которых было оставлено читателю.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 1"><a tabindex="-1" href="#polynomials-25-2" title="Copy heading and permalink for Exercise 1" aria-label="Copy heading and permalink for Exercise 1">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="x4reverse"><h3 class="heading">
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="x4reverse-1-1">Докажите, что если <span class="process-math">\(w, z \in \C{}\)</span>, то <span class="process-math">\(\lvert \lvert w \rvert - \lvert z \rvert \rvert \le \lvert w-z \rvert\)</span>. Примечание. Приведённое выше неравенство называется <dfn class="terminology">обратным неравенством треугольника</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x4reverse-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x4reverse-1-1">Докажите, что если <span class="process-math">\(w, z \in \C{}\)</span>, то <span class="process-math">\(\lvert \lvert w \rvert - \lvert z \rvert \rvert \le \lvert w-z \rvert\)</span>. Примечание: это неравенство называется <dfn class="terminology">обратным неравенством треугольника</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x4reverse-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 2"><a tabindex="-1" href="#x4reverse" title="Copy heading and permalink for Exercise 2" aria-label="Copy heading and permalink for Exercise 2">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="polynomials-25-4"><h3 class="heading">
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="polynomials-25-4-1-1">
-<div class="para">Предположим, что <span class="process-math">\(V\)</span> — комплексное векторное пространство и <span class="process-math">\(\phi \in V'\!\)</span>. Определите <span class="process-math">\(\fun \sigma V {\R{}}\)</span> через <span class="process-math">\(\sigma(v) = \re \phi(v)\)</span> для каждого <span class="process-math">\(v \in V{}\)</span>. Покажи это</div>
+<div class="para">Пусть <span class="process-math">\(V\)</span> — комплексное векторное пространство и <span class="process-math">\(\phi \in V'\!\)</span>. Определим функцию <span class="process-math">\(\fun \sigma V {\R{}}\)</span> формулой <span class="process-math">\(\sigma(v) = \re \phi(v)\)</span> для каждого <span class="process-math">\(v \in V{}\)</span>. Покажите, что</div>
 <div class="displaymath process-math" id="polynomials-25-4-1-1-6">
 \begin{equation*}
 \phi(v) = \sigma(v) - i \sigma(iv)
@@ -1311,13 +1311,13 @@ a_{n-2} \in \C{}\)</span>, таким образом, мы имеем</div>
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="polynomials-25-5-1-1">
-<div class="para">Предположим, что <span class="process-math">\(m\)</span> — целое положительное число. Это множество</div>
+<div class="para">Пусть <span class="process-math">\(m\)</span> — целое положительное число. Является ли множество</div>
 <div class="displaymath process-math" id="polynomials-25-5-1-1-2">
 \begin{equation*}
 \{0\} \cup \{ p \in \P(\F{}): \deg p = m \}
 \end{equation*}
 </div>
-<div class="para">подпространство <span class="process-math">\(\P(\F{})\)</span>?</div>
+<div class="para">подпространством пространства <span class="process-math">\(\P(\F{})\)</span>?</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 4"><a tabindex="-1" href="#polynomials-25-5" title="Copy heading and permalink for Exercise 4" aria-label="Copy heading and permalink for Exercise 4">🔗</a></div>
@@ -1326,13 +1326,13 @@ a_{n-2} \in \C{}\)</span>, таким образом, мы имеем</div>
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="polynomials-25-6-1-1">
-<div class="para">Это множество</div>
+<div class="para">Является ли множество</div>
 <div class="displaymath process-math" id="polynomials-25-6-1-1-1">
 \begin{equation*}
 \{0\} \cup \{ p \in \P(\F{}): \deg p \text{ чётна }  \}
 \end{equation*}
 </div>
-<div class="para">подпространство <span class="process-math">\(\P(\F{})\)</span>?</div>
+<div class="para">подпространством пространства <span class="process-math">\(\P(\F{})\)</span>?</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5"><a tabindex="-1" href="#polynomials-25-6" title="Copy heading and permalink for Exercise 5" aria-label="Copy heading and permalink for Exercise 5">🔗</a></div>
@@ -1340,21 +1340,21 @@ a_{n-2} \in \C{}\)</span>, таким образом, мы имеем</div>
 <article class="exercise exercise-like" id="polynomials-25-7"><h3 class="heading">
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="polynomials-25-7-1-1">Предположим, что <span class="process-math">\(m\)</span> и <span class="process-math">\(n\)</span> — целые положительные числа с <span class="process-math">\(m \le n\)</span>, и предположим, что <span class="process-math">\(\lambda_1, \dots, \lambda_m \in \F{}{}\)</span>. Докажите, что существует многочлен <span class="process-math">\(p \in \P(\F{})\)</span> с <span class="process-math">\(\deg p = n\)</span> такой, что <span class="process-math">\(0 = p(\lambda_1) = \dots = p(\lambda_m)\)</span> и такой, что <span class="process-math">\(p\)</span> не имеет других нулей.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-25-7-1-1">Пусть <span class="process-math">\(m\)</span> и <span class="process-math">\(n\)</span> — целые положительные числа, причём <span class="process-math">\(m \le n\)</span>, и пусть <span class="process-math">\(\lambda_1, \dots, \lambda_m \in \F{}{}\)</span>. Докажите, что существует такой многочлен <span class="process-math">\(p \in \P(\F{})\)</span> степени <span class="process-math">\(\deg p = n\)</span>, что <span class="process-math">\(0 = p(\lambda_1) = \dots = p(\lambda_m)\)</span> и никаких других корней у многочлена <span class="process-math">\(p\)</span> нет.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 6"><a tabindex="-1" href="#polynomials-25-7" title="Copy heading and permalink for Exercise 6" aria-label="Copy heading and permalink for Exercise 6">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="PolyInterpolation"><h3 class="heading">
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="PolyInterpolation-1-1">
-<div class="para">Предположим, что <span class="process-math">\(m\)</span> — целое неотрицательное число, <span class="process-math">\(z_1, \dots,
-z_{m+1}\)</span> — различные элементы <span class="process-math">\(\F{}{}\)</span> и <span class="process-math">\(w_1, \dots, w_{m+1} \in \F{}{}\)</span>. Докажите, что существует единственный многочлен <span class="process-math">\(p \in \P{}_m(\F{})\)</span> такой, что</div>
+<div class="para">Пусть <span class="process-math">\(m\)</span> — целое неотрицательное число, <span class="process-math">\(z_1, \dots,
+z_{m+1}\)</span> — попарно различные элементы поля <span class="process-math">\(\F{}{}\)</span> и <span class="process-math">\(w_1, \dots, w_{m+1} \in \F{}{}\)</span>. Докажите, что существует единственный многочлен <span class="process-math">\(p \in \P{}_m(\F{})\)</span>, такой что</div>
 <div class="displaymath process-math" id="PolyInterpolation-1-1-6">
 \begin{equation*}
 p(z_k) = w_k
 \end{equation*}
 </div>
-<div class="para">для каждого <span class="process-math">\(k = 1, \dots, m + 1\)</span>. Примечание. Этот результат можно доказать, не используя линейную алгебру. Однако попытайтесь найти более ясное и короткое доказательство, использующее некоторую линейную алгебру.</div>
+<div class="para">для каждого <span class="process-math">\(k = 1, \dots, m + 1\)</span>. Примечание: этот результат можно доказать и без использования линейной алгебры, однако постарайтесь найти более прозрачное и короткое доказательство, опирающееся на методы линейной алгебры.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#PolyInterpolation-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 7"><a tabindex="-1" href="#PolyInterpolation" title="Copy heading and permalink for Exercise 7" aria-label="Copy heading and permalink for Exercise 7">🔗</a></div>
@@ -1362,26 +1362,26 @@ p(z_k) = w_k
 <article class="exercise exercise-like" id="polynomials-25-9"><h3 class="heading">
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="polynomials-25-9-1-1">Предположим, <span class="process-math">\(p \in \P(\C{})\)</span> имеет степень <span class="process-math">\(m\)</span>. Докажите, что <span class="process-math">\(p\)</span> имеет <span class="process-math">\(m\)</span> различных нулей тогда и только тогда, когда <span class="process-math">\(p\)</span> и ее производная <span class="process-math">\(p'\)</span> не имеют общих нулей.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-25-9-1-1">Пусть многочлен <span class="process-math">\(p \in \P(\C{})\)</span> имеет степень <span class="process-math">\(m\)</span>. Докажите, что <span class="process-math">\(p\)</span> имеет <span class="process-math">\(m\)</span> различных корней тогда и только тогда, когда <span class="process-math">\(p\)</span> и его производная <span class="process-math">\(p'\)</span> не имеют общих корней.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 8"><a tabindex="-1" href="#polynomials-25-9" title="Copy heading and permalink for Exercise 8" aria-label="Copy heading and permalink for Exercise 8">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="x4oddzero"><h3 class="heading">
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="x4oddzero-1-1">Докажите, что каждый многочлен нечетной степени с вещественными коэффициентами имеет вещественный ноль.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x4oddzero-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x4oddzero-1-1">Докажите, что всякий многочлен нечётной степени с вещественными коэффициентами имеет хотя бы один вещественный корень.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x4oddzero-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9"><a tabindex="-1" href="#x4oddzero" title="Copy heading and permalink for Exercise 9" aria-label="Copy heading and permalink for Exercise 9">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="polynomials-25-11"><h3 class="heading">
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="polynomials-25-11-1-1">
-<div class="para">Для <span class="process-math">\(p \in \P(\R{})\)</span> определим <span class="process-math">\(\fun {Tp} {\R{}} {\R{}}\)</span> как</div>
+<div class="para">Для каждого <span class="process-math">\(p \in \P(\R{})\)</span> определим функцию <span class="process-math">\(\fun {Tp} {\R{}} {\R{}}\)</span> формулой</div>
 <div class="displaymath process-math" id="polynomials-25-11-1-1-3">
 \begin{equation*}
 (Tp)(x) = \begin{cases}\dfrac{p(x) - p(3)}{x-3} \amp  \text{ если }  x \ne 3,\\ p' \! (3) \amp  \text{ если }  x = 3 \end{cases}
 \end{equation*}
 </div>
-<div class="para">для каждого <span class="process-math">\(x \in \R{}\)</span>. Покажите, что <span class="process-math">\(Tp \in \P(\R{})\)</span> для любого многочлена <span class="process-math">\(p \in \P(\R{})\)</span>, а также покажите, что <span class="process-math">\(\fun T {\P(\R{})} {\P(\R{})}\)</span> — линейное отображение.</div>
+<div class="para">для каждого <span class="process-math">\(x \in \R{}\)</span>. Покажите, что <span class="process-math">\(Tp \in \P(\R{})\)</span> для любого многочлена <span class="process-math">\(p \in \P(\R{})\)</span>, а также что отображение <span class="process-math">\(\fun T {\P(\R{})} {\P(\R{})}\)</span> линейно.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 10"><a tabindex="-1" href="#polynomials-25-11" title="Copy heading and permalink for Exercise 10" aria-label="Copy heading and permalink for Exercise 10">🔗</a></div>
@@ -1390,7 +1390,7 @@ p(z_k) = w_k
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="polynomials-25-12-1-1">
-<div class="para">Предположим, <span class="process-math">\(p \in \P(\C{})\)</span>. Определите <span class="process-math">\(q \colon \C{} \to \C{}\)</span> по</div>
+<div class="para">Пусть <span class="process-math">\(p \in \P(\C{})\)</span>. Определим <span class="process-math">\(q \colon \C{} \to \C{}\)</span> формулой</div>
 <div class="displaymath process-math" id="polynomials-25-12-1-1-3">
 \begin{equation*}
 q(z) = p(z)   \overline{ p( \bar{z} ) }.
@@ -1404,22 +1404,22 @@ q(z) = p(z)   \overline{ p( \bar{z} ) }.
 <article class="exercise exercise-like" id="polynomials-25-13"><h3 class="heading">
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="polynomials-25-13-1-1">Предположим, что <span class="process-math">\(m\)</span> — неотрицательное целое число, а <span class="process-math">\(p \in \P{}_m(\C{})\)</span> таково, что для каждого <span class="process-math">\(k = 0, 1, \dots, m\)</span> существуют различные действительные числа <span class="process-math">\(x_0, x_1, \dots,
-x_m\)</span> с <span class="process-math">\(p(x_k) \in \R{}\)</span>. Докажите, что все коэффициенты числа <span class="process-math">\(p\)</span> действительны.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-25-13-1-1">Пусть <span class="process-math">\(m\)</span> — целое неотрицательное число и многочлен <span class="process-math">\(p \in \P{}_m(\C{})\)</span> таков, что существуют попарно различные вещественные числа <span class="process-math">\(x_0, x_1, \dots,
+x_m\)</span>, для которых <span class="process-math">\(p(x_k) \in \R{}\)</span> при каждом <span class="process-math">\(k = 0, 1, \dots, m\)</span>. Докажите, что все коэффициенты многочлена <span class="process-math">\(p\)</span> вещественны.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 12"><a tabindex="-1" href="#polynomials-25-13" title="Copy heading and permalink for Exercise 12" aria-label="Copy heading and permalink for Exercise 12">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="polynomials-25-14"><h3 class="heading">
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="polynomials-25-14-1-1">
-<div class="para">Предположим, <span class="process-math">\(p \in \P(\F{})\)</span> с <span class="process-math">\(p \ne 0\)</span>. Пусть <span class="process-math">\(U = \{ p q : q \in \P(\F{}) \}\)</span>.</div>
+<div class="para">Пусть <span class="process-math">\(p \in \P(\F{})\)</span>, причём <span class="process-math">\(p \ne 0\)</span>. Положим <span class="process-math">\(U = \{ p q : q \in \P(\F{}) \}\)</span>.</div>
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="polynomials-25-14-1-1-4">
 <li id="polynomials-25-14-1-1-4-1">
-<div class="para" id="polynomials-25-14-1-1-4-1-1">Докажите, что <span class="process-math">\(\dim \P(\F{})/U = \deg p\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-14-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-25-14-1-1-4-1-1">Покажите, что <span class="process-math">\(\dim \P(\F{})/U = \deg p\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-14-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item 13.a"><a tabindex="-1" href="#polynomials-25-14-1-1-4-1" title="Copy heading and permalink for Item 13.a" aria-label="Copy heading and permalink for Item 13.a">🔗</a></div>
 </li>
 <li id="polynomials-25-14-1-1-4-2">
-<div class="para" id="polynomials-25-14-1-1-4-2-1">Найдите базис <span class="process-math">\(\P(\F{})/U\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-14-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-25-14-1-1-4-2-1">Найдите базис подпространства <span class="process-math">\(\P(\F{})/U\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-14-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item 13.b"><a tabindex="-1" href="#polynomials-25-14-1-1-4-2" title="Copy heading and permalink for Item 13.b" aria-label="Copy heading and permalink for Item 13.b">🔗</a></div>
 </li>
 </ol>
@@ -1431,8 +1431,8 @@ x_m\)</span> с <span class="process-math">\(p(x_k) \in \R{}\)</span>. Дока�
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="polynomials-25-15-1-1">
-<div class="para">Предположим, что <span class="process-math">\(p,
-q \in \P(\C{})\)</span> — непостоянные многочлены, не имеющие общих нулей. Пусть <span class="process-math">\(m = \deg p\)</span> и <span class="process-math">\(n = \deg q\)</span>. Используйте линейную алгебру, как описано ниже в пунктах (a)–(c), чтобы доказать, что существуют <span class="process-math">\(r \in \P{}_{n-1}(\C{})\)</span> и <span class="process-math">\(s \in \P{}_{m-1}(\C{})\)</span> такие, что</div>
+<div class="para">Пусть <span class="process-math">\(p,
+q \in \P(\C{})\)</span> — непостоянные многочлены, не имеющие общих корней. Положим <span class="process-math">\(m = \deg p\)</span> и <span class="process-math">\(n = \deg q\)</span>. Используя методы линейной алгебры по плану, намеченному ниже в пунктах (a)–(c), докажите, что существуют такие многочлены <span class="process-math">\(r \in \P{}_{n-1}(\C{})\)</span> и <span class="process-math">\(s \in \P{}_{m-1}(\C{})\)</span>, что</div>
 <div class="displaymath process-math" id="polynomials-25-15-1-1-7">
 \begin{equation*}
 rp + sq = 1.
@@ -1441,7 +1441,7 @@ rp + sq = 1.
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="polynomials-25-15-1-1-8">
 <li id="polynomials-25-15-1-1-8-1">
 <div class="para logical" id="polynomials-25-15-1-1-8-1-1">
-<div class="para">Определите <span class="process-math">\(\fun T { \P{}_{n-1}(\C{}) \times \P{}_{m-1}(\C{}) } {\P{}_{m+n-1}(\C{})}\)</span> по</div>
+<div class="para">Определим <span class="process-math">\(\fun T { \P{}_{n-1}(\C{}) \times \P{}_{m-1}(\C{}) } {\P{}_{m+n-1}(\C{})}\)</span> формулой</div>
 <div class="displaymath process-math" id="polynomials-25-15-1-1-8-1-1-2">
 \begin{equation*}
 T(r, s) = rp + sq.
@@ -1453,11 +1453,11 @@ T(r, s) = rp + sq.
 <div class="autopermalink" aria-hidden="true" data-description="Item 14.a"><a tabindex="-1" href="#polynomials-25-15-1-1-8-1" title="Copy heading and permalink for Item 14.a" aria-label="Copy heading and permalink for Item 14.a">🔗</a></div>
 </li>
 <li id="polynomials-25-15-1-1-8-2">
-<div class="para" id="polynomials-25-15-1-1-8-2-1">Покажите, что линейное отображение <span class="process-math">\(T\)</span> из (a) сюръективно.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-15-1-1-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-25-15-1-1-8-2-1">Покажите, что линейное отображение <span class="process-math">\(T\)</span> из пункта (a) сюръективно.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-15-1-1-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item 14.b"><a tabindex="-1" href="#polynomials-25-15-1-1-8-2" title="Copy heading and permalink for Item 14.b" aria-label="Copy heading and permalink for Item 14.b">🔗</a></div>
 </li>
 <li id="polynomials-25-15-1-1-8-3">
-<div class="para" id="polynomials-25-15-1-1-8-3-1">Используйте (b), чтобы сделать вывод, что существуют <span class="process-math">\(r \in \P{}_{n-1}(\C{})\)</span> и <span class="process-math">\(s \in \P{}_{m-1}(\C{})\)</span> такие, что <span class="process-math">\(rp + sq = 1\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-15-1-1-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="polynomials-25-15-1-1-8-3-1">Используя пункт (b), выведите, что существуют такие <span class="process-math">\(r \in \P{}_{n-1}(\C{})\)</span> и <span class="process-math">\(s \in \P{}_{m-1}(\C{})\)</span>, для которых <span class="process-math">\(rp + sq = 1\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#polynomials-25-15-1-1-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item 14.c"><a tabindex="-1" href="#polynomials-25-15-1-1-8-3" title="Copy heading and permalink for Item 14.c" aria-label="Copy heading and permalink for Item 14.c">🔗</a></div>
 </li>
 </ol>

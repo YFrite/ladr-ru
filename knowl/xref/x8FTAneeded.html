@@ -22,7 +22,7 @@
 <span class="type">Упражнение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
 </h2>
 <div class="para logical">
-<div class="para">Предположим, <span class="process-math">\(a_0, \dots, a_{n-1} \in \F{}{}\)</span>. Пусть <span class="process-math">\(T\)</span> — оператор на <span class="process-math">\(\F n\)</span>, матрица которого (относительно стандартного базиса) равна</div>
+<div class="para">Пусть <span class="process-math">\(a_0, \dots, a_{n-1} \in \F{}{}\)</span>. Пусть <span class="process-math">\(T\)</span> — оператор на <span class="process-math">\(\F n\)</span>, матрица которого (в стандартном базисе) имеет вид</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{pmatrix}0 \amp  \amp  \amp  \amp  \amp  -a_0 \\ 1 \amp  0  \amp  \amp  \amp  \amp  -a_1 \\ \amp  1 \amp  \ddots \amp  \amp  \amp  -a_2 \\ \amp  \amp  \ddots \amp  \amp  \amp  \vdots \\ \amp  \amp  \amp  \amp  0 \amp  -a_{n-2} \\ \amp  \amp  \amp  \amp  1 \amp  -a_{n-1} \end{pmatrix} .
@@ -31,7 +31,7 @@
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8FTAneeded-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical">
-<div class="para">Здесь все элементы матрицы — это <span class="process-math">\(0\)</span>, за исключением всех <span class="process-math">\(1\)</span> на линии под диагональю и элементов в последнем столбце (некоторые из которых также могут быть <span class="process-math">\(0\)</span>). Докажите, что минимальный многочлен <span class="process-math">\(T\)</span> — это многочлен</div>
+<div class="para">Здесь все элементы матрицы равны <span class="process-math">\(0\)</span>, за исключением единиц (<span class="process-math">\(1\)</span>) на поддиагонали и элементов последнего столбца (некоторые из которых также могут равняться <span class="process-math">\(0\)</span>). Покажите, что минимальным многочленом оператора <span class="process-math">\(T\)</span> является многочлен</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a_0 + a_1 z + \cdots + a_{n-1} z^{n-1} + z^n{}.
@@ -39,7 +39,7 @@ a_0 + a_1 z + \cdots + a_{n-1} z^{n-1} + z^n{}.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8FTAneeded-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para">Примечание. Приведенная выше матрица называется <dfn class="terminology">сопутствующей матрицей</dfn> приведенного выше полинома. Это упражнение показывает, что каждый приведённый многочлен является минимальным многочленом некоторого оператора. Следовательно, формула или алгоритм, которые могли бы выдавать точные собственные значения для каждого оператора на каждом <span class="process-math">\(\F n\)</span>, могли бы затем выдавать точные нули для каждого многочлена [согласно <a href="eigenuppertri.html#x136" class="xref" data-knowl="./knowl/xref/x136.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.27: собственные значения являются нулями минимального многочлена">Теореме 5.27</a> (a)] . Таким образом, такой формулы или алгоритма не существует. Однако существуют эффективные численные методы для получения очень хороших приближений собственных значений оператора.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8FTAneeded-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para">Примечание: приведённая выше матрица называется <dfn class="terminology">сопровождающей матрицей</dfn> указанного многочлена. Это упражнение показывает, что всякий приведённый многочлен является минимальным многочленом некоторого оператора. Следовательно, формула или алгоритм, позволяющие находить точные значения собственных значений любого оператора на каждом <span class="process-math">\(\F n\)</span>, позволяли бы находить и точные корни любого многочлена [по <a href="eigenuppertri.html#x136" class="xref" data-knowl="./knowl/xref/x136.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 5.27: собственные значения — это корни минимального многочлена">Теореме 5.27</a>(a)]. Поэтому такой формулы или алгоритма не существует. Тем не менее существуют эффективные численные методы, дающие очень хорошие приближения для собственных значений оператора.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8FTAneeded-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 5.2.3.16"><a tabindex="-1" href="#x8FTAneeded" title="Copy heading and permalink for Exercise 5.2.3.16" aria-label="Copy heading and permalink for Exercise 5.2.3.16">🔗</a></div>
 </article><span class="incontext"><a class="internal" href="eigenuppertri.html#x8FTAneeded">В контексте</a></span>
 </body>

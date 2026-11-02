@@ -25,7 +25,7 @@
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x9BilinearExample-2-1-1">
 <li>
 <div class="para logical">
-<div class="para">Функция <span class="process-math">\(\fun \beta {\F3 \times \F3} {\F{}}\)</span>, определяемая формулой</div>
+<div class="para">Функция <span class="process-math">\(\fun \beta {\F3 \times \F3} {\F{}}\)</span>, заданная формулой</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \beta(  (x_1, x_2, x_3), (y_1, y_2, y_3)  ) = x_1 y_2 - 5 x_2 y_3 + 2 x_3 y_1
@@ -38,13 +38,13 @@
 </li>
 <li>
 <div class="para logical">
-<div class="para">Предположим, что <span class="process-math">\(A\)</span> — матрица размера <span class="process-math">\(n\)</span> на <span class="process-math">\(n\)</span> с <span class="process-math">\(A_{j,k} \in \F{}\)</span> в строке <span class="process-math">\(j\)</span> и столбце <span class="process-math">\(k\)</span>. Определим билинейную форму <span class="process-math">\(\beta_A\)</span> на <span class="process-math">\(\F n\)</span> с помощью</div>
+<div class="para">Пусть <span class="process-math">\(A\)</span> — матрица размера <span class="process-math">\(n\)</span> на <span class="process-math">\(n\)</span>, у которой на пересечении <span class="process-math">\(j\)</span>-й строки и <span class="process-math">\(k\)</span>-го столбца стоит элемент <span class="process-math">\(A_{j,k} \in \F{}\)</span>. Определим билинейную форму <span class="process-math">\(\beta_A\)</span> на <span class="process-math">\(\F n\)</span> формулой</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \beta_A(  (x_1, \ldots, x_n), (y_1, \ldots, y_n)  ) = \sum_{k=1}^n \sum_{j=1}^n A_{j,k} x_j y_k.
 \end{equation*}
 </div>
-<div class="para">Первый пункт списка является частным случаем этого пункта списка с <span class="process-math">\(n = 3\)</span> и</div>
+<div class="para">Первый пункт этого примера является частным случаем данного пункта при <span class="process-math">\(n = 3\)</span> и</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A = \begin{pmatrix}0 \amp  1 \amp  0\\ 0 \amp  0 \amp  -5 \\ 2 \amp  0 \amp  0 \end{pmatrix} .
@@ -56,7 +56,7 @@ A = \begin{pmatrix}0 \amp  1 \amp  0\\ 0 \amp  0 \amp  -5 \\ 2 \amp  0 \amp  0 \
 </li>
 <li>
 <div class="para logical">
-<div class="para">Предположим, что <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением, а <span class="process-math">\(T \in \Lc(V)\)</span>. Тогда функция <span class="process-math">\(\fun \beta {V{} \times V} {\R{}}\)</span>, определенная формулой</div>
+<div class="para">Пусть <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением и <span class="process-math">\(T \in \Lc(V)\)</span>. Тогда функция <span class="process-math">\(\fun \beta {V{} \times V} {\R{}}\)</span>, заданная формулой</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \beta(u, v) = \langle u, Tv \rangle
@@ -69,7 +69,7 @@ A = \begin{pmatrix}0 \amp  1 \amp  0\\ 0 \amp  0 \amp  -5 \\ 2 \amp  0 \amp  0 \
 </li>
 <li>
 <div class="para logical">
-<div class="para">Если <span class="process-math">\(n\)</span> — целое положительное число, то функция <span class="process-math">\(\fun \beta { \P{}_n(\R{}) \times \P{}_n(\R{}) } {\R{}}\)</span>, определенная формулой</div>
+<div class="para">Если <span class="process-math">\(n\)</span> — целое положительное число, то функция <span class="process-math">\(\fun \beta { \P{}_n(\R{}) \times \P{}_n(\R{}) } {\R{}}\)</span>, заданная формулой</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \beta(p,q) = p(2) \cdot q'(3)
@@ -82,7 +82,7 @@ A = \begin{pmatrix}0 \amp  1 \amp  0\\ 0 \amp  0 \amp  -5 \\ 2 \amp  0 \amp  0 \
 </li>
 <li>
 <div class="para logical">
-<div class="para">Предположим, <span class="process-math">\(\phi, \tau \in V'\!\)</span>. Тогда функция <span class="process-math">\(\fun \beta {V{} \times V} {\F{}}\)</span>, определенная формулой</div>
+<div class="para">Пусть <span class="process-math">\(\phi, \tau \in V'\!\)</span>. Тогда функция <span class="process-math">\(\fun \beta {V{} \times V} {\F{}}\)</span>, заданная формулой</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \beta(u, v) = \phi(u) \cdot \tau(v)
@@ -95,7 +95,7 @@ A = \begin{pmatrix}0 \amp  1 \amp  0\\ 0 \amp  0 \amp  -5 \\ 2 \amp  0 \amp  0 \
 </li>
 <li>
 <div class="para logical">
-<div class="para">В более общем плане предположим, что <span class="process-math">\(\phi_1, \ldots, \phi_n, \tau_1, \ldots, \tau_n \in V'\!\)</span>. Тогда функция <span class="process-math">\(\fun \beta {V{} \times V} {\F{}}\)</span>, определенная формулой</div>
+<div class="para">Более общо, пусть <span class="process-math">\(\phi_1, \ldots, \phi_n, \tau_1, \ldots, \tau_n \in V'\!\)</span>. Тогда функция <span class="process-math">\(\fun \beta {V{} \times V} {\F{}}\)</span>, заданная формулой</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \beta(u, v) = \phi_1(u) \cdot \tau_1(v) + \cdots + \phi_n(u) \cdot \tau_n(v)

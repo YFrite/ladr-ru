@@ -22,27 +22,27 @@
 <span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.72</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">операторы частного дифференцирования коммутируют.</span>
 </h2>
 <div class="para logical">
-<div class="para">Предположим, что <span class="process-math">\(m\)</span> — целое неотрицательное число. Обозначим через <span class="process-math">\(\P\!_m{}(\CC2, \C{})\)</span> комплексное векторное пространство многочленов (с коэффициентами из <span class="process-math">\(\C{}\)</span>) от двух переменных степени не выше <span class="process-math">\(m\)</span> с обычными операциями сложения и умножения на скаляр функций со значениями <span class="process-math">\(\C{}\)</span>. Таким образом, элементами <span class="process-math">\(\P\!_m{}(\CC2, \C{})\)</span> являются функции <span class="process-math">\(p\)</span> от <span class="process-math">\(\C2\)</span> до <span class="process-math">\(\C{}\)</span> вида</div>
+<div class="para">Пусть <span class="process-math">\(m\)</span> — целое неотрицательное число. Обозначим через <span class="process-math">\(\P\!_m{}(\CC2, \C{})\)</span> комплексное векторное пространство многочленов (с коэффициентами из <span class="process-math">\(\C{}\)</span>) от двух переменных степени не выше <span class="process-math">\(m\)</span> с обычными операциями сложения и умножения на скаляр для <span class="process-math">\(\C{}\)</span>-значных функций. Таким образом, элементами пространства <span class="process-math">\(\P\!_m{}(\CC2, \C{})\)</span> являются функции <span class="process-math">\(p\)</span> из <span class="process-math">\(\C2\)</span> в <span class="process-math">\(\C{}\)</span> вида</div>
 <div class="displaymath process-math">
 \begin{equation}
 p(w,z) = \sum_{j+k \le m} a_{j,k} w^j z^k\!,\tag{5.73}
 \end{equation}
 </div>
-<div class="para">где индексы <span class="process-math">\(j\)</span> и <span class="process-math">\(k\)</span> принимают все неотрицательные целые значения такие, что <span class="process-math">\(j + k \le m\)</span>, каждый <span class="process-math">\(a_{j,k}\)</span> находится в <span class="process-math">\(\C{}\)</span>, а <span class="process-math">\(w^j z^k\)</span> обозначает функцию на <span class="process-math">\(\C2\)</span>, определенную <span class="process-math">\((w, z) \mapsto w^j z^k\!\)</span>.</div>
+<div class="para">где индексы <span class="process-math">\(j\)</span> и <span class="process-math">\(k\)</span> пробегают все целые неотрицательные значения, удовлетворяющие условию <span class="process-math">\(j + k \le m\)</span>, каждый коэффициент <span class="process-math">\(a_{j,k}\)</span> принадлежит <span class="process-math">\(\C{}\)</span>, а <span class="process-math">\(w^j z^k\)</span> обозначает функцию на <span class="process-math">\(\C2\)</span>, заданную правилом <span class="process-math">\((w, z) \mapsto w^j z^k\!\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#PD-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical">
-<div class="para">Определим операторы <span class="process-math">\(D_w, D_z \in \Lc( \P\!_m{}(\CC2, \C{}) )\)</span> по</div>
+<div class="para">Зададим операторы <span class="process-math">\(D_w, D_z \in \Lc( \P\!_m{}(\CC2, \C{}) )\)</span> формулами</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x2p.html">
 \begin{equation*}
 D_w p = \frac{ \partial p}{\partial w} = \sum_{j+k \le m} j a_{j,k} w^{j-1} z^k \andd D_z p = \frac{ \partial p}{\partial z} = \sum_{j+k \le m} k a_{j,k} w^j z^{k-1}\!,
 \end{equation*}
 </div>
-<div class="para">где <span class="process-math">\(p\)</span> соответствует <a href="x2diagmat.html#x2p" class="xref" data-knowl="./knowl/xref/x2p.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 5.73">(5.73)</a>. Операторы <span class="process-math">\(D_w\)</span> и <span class="process-math">\(D_z\)</span> называются операторами частного дифференцирования, поскольку каждый из этих операторов дифференцирует по одной из переменных, притворяясь, что другая переменная является константой.</div>
+<div class="para">где многочлен <span class="process-math">\(p\)</span> имеет вид <a href="x2diagmat.html#x2p" class="xref" data-knowl="./knowl/xref/x2p.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 5.73">(5.73)</a>. Операторы <span class="process-math">\(D_w\)</span> и <span class="process-math">\(D_z\)</span> называются операторами частного дифференцирования, поскольку каждый из них дифференцирует функцию по одной из переменных, считая другую переменную постоянной.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#PD-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical">
-<div class="para">Операторы <span class="process-math">\(D_w\)</span> и <span class="process-math">\(D_z\)</span> коммутируют, поскольку если <span class="process-math">\(p\)</span> такой же, как в <a href="x2diagmat.html#x2p" class="xref" data-knowl="./knowl/xref/x2p.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 5.73">(5.73)</a>, то</div>
+<div class="para">Операторы <span class="process-math">\(D_w\)</span> и <span class="process-math">\(D_z\)</span> коммутируют, так как для любого многочлена <span class="process-math">\(p\)</span> вида <a href="x2diagmat.html#x2p" class="xref" data-knowl="./knowl/xref/x2p.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Equation 5.73">(5.73)</a> имеем</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x2p.html">
 \begin{equation*}
 (D_w D_z)p = \sum_{j+k \le m} j k a_{j,k} w^{j-1} z^{k-1} = (D_z D_w)p.
@@ -50,7 +50,7 @@ D_w p = \frac{ \partial p}{\partial w} = \sum_{j+k \le m} j a_{j,k} w^{j-1} z^k 
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#PD-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para">Уравнение <span class="process-math">\(D_w D_z = D_z D_w\)</span> на <span class="process-math">\(\P\!_m{}(\CC2, \C{})\)</span> иллюстрирует более общий результат о том, что порядок частного дифференцирования не имеет значения для хороших функций.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#PD-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para">Равенство <span class="process-math">\(D_w D_z = D_z D_w\)</span> на пространстве <span class="process-math">\(\P\!_m{}(\CC2, \C{})\)</span> иллюстрирует более общий факт: для достаточно гладких функций результат смешанного частного дифференцирования не зависит от порядка дифференцирования.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#PD-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 5.72: partial differentiation operators commute"><a tabindex="-1" href="#PD" title="Copy heading and permalink for Example 5.72: операторы частного дифференцирования коммутируют" aria-label="Copy heading and permalink for Example 5.72: partial differentiation operators commute">🔗</a></div>
 </article><span class="incontext"><a class="internal" href="x2diagmat.html#PD">В контексте</a></span>
 </body>

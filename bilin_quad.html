@@ -554,29 +554,29 @@ eBookConfig.enable_chatcodes =  false;
 <h2 class="heading hide-type">
 <span class="type">Подраздел</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Билинейные формы</span>
 </h2>
-<div class="para" id="bilin_quad-2-2">Билинейная форма на <span class="process-math">\(V\)</span> — это функция от <span class="process-math">\(V{} \times V\)</span> до <span class="process-math">\(\F{}\)</span>, которая является линейной по каждому аргументу в отдельности. Это означает, что если мы зафиксируем любой из двух аргументов, то по другому аргументу у нас будет линейная функция. Вот формальное определение.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-2">Билинейная форма на пространстве <span class="process-math">\(V\)</span> — это функция из <span class="process-math">\(V{} \times V\)</span> в <span class="process-math">\(\F{}\)</span>, которая линейна по каждому аргументу в отдельности; это означает, что если зафиксировать любой из двух аргументов, то получится линейная функция от другого аргумента. Приведём формальное определение.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="definition definition-like" id="x8biform"><h3 class="heading">
-<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">билинейная форма.</span>
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Билинейная форма.</span>
 </h3>
 <div class="para logical" id="x8biform-2-1">
-<div class="para"><dfn class="terminology">Билинейная форма</dfn> на <span class="process-math">\(V\)</span> — это функция <span class="process-math">\(\fun \beta {V{} \times V} \F{}\)</span> такая, что</div>
+<div class="para"><dfn class="terminology">Билинейной формой</dfn> на <span class="process-math">\(V\)</span> называется такая функция <span class="process-math">\(\fun \beta {V{} \times V} \F{}\)</span>, что отображения</div>
 <div class="displaymath process-math" id="x8biform-2-1-5">
 \begin{equation*}
 v \mapsto \beta(v, u) \andd v \mapsto \beta(u,v)
 \end{equation*}
 </div>
-<div class="para">оба являются линейными функционалами на <span class="process-math">\(V\)</span> для любого <span class="process-math">\(u \in V{}\)</span>.</div>
+<div class="para">являются линейными функционалами на <span class="process-math">\(V\)</span> при каждом <span class="process-math">\(u \in V{}\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x8biform-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 9.1: bilinear form"><a tabindex="-1" href="#x8biform" title="Copy heading and permalink for Definition 9.1: билинейная форма" aria-label="Copy heading and permalink for Definition 9.1: bilinear form">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 9.1: bilinear form"><a tabindex="-1" href="#x8biform" title="Copy heading and permalink for Definition 9.1: Билинейная форма" aria-label="Copy heading and permalink for Definition 9.1: bilinear form">🔗</a></div>
 </article>
 <details id="bilin_quad-2-4" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Примечание</span></h3></summary>
 <aside class="aside aside-like knowl__content">
-<div class="para" id="bilin_quad-2-4-1">Напомним, что термин <em class="emphasis">линейный функционал</em>, используемый в приведенном выше определении, означает линейную функцию, которая отображается в скалярное поле <span class="process-math">\(\F{}{}\)</span>. Таким образом, термин <em class="emphasis">билинейный функционал</em> был бы более последовательным термином, чем <em class="emphasis">билинейная форма</em>, которая, к сожалению, стала стандартной.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-4-1">Напомним, что термин <em class="emphasis">линейный функционал</em>, использованный в приведённом выше определении, означает линейное отображение со значениями в поле скаляров <span class="process-math">\(\F{}{}\)</span>. Поэтому термин <em class="emphasis">билинейный функционал</em> был бы более последовательным, чем термин <em class="emphasis">билинейная форма</em>, который, к сожалению, стал общепринятым.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 </aside></details>
-<div class="para" id="bilin_quad-2-5">Например, если <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением, то функция, переводящая упорядоченную пару <span class="process-math">\((u, v) \in V{} \times V\)</span> в <span class="process-math">\(\langle u, v \rangle\)</span>, имеет билинейную форму на <span class="process-math">\(V{}\)</span>. Если <span class="process-math">\(V\)</span> — ненулевое вещественное пространство со скалярным произведением, то эта функция не является билинейной формой, поскольку скалярное произведение не является линейным по второму аргументу (комплексные скаляры выходят из второго аргумента как их комплексно-сопряженные).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="bilin_quad-2-6">Если <span class="process-math">\(\F{} = \R{}\)</span>, то билинейная форма отличается от скалярного произведения тем, что скалярное произведение требует симметрии (то есть <span class="process-math">\(\beta(v,w) = \beta(w,v)\)</span> для всех <span class="process-math">\(v,
-w \in V\)</span>) и положительной определенности (то есть <span class="process-math">\(\beta(v, v) &gt; 0\)</span> для всех <span class="process-math">\(v \in V \sm \{ 0 \}\)</span>), но эти свойства не требуются для билинейной формы.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-5">Например, если <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением, то функция, сопоставляющая упорядоченной паре <span class="process-math">\((u, v) \in V{} \times V\)</span> число <span class="process-math">\(\langle u, v \rangle\)</span>, является билинейной формой на <span class="process-math">\(V{}\)</span>. Если же <span class="process-math">\(V\)</span> — ненулевое комплексное пространство со скалярным произведением, то эта функция не является билинейной формой, поскольку скалярное произведение не линейно по второму аргументу (комплексные скаляры выносятся из второго аргумента со знаком комплексного сопряжения).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-6">В случае <span class="process-math">\(\F{} = \R{}\)</span> билинейная форма отличается от скалярного произведения тем, что от скалярного произведения требуются симметричность [то есть <span class="process-math">\(\beta(v,w) = \beta(w,v)\)</span> для всех <span class="process-math">\(v,
+w \in V\)</span>] и положительная определённость [то есть <span class="process-math">\(\beta(v, v) &gt; 0\)</span> для всех <span class="process-math">\(v \in V \sm \{ 0 \}\)</span>], тогда как для билинейной формы эти свойства не требуются.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <details id="x9BilinearExample" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">билинейные формы.</span>
 </h3></summary>
@@ -585,7 +585,7 @@ w \in V\)</span>) и положительной определенности (т
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x9BilinearExample-2-1-1">
 <li id="x9BilinearExample-2-1-1-1">
 <div class="para logical" id="x9BilinearExample-2-1-1-1-1">
-<div class="para">Функция <span class="process-math">\(\fun \beta {\F3 \times \F3} {\F{}}\)</span>, определяемая формулой</div>
+<div class="para">Функция <span class="process-math">\(\fun \beta {\F3 \times \F3} {\F{}}\)</span>, заданная формулой</div>
 <div class="displaymath process-math" id="x9BilinearExample-2-1-1-1-1-2">
 \begin{equation*}
 \beta(  (x_1, x_2, x_3), (y_1, y_2, y_3)  ) = x_1 y_2 - 5 x_2 y_3 + 2 x_3 y_1
@@ -598,13 +598,13 @@ w \in V\)</span>) и положительной определенности (т
 </li>
 <li id="x9BilinearExample-2-1-1-2">
 <div class="para logical" id="x9BilinearExample-2-1-1-2-1">
-<div class="para">Предположим, что <span class="process-math">\(A\)</span> — матрица размера <span class="process-math">\(n\)</span> на <span class="process-math">\(n\)</span> с <span class="process-math">\(A_{j,k} \in \F{}\)</span> в строке <span class="process-math">\(j\)</span> и столбце <span class="process-math">\(k\)</span>. Определим билинейную форму <span class="process-math">\(\beta_A\)</span> на <span class="process-math">\(\F n\)</span> с помощью</div>
+<div class="para">Пусть <span class="process-math">\(A\)</span> — матрица размера <span class="process-math">\(n\)</span> на <span class="process-math">\(n\)</span>, у которой на пересечении <span class="process-math">\(j\)</span>-й строки и <span class="process-math">\(k\)</span>-го столбца стоит элемент <span class="process-math">\(A_{j,k} \in \F{}\)</span>. Определим билинейную форму <span class="process-math">\(\beta_A\)</span> на <span class="process-math">\(\F n\)</span> формулой</div>
 <div class="displaymath process-math" id="x9BilinearExample-2-1-1-2-1-9">
 \begin{equation*}
 \beta_A(  (x_1, \ldots, x_n), (y_1, \ldots, y_n)  ) = \sum_{k=1}^n \sum_{j=1}^n A_{j,k} x_j y_k.
 \end{equation*}
 </div>
-<div class="para">Первый пункт списка является частным случаем этого пункта списка с <span class="process-math">\(n = 3\)</span> и</div>
+<div class="para">Первый пункт этого примера является частным случаем данного пункта при <span class="process-math">\(n = 3\)</span> и</div>
 <div class="displaymath process-math" id="x9BilinearExample-2-1-1-2-1-11">
 \begin{equation*}
 A = \begin{pmatrix}0 \amp  1 \amp  0\\ 0 \amp  0 \amp  -5 \\ 2 \amp  0 \amp  0 \end{pmatrix} .
@@ -616,7 +616,7 @@ A = \begin{pmatrix}0 \amp  1 \amp  0\\ 0 \amp  0 \amp  -5 \\ 2 \amp  0 \amp  0 \
 </li>
 <li id="x9BilinearExample-2-1-1-3">
 <div class="para logical" id="x9BilinearExample-2-1-1-3-1">
-<div class="para">Предположим, что <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением, а <span class="process-math">\(T \in \Lc(V)\)</span>. Тогда функция <span class="process-math">\(\fun \beta {V{} \times V} {\R{}}\)</span>, определенная формулой</div>
+<div class="para">Пусть <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением и <span class="process-math">\(T \in \Lc(V)\)</span>. Тогда функция <span class="process-math">\(\fun \beta {V{} \times V} {\R{}}\)</span>, заданная формулой</div>
 <div class="displaymath process-math" id="x9BilinearExample-2-1-1-3-1-4">
 \begin{equation*}
 \beta(u, v) = \langle u, Tv \rangle
@@ -629,7 +629,7 @@ A = \begin{pmatrix}0 \amp  1 \amp  0\\ 0 \amp  0 \amp  -5 \\ 2 \amp  0 \amp  0 \
 </li>
 <li id="x9BilinearExample-2-1-1-4">
 <div class="para logical" id="x9BilinearExample-2-1-1-4-1">
-<div class="para">Если <span class="process-math">\(n\)</span> — целое положительное число, то функция <span class="process-math">\(\fun \beta { \P{}_n(\R{}) \times \P{}_n(\R{}) } {\R{}}\)</span>, определенная формулой</div>
+<div class="para">Если <span class="process-math">\(n\)</span> — целое положительное число, то функция <span class="process-math">\(\fun \beta { \P{}_n(\R{}) \times \P{}_n(\R{}) } {\R{}}\)</span>, заданная формулой</div>
 <div class="displaymath process-math" id="x9BilinearExample-2-1-1-4-1-3">
 \begin{equation*}
 \beta(p,q) = p(2) \cdot q'(3)
@@ -642,7 +642,7 @@ A = \begin{pmatrix}0 \amp  1 \amp  0\\ 0 \amp  0 \amp  -5 \\ 2 \amp  0 \amp  0 \
 </li>
 <li id="x9BilinearExample-2-1-1-5">
 <div class="para logical" id="x9BilinearExample-2-1-1-5-1">
-<div class="para">Предположим, <span class="process-math">\(\phi, \tau \in V'\!\)</span>. Тогда функция <span class="process-math">\(\fun \beta {V{} \times V} {\F{}}\)</span>, определенная формулой</div>
+<div class="para">Пусть <span class="process-math">\(\phi, \tau \in V'\!\)</span>. Тогда функция <span class="process-math">\(\fun \beta {V{} \times V} {\F{}}\)</span>, заданная формулой</div>
 <div class="displaymath process-math" id="x9BilinearExample-2-1-1-5-1-3">
 \begin{equation*}
 \beta(u, v) = \phi(u) \cdot \tau(v)
@@ -655,7 +655,7 @@ A = \begin{pmatrix}0 \amp  1 \amp  0\\ 0 \amp  0 \amp  -5 \\ 2 \amp  0 \amp  0 \
 </li>
 <li id="x9BilinearExample-2-1-1-6">
 <div class="para logical" id="x9BilinearExample-2-1-1-6-1">
-<div class="para">В более общем плане предположим, что <span class="process-math">\(\phi_1, \ldots, \phi_n, \tau_1, \ldots, \tau_n \in V'\!\)</span>. Тогда функция <span class="process-math">\(\fun \beta {V{} \times V} {\F{}}\)</span>, определенная формулой</div>
+<div class="para">Более общо, пусть <span class="process-math">\(\phi_1, \ldots, \phi_n, \tau_1, \ldots, \tau_n \in V'\!\)</span>. Тогда функция <span class="process-math">\(\fun \beta {V{} \times V} {\F{}}\)</span>, заданная формулой</div>
 <div class="displaymath process-math" id="x9BilinearExample-2-1-1-6-1-3">
 \begin{equation*}
 \beta(u, v) = \phi_1(u) \cdot \tau_1(v) + \cdots + \phi_n(u) \cdot \tau_n(v)
@@ -671,22 +671,22 @@ A = \begin{pmatrix}0 \amp  1 \amp  0\\ 0 \amp  0 \amp  -5 \\ 2 \amp  0 \amp  0 \
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 9.2: bilinear forms"><a tabindex="-1" href="#x9BilinearExample" title="Copy heading and permalink for Example 9.2: билинейные формы" aria-label="Copy heading and permalink for Example 9.2: bilinear forms">🔗</a></div>
 </article></details>
-<div class="para" id="bilin_quad-2-8">Билинейная форма на <span class="process-math">\(V\)</span> — это функция от <span class="process-math">\(V{} \times V\)</span> до <span class="process-math">\(\F{}{}\)</span>. Поскольку <span class="process-math">\(V{} \times V\)</span> является векторным пространством, возникает вопрос, может ли билинейная форма также быть линейным отображением из <span class="process-math">\(V{} \times V\)</span> в <span class="process-math">\(\F{}{}\)</span>. Обратите внимание, что ни одна из билинейных форм в <a href="bilin_quad.html#x9BilinearExample" class="xref" data-knowl="./knowl/xref/x9BilinearExample.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 9.2: билинейные формы">Примере 9.2</a> не является линейным отображением, за исключением некоторых особых случаев, в которых билинейная форма является нулевым отображением. <a href="bilin_quad.html#x11zero" class="xref" data-knowl="./knowl/xref/x11zero.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 9.1.3.3">Упражнение 9.1.3.3</a> показывает, что билинейная форма <span class="process-math">\(\beta\)</span> на <span class="process-math">\(V\)</span> является линейным отображением на <span class="process-math">\(V{} \times V\)</span>, только если <span class="process-math">\(\beta = 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-8">Билинейная форма на <span class="process-math">\(V\)</span> — это функция из <span class="process-math">\(V{} \times V\)</span> в <span class="process-math">\(\F{}{}\)</span>. Поскольку <span class="process-math">\(V{} \times V\)</span> является векторным пространством, возникает вопрос: может ли билинейная форма быть одновременно и линейным отображением из <span class="process-math">\(V{} \times V\)</span> в <span class="process-math">\(\F{}{}\)</span>? Заметим, что ни одна из билинейных форм в <a href="bilin_quad.html#x9BilinearExample" class="xref" data-knowl="./knowl/xref/x9BilinearExample.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 9.2: билинейные формы">примере 9.2</a> не является линейным отображением, за исключением некоторых вырожденных случаев, когда билинейная форма равна нулевому отображению. В <a href="bilin_quad.html#x11zero" class="xref" data-knowl="./knowl/xref/x11zero.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 9.1.3.3">упражнении 9.1.3.3</a> показано, что билинейная форма <span class="process-math">\(\beta\)</span> на <span class="process-math">\(V\)</span> является линейным отображением на <span class="process-math">\(V{} \times V\)</span> только в том случае, когда <span class="process-math">\(\beta = 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="definition definition-like" id="bilin_quad-2-9"><h3 class="heading">
 <span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(V^{(2)}\)</span>.</span>
 </h3>
-<div class="para" id="bilin_quad-2-9-2-1">Множество билинейных форм на <span class="process-math">\(V\)</span> обозначается <span class="process-math">\(V^{(2)}\!\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-9-2-1">Множество всех билинейных форм на <span class="process-math">\(V\)</span> обозначается через <span class="process-math">\(V^{(2)}\!\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 9.3: V^{(2)}"><a tabindex="-1" href="#bilin_quad-2-9" title="Copy heading and permalink for Definition 9.3: V^{(2)}" aria-label="Copy heading and permalink for Definition 9.3: V^{(2)}">🔗</a></div>
 </article>
-<div class="para" id="bilin_quad-2-10">С обычными операциями сложения и умножения на скаляр функций <span class="process-math">\(V^{(2)}\)</span> является векторным пространством.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="bilin_quad-2-11">Для оператора <span class="process-math">\(T\)</span> в <span class="process-math">\(n\)</span>-мерном векторном пространстве <span class="process-math">\(V\)</span> и базиса <span class="process-math">\(e_1, \ldots,
-e_n\)</span> пространства <span class="process-math">\(V{}\)</span> мы использовали матрицу размера <span class="process-math">\(n\)</span> на <span class="process-math">\(n\)</span>, чтобы предоставить информацию о <span class="process-math">\(T{}\)</span>. Теперь мы делаем то же самое для билинейных форм на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-10">Относительно обычных операций сложения функций и умножения функции на скаляр множество <span class="process-math">\(V^{(2)}\)</span> является векторным пространством.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-11">Для оператора <span class="process-math">\(T\)</span> на <span class="process-math">\(n\)</span>-мерном векторном пространстве <span class="process-math">\(V\)</span> и базиса <span class="process-math">\(e_1, \ldots,
+e_n\)</span> пространства <span class="process-math">\(V{}\)</span> мы использовали матрицу размера <span class="process-math">\(n\)</span> на <span class="process-math">\(n\)</span> для описания оператора <span class="process-math">\(T{}\)</span>. Теперь мы проделаем то же самое для билинейных форм на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="definition definition-like" id="bilin_quad-2-12"><h3 class="heading">
 <span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">матрица билинейной формы, <span class="process-math">\(\M(\beta)\)</span>.</span>
 </h3>
 <div class="para logical" id="bilin_quad-2-12-2-1">
-<div class="para">Предположим, что <span class="process-math">\(\beta\)</span> — билинейная форма на <span class="process-math">\(V\)</span>, а <span class="process-math">\(e_1, \ldots,
-e_n\)</span> — базис <span class="process-math">\(V{}\)</span>. <dfn class="terminology">Матрица</dfn> <span class="process-math">\(\beta\)</span> относительно этого базиса — это n n матрица <span class="process-math">\(\M(\beta)\)</span>, элемент <span class="process-math">\(\M(\beta)_{j,k}\)</span> которой в строке <span class="process-math">\(j\)</span>, столбце <span class="process-math">\(k\)</span> определяется выражением</div>
+<div class="para">Пусть <span class="process-math">\(\beta\)</span> — билинейная форма на <span class="process-math">\(V\)</span> и <span class="process-math">\(e_1, \ldots,
+e_n\)</span> — базис пространства <span class="process-math">\(V{}\)</span>. <dfn class="terminology">Матрицей</dfn> билинейной формы <span class="process-math">\(\beta\)</span> в этом базисе называется матрица <span class="process-math">\(\M(\beta)\)</span> размера n на n, элемент <span class="process-math">\(\M(\beta)_{j,k}\)</span> которой в <span class="process-math">\(j\)</span>-й строке и <span class="process-math">\(k\)</span>-м столбце задаётся равенством</div>
 <div class="displaymath process-math" id="bilin_quad-2-12-2-1-11">
 \begin{equation*}
 \M(\beta)_{j,k} = \beta(e_j, e_k)\text{.}
@@ -697,37 +697,37 @@ e_n\)</span> — базис <span class="process-math">\(V{}\)</span>. <dfn clas
 <div class="para" id="bilin_quad-2-12-2-2">Если базис <span class="process-math">\(e_1, \ldots, e_n\)</span> не ясен из контекста, то используется обозначение <span class="process-math">\(\M( \beta, (e_1, \ldots, e_n) )\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-12-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 9.4: matrix of a bilinear form,  \M(\beta)"><a tabindex="-1" href="#bilin_quad-2-12" title="Copy heading and permalink for Definition 9.4: матрица билинейной формы, \M(\beta)" aria-label="Copy heading and permalink for Definition 9.4: matrix of a bilinear form,  \M(\beta)">🔗</a></div>
 </article>
-<div class="para" id="bilin_quad-2-13">Напомним, что <span class="process-math">\(\F{n,n}\)</span> обозначает векторное пространство матриц размером <span class="process-math">\(n\)</span> на <span class="process-math">\(n\)</span> с элементами из <span class="process-math">\(\F{}\)</span>, а <span class="process-math">\(\dim \F{n,n} = n^2\)</span> (см. <a href="matrices.html#x3mnmatrices" class="xref" data-knowl="./knowl/xref/x3mnmatrices.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Обозначение 3.39: \F{m,n}">Обозначение 3.39</a> и <a href="matrices.html#dimFmn" class="xref" data-knowl="./knowl/xref/dimFmn.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.40: \dim \F{m,n} = mn">Теорему 3.40</a>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-13">Напомним, что через <span class="process-math">\(\F{n,n}\)</span> обозначается векторное пространство матриц размера <span class="process-math">\(n\)</span> на <span class="process-math">\(n\)</span> с элементами из <span class="process-math">\(\F{}\)</span> и что <span class="process-math">\(\dim \F{n,n} = n^2\)</span> (см. <a href="matrices.html#x3mnmatrices" class="xref" data-knowl="./knowl/xref/x3mnmatrices.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Обозначение 3.39: \F{m,n}">обозначение 3.39</a> и <a href="matrices.html#dimFmn" class="xref" data-knowl="./knowl/xref/dimFmn.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.40: \dim \F{m,n} = mn">теорему 3.40</a>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x9dimV2"><h3 class="heading">
 <span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\dim V^{(2)} = (\dim V)^2\)</span>.</span>
 </h3>
-<div class="para" id="x9dimV2-2-1">Предположим, что <span class="process-math">\(e_1, \ldots, e_n\)</span> — базис <span class="process-math">\(V{}\)</span>. Тогда отображение <span class="process-math">\(\beta \mapsto \M(\beta)\)</span> является изоморфизмом <span class="process-math">\(V^{(2)}\)</span> на <span class="process-math">\(\FF{n,n}\)</span>. Кроме того, <span class="process-math">\(\dim V^{(2)} = (\dim V)^2{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9dimV2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x9dimV2-2-1">Пусть <span class="process-math">\(e_1, \ldots, e_n\)</span> — базис пространства <span class="process-math">\(V{}\)</span>. Тогда отображение <span class="process-math">\(\beta \mapsto \M(\beta)\)</span> является изоморфизмом пространства <span class="process-math">\(V^{(2)}\)</span> на <span class="process-math">\(\FF{n,n}\)</span>. Кроме того, <span class="process-math">\(\dim V^{(2)} = (\dim V)^2{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9dimV2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Theorem 9.5: \dim V^{(2)} = (\dim V)^2"><a tabindex="-1" href="#x9dimV2" title="Copy heading and permalink for Theorem 9.5: \dim V^{(2)} = (\dim V)^2" aria-label="Copy heading and permalink for Theorem 9.5: \dim V^{(2)} = (\dim V)^2">🔗</a></div>
 </article>
 <details id="bilin_quad-2-15" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="bilin_quad-2-15-1">
-<div class="para">Отображение <span class="process-math">\(\beta \mapsto \M(\beta)\)</span>, очевидно, является линейным отображением <span class="process-math">\(V^{(2)}\)</span> в <span class="process-math">\(\FF{n,n}\)</span>. Для <span class="process-math">\(A \in \FF{n,n}\)</span> определим билинейную форму <span class="process-math">\(\beta_A\)</span> на <span class="process-math">\(V\)</span> формулой</div>
+<div class="para">Отображение <span class="process-math">\(\beta \mapsto \M(\beta)\)</span>, очевидно, является линейным отображением из <span class="process-math">\(V^{(2)}\)</span> в <span class="process-math">\(\FF{n,n}\)</span>. Для матрицы <span class="process-math">\(A \in \FF{n,n}\)</span> определим билинейную форму <span class="process-math">\(\beta_A\)</span> на <span class="process-math">\(V\)</span> равенством</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x9BilinearExample.html" id="bilin_quad-2-15-1-7">
 \begin{equation*}
 \beta_A( x_1 e_1+ \cdots + x_n e_n, y_1 e_1 + \cdots + y_n e_n ) = \sum_{k=1}^n \sum_{j=1}^n A_{j,k} x_j y_k
 \end{equation*}
 </div>
-<div class="para">для <span class="process-math">\(x_1, \ldots, x_n, y_1, \ldots,
+<div class="para">при <span class="process-math">\(x_1, \ldots, x_n, y_1, \ldots,
 y_n \in \F{}\)</span> (если <span class="process-math">\(V = \F{n}\)</span> и <span class="process-math">\(e_1, \ldots,
-e_n\)</span> являются стандартным базисом <span class="process-math">\(\FF{n}\)</span>, то этот <span class="process-math">\(\beta_A\)</span> совпадает с билинейной формой <span class="process-math">\(\beta_A\)</span> во втором пункте <a href="bilin_quad.html#x9BilinearExample" class="xref" data-knowl="./knowl/xref/x9BilinearExample.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 9.2: билинейные формы">Примера 9.2</a>).</div>
+e_n\)</span> — стандартный базис пространства <span class="process-math">\(\FF{n}\)</span>, то эта форма <span class="process-math">\(\beta_A\)</span> совпадает с билинейной формой <span class="process-math">\(\beta_A\)</span> из второго пункта <a href="bilin_quad.html#x9BilinearExample" class="xref" data-knowl="./knowl/xref/x9BilinearExample.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 9.2: билинейные формы">примера 9.2</a>).</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="bilin_quad-2-15-2">Линейное отображение <span class="process-math">\(\beta \mapsto \M(\beta)\)</span> из <span class="process-math">\(V^{(2)}\)</span> в <span class="process-math">\(\F{n,n}\)</span> и линейное отображение <span class="process-math">\(A \mapsto \beta_A\)</span> из <span class="process-math">\(\F{n,n}\)</span> в <span class="process-math">\(V^{(2)}\)</span> являются обратными друг другу, поскольку <span class="process-math">\(\beta_{\M(\beta)} = \beta\)</span> для всех <span class="process-math">\(\beta \in V^{(2)}\)</span> и <span class="process-math">\(\M(\beta_A) = A\)</span> для всех <span class="process-math">\(A \in \FF{n,n}\)</span>, как вы должны убедиться.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-15-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="bilin_quad-2-15-3">Таким образом, оба отображения являются изоморфизмами, и два пространства, которые они соединяют, имеют одинаковую размерность. Следовательно, <span class="process-math">\(\dim V^{(2)} = \dim \F{n,n} = n^2 = (\dim V)^2{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-15-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-15-2">Линейное отображение <span class="process-math">\(\beta \mapsto \M(\beta)\)</span> из <span class="process-math">\(V^{(2)}\)</span> в <span class="process-math">\(\F{n,n}\)</span> и линейное отображение <span class="process-math">\(A \mapsto \beta_A\)</span> из <span class="process-math">\(\F{n,n}\)</span> в <span class="process-math">\(V^{(2)}\)</span> взаимно обратны, поскольку <span class="process-math">\(\beta_{\M(\beta)} = \beta\)</span> для всех <span class="process-math">\(\beta \in V^{(2)}\)</span> и <span class="process-math">\(\M(\beta_A) = A\)</span> для всех <span class="process-math">\(A \in \FF{n,n}\)</span>, в чём читателю предлагается убедиться самостоятельно.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-15-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-15-3">Следовательно, оба отображения являются изоморфизмами, а связываемые ими пространства имеют одинаковую размерность. Таким образом, <span class="process-math">\(\dim V^{(2)} = \dim \F{n,n} = n^2 = (\dim V)^2{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-15-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 9.1.1.1"><a tabindex="-1" href="#bilin_quad-2-15" title="Copy heading and permalink for Proof 9.1.1.1" aria-label="Copy heading and permalink for Proof 9.1.1.1">🔗</a></div>
 </article></details>
-<div class="para" id="bilin_quad-2-16">Напомним, что <span class="process-math">\(\tran{C}\)</span> обозначает транспонирование матрицы <span class="process-math">\(C\)</span>. Матрица <span class="process-math">\(\tran{C}\)</span> получается перестановкой строк и столбцов <span class="process-math">\(C\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-16">Напомним, что через <span class="process-math">\(\tran{C}\)</span> обозначается матрица, транспонированная к матрице <span class="process-math">\(C\)</span>. Матрица <span class="process-math">\(\tran{C}\)</span> получается из матрицы <span class="process-math">\(C\)</span> заменой строк столбцами.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x11comp"><h3 class="heading">
 <span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">композиция билинейной формы и оператора.</span>
 </h3>
 <div class="para logical" id="x11comp-2-1">
-<div class="para">Предположим, что <span class="process-math">\(\beta\)</span> — билинейная форма на <span class="process-math">\(V\)</span> и <span class="process-math">\(T \in \Lc(V)\)</span>. Определим билинейные формы <span class="process-math">\(\alpha\)</span> и <span class="process-math">\(\rho\)</span> на <span class="process-math">\(V\)</span> формулой</div>
+<div class="para">Пусть <span class="process-math">\(\beta\)</span> — билинейная форма на <span class="process-math">\(V\)</span> и <span class="process-math">\(T \in \Lc(V)\)</span>. Определим билинейные формы <span class="process-math">\(\alpha\)</span> и <span class="process-math">\(\rho\)</span> на <span class="process-math">\(V\)</span> равенствами</div>
 <div class="displaymath process-math" id="x11comp-2-1-7">
 \begin{equation*}
 \alpha (u,v) = \beta(u, Tv) \andd \rho(u,v) = \beta(Tu, v).
@@ -736,7 +736,7 @@ e_n\)</span> являются стандартным базисом <span class=
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x11comp-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="x11comp-2-2">
-<div class="para">Пусть <span class="process-math">\(e_1, \ldots, e_n\)</span> — базис <span class="process-math">\(V{}\)</span>. Тогда</div>
+<div class="para">Пусть <span class="process-math">\(e_1, \ldots, e_n\)</span> — базис пространства <span class="process-math">\(V{}\)</span>. Тогда</div>
 <div class="displaymath process-math" id="x11comp-2-2-3">
 \begin{equation*}
 \M(\alpha ) = \M(\beta) \M(T) \andd \M(\rho) = \tran{\M(T)} \M(\beta).
@@ -749,7 +749,7 @@ e_n\)</span> являются стандартным базисом <span class=
 <details id="bilin_quad-2-18" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="bilin_quad-2-18-1">
-<div class="para">Если <span class="process-math">\(j, k \in \{ 1, \ldots, n \}\)</span>, то</div>
+<div class="para">Если <span class="process-math">\(j, k \in \{ 1, \ldots, n \}\)</span>, то множество</div>
 <div class="displaymath process-math" id="bilin_quad-2-18-1-2">
 \begin{align*}
 \M(\alpha )_{j,k} \amp = \alpha (e_j, e_k)\\
@@ -761,16 +761,16 @@ e_n\)</span> являются стандартным базисом <span class=
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-18-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="bilin_quad-2-18-2">Таким образом, <span class="process-math">\(\M(\alpha ) = \M(\beta) \M(T)\)</span>. Доказательство подобия <span class="process-math">\(\M(\rho) = \tran{\M(T)} \M(\beta)\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-18-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-18-2">Следовательно, <span class="process-math">\(\M(\alpha ) = \M(\beta) \M(T)\)</span>. Равенство <span class="process-math">\(\M(\rho) = \tran{\M(T)} \M(\beta)\)</span> доказывается аналогично.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-18-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 9.1.1.2"><a tabindex="-1" href="#bilin_quad-2-18" title="Copy heading and permalink for Proof 9.1.1.2" aria-label="Copy heading and permalink for Proof 9.1.1.2">🔗</a></div>
 </article></details>
-<div class="para" id="bilin_quad-2-19">Результат ниже показывает, как изменится матрица билинейной формы, если мы поменяем базис. Формулу в приведенном ниже результате следует сравнить с формулой замены базиса для матрицы оператора (см. <a href="invertible.html#x303" class="xref" data-knowl="./knowl/xref/x303.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.84: формула изменения базиса">Теорему 3.84</a>). Эти две формулы аналогичны, за исключением того, что транспонированная <span class="process-math">\(\tran{C}\)</span> появляется в приведенной ниже формуле, а обратная <span class="process-math">\(C^{-1}\)</span> появляется в формуле смены базиса для матрицы оператора.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-19">Следующий результат показывает, как изменяется матрица билинейной формы при замене базиса. Формулу в приведённой ниже теореме следует сравнить с формулой замены базиса для матрицы оператора (см. <a href="invertible.html#x303" class="xref" data-knowl="./knowl/xref/x303.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.84: формула замены базиса">теорему 3.84</a>). Эти две формулы похожи, за исключением того, что в формуле ниже стоит транспонированная матрица <span class="process-math">\(\tran{C}\)</span>, тогда как в формуле замены базиса для матрицы оператора стоит обратная матрица <span class="process-math">\(C^{-1}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x11change"><h3 class="heading">
-<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">формула изменения базиса.</span>
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">формула замены базиса.</span>
 </h3>
 <div class="para logical" id="x11change-2-1">
-<div class="para">Предположим, <span class="process-math">\(\beta \in V^{(2)}\!\)</span>. Предположим, <span class="process-math">\(e_1, \ldots, e_n\)</span> и <span class="process-math">\(f_1, \ldots,
-f_n\)</span> являются базисами <span class="process-math">\(V{}\)</span>. Пусть</div>
+<div class="para">Пусть <span class="process-math">\(\beta \in V^{(2)}\!\)</span>. Пусть <span class="process-math">\(e_1, \ldots, e_n\)</span> и <span class="process-math">\(f_1, \ldots,
+f_n\)</span> — базисы пространства <span class="process-math">\(V{}\)</span>. Положим</div>
 <div class="displaymath process-math" id="x11change-2-1-6">
 \begin{equation*}
 A= \M\bigl(\beta, (e_1, \ldots, e_n)\bigr) \andd B = \M\bigl(\beta, (f_1, \ldots, f_n)\bigr)
@@ -785,12 +785,12 @@ A = \tran{C} B C\text{.}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x11change-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.7: change-of-basis formula"><a tabindex="-1" href="#x11change" title="Copy heading and permalink for Theorem 9.7: формула изменения базиса" aria-label="Copy heading and permalink for Theorem 9.7: change-of-basis formula">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.7: change-of-basis formula"><a tabindex="-1" href="#x11change" title="Copy heading and permalink for Theorem 9.7: формула замены базиса" aria-label="Copy heading and permalink for Theorem 9.7: change-of-basis formula">🔗</a></div>
 </article>
 <details id="bilin_quad-2-21" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="bilin_quad-2-21-1">
-<div class="para">Лемма о линейном отображении <a href="vslinear.html#x3linearmap" class="xref" data-knowl="./knowl/xref/x3linearmap.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.4: лемма о линейном отображении">Теорема 3.4</a> говорит нам, что существует оператор <span class="process-math">\(T \in \Lc(V)\)</span> такой, что <span class="process-math">\(Tf_k = e_k\)</span> для каждого <span class="process-math">\(k = 1, \ldots, n\)</span>. Из определения матрицы оператора по базису следует, что</div>
+<div class="para">По лемме о задании линейного отображения (<a href="vslinear.html#x3linearmap" class="xref" data-knowl="./knowl/xref/x3linearmap.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.4: лемма о линейном отображении">теорема 3.4</a>) существует такой оператор <span class="process-math">\(T \in \Lc(V)\)</span>, что <span class="process-math">\(Tf_k = e_k\)</span> при каждом <span class="process-math">\(k = 1, \ldots, n\)</span>. Из определения матрицы оператора в заданном базисе вытекает, что</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x3linearmap.html" id="bilin_quad-2-21-1-5">
 \begin{equation*}
 \M(  T, (f_1, \ldots, f_n)  ) = C.
@@ -799,7 +799,7 @@ A = \tran{C} B C\text{.}
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-21-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="bilin_quad-2-21-2">
-<div class="para">Определим билинейные формы <span class="process-math">\(\alpha , \rho\)</span> на <span class="process-math">\(V\)</span> формулой</div>
+<div class="para">Определим билинейные формы <span class="process-math">\(\alpha , \rho\)</span> на <span class="process-math">\(V\)</span> формулами</div>
 <div class="displaymath process-math" id="bilin_quad-2-21-2-3">
 \begin{equation*}
 \alpha (u, v) = \beta(u, Tv) \andd \rho(u,v) = \alpha (Tu, v) = \beta(Tu, Tv).
@@ -809,7 +809,7 @@ A = \tran{C} B C\text{.}
 </div>
 <div class="para logical" id="bilin_quad-2-21-3">
 <div class="para">Тогда <span class="process-math">\(\beta(e_j, e_k) = \beta(Tf_j, Tf_k) = \rho(f_j, f_k)\)</span> для всех <span class="process-math">\(j,
-k \in \{ 1, \ldots, n \}\)</span>. Таким образом</div>
+k \in \{ 1, \ldots, n \}\)</span>. Следовательно,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x11comp.html" id="bilin_quad-2-21-3-3">
 \begin{align*}
 A \amp = \M(  \rho, (f_1, \ldots, f_n)  )\\
@@ -817,7 +817,7 @@ A \amp = \M(  \rho, (f_1, \ldots, f_n)  )\\
 \amp = \tran{C} B C\text{,}
 \end{align*}
 </div>
-<div class="para">где вторая и третья строки следуют из <a href="bilin_quad.html#x11comp" class="xref" data-knowl="./knowl/xref/x11comp.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.6: композиция билинейной формы и оператора">теоремы 9.6</a>.</div>
+<div class="para">где второе и третье равенства следуют из <a href="bilin_quad.html#x11comp" class="xref" data-knowl="./knowl/xref/x11comp.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.6: композиция билинейной формы и оператора">теоремы 9.6</a>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-21-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 9.1.1.3"><a tabindex="-1" href="#bilin_quad-2-21" title="Copy heading and permalink for Proof 9.1.1.3" aria-label="Copy heading and permalink for Proof 9.1.1.3">🔗</a></div>
@@ -827,7 +827,7 @@ A \amp = \M(  \rho, (f_1, \ldots, f_n)  )\\
 </h3></summary>
 <article class="example example-like knowl__content">
 <div class="para logical" id="bilin_quad-2-22-2-1">
-<div class="para">Определим билинейную форму <span class="process-math">\(\beta\)</span> на <span class="process-math">\(\P{}_2(\R{})\)</span> через <span class="process-math">\(\beta(p,q) = p(2) \cdot q'(3)\)</span>. Пусть</div>
+<div class="para">Зададим билинейную форму <span class="process-math">\(\beta\)</span> на <span class="process-math">\(\P{}_2(\R{})\)</span> формулой <span class="process-math">\(\beta(p,q) = p(2) \cdot q'(3)\)</span>. Пусть</div>
 <div class="displaymath process-math" id="bilin_quad-2-22-2-1-4">
 \begin{equation*}
 A =  \M(  \beta, (1, x-2, (x-3)^2 )  ) \andd B = \M( \beta, (1, x, x^2)  )
@@ -841,7 +841,7 @@ A = \begin{pmatrix}0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  0 \\ 0 \amp  1 \amp  0 \
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-22-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="bilin_quad-2-22-2-2">Теперь формула замены базиса <a href="bilin_quad.html#x11change" class="xref" data-knowl="./knowl/xref/x11change.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.7: формула изменения базиса">Теорема 9.7</a> утверждает, что <span class="process-math">\(A = \tran{C} B C\)</span>, что вы можете проверить с помощью умножения матриц, используя приведенные выше матрицы.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-22-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-2-22-2-2">Формула замены базиса (<a href="bilin_quad.html#x11change" class="xref" data-knowl="./knowl/xref/x11change.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.7: формула замены базиса">теорема 9.7</a>) утверждает, что <span class="process-math">\(A = \tran{C} B C\)</span>; в этом можно непосредственно убедиться, перемножив выписанные выше матрицы.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-2-22-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 9.8: the matrix of a bilinear form on  \P_2(\R)"><a tabindex="-1" href="#bilin_quad-2-22" title="Copy heading and permalink for Example 9.8: матрица билинейной формы на \P_2(\R)" aria-label="Copy heading and permalink for Example 9.8: the matrix of a bilinear form on  \P_2(\R)">🔗</a></div>
 </article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 9.1.1: Bilinear Forms"><a tabindex="-1" href="#bilin_quad-2" title="Copy heading and permalink for Subsection 9.1.1: Билинейные формы" aria-label="Copy heading and permalink for Subsection 9.1.1: Bilinear Forms">🔗</a></div>
 </section>
@@ -859,7 +859,7 @@ A = \begin{pmatrix}0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  0 \\ 0 \amp  1 \amp  0 \
 \rho(u,w) = \rho(w, u)
 \end{equation*}
 </div>
-<div class="para">для всех <span class="process-math">\(u,w \in V{}\)</span>. Множество симметричных билинейных форм на <span class="process-math">\(V\)</span> обозначается <span class="process-math">\(V^{(2)}_{\text{ sym } }\)</span>.</div>
+<div class="para">для всех <span class="process-math">\(u,w \in V{}\)</span>. Множество всех симметричных билинейных форм на <span class="process-math">\(V\)</span> обозначается через <span class="process-math">\(V^{(2)}_{\text{ sym } }\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 9.9: symmetric bilinear form, V^{(2)}_{\text{sym}}"><a tabindex="-1" href="#bilin_quad-3-2" title="Copy heading and permalink for Definition 9.9: симметричная билинейная форма, V^{(2)}_{\text{sym}}" aria-label="Copy heading and permalink for Definition 9.9: symmetric bilinear form, V^{(2)}_{\text{sym}}">🔗</a></div>
@@ -872,39 +872,39 @@ A = \begin{pmatrix}0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  0 \\ 0 \amp  1 \amp  0 \
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="bilin_quad-3-3-2-1-1">
 <li id="bilin_quad-3-3-2-1-1-1">
 <div class="para logical" id="bilin_quad-3-3-2-1-1-1-1">
-<div class="para">Если <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением, а <span class="process-math">\(\rho \in V^{(2)}\)</span> определяется формулой</div>
+<div class="para">Если <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением и форма <span class="process-math">\(\rho \in V^{(2)}\)</span> задана равенством</div>
 <div class="displaymath process-math" id="bilin_quad-3-3-2-1-1-1-1-3">
 \begin{equation*}
 \rho(u, w) = \langle u, w \rangle ,
 \end{equation*}
 </div>
-<div class="para">тогда <span class="process-math">\(\rho\)</span> — симметричная билинейная форма на <span class="process-math">\(V{}\)</span>.</div>
+<div class="para">то <span class="process-math">\(\rho\)</span> является симметричной билинейной формой на <span class="process-math">\(V{}\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-3-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#bilin_quad-3-3-2-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="bilin_quad-3-3-2-1-1-2">
 <div class="para logical" id="bilin_quad-3-3-2-1-1-2-1">
-<div class="para">Предположим, что <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением, а <span class="process-math">\(T \in \Lc(V)\)</span>. Определите <span class="process-math">\(\rho \in V^{(2)}\)</span> по</div>
+<div class="para">Пусть <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением и <span class="process-math">\(T \in \Lc(V)\)</span>. Зададим форму <span class="process-math">\(\rho \in V^{(2)}\)</span> равенством</div>
 <div class="displaymath process-math" id="bilin_quad-3-3-2-1-1-2-1-4">
 \begin{equation*}
 \rho(u, w) = \langle u, Tw \rangle .
 \end{equation*}
 </div>
-<div class="para">Тогда <span class="process-math">\(\rho\)</span> — симметричная билинейная форма на <span class="process-math">\(V\)</span> тогда и только тогда, когда <span class="process-math">\(T\)</span> — самосопряженный оператор (предыдущий пункт — это частный случай <span class="process-math">\(T = I\)</span>).</div>
+<div class="para">Тогда <span class="process-math">\(\rho\)</span> является симметричной билинейной формой на <span class="process-math">\(V\)</span> в том и только том случае, когда <span class="process-math">\(T\)</span> — самосопряжённый оператор (предыдущий пункт отвечает частному случаю <span class="process-math">\(T = I\)</span>).</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-3-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#bilin_quad-3-3-2-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="bilin_quad-3-3-2-1-1-3">
 <div class="para logical" id="bilin_quad-3-3-2-1-1-3-1">
-<div class="para">Предположим, что <span class="process-math">\(\fun \rho {\Lc(V) \times \Lc(V)} {\F{}}\)</span> определяется формулой</div>
+<div class="para">Пусть отображение <span class="process-math">\(\fun \rho {\Lc(V) \times \Lc(V)} {\F{}}\)</span> определено формулой</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x372.html" id="bilin_quad-3-3-2-1-1-3-1-2">
 \begin{equation*}
 \rho(S,T) = \tr(ST).
 \end{equation*}
 </div>
-<div class="para">Тогда <span class="process-math">\(\rho\)</span> — симметричная билинейная форма на <span class="process-math">\(\Lc(V)\)</span>, поскольку трассировка — линейный функционал на <span class="process-math">\(\Lc(V)\)</span> и <span class="process-math">\(\tr(ST) = \tr(TS)\)</span> для всех <span class="process-math">\(S, T \in \Lc(V)\)</span>; см. <a href="x7trace.html#x372" class="xref" data-knowl="./knowl/xref/x372.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.56: след линейный">Теорему 8.56</a>.</div>
+<div class="para">Тогда <span class="process-math">\(\rho\)</span> является симметричной билинейной формой на <span class="process-math">\(\Lc(V)\)</span>, так как след — это линейный функционал на <span class="process-math">\(\Lc(V)\)</span> и <span class="process-math">\(\tr(ST) = \tr(TS)\)</span> для всех <span class="process-math">\(S, T \in \Lc(V)\)</span> (см. <a href="x7trace.html#x372" class="xref" data-knowl="./knowl/xref/x372.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 8.56: линейность следа">теорему 8.56</a>).</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-3-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#bilin_quad-3-3-2-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
@@ -915,17 +915,17 @@ A = \begin{pmatrix}0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  0 \\ 0 \amp  1 \amp  0 \
 <div class="autopermalink" aria-hidden="true" data-description="Example 9.10: symmetric bilinear forms"><a tabindex="-1" href="#bilin_quad-3-3" title="Copy heading and permalink for Example 9.10: симметричные билинейные формы" aria-label="Copy heading and permalink for Example 9.10: symmetric bilinear forms">🔗</a></div>
 </article></details>
 <article class="definition definition-like" id="bilin_quad-3-4"><h3 class="heading">
-<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">симметричная матрица.</span>
+<span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Симметричная матрица.</span>
 </h3>
-<div class="para" id="bilin_quad-3-4-2-1">Квадратная матрица <span class="process-math">\(A\)</span> называется <em class="emphasis">симметричной</em>, если она равна ее транспонированной.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 9.11: symmetric matrix"><a tabindex="-1" href="#bilin_quad-3-4" title="Copy heading and permalink for Definition 9.11: симметричная матрица" aria-label="Copy heading and permalink for Definition 9.11: symmetric matrix">🔗</a></div>
+<div class="para" id="bilin_quad-3-4-2-1">Квадратная матрица <span class="process-math">\(A\)</span> называется <em class="emphasis">симметричной</em>, если она равна своей транспонированной матрице.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 9.11: symmetric matrix"><a tabindex="-1" href="#bilin_quad-3-4" title="Copy heading and permalink for Definition 9.11: Симметричная матрица" aria-label="Copy heading and permalink for Definition 9.11: symmetric matrix">🔗</a></div>
 </article>
-<div class="para" id="bilin_quad-3-5">Оператор на <span class="process-math">\(V\)</span> может иметь симметричную матрицу относительно некоторых, но не всех базисов <span class="process-math">\(V{}\)</span>. Напротив, следующий результат показывает, что билинейная форма на <span class="process-math">\(V\)</span> имеет симметричную матрицу либо относительно всех базисов <span class="process-math">\(V\)</span>, либо относительно всех базисов <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-5">Оператор на <span class="process-math">\(V\)</span> может иметь симметричную матрицу в некоторых, но не во всех базисах пространства <span class="process-math">\(V{}\)</span>. Напротив, следующий результат показывает, что матрица билинейной формы на <span class="process-math">\(V\)</span> либо симметрична во всех базисах пространства <span class="process-math">\(V\)</span>, либо не симметрична ни в одном базисе пространства <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x9symdiag"><h3 class="heading">
-<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">симметричные билинейные формы диагонализуемы.</span>
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">диагонализируемость симметричных билинейных форм.</span>
 </h3>
 <div class="para logical" id="x9symdiag-2-1">
-<div class="para">Предположим, <span class="process-math">\(\rho \in V^{(2)}\!\)</span>. Тогда следующие утверждения эквивалентны.</div>
+<div class="para">Пусть <span class="process-math">\(\rho \in V^{(2)}\!\)</span>. Тогда следующие условия равносильны.</div>
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x9symdiag-2-1-2">
 <li id="x9symdiag-2-1-2-1">
 <div class="para" id="x9symdiag-2-1-2-1-1"><span class="process-math">\(\rho\)</span> — симметричная билинейная форма на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9symdiag-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
@@ -934,38 +934,38 @@ A = \begin{pmatrix}0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  0 \\ 0 \amp  1 \amp  0 \
 <li id="x9symdiag-2-1-2-2">
 <div class="para" id="x9symdiag-2-1-2-2-1"><span class="process-math">\(\M( \rho, (e_1, \ldots,
 e_n) )\)</span> — симметричная матрица для любого базиса <span class="process-math">\(e_1, \ldots,
-e_n\)</span> матрицы <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9symdiag-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+e_n\)</span> пространства <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9symdiag-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#x9symdiag-2-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="x9symdiag-2-1-2-3">
 <div class="para" id="x9symdiag-2-1-2-3-1"><span class="process-math">\(\M( \rho, (e_1, \ldots,
 e_n) )\)</span> — симметричная матрица для некоторого базиса <span class="process-math">\(e_1, \ldots,
-e_n\)</span> матрицы <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9symdiag-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+e_n\)</span> пространства <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9symdiag-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item c"><a tabindex="-1" href="#x9symdiag-2-1-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
 </li>
 <li id="x9symdiag-2-1-2-4">
 <div class="para" id="x9symdiag-2-1-2-4-1"><span class="process-math">\(\M( \rho, (e_1, \ldots,
 e_n) )\)</span> — диагональная матрица для некоторого базиса <span class="process-math">\(e_1, \ldots,
-e_n\)</span> матрицы <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9symdiag-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+e_n\)</span> пространства <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9symdiag-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item d"><a tabindex="-1" href="#x9symdiag-2-1-2-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9symdiag-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.12: symmetric bilinear forms are diagonalizable"><a tabindex="-1" href="#x9symdiag" title="Copy heading and permalink for Theorem 9.12: симметричные билинейные формы диагонализуемы" aria-label="Copy heading and permalink for Theorem 9.12: symmetric bilinear forms are diagonalizable">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.12: symmetric bilinear forms are diagonalizable"><a tabindex="-1" href="#x9symdiag" title="Copy heading and permalink for Theorem 9.12: диагонализируемость симметричных билинейных форм" aria-label="Copy heading and permalink for Theorem 9.12: symmetric bilinear forms are diagonalizable">🔗</a></div>
 </article>
 <details id="bilin_quad-3-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
-<div class="para" id="bilin_quad-3-7-1">Сначала предположим, что (a) выполнено, поэтому <span class="process-math">\(\rho\)</span> — симметричная билинейная форма. Предположим, что <span class="process-math">\(e_1, \ldots,
-e_n\)</span> является базисом <span class="process-math">\(V{}\)</span> и <span class="process-math">\(j,k \in \{ 1, \ldots,
-n \}\)</span>. Тогда <span class="process-math">\(\rho(e_j, e_k) = \rho(e_k, e_j)\)</span>, поскольку <span class="process-math">\(\rho\)</span> симметричен. Таким образом, <span class="process-math">\(\M( \rho, (e_1, \ldots,
-e_n) )\)</span> является симметричной матрицей, что показывает, что из (a) следует (b).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="bilin_quad-3-7-2">Очевидно, что (б) влечет за собой (в).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-7-1">Предположим сначала, что выполнено условие (a), то есть <span class="process-math">\(\rho\)</span> — симметричная билинейная форма. Пусть <span class="process-math">\(e_1, \ldots,
+e_n\)</span> — базис пространства <span class="process-math">\(V{}\)</span> и <span class="process-math">\(j,k \in \{ 1, \ldots,
+n \}\)</span>. Тогда <span class="process-math">\(\rho(e_j, e_k) = \rho(e_k, e_j)\)</span> в силу симметричности формы <span class="process-math">\(\rho\)</span>. Следовательно, <span class="process-math">\(\M( \rho, (e_1, \ldots,
+e_n) )\)</span> — симметричная матрица, а значит, из (a) следует (b).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-7-2">Очевидно, что из (b) следует (c).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="bilin_quad-3-7-3">
-<div class="para">Теперь предположим, что (c) выполнено и <span class="process-math">\(e_1, \ldots,
-e_n\)</span> — базис матрицы <span class="process-math">\(V\)</span> такой, что <span class="process-math">\(\M(  \rho, (e_1, \ldots,
-e_n)  )\)</span> — симметричная матрица. Предположим <span class="process-math">\(u, w \in V{}\)</span>. Существуют <span class="process-math">\(a_1, \ldots, a_n, b_1, \ldots,
-b_n \in \F{}\)</span> такие, что <span class="process-math">\(u = a_1 e_1 + \cdots + a_n e_n\)</span> и <span class="process-math">\(w = b_1 e_1 + \cdots + b_n e_n\)</span>. Сейчас</div>
+<div class="para">Предположим теперь, что выполнено (c) и <span class="process-math">\(e_1, \ldots,
+e_n\)</span> — такой базис пространства <span class="process-math">\(V\)</span>, что <span class="process-math">\(\M(  \rho, (e_1, \ldots,
+e_n)  )\)</span> — симметричная матрица. Пусть <span class="process-math">\(u, w \in V{}\)</span>. Существуют такие скаляры <span class="process-math">\(a_1, \ldots, a_n, b_1, \ldots,
+b_n \in \F{}\)</span>, что <span class="process-math">\(u = a_1 e_1 + \cdots + a_n e_n\)</span> и <span class="process-math">\(w = b_1 e_1 + \cdots + b_n e_n\)</span>. Тогда</div>
 <div class="displaymath process-math" id="bilin_quad-3-7-3-8">
 \begin{align*}
 \rho(u, w) \amp = \rho(  \sum_{j=1}^n a_j e_j, \sum_{k=1}^n b_k e_k  )\\
@@ -975,13 +975,13 @@ b_n \in \F{}\)</span> такие, что <span class="process-math">\(u = a_1 e_
 \amp = \rho(w,u)\text{,}
 \end{align*}
 </div>
-<div class="para">где третья строка верна, поскольку <span class="process-math">\(\M(\rho)\)</span> — симметричная матрица. Уравнение выше показывает, что <span class="process-math">\(\rho\)</span> является симметричной билинейной формой, доказывая, что из (c) следует (a).</div>
+<div class="para">где третье равенство справедливо в силу симметричности матрицы <span class="process-math">\(\M(\rho)\)</span>. Приведённая выше цепочка равенств показывает, что <span class="process-math">\(\rho\)</span> — симметричная билинейная форма, что доказывает импликацию (c) => (a).</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="bilin_quad-3-7-4">К этому моменту мы доказали, что (a), (b), (c) эквивалентны. Поскольку каждая диагональная матрица симметрична, из (d) следует (c). Для завершения доказательства покажем, что из (a) следует (d) индукцией по <span class="process-math">\(n = \dim V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-7-4">К этому моменту мы доказали равносильность условий (a), (b) и (c). Поскольку всякая диагональная матрица симметрична, из (d) следует (c). Чтобы завершить доказательство, мы покажем по индукции по <span class="process-math">\(n = \dim V{}\)</span>, что из (a) следует (d).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="bilin_quad-3-7-5">
-<div class="para">Если <span class="process-math">\(n = 1\)</span>, то из (a) следует (d), поскольку каждая матрица размером <span class="process-math">\(1\)</span> на <span class="process-math">\(1\)</span> диагональна. Теперь предположим, что <span class="process-math">\(n &gt; 1\)</span> и импликация (a) <span class="process-math">\(\implies\)</span> (d) справедлива для одного измерения меньше. Предположим, что (а) выполнено, поэтому <span class="process-math">\(\rho\)</span> — симметричная билинейная форма. Если <span class="process-math">\(\rho = 0\)</span>, то матрица <span class="process-math">\(\rho\)</span> по каждому базису <span class="process-math">\(V\)</span> является нулевой матрицей, которая является диагональной матрицей. Следовательно, мы можем предположить, что <span class="process-math">\(\rho \ne 0\)</span>, а это значит, что существует <span class="process-math">\(u,
-w \in V\)</span> такой, что <span class="process-math">\(\rho(u, w) \ne 0\)</span>. Сейчас</div>
+<div class="para">Если <span class="process-math">\(n = 1\)</span>, то из (a) следует (d), поскольку всякая матрица размера <span class="process-math">\(1\)</span> на <span class="process-math">\(1\)</span> является диагональной. Пусть теперь <span class="process-math">\(n &gt; 1\)</span> и импликация (a) <span class="process-math">\(\implies\)</span> (d) верна для пространств размерности на единицу меньше. Предположим, что выполнено (a), то есть <span class="process-math">\(\rho\)</span> — симметричная билинейная форма. Если <span class="process-math">\(\rho = 0\)</span>, то матрица формы <span class="process-math">\(\rho\)</span> в любом базисе пространства <span class="process-math">\(V\)</span> является нулевой, а значит, диагональной. Поэтому можно считать, что <span class="process-math">\(\rho \ne 0\)</span>, то есть существуют такие векторы <span class="process-math">\(u,
+w \in V\)</span>, что <span class="process-math">\(\rho(u, w) \ne 0\)</span>. Заметим, что</div>
 <div class="displaymath process-math" id="bilin_quad-3-7-5-13">
 \begin{equation*}
 2 \rho(u, w) = \rho(u + w, u+w) - \rho(u, u) - \rho(w,w).
@@ -989,82 +989,82 @@ w \in V\)</span> такой, что <span class="process-math">\(\rho(u, w) \ne 
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="bilin_quad-3-7-6">Поскольку левая часть приведенного выше уравнения не равна нулю, три члена справа не могут все равняться <span class="process-math">\(0\)</span>. Следовательно, существует <span class="process-math">\(v \in V\)</span> такое, что <span class="process-math">\(\rho(v,v) \ne 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="bilin_quad-3-7-7">Пусть <span class="process-math">\(U = \{ u \in V : \rho(u,v) = 0 \}\)</span>. Таким образом, <span class="process-math">\(U\)</span> — это нуль-пространство линейного функционала <span class="process-math">\(u \mapsto \rho(u, v)\)</span> на <span class="process-math">\(V{}\)</span>. Этот линейный функционал не является нулевым линейным функционалом, поскольку <span class="process-math">\(v \notin U\)</span>. Таким образом, <span class="process-math">\(\dim U = n-1\)</span>. По нашему предположению индукции существует базис <span class="process-math">\(e_1, \ldots,
-e_{n-1}\)</span> формы <span class="process-math">\(U\)</span> такой, что симметричная билинейная форма <span class="process-math">\(\rho|_{U \times U}\)</span> имеет диагональную матрицу относительно этого базиса.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="bilin_quad-3-7-8">Поскольку <span class="process-math">\(v \notin U\)</span>, список <span class="process-math">\(e_1, \ldots, e_{n-1}, v\)</span> является базисом <span class="process-math">\(V{}\)</span>. Предположим <span class="process-math">\(k \in \{ 1, \ldots, n-1 \}\)</span>. Тогда <span class="process-math">\(\rho(e_k, v) = 0\)</span> по построению <span class="process-math">\(U\)</span>. Поскольку <span class="process-math">\(\rho\)</span> симметричен, у нас также есть <span class="process-math">\(\rho(v, e_k) = 0\)</span>. Таким образом, матрица <span class="process-math">\(\rho\)</span> относительно <span class="process-math">\(e_1, \ldots,
-e_{n-1}, v\)</span> является диагональной матрицей, что завершает доказательство того, что из (a) следует (d).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-7-6">Поскольку левая часть этого равенства отлична от нуля, три слагаемых в правой части не могут одновременно равняться <span class="process-math">\(0\)</span>. Следовательно, существует такой вектор <span class="process-math">\(v \in V\)</span>, что <span class="process-math">\(\rho(v,v) \ne 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-7-7">Положим <span class="process-math">\(U = \{ u \in V : \rho(u,v) = 0 \}\)</span>. Тогда <span class="process-math">\(U\)</span> — ядро линейного функционала <span class="process-math">\(u \mapsto \rho(u, v)\)</span> на <span class="process-math">\(V{}\)</span>. Этот линейный функционал не является нулевым, поскольку <span class="process-math">\(v \notin U\)</span>. Значит, <span class="process-math">\(\dim U = n-1\)</span>. По предположению индукции в подпространстве <span class="process-math">\(U\)</span> существует такой базис <span class="process-math">\(e_1, \ldots,
+e_{n-1}\)</span>, что сужение симметричной билинейной формы <span class="process-math">\(\rho|_{U \times U}\)</span> имеет в этом базисе диагональную матрицу.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-7-8">Так как <span class="process-math">\(v \notin U\)</span>, набор векторов <span class="process-math">\(e_1, \ldots, e_{n-1}, v\)</span> образует базис пространства <span class="process-math">\(V{}\)</span>. Пусть <span class="process-math">\(k \in \{ 1, \ldots, n-1 \}\)</span>. Тогда <span class="process-math">\(\rho(e_k, v) = 0\)</span> по построению подпространства <span class="process-math">\(U\)</span>. В силу симметричности формы <span class="process-math">\(\rho\)</span> имеем также <span class="process-math">\(\rho(v, e_k) = 0\)</span>. Таким образом, матрица формы <span class="process-math">\(\rho\)</span> в базисе <span class="process-math">\(e_1, \ldots,
+e_{n-1}, v\)</span> диагональна, что завершает доказательство импликации (a) => (d).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-7-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 9.1.2.1"><a tabindex="-1" href="#bilin_quad-3-7" title="Copy heading and permalink for Proof 9.1.2.1" aria-label="Copy heading and permalink for Proof 9.1.2.1">🔗</a></div>
 </article></details>
-<div class="para" id="bilin_quad-3-8">Предыдущий результат утверждает, что каждая симметричная билинейная форма имеет диагональную матрицу относительно некоторого базиса. Если наше векторное пространство является вещественным пространством со скалярным произведением, то следующий результат показывает, что каждая симметричная билинейная форма имеет диагональную матрицу относительно некоторого <dfn class="terminology">ортонормированного</dfn> базиса. Обратите внимание, что скалярное произведение здесь не связано с билинейной формой.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-8">Предыдущий результат утверждает, что всякая симметричная билинейная форма в некотором базисе имеет диагональную матрицу. Если же рассматриваемое векторное пространство является вещественным пространством со скалярным произведением, то следующий результат показывает, что всякая симметричная билинейная форма приводится к диагональному виду в некотором <dfn class="terminology">ортонормированном</dfn> базисе. Отметим, что скалярное произведение здесь никак не связано с самой билинейной формой.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x9diagortho"><h3 class="heading">
-<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.13</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">диагонализация симметричной билинейной формы ортонормированным базисом.</span>
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.13</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">диагонализация симметричной билинейной формы в ортонормированном базисе.</span>
 </h3>
-<div class="para" id="x9diagortho-2-1">Предположим, что <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением, а <span class="process-math">\(\rho\)</span> — симметричная билинейная форма на <span class="process-math">\(V{}\)</span>. Тогда <span class="process-math">\(\rho\)</span> имеет диагональную матрицу относительно некоторого ортонормированного базиса <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9diagortho-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.13: diagonalization of a symmetric bilinear form by an orthonormal basis"><a tabindex="-1" href="#x9diagortho" title="Copy heading and permalink for Theorem 9.13: диагонализация симметричной билинейной формы ортонормированным базисом" aria-label="Copy heading and permalink for Theorem 9.13: diagonalization of a symmetric bilinear form by an orthonormal basis">🔗</a></div>
+<div class="para" id="x9diagortho-2-1">Пусть <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением и <span class="process-math">\(\rho\)</span> — симметричная билинейная форма на <span class="process-math">\(V{}\)</span>. Тогда <span class="process-math">\(\rho\)</span> имеет диагональную матрицу в некотором ортонормированном базисе пространства <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9diagortho-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.13: diagonalization of a symmetric bilinear form by an orthonormal basis"><a tabindex="-1" href="#x9diagortho" title="Copy heading and permalink for Theorem 9.13: диагонализация симметричной билинейной формы в ортонормированном базисе" aria-label="Copy heading and permalink for Theorem 9.13: diagonalization of a symmetric bilinear form by an orthonormal basis">🔗</a></div>
 </article>
 <details id="bilin_quad-3-10" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
-<div class="para" id="bilin_quad-3-10-1">Пусть <span class="process-math">\(f_1, \ldots, f_n\)</span> — ортонормированный базис <span class="process-math">\(V{}\)</span>. Пусть <span class="process-math">\(B = \M( \rho, (f_1, \ldots, f_n) )\)</span>. Тогда <span class="process-math">\(B\)</span> — симметричная матрица (по <a href="bilin_quad.html#x9symdiag" class="xref" data-knowl="./knowl/xref/x9symdiag.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.12: симметричные билинейные формы диагонализуемы">теореме 9.12</a>). Пусть <span class="process-math">\(T \in \Lc(V)\)</span> — оператор такой, что <span class="process-math">\(\M( T, (f_1, \ldots,
-f_n) ) = B\)</span>. Таким образом, <span class="process-math">\(T\)</span> самосопряжена.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-10-1">Пусть <span class="process-math">\(f_1, \ldots, f_n\)</span> — некоторый ортонормированный базис пространства <span class="process-math">\(V{}\)</span>. Положим <span class="process-math">\(B = \M( \rho, (f_1, \ldots, f_n) )\)</span>. Тогда <span class="process-math">\(B\)</span> — симметричная матрица (по <a href="bilin_quad.html#x9symdiag" class="xref" data-knowl="./knowl/xref/x9symdiag.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.12: диагонализируемость симметричных билинейных форм">теореме 9.12</a>). Пусть <span class="process-math">\(T \in \Lc(V)\)</span> — такой оператор, что <span class="process-math">\(\M( T, (f_1, \ldots,
+f_n) ) = B\)</span>. Тогда оператор <span class="process-math">\(T\)</span> является самосопряжённым.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="bilin_quad-3-10-2">
-<div class="para">Вещественная спектральная теорема <a href="SpectralTheorem.html#x86" class="xref" data-knowl="./knowl/xref/x86.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 7.29: вещественная спектральная теорема">Теорема 7.29</a> утверждает, что <span class="process-math">\(T\)</span> имеет диагональную матрицу относительно некоторого ортонормированного базиса <span class="process-math">\(e_1, \ldots,
-e_n\)</span> матрицы <span class="process-math">\(V{}\)</span>. Пусть <span class="process-math">\(C = \M\bigl(I, (e_1, \ldots,
-e_n), (f_1, \ldots, f_n)\bigr)\)</span>. Таким образом, <span class="process-math">\(C^{-1} B C\)</span> является матрицей <span class="process-math">\(T\)</span> относительно базиса <span class="process-math">\(e_1, \ldots, e_n\)</span> (по <a href="invertible.html#x303" class="xref" data-knowl="./knowl/xref/x303.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.84: формула изменения базиса">теореме 3.84</a>). Следовательно, <span class="process-math">\(C^{-1} B C\)</span> — диагональная матрица. Сейчас</div>
+<div class="para">По вещественной спектральной теореме (<a href="SpectralTheorem.html#x86" class="xref" data-knowl="./knowl/xref/x86.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 7.29: вещественная спектральная теорема">теорема 7.29</a>) оператор <span class="process-math">\(T\)</span> имеет диагональную матрицу в некотором ортонормированном базисе <span class="process-math">\(e_1, \ldots,
+e_n\)</span> пространства <span class="process-math">\(V{}\)</span>. Положим <span class="process-math">\(C = \M\bigl(I, (e_1, \ldots,
+e_n), (f_1, \ldots, f_n)\bigr)\)</span>. Тогда <span class="process-math">\(C^{-1} B C\)</span> — матрица оператора <span class="process-math">\(T\)</span> в базисе <span class="process-math">\(e_1, \ldots, e_n\)</span> (по <a href="invertible.html#x303" class="xref" data-knowl="./knowl/xref/x303.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 3.84: формула замены базиса">теореме 3.84</a>). Следовательно, матрица <span class="process-math">\(C^{-1} B C\)</span> диагональна. Теперь имеем</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x86.html ./knowl/xref/x303.html ./knowl/xref/x11change.html ./knowl/xref/x7unitarymat.html" id="bilin_quad-3-10-2-11">
 \begin{equation*}
 \\M(  \rho, (e_1, \ldots, e_n)  ) = \tran{C} B C = C^{-1} B C,
 \end{equation*}
 </div>
-<div class="para">где первое равенство выполняется согласно <a href="bilin_quad.html#x11change" class="xref" data-knowl="./knowl/xref/x11change.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.7: формула изменения базиса">Теореме 9.7</a>, а второе равенство выполняется, поскольку <span class="process-math">\(C\)</span> — унитарная матрица с вещественными элементами (из чего следует, что <span class="process-math">\(C^{-1} = \tran{C}\)</span>; см. <a href="x3QR.html#x7unitarymat" class="xref" data-knowl="./knowl/xref/x7unitarymat.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 7.57: характеристики унитарных матриц">Теорема 7.57</a>).</div>
+<div class="para">где первое равенство справедливо по <a href="bilin_quad.html#x11change" class="xref" data-knowl="./knowl/xref/x11change.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.7: формула замены базиса">теореме 9.7</a>, а второе — поскольку <span class="process-math">\(C\)</span> является унитарной матрицей с вещественными элементами (откуда <span class="process-math">\(C^{-1} = \tran{C}\)</span>; см. <a href="x3QR.html#x7unitarymat" class="xref" data-knowl="./knowl/xref/x7unitarymat.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 7.57: характеризации унитарных матриц">теорему 7.57</a>).</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 9.1.2.2"><a tabindex="-1" href="#bilin_quad-3-10" title="Copy heading and permalink for Proof 9.1.2.2" aria-label="Copy heading and permalink for Proof 9.1.2.2">🔗</a></div>
 </article></details>
-<div class="para" id="bilin_quad-3-11">Теперь обратим внимание на знакопеременные билинейные формы. Знакопеременные полилинейные формы будут играть важную роль в нашем подходе к детерминантам далее в этой главе.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-11">Обратимся теперь к кососимметрическим (знакопеременным) билинейным формам. Кососимметрические полилинейные формы сыграют важнейшую роль в нашем подходе к определителям далее в этой главе.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="definition definition-like" id="bilin_quad-3-12"><h3 class="heading">
 <span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.14</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">кососимметрическая (знакопеременная) билинейная форма, <span class="process-math">\(V^{(2)}_{\text{alt}}\)</span>.</span>
 </h3>
 <div class="para logical" id="bilin_quad-3-12-2-1">
-<div class="para">Билинейная форма <span class="process-math">\(\alpha  \in V^{(2)}\)</span> называется <dfn class="terminology">знакопеременной (кососимметрической)</dfn>, если</div>
+<div class="para">Билинейная форма <span class="process-math">\(\alpha  \in V^{(2)}\)</span> называется <dfn class="terminology">кососимметрической</dfn> (или <dfn class="terminology">знакопеременной</dfn>), если</div>
 <div class="displaymath process-math" id="bilin_quad-3-12-2-1-5">
 \begin{equation*}
 \alpha (v,v) = 0
 \end{equation*}
 </div>
-<div class="para">для всех <span class="process-math">\(v \in V{}\)</span>. Множество знакопеременных билинейных форм на <span class="process-math">\(V\)</span> обозначим <span class="process-math">\(V^{(2)}_{\text{ alt } }\)</span>.</div>
+<div class="para">для всех <span class="process-math">\(v \in V{}\)</span>. Множество всех кососимметрических билинейных форм на <span class="process-math">\(V\)</span> обозначается через <span class="process-math">\(V^{(2)}_{\text{ alt } }\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 9.14: alternating bilinear form, V^{(2)}_{\text{alt}}"><a tabindex="-1" href="#bilin_quad-3-12" title="Copy heading and permalink for Definition 9.14: кососимметрическая (знакопеременная) билинейная форма, V^{(2)}_{\text{alt}}" aria-label="Copy heading and permalink for Definition 9.14: alternating bilinear form, V^{(2)}_{\text{alt}}">🔗</a></div>
 </article>
 <details id="x9alt" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.15</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">знакопеременные билинейные формы.</span>
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.15</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">кососимметрические билинейные формы.</span>
 </h3></summary>
 <article class="example example-like knowl__content">
 <div class="para logical" id="x9alt-2-1">
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x9alt-2-1-1">
 <li id="x9alt-2-1-1-1">
 <div class="para logical" id="x9alt-2-1-1-1-1">
-<div class="para">Предположим, что <span class="process-math">\(n \ge 3\)</span> и <span class="process-math">\(\fun \alpha  {\F n \times \F n} {\F{}}\)</span> определяются формулами</div>
+<div class="para">Пусть <span class="process-math">\(n \ge 3\)</span> и отображение <span class="process-math">\(\fun \alpha  {\F n \times \F n} {\F{}}\)</span> задано формулой</div>
 <div class="displaymath process-math" id="x9alt-2-1-1-1-1-3">
 \begin{equation*}
 \alpha (  (x_1, \ldots, x_n), (y_1, \ldots, y_n)  ) = x_1 y_2 - x_2 y_1 + x_1 y_3 - x_3 y_1.
 \end{equation*}
 </div>
-<div class="para">Тогда <span class="process-math">\(\alpha\)</span> — знакопеременная билинейная форма на <span class="process-math">\(\FF n\)</span>.</div>
+<div class="para">Тогда <span class="process-math">\(\alpha\)</span> — кососимметрическая билинейная форма на <span class="process-math">\(\FF n\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9alt-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#x9alt-2-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="x9alt-2-1-1-2">
 <div class="para logical" id="x9alt-2-1-1-2-1">
-<div class="para">Предположим, <span class="process-math">\(\phi, \tau \in V'\!\)</span>. Тогда билинейная форма <span class="process-math">\(\alpha\)</span> на <span class="process-math">\(V\)</span>, определенная формулой</div>
+<div class="para">Пусть <span class="process-math">\(\phi, \tau \in V'\!\)</span>. Тогда билинейная форма <span class="process-math">\(\alpha\)</span> на <span class="process-math">\(V\)</span>, заданная формулой</div>
 <div class="displaymath process-math" id="x9alt-2-1-1-2-1-4">
 \begin{equation*}
 \alpha (u, w) = \phi(u) \tau(w) - \phi(w) \tau(u)
 \end{equation*}
 </div>
-<div class="para">является знакопеременным.</div>
+<div class="para">является кососимметрической.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9alt-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#x9alt-2-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
@@ -1072,14 +1072,14 @@ e_n), (f_1, \ldots, f_n)\bigr)\)</span>. Таким образом, <span class=
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9alt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 9.15: alternating bilinear forms"><a tabindex="-1" href="#x9alt" title="Copy heading and permalink for Example 9.15: знакопеременные билинейные формы" aria-label="Copy heading and permalink for Example 9.15: alternating bilinear forms">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 9.15: alternating bilinear forms"><a tabindex="-1" href="#x9alt" title="Copy heading and permalink for Example 9.15: кососимметрические билинейные формы" aria-label="Copy heading and permalink for Example 9.15: alternating bilinear forms">🔗</a></div>
 </article></details>
-<div class="para" id="bilin_quad-3-14">Следующий результат показывает, что билинейная форма является знакопеременной тогда и только тогда, когда переключение порядка двух входов умножает выход на <span class="process-math">\(-1\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-14">Следующий результат показывает, что билинейная форма является кососимметрической тогда и только тогда, когда при перестановке двух её аргументов значение формы умножается на <span class="process-math">\(-1\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x9skew"><h3 class="heading">
-<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.16</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">характеристика знакопеременных билинейных форм.</span>
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.16</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">характеризация кососимметрических билинейных форм.</span>
 </h3>
 <div class="para logical" id="x9skew-2-1">
-<div class="para">Билинейная форма <span class="process-math">\(\alpha\)</span> на <span class="process-math">\(V\)</span> знакопеременная тогда и только тогда, когда</div>
+<div class="para">Билинейная форма <span class="process-math">\(\alpha\)</span> на <span class="process-math">\(V\)</span> является кососимметрической в том и только том случае, когда</div>
 <div class="displaymath process-math" id="x9skew-2-1-3">
 \begin{equation*}
 \alpha (u,w) = -\alpha (w,u)
@@ -1088,12 +1088,12 @@ e_n), (f_1, \ldots, f_n)\bigr)\)</span>. Таким образом, <span class=
 <div class="para">для всех <span class="process-math">\(u, w \in V{}\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9skew-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.16: characterization of alternating bilinear forms"><a tabindex="-1" href="#x9skew" title="Copy heading and permalink for Theorem 9.16: характеристика знакопеременных билинейных форм" aria-label="Copy heading and permalink for Theorem 9.16: characterization of alternating bilinear forms">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.16: characterization of alternating bilinear forms"><a tabindex="-1" href="#x9skew" title="Copy heading and permalink for Theorem 9.16: характеризация кососимметрических билинейных форм" aria-label="Copy heading and permalink for Theorem 9.16: characterization of alternating bilinear forms">🔗</a></div>
 </article>
 <details id="bilin_quad-3-16" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="bilin_quad-3-16-1">
-<div class="para">Предположим сначала, что <span class="process-math">\(\alpha\)</span> является переменным. Если <span class="process-math">\(u, w \in V{}\)</span>, то</div>
+<div class="para">Пусть сначала форма <span class="process-math">\(\alpha\)</span> кососимметрическая. Если <span class="process-math">\(u, w \in V{}\)</span>, то</div>
 <div class="displaymath process-math" id="bilin_quad-3-16-1-3">
 \begin{align*}
 0 \amp = \alpha (u+w, u+w)\\
@@ -1103,17 +1103,17 @@ e_n), (f_1, \ldots, f_n)\bigr)\)</span>. Таким образом, <span class=
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-16-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="bilin_quad-3-16-2">Таким образом, <span class="process-math">\(\alpha (u,w) = -\alpha (w,u)\)</span> по желанию.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-16-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="bilin_quad-3-16-3">Чтобы доказать импликацию в обратном направлении, предположим, что <span class="process-math">\(\alpha (u,w) = -\alpha (w,u)\)</span> для всех <span class="process-math">\(u,
-w \in V{}\)</span>. Тогда <span class="process-math">\(\alpha (v,v) = -\alpha (v, v)\)</span> для всех <span class="process-math">\(v \in V{}\)</span>, откуда следует, что <span class="process-math">\(\alpha (v,v) = 0\)</span> для всех <span class="process-math">\(v \in V{}\)</span>. Таким образом, <span class="process-math">\(\alpha\)</span> является знакопеременным.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-16-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-16-2">Следовательно, <span class="process-math">\(\alpha (u,w) = -\alpha (w,u)\)</span>, что и требовалось доказать.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-16-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-16-3">Для доказательства обратной импликации предположим, что <span class="process-math">\(\alpha (u,w) = -\alpha (w,u)\)</span> для всех <span class="process-math">\(u,
+w \in V{}\)</span>. Тогда <span class="process-math">\(\alpha (v,v) = -\alpha (v, v)\)</span> для всех <span class="process-math">\(v \in V{}\)</span>, откуда <span class="process-math">\(\alpha (v,v) = 0\)</span> для всех <span class="process-math">\(v \in V{}\)</span>. Следовательно, форма <span class="process-math">\(\alpha\)</span> является кососимметрической.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-16-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 9.1.2.3"><a tabindex="-1" href="#bilin_quad-3-16" title="Copy heading and permalink for Proof 9.1.2.3" aria-label="Copy heading and permalink for Proof 9.1.2.3">🔗</a></div>
 </article></details>
-<div class="para" id="bilin_quad-3-17">Теперь мы покажем, что векторное пространство билинейных форм на <span class="process-math">\(V\)</span> является прямой суммой симметричных билинейных форм на <span class="process-math">\(V\)</span> и знакопеременных билинейных форм на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-17">Покажем теперь, что векторное пространство всех билинейных форм на <span class="process-math">\(V\)</span> раскладывается в прямую сумму подпространства симметричных билинейных форм на <span class="process-math">\(V\)</span> и подпространства кососимметрических билинейных форм на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x9V2"><h3 class="heading">
 <span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.17</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(V^{(2)} = V^{(2)}_{\text{sym}} \oplus V^{(2)}_{\text{alt}}\)</span>.</span>
 </h3>
 <div class="para logical" id="x9V2-2-1">
-<div class="para">Множества <span class="process-math">\(V^{(2)}_{\text{ sym } }\)</span> и <span class="process-math">\(V^{(2)}_{\text{ alt } }\)</span> являются подпространствами <span class="process-math">\(V^{(2)}\)</span>. Кроме того,</div>
+<div class="para">Множества <span class="process-math">\(V^{(2)}_{\text{ sym } }\)</span> и <span class="process-math">\(V^{(2)}_{\text{ alt } }\)</span> являются подпространствами в <span class="process-math">\(V^{(2)}\)</span>. Более того,</div>
 <div class="displaymath process-math" id="x9V2-2-1-4">
 \begin{equation*}
 V^{(2)} = V^{(2)}_{\text{ sym } } \oplus V^{(2)}_{\text{ alt } }.
@@ -1125,9 +1125,9 @@ V^{(2)} = V^{(2)}_{\text{ sym } } \oplus V^{(2)}_{\text{ alt } }.
 </article>
 <details id="bilin_quad-3-19" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
-<div class="para" id="bilin_quad-3-19-1">Из определения симметричной билинейной формы следует, что сумма любых двух симметричных билинейных форм на <span class="process-math">\(V\)</span> является симметричной билинейной формой на <span class="process-math">\(V{}\)</span>, а каждое скалярное кратное любой симметричной билинейной формы на <span class="process-math">\(V\)</span> является симметричной билинейной формой на <span class="process-math">\(V{}\)</span>. Кроме того, нулевая билинейная форма находится в <span class="process-math">\(V^{(2)}_{\text{ sym } }\)</span>. Таким образом, <span class="process-math">\(V^{(2)}_{\text{ sym } }\)</span> является подпространством <span class="process-math">\(V^{(2)}\!\)</span>. Аналогично, проверка того, что <span class="process-math">\(V^{(2)}_{\text{ alt } }\)</span> является подпространством <span class="process-math">\(V^{(2)}\)</span>, не вызывает затруднений.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-19-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-19-1">Из определения симметричной билинейной формы следует, что сумма любых двух симметричных билинейных форм на <span class="process-math">\(V\)</span> является симметричной билинейной формой на <span class="process-math">\(V{}\)</span>, а произведение любой симметричной билинейной формы на <span class="process-math">\(V\)</span> на произвольный скаляр является симметричной билинейной формой на <span class="process-math">\(V{}\)</span>. Кроме того, нулевая билинейная форма принадлежит <span class="process-math">\(V^{(2)}_{\text{ sym } }\)</span>. Значит, <span class="process-math">\(V^{(2)}_{\text{ sym } }\)</span> — подпространство в <span class="process-math">\(V^{(2)}\!\)</span>. Аналогично без труда проверяется, что <span class="process-math">\(V^{(2)}_{\text{ alt } }\)</span> — подпространство в <span class="process-math">\(V^{(2)}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-19-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="bilin_quad-3-19-2">
-<div class="para">Далее мы хотим показать, что <span class="process-math">\(V^{(2)} = V^{(2)}_{\text{ sym } } + V^{(2)}_{\text{ alt } }\)</span>. Для этого предположим <span class="process-math">\(\beta \in V^{(2)}\!\)</span>. Определите <span class="process-math">\(\rho, \alpha  \in V^{(2)}\)</span> по</div>
+<div class="para">Далее покажем, что <span class="process-math">\(V^{(2)} = V^{(2)}_{\text{ sym } } + V^{(2)}_{\text{ alt } }\)</span>. Для этого возьмём произвольную форму <span class="process-math">\(\beta \in V^{(2)}\!\)</span> и определим <span class="process-math">\(\rho, \alpha  \in V^{(2)}\)</span> равенствами</div>
 <div class="displaymath process-math" id="bilin_quad-3-19-2-4">
 \begin{equation*}
 \rho(u,w) = \frac{ \beta(u,w) + \beta(w,u) }{2} \andd \alpha (u,w) = \frac{ \beta(u,w) - \beta(w,u) }{2}.
@@ -1135,15 +1135,15 @@ V^{(2)} = V^{(2)}_{\text{ sym } } \oplus V^{(2)}_{\text{ alt } }.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-19-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="bilin_quad-3-19-3">Затем <span class="process-math">\(\rho \in V^{(2)}_{\text{ sym } }\)</span>, <span class="process-math">\(\alpha \in V^{(2)}_{\text{ alt } }\)</span> и <span class="process-math">\(\beta = \rho + \alpha\)</span>. Таким образом, <span class="process-math">\(V^{(2)} = V^{(2)}_{\text{ sym } } + V^{(2)}_{\text{ alt } }\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-19-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-3-19-3">Тогда <span class="process-math">\(\rho \in V^{(2)}_{\text{ sym } }\)</span> и <span class="process-math">\(\alpha \in V^{(2)}_{\text{ alt } }\)</span>, причём <span class="process-math">\(\beta = \rho + \alpha\)</span>. Следовательно, <span class="process-math">\(V^{(2)} = V^{(2)}_{\text{ sym } } + V^{(2)}_{\text{ alt } }\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-19-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="bilin_quad-3-19-4">
-<div class="para">Наконец, чтобы показать, что пересечение двух рассматриваемых подпространств равно <span class="process-math">\(\{ 0 \}\)</span>, предположим <span class="process-math">\(\beta \in V^{(2)}_{\text{ sym } } \cap V^{(2)}_{\text{ alt } }\)</span>. Если <span class="process-math">\(u, w \in V{}\)</span>, то из <a href="bilin_quad.html#x9skew" class="xref" data-knowl="./knowl/xref/x9skew.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.16: характеристика знакопеременных билинейных форм">Теоремы 9.16</a> следует, что</div>
+<div class="para">Наконец, чтобы показать, что пересечение двух рассматриваемых подпространств равно <span class="process-math">\(\{ 0 \}\)</span>, предположим, что <span class="process-math">\(\beta \in V^{(2)}_{\text{ sym } } \cap V^{(2)}_{\text{ alt } }\)</span>. Если <span class="process-math">\(u, w \in V{}\)</span>, то по <a href="bilin_quad.html#x9skew" class="xref" data-knowl="./knowl/xref/x9skew.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.16: характеризация кососимметрических билинейных форм">теореме 9.16</a> имеем</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x9skew.html ./knowl/xref/x219.html" id="bilin_quad-3-19-4-5">
 \begin{equation*}
 \beta(u,w) = -\beta(w, u) = -\beta(u,w)
 \end{equation*}
 </div>
-<div class="para">и, следовательно, <span class="process-math">\(\beta(u, w) = 0\)</span>. Таким образом <span class="process-math">\(\beta = 0\)</span>. Следовательно, <span class="process-math">\(V^{(2)} = V^{(2)}_{\text{ sym } } \oplus V^{(2)}_{\text{ alt } }\)</span> (по <a href="x1Subspaces.html#x219" class="xref" data-knowl="./knowl/xref/x219.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 1.46: прямая сумма двух подпространств">теореме 1.46</a>).</div>
+<div class="para">откуда <span class="process-math">\(\beta(u, w) = 0\)</span>. Значит, <span class="process-math">\(\beta = 0\)</span>. Следовательно, <span class="process-math">\(V^{(2)} = V^{(2)}_{\text{ sym } } \oplus V^{(2)}_{\text{ alt } }\)</span> (по <a href="x1Subspaces.html#x219" class="xref" data-knowl="./knowl/xref/x219.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 1.46: прямая сумма двух подпространств">теореме 1.46</a>).</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-3-19-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 9.1.2.4"><a tabindex="-1" href="#bilin_quad-3-19" title="Copy heading and permalink for Proof 9.1.2.4" aria-label="Copy heading and permalink for Proof 9.1.2.4">🔗</a></div>
@@ -1156,16 +1156,16 @@ V^{(2)} = V^{(2)}_{\text{ sym } } \oplus V^{(2)}_{\text{ alt } }.
 <article class="definition definition-like" id="bilin_quad-4-2"><h3 class="heading">
 <span class="type">Определение</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">квадратичная форма, ассоциированная с билинейной формой, <span class="process-math">\(q_\beta\)</span>.</span>
 </h3>
-<div class="para" id="bilin_quad-4-2-2-1">Для <span class="process-math">\(\beta\)</span>, билинейной формы на <span class="process-math">\(V{}\)</span>, определим функцию <span class="process-math">\(\fun {q_\beta} V {\F{}}\)</span> через <span class="process-math">\(q_\beta(v) = \beta(v, v)\)</span>. Функция <span class="process-math">\(\fun q V {\F{}}\)</span> называется <dfn class="terminology">квадратичной формой</dfn> на <span class="process-math">\(V\)</span>, если существует билинейная форма <span class="process-math">\(\beta\)</span> на <span class="process-math">\(V\)</span> такая, что <span class="process-math">\(q = q_\beta\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-2-2-1">Для билинейной формы <span class="process-math">\(\beta\)</span> на <span class="process-math">\(V{}\)</span> определим функцию <span class="process-math">\(\fun {q_\beta} V {\F{}}\)</span> формулой <span class="process-math">\(q_\beta(v) = \beta(v, v)\)</span>. Функция <span class="process-math">\(\fun q V {\F{}}\)</span> называется <dfn class="terminology">квадратичной формой</dfn> на <span class="process-math">\(V\)</span>, если существует такая билинейная форма <span class="process-math">\(\beta\)</span> на <span class="process-math">\(V\)</span>, что <span class="process-math">\(q = q_\beta\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Definition 9.18: quadratic form associated with a bilinear form, q_\beta"><a tabindex="-1" href="#bilin_quad-4-2" title="Copy heading and permalink for Definition 9.18: квадратичная форма, ассоциированная с билинейной формой, q_\beta" aria-label="Copy heading and permalink for Definition 9.18: quadratic form associated with a bilinear form, q_\beta">🔗</a></div>
 </article>
-<div class="para" id="bilin_quad-4-3">Заметим, что если <span class="process-math">\(\beta\)</span> — билинейная форма, то <span class="process-math">\(q_\beta = 0\)</span> тогда и только тогда, когда <span class="process-math">\(\beta\)</span> знакопеременная.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-3">Заметим, что если <span class="process-math">\(\beta\)</span> — билинейная форма, то <span class="process-math">\(q_\beta = 0\)</span> тогда и только тогда, когда форма <span class="process-math">\(\beta\)</span> кососимметрическая.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <details id="x9quad" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.19</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">квадратичная форма.</span>
 </h3></summary>
 <article class="example example-like knowl__content">
 <div class="para logical" id="x9quad-2-1">
-<div class="para">Предположим, что <span class="process-math">\(\beta\)</span> — билинейная форма на <span class="process-math">\(\R3\)</span>, определенная формулой</div>
+<div class="para">Пусть <span class="process-math">\(\beta\)</span> — билинейная форма на <span class="process-math">\(\R3\)</span>, заданная формулой</div>
 <div class="displaymath process-math" id="x9quad-2-1-3">
 \begin{equation*}
 \beta( (x_1, x_2,x_3), (y_1, y_2, y_3) ) =  x_1 y_1 - 4x_1 y_2  + 8x_1 y_3 - 3x_3 y_3.
@@ -1174,7 +1174,7 @@ V^{(2)} = V^{(2)}_{\text{ sym } } \oplus V^{(2)}_{\text{ alt } }.
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9quad-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="x9quad-2-2">
-<div class="para">Тогда <span class="process-math">\(q_\beta\)</span> — квадратичная форма на <span class="process-math">\(\R3\)</span>, заданная формулой</div>
+<div class="para">Тогда <span class="process-math">\(q_\beta\)</span> — квадратичная форма на <span class="process-math">\(\R3\)</span>, задаваемая формулой</div>
 <div class="displaymath process-math" id="x9quad-2-2-3">
 \begin{equation*}
 q_\beta(x_1, x_2, x_3) = {x_1}^{2} - 4 x_1 x_2 +8 x_1 x_3 - 3{x_3}^{2}{}.
@@ -1184,13 +1184,13 @@ q_\beta(x_1, x_2, x_3) = {x_1}^{2} - 4 x_1 x_2 +8 x_1 x_3 - 3{x_3}^{2}{}.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 9.19: quadratic form"><a tabindex="-1" href="#x9quad" title="Copy heading and permalink for Example 9.19: квадратичная форма" aria-label="Copy heading and permalink for Example 9.19: quadratic form">🔗</a></div>
 </article></details>
-<div class="para" id="bilin_quad-4-5">Квадратичная форма в приведенном выше примере типична для квадратичных форм на <span class="process-math">\(\FF n\)</span>, как показано в следующем результате.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-5">Квадратичная форма из приведённого выше примера типична для квадратичных форм на <span class="process-math">\(\FF n\)</span>, как показывает следующий результат.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="bilin_quad-4-6"><h3 class="heading">
 <span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.20</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">квадратичные формы на <span class="process-math">\(\F n\)</span>.</span>
 </h3>
 <div class="para logical" id="bilin_quad-4-6-2-1">
-<div class="para">Предположим, что <span class="process-math">\(n\)</span> — целое положительное число, а <span class="process-math">\(q\)</span> — функция от <span class="process-math">\(\F n\)</span> до <span class="process-math">\(\F{}{}\)</span>. Тогда <span class="process-math">\(q\)</span> является квадратичной формой на <span class="process-math">\(\F n\)</span> тогда и только тогда, когда существуют числа <span class="process-math">\(A_{j,k} \in \F{}\)</span> для <span class="process-math">\(j,
-k \in \{  1, \ldots, n \}\)</span> такие, что</div>
+<div class="para">Пусть <span class="process-math">\(n\)</span> — целое положительное число и <span class="process-math">\(q\)</span> — функция из <span class="process-math">\(\F n\)</span> в <span class="process-math">\(\F{}{}\)</span>. Тогда <span class="process-math">\(q\)</span> является квадратичной формой на <span class="process-math">\(\F n\)</span> в том и только том случае, когда существуют такие скаляры <span class="process-math">\(A_{j,k} \in \F{}\)</span> при <span class="process-math">\(j,
+k \in \{  1, \ldots, n \}\)</span>, что</div>
 <div class="displaymath process-math" id="bilin_quad-4-6-2-1-9">
 \begin{equation*}
 q(x_1, \ldots, x_n) = \sum_{k=1}^n \sum_{j=1}^n A_{j,k} x_j x_k
@@ -1204,8 +1204,8 @@ q(x_1, \ldots, x_n) = \sum_{k=1}^n \sum_{j=1}^n A_{j,k} x_j x_k
 <details id="bilin_quad-4-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="bilin_quad-4-7-1">
-<div class="para">Предположим сначала, что <span class="process-math">\(q\)</span> — квадратичная форма на <span class="process-math">\(\FF n\)</span>. Таким образом, существует билинейная форма <span class="process-math">\(\beta\)</span> на <span class="process-math">\(\F n\)</span> такая, что <span class="process-math">\(q = q_\beta\)</span>. Пусть <span class="process-math">\(A\)</span> — матрица <span class="process-math">\(\beta\)</span> относительно стандартного базиса <span class="process-math">\(\FF n\)</span>. Тогда для всех <span class="process-math">\((x_1, \ldots,
-x_n) \in \FF n\)</span> имеем искомое уравнение</div>
+<div class="para">Пусть сначала <span class="process-math">\(q\)</span> — квадратичная форма на <span class="process-math">\(\FF n\)</span>. Тогда существует такая билинейная форма <span class="process-math">\(\beta\)</span> на <span class="process-math">\(\F n\)</span>, что <span class="process-math">\(q = q_\beta\)</span>. Пусть <span class="process-math">\(A\)</span> — матрица формы <span class="process-math">\(\beta\)</span> в стандартном базисе пространства <span class="process-math">\(\FF n\)</span>. Тогда для всех <span class="process-math">\((x_1, \ldots,
+x_n) \in \FF n\)</span> получаем требуемое равенство</div>
 <div class="displaymath process-math" id="bilin_quad-4-7-1-10">
 \begin{equation*}
 q(x_1, \ldots, x_n) = \beta(  (x_1, \ldots, x_n), (x_1, \ldots, x_n)  ) = \sum_{k=1}^n \sum_{j=1}^n A_{j,k} x_j x_k.
@@ -1214,14 +1214,14 @@ q(x_1, \ldots, x_n) = \beta(  (x_1, \ldots, x_n), (x_1, \ldots, x_n)  ) = \sum_{
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="bilin_quad-4-7-2">
-<div class="para">Обратно, предположим, что существуют числа <span class="process-math">\(A_{j,k} \in \F{}\)</span> для <span class="process-math">\(j,
-k \in \{  1, \ldots, n \}\)</span> такие, что</div>
+<div class="para">Обратно, пусть существуют такие числа <span class="process-math">\(A_{j,k} \in \F{}\)</span> при <span class="process-math">\(j,
+k \in \{  1, \ldots, n \}\)</span>, что</div>
 <div class="displaymath process-math" id="bilin_quad-4-7-2-4">
 \begin{equation*}
 q(x_1, \ldots, x_n) = \sum_{k=1}^n \sum_{j=1}^n A_{j,k} x_j x_k
 \end{equation*}
 </div>
-<div class="para">для всех <span class="process-math">\((x_1, \ldots, x_n) \in \FF n\)</span>. Определим билинейную форму <span class="process-math">\(\beta\)</span> на <span class="process-math">\(\F n\)</span> формулой</div>
+<div class="para">для всех <span class="process-math">\((x_1, \ldots, x_n) \in \FF n\)</span>. Зададим билинейную форму <span class="process-math">\(\beta\)</span> на <span class="process-math">\(\F n\)</span> формулой</div>
 <div class="displaymath process-math" id="bilin_quad-4-7-2-8">
 \begin{equation*}
 \beta(  (x_1, \ldots, x_n), (y_1, \ldots, y_n)  ) = \sum_{k=1}^n \sum_{j=1}^n A_{j,k} x_j y_k.
@@ -1229,22 +1229,22 @@ q(x_1, \ldots, x_n) = \sum_{k=1}^n \sum_{j=1}^n A_{j,k} x_j x_k
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="bilin_quad-4-7-3">Затем <span class="process-math">\(q = q_\beta\)</span> по желанию.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-7-3">Тогда <span class="process-math">\(q = q_\beta\)</span>, что и требовалось.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 9.1.3.1"><a tabindex="-1" href="#bilin_quad-4-7" title="Copy heading and permalink for Proof 9.1.3.1" aria-label="Copy heading and permalink for Proof 9.1.3.1">🔗</a></div>
 </article></details>
-<div class="para" id="bilin_quad-4-8">Хотя квадратичные формы определяются в терминах произвольной билинейной формы, эквивалентность (a) и (b) в приведенном ниже результате показывает, что всегда можно использовать <em class="emphasis">симметричную</em> билинейную форму.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-8">Хотя квадратичные формы определяются с помощью произвольной билинейной формы, равносильность условий (a) и (b) в приведённом ниже результате показывает, что всегда можно ограничиться <em class="emphasis">симметричной</em> билинейной формой.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="x11charquad"><h3 class="heading">
-<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.21</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">характеристики квадратичных форм.</span>
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.21</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">характеризации квадратичных форм.</span>
 </h3>
 <div class="para logical" id="x11charquad-2-1">
-<div class="para">Предположим, что <span class="process-math">\(\fun q V {\F{}}\)</span> — функция. Следующие действия эквивалентны.</div>
+<div class="para">Пусть <span class="process-math">\(\fun q V {\F{}}\)</span> — некоторая функция. Следующие условия равносильны.</div>
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="x11charquad-2-1-2">
 <li id="x11charquad-2-1-2-1">
 <div class="para" id="x11charquad-2-1-2-1-1"><span class="process-math">\(q\)</span> — квадратичная форма.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x11charquad-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#x11charquad-2-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="x11charquad-2-1-2-2">
-<div class="para" id="x11charquad-2-1-2-2-1">Существует единственная симметричная билинейная форма <span class="process-math">\(\rho\)</span> на <span class="process-math">\(V\)</span> такая, что <span class="process-math">\(q = q_\rho\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x11charquad-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x11charquad-2-1-2-2-1">Существует единственная симметричная билинейная форма <span class="process-math">\(\rho\)</span> на <span class="process-math">\(V\)</span>, для которой <span class="process-math">\(q = q_\rho\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x11charquad-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#x11charquad-2-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="x11charquad-2-1-2-3">
@@ -1262,7 +1262,7 @@ q(x_1, \ldots, x_n) = \sum_{k=1}^n \sum_{j=1}^n A_{j,k} x_j x_k
 </li>
 <li id="x11charquad-2-1-2-4">
 <div class="para logical" id="x11charquad-2-1-2-4-1">
-<div class="para"><span class="process-math">\(q(2 v) = 4 q(v)\)</span> для всех <span class="process-math">\(v \in V{}\)</span> и функция</div>
+<div class="para"><span class="process-math">\(q(2 v) = 4 q(v)\)</span> для всех <span class="process-math">\(v \in V{}\)</span>, а функция</div>
 <div class="displaymath process-math" id="x11charquad-2-1-2-4-1-3">
 \begin{equation*}
 (u, w) \mapsto q(u+w) - q(u) - q(w)
@@ -1276,12 +1276,12 @@ q(x_1, \ldots, x_n) = \sum_{k=1}^n \sum_{j=1}^n A_{j,k} x_j x_k
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x11charquad-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.21: characterizations of quadratic forms"><a tabindex="-1" href="#x11charquad" title="Copy heading and permalink for Theorem 9.21: характеристики квадратичных форм" aria-label="Copy heading and permalink for Theorem 9.21: characterizations of quadratic forms">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.21: characterizations of quadratic forms"><a tabindex="-1" href="#x11charquad" title="Copy heading and permalink for Theorem 9.21: характеризации квадратичных форм" aria-label="Copy heading and permalink for Theorem 9.21: characterizations of quadratic forms">🔗</a></div>
 </article>
 <details id="bilin_quad-4-10" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="bilin_quad-4-10-1">
-<div class="para">Сначала предположим, что (a) выполнено, поэтому <span class="process-math">\(q\)</span> — квадратичная форма. Следовательно, существует билинейная форма <span class="process-math">\(\beta\)</span> такая, что <span class="process-math">\(q = q_\beta\)</span>. По <a href="bilin_quad.html#x9V2" class="xref" data-knowl="./knowl/xref/x9V2.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.17: V^{(2)} = V^{(2)}_{\text{sym}} \oplus V^{(2)}_{\text{alt}}">Теореме 9.17</a> существуют симметричная билинейная форма <span class="process-math">\(\rho\)</span> на <span class="process-math">\(V\)</span> и знакопеременная билинейная форма <span class="process-math">\(\alpha\)</span> на <span class="process-math">\(V\)</span> такие, что <span class="process-math">\(\beta = \rho + \alpha\)</span>. Сейчас</div>
+<div class="para">Предположим сначала, что выполнено (a), то есть <span class="process-math">\(q\)</span> — квадратичная форма. Тогда существует такая билинейная форма <span class="process-math">\(\beta\)</span>, что <span class="process-math">\(q = q_\beta\)</span>. По <a href="bilin_quad.html#x9V2" class="xref" data-knowl="./knowl/xref/x9V2.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.17: V^{(2)} = V^{(2)}_{\text{sym}} \oplus V^{(2)}_{\text{alt}}">теореме 9.17</a> существуют такие симметричная билинейная форма <span class="process-math">\(\rho\)</span> на <span class="process-math">\(V\)</span> и кососимметрическая билинейная форма <span class="process-math">\(\alpha\)</span> на <span class="process-math">\(V\)</span>, что <span class="process-math">\(\beta = \rho + \alpha\)</span>. Тогда</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x9V2.html" id="bilin_quad-4-10-1-10">
 \begin{equation*}
 q = q_\beta = q_\rho + q_\alpha  = q_\rho.
@@ -1289,19 +1289,19 @@ q = q_\beta = q_\rho + q_\alpha  = q_\rho.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="bilin_quad-4-10-2">Если <span class="process-math">\(\rho' \in V^{(2)}_{\text{ sym } }\)</span> также удовлетворяет <span class="process-math">\(q_{\rho'} = q\)</span>, то <span class="process-math">\(q_{\rho' - \rho} = 0\)</span>; таким образом, <span class="process-math">\(\rho' - \rho \in V^{(2)}_{\text{ sym } } \cap V^{(2)}_{\text{ alt } }\)</span>, откуда следует, что <span class="process-math">\(\rho' = \rho\)</span> (по <a href="bilin_quad.html#x9V2" class="xref" data-knowl="./knowl/xref/x9V2.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.17: V^{(2)} = V^{(2)}_{\text{sym}} \oplus V^{(2)}_{\text{alt}}">теореме 9.17</a>). Это завершает доказательство того, что из (а) следует (б).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-10-2">Если форма <span class="process-math">\(\rho' \in V^{(2)}_{\text{ sym } }\)</span> также удовлетворяет условию <span class="process-math">\(q_{\rho'} = q\)</span>, то <span class="process-math">\(q_{\rho' - \rho} = 0\)</span>; следовательно, <span class="process-math">\(\rho' - \rho \in V^{(2)}_{\text{ sym } } \cap V^{(2)}_{\text{ alt } }\)</span>, откуда <span class="process-math">\(\rho' = \rho\)</span> (по <a href="bilin_quad.html#x9V2" class="xref" data-knowl="./knowl/xref/x9V2.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.17: V^{(2)} = V^{(2)}_{\text{sym}} \oplus V^{(2)}_{\text{alt}}">теореме 9.17</a>). Это завершает доказательство импликации (a) => (b).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="bilin_quad-4-10-3">
-<div class="para">Теперь предположим, что (b) выполнено, поэтому существует симметричная билинейная форма <span class="process-math">\(\rho\)</span> на <span class="process-math">\(V\)</span> такая, что <span class="process-math">\(q = q_\rho\)</span>. Если <span class="process-math">\(\lambda \in \F{}\)</span> и <span class="process-math">\(v \in V\)</span>, то</div>
+<div class="para">Предположим теперь, что выполнено (b), то есть существует такая симметричная билинейная форма <span class="process-math">\(\rho\)</span> на <span class="process-math">\(V\)</span>, что <span class="process-math">\(q = q_\rho\)</span>. Если <span class="process-math">\(\lambda \in \F{}\)</span> и <span class="process-math">\(v \in V\)</span>, то</div>
 <div class="displaymath process-math" id="bilin_quad-4-10-3-6">
 \begin{equation*}
 q(\lambda v) = \rho(\lambda v, \lambda v) = \lambda \rho(v, \lambda v) = \lambda^2 \rho(v, v) = \lambda^2 q(v),
 \end{equation*}
 </div>
-<div class="para">показывая, что первая часть (c) верна.</div>
+<div class="para">что доказывает первую часть условия (c).</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="bilin_quad-4-10-4">
-<div class="para">Если <span class="process-math">\(u, w \in V{}\)</span>, то</div>
+<div class="para">Если <span class="process-math">\(u, w \in V{}\)</span>, то множество</div>
 <div class="displaymath process-math" id="bilin_quad-4-10-4-2">
 \begin{equation*}
 q(u+w) - q(u) - q(w) = \rho(u+w, u+ w) - \rho(u, u) - \rho(w, w) = 2 \rho(u, w).
@@ -1309,10 +1309,10 @@ q(u+w) - q(u) - q(w) = \rho(u+w, u+ w) - \rho(u, u) - \rho(w, w) = 2 \rho(u, w).
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="bilin_quad-4-10-5">Таким образом, функция <span class="process-math">\((u, w) \mapsto q(u+w) - q(u) - q(w)\)</span> равна <span class="process-math">\(2\rho\)</span>, которая является симметричной билинейной формой на <span class="process-math">\(V{}\)</span>, что завершает доказательство того, что из (b) следует (c).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="para" id="bilin_quad-4-10-6">Очевидно, что (в) влечет за собой (г).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-10-5">Таким образом, функция <span class="process-math">\((u, w) \mapsto q(u+w) - q(u) - q(w)\)</span> совпадает с <span class="process-math">\(2\rho\)</span> и потому является симметричной билинейной формой на <span class="process-math">\(V{}\)</span>, что завершает доказательство импликации (b) => (c).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-10-6">Очевидно, что из (c) следует (d).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="bilin_quad-4-10-7">
-<div class="para">Теперь предположим, что (d) выполнено. Пусть <span class="process-math">\(\rho\)</span> — симметричная билинейная форма на <span class="process-math">\(V\)</span>, определенная формулой</div>
+<div class="para">Предположим теперь, что выполнено (d). Пусть <span class="process-math">\(\rho\)</span> — симметричная билинейная форма на <span class="process-math">\(V\)</span>, заданная формулой</div>
 <div class="displaymath process-math" id="bilin_quad-4-10-7-3">
 \begin{equation*}
 \rho(u, w) = \frac{ q(u+w) - q(u) - q(w) }{2}.
@@ -1321,7 +1321,7 @@ q(u+w) - q(u) - q(w) = \rho(u+w, u+ w) - \rho(u, u) - \rho(w, w) = 2 \rho(u, w).
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="bilin_quad-4-10-8">
-<div class="para">Если <span class="process-math">\(v \in V{}\)</span>, то</div>
+<div class="para">Если <span class="process-math">\(v \in V{}\)</span>, то множество</div>
 <div class="displaymath process-math" id="bilin_quad-4-10-8-2">
 \begin{equation*}
 \rho(v,v) =  \frac{ q(2v) - q(v) - q(v) }{2} = \frac{4q(v) - 2q(v)}{2} = q(v).
@@ -1329,15 +1329,15 @@ q(u+w) - q(u) - q(w) = \rho(u+w, u+ w) - \rho(u, u) - \rho(w, w) = 2 \rho(u, w).
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="bilin_quad-4-10-9">Таким образом, <span class="process-math">\(q = q_\rho\)</span> завершает доказательство того, что из (d) следует (a).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-10-9">Следовательно, <span class="process-math">\(q = q_\rho\)</span>, что завершает доказательство импликации (d) => (a).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-10-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 9.1.3.2"><a tabindex="-1" href="#bilin_quad-4-10" title="Copy heading and permalink for Proof 9.1.3.2" aria-label="Copy heading and permalink for Proof 9.1.3.2">🔗</a></div>
 </article></details>
 <details id="bilin_quad-4-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.22</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">симметричная билинейная форма, связанная с квадратичной формой.</span>
+<span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.22</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">симметричная билинейная форма, ассоциированная с квадратичной формой.</span>
 </h3></summary>
 <article class="example example-like knowl__content">
 <div class="para logical" id="bilin_quad-4-11-2-1">
-<div class="para">Предположим, что <span class="process-math">\(q\)</span> — квадратичная форма на <span class="process-math">\(\R3\)</span>, заданная формулой</div>
+<div class="para">Пусть <span class="process-math">\(q\)</span> — квадратичная форма на <span class="process-math">\(\R3\)</span>, заданная формулой</div>
 <div class="displaymath process-math" id="bilin_quad-4-11-2-1-3">
 \begin{equation*}
 q(x_1, x_2, x_3) = {x_1}^{2} - 4 x_1 x_2 +8 x_1 x_3 - 3{x_3}^{2}{}.
@@ -1346,28 +1346,28 @@ q(x_1, x_2, x_3) = {x_1}^{2} - 4 x_1 x_2 +8 x_1 x_3 - 3{x_3}^{2}{}.
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="bilin_quad-4-11-2-2">
-<div class="para">Билинейная форма <span class="process-math">\(\beta\)</span> на <span class="process-math">\(\R3\)</span> такая, что <span class="process-math">\(q = q_\beta\)</span> задана <a href="bilin_quad.html#x9quad" class="xref" data-knowl="./knowl/xref/x9quad.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 9.19: квадратичная форма">Примером 9.19</a>, но эта билинейная форма не является симметричной, как обещает <a href="bilin_quad.html#x11charquad" class="xref" data-knowl="./knowl/xref/x11charquad.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.21: характеристики квадратичных форм">Теорема 9.21</a>(b). Однако билинейная форма <span class="process-math">\(\rho\)</span> на <span class="process-math">\(\R3\)</span>, определенная формулой</div>
+<div class="para">Билинейная форма <span class="process-math">\(\beta\)</span> на <span class="process-math">\(\R3\)</span>, для которой <span class="process-math">\(q = q_\beta\)</span>, приведена в <a href="bilin_quad.html#x9quad" class="xref" data-knowl="./knowl/xref/x9quad.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 9.19: квадратичная форма">примере 9.19</a>, но эта форма не является симметричной, в отличие от формы из <a href="bilin_quad.html#x11charquad" class="xref" data-knowl="./knowl/xref/x11charquad.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.21: характеризации квадратичных форм">теоремы 9.21</a>(b). Однако билинейная форма <span class="process-math">\(\rho\)</span> на <span class="process-math">\(\R3\)</span>, заданная равенством</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x9quad.html ./knowl/xref/x11charquad.html" id="bilin_quad-4-11-2-2-8">
 \begin{equation*}
 \rho( (x_1, x_2,x_3), (y_1, y_2, y_3) ) =  x_1 y_1 - 2 x_1 y_2  - 2 x_2 y_1 + 4x_1 y_3 + 4x_3 y_1- 3x_3 y_3
 \end{equation*}
 </div>
-<div class="para">симметричен и удовлетворяет <span class="process-math">\(q = q_\rho\)</span>.</div>
+<div class="para">симметрична и удовлетворяет соотношению <span class="process-math">\(q = q_\rho\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-11-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 9.22: symmetric bilinear form associated with a quadratic form"><a tabindex="-1" href="#bilin_quad-4-11" title="Copy heading and permalink for Example 9.22: симметричная билинейная форма, связанная с квадратичной формой" aria-label="Copy heading and permalink for Example 9.22: symmetric bilinear form associated with a quadratic form">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 9.22: symmetric bilinear form associated with a quadratic form"><a tabindex="-1" href="#bilin_quad-4-11" title="Copy heading and permalink for Example 9.22: симметричная билинейная форма, ассоциированная с квадратичной формой" aria-label="Copy heading and permalink for Example 9.22: symmetric bilinear form associated with a quadratic form">🔗</a></div>
 </article></details>
-<div class="para" id="bilin_quad-4-12">Следующий результат гласит, что для каждой квадратичной формы мы можем выбрать базис так, чтобы квадратичная форма выглядела как взвешенная сумма квадратов координат, а это означает, что не существует перекрестных членов формы <span class="process-math">\(x_j x_k\)</span> с <span class="process-math">\(j \ne k\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-12">Следующий результат утверждает, что для каждой квадратичной формы можно выбрать базис, в котором эта квадратичная форма имеет вид взвешенной суммы квадратов координат, то есть не содержит перекрёстных слагаемых вида <span class="process-math">\(x_j x_k\)</span> с <span class="process-math">\(j \ne k\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <article class="theorem theorem-like" id="bilin_quad-4-13"><h3 class="heading">
-<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.23</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">диагонализация квадратичной формы.</span>
+<span class="type">Теорема</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.23</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">приведение квадратичной формы к диагональному виду.</span>
 </h3>
 <div class="para logical" id="bilin_quad-4-13-2-1">
-<div class="para">Предположим, что <span class="process-math">\(q\)</span> — квадратичная форма на <span class="process-math">\(V{}\)</span>.</div>
+<div class="para">Пусть <span class="process-math">\(q\)</span> — квадратичная форма на <span class="process-math">\(V{}\)</span>.</div>
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="bilin_quad-4-13-2-1-3">
 <li id="bilin_quad-4-13-2-1-3-1">
 <div class="para logical" id="bilin_quad-4-13-2-1-3-1-1">
-<div class="para">Существует базис <span class="process-math">\(e_1, \ldots,
-e_n\)</span> из <span class="process-math">\(V\)</span> и <span class="process-math">\(\lambda_1, \ldots, \lambda_n \in \F{}\)</span> такой, что</div>
+<div class="para">Существуют базис <span class="process-math">\(e_1, \ldots,
+e_n\)</span> пространства <span class="process-math">\(V\)</span> и скаляры <span class="process-math">\(\lambda_1, \ldots, \lambda_n \in \F{}\)</span>, такие, что</div>
 <div class="displaymath process-math" id="bilin_quad-4-13-2-1-3-1-1-4">
 \begin{equation*}
 q( x_1 e_1 + \cdots + x_n e_n ) = \lambda_1 {x_1}^{2} + \cdots + \lambda_n {x_n}^{2}
@@ -1379,13 +1379,13 @@ q( x_1 e_1 + \cdots + x_n e_n ) = \lambda_1 {x_1}^{2} + \cdots + \lambda_n {x_n}
 <div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#bilin_quad-4-13-2-1-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="bilin_quad-4-13-2-1-3-2">
-<div class="para" id="bilin_quad-4-13-2-1-3-2-1">Если <span class="process-math">\(\F{} = \R{}\)</span> и <span class="process-math">\(V\)</span> — пространство со скалярным произведением, то базис в (a) можно выбрать в качестве ортонормированного базиса <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-13-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-13-2-1-3-2-1">Если <span class="process-math">\(\F{} = \R{}\)</span> и <span class="process-math">\(V\)</span> — пространство со скалярным произведением, то базис в пункте (a) можно выбрать ортонормированным базисом пространства <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-13-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#bilin_quad-4-13-2-1-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.23: diagonalization of quadratic form"><a tabindex="-1" href="#bilin_quad-4-13" title="Copy heading and permalink for Theorem 9.23: диагонализация квадратичной формы" aria-label="Copy heading and permalink for Theorem 9.23: diagonalization of quadratic form">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.23: diagonalization of quadratic form"><a tabindex="-1" href="#bilin_quad-4-13" title="Copy heading and permalink for Theorem 9.23: приведение квадратичной формы к диагональному виду" aria-label="Copy heading and permalink for Theorem 9.23: diagonalization of quadratic form">🔗</a></div>
 </article>
 <details id="bilin_quad-4-14" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Доказательство<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
@@ -1393,9 +1393,9 @@ q( x_1 e_1 + \cdots + x_n e_n ) = \lambda_1 {x_1}^{2} + \cdots + \lambda_n {x_n}
 <ol class="lower-alpha" style="list-style: ptx-marker-1;" id="bilin_quad-4-14-1-1">
 <li id="bilin_quad-4-14-1-1-1">
 <div class="para logical" id="bilin_quad-4-14-1-1-1-1">
-<div class="para">Существует симметричная билинейная форма <span class="process-math">\(\rho\)</span> на <span class="process-math">\(V\)</span> такая, что <span class="process-math">\(q = q_\rho\)</span> (по <a href="bilin_quad.html#x11charquad" class="xref" data-knowl="./knowl/xref/x11charquad.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.21: характеристики квадратичных форм">теореме 9.21</a>). Теперь существует базис <span class="process-math">\(e_1, \ldots,
-e_n\)</span> матрицы <span class="process-math">\(V\)</span> такой, что <span class="process-math">\(\M(  \rho, (e_1, \ldots,
-e_n)  )\)</span> является диагональной матрицей (по <a href="bilin_quad.html#x9symdiag" class="xref" data-knowl="./knowl/xref/x9symdiag.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.12: симметричные билинейные формы диагонализуемы">теореме 9.12</a>). Обозначим через <span class="process-math">\(\lambda_1, \ldots, \lambda_n\)</span> элементы диагонали этой матрицы. Таким образом</div>
+<div class="para">По <a href="bilin_quad.html#x11charquad" class="xref" data-knowl="./knowl/xref/x11charquad.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.21: характеризации квадратичных форм">теореме 9.21</a> существует такая симметричная билинейная форма <span class="process-math">\(\rho\)</span> на <span class="process-math">\(V\)</span>, что <span class="process-math">\(q = q_\rho\)</span>. Далее, по <a href="bilin_quad.html#x9symdiag" class="xref" data-knowl="./knowl/xref/x9symdiag.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.12: диагонализируемость симметричных билинейных форм">теореме 9.12</a> существует такой базис <span class="process-math">\(e_1, \ldots,
+e_n\)</span> пространства <span class="process-math">\(V\)</span>, что <span class="process-math">\(\M(  \rho, (e_1, \ldots,
+e_n)  )\)</span> — диагональная матрица. Обозначим диагональные элементы этой матрицы через <span class="process-math">\(\lambda_1, \ldots, \lambda_n\)</span>. Тогда</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x11charquad.html ./knowl/xref/x9symdiag.html" id="bilin_quad-4-14-1-1-1-1-10">
 \begin{equation*}
 \rho(e_j, e_k) = \begin{cases}\lambda_j \amp  \text{ если }  j = k,\\ 0 \amp  \text{ если }  j \ne k \end{cases}
@@ -1409,13 +1409,13 @@ q( x_1 e_1 + \cdots + x_n e_n ) \amp = \rho( x_1 e_1 + \cdots + x_n e_n, x_1 e_1
 \amp = \lambda_1 {x_1}^{2} + \cdots + \lambda_n {x_n}^{2}{}\text{,}
 \end{align*}
 </div>
-<div class="para">по желанию.</div>
+<div class="para">что и требовалось доказать.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-14-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#bilin_quad-4-14-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="bilin_quad-4-14-1-1-2">
-<div class="para" id="bilin_quad-4-14-1-1-2-1">Предположим, что <span class="process-math">\(\F{} = \R{}\)</span> и <span class="process-math">\(V\)</span> — пространство со скалярным произведением. Тогда <a href="bilin_quad.html#x9diagortho" class="xref" data-knowl="./knowl/xref/x9diagortho.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.13: диагонализация симметричной билинейной формы ортонормированным базисом">Теорема 9.13</a> говорит нам, что базис в (a) может быть выбран в качестве ортонормированного базиса <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-14-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-14-1-1-2-1">Пусть <span class="process-math">\(\F{} = \R{}\)</span> и <span class="process-math">\(V\)</span> — пространство со скалярным произведением. Тогда по <a href="bilin_quad.html#x9diagortho" class="xref" data-knowl="./knowl/xref/x9diagortho.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.13: диагонализация симметричной билинейной формы в ортонормированном базисе">теореме 9.13</a> базис в пункте (a) можно выбрать ортонормированным базисом пространства <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-14-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#bilin_quad-4-14-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
@@ -1429,7 +1429,7 @@ q( x_1 e_1 + \cdots + x_n e_n ) \amp = \rho( x_1 e_1 + \cdots + x_n e_n, x_1 e_1
 </h3>
 <article class="exercise exercise-like" id="bilin_quad-4-15-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para logical" id="bilin_quad-4-15-2-1-1">
-<div class="para">Докажите, что если <span class="process-math">\(\beta\)</span> — билинейная форма на <span class="process-math">\(\F{}{}\)</span>, то существует <span class="process-math">\(c \in \F{}\)</span> такая, что</div>
+<div class="para">Докажите, что если <span class="process-math">\(\beta\)</span> — билинейная форма на <span class="process-math">\(\F{}{}\)</span>, то существует такой скаляр <span class="process-math">\(c \in \F{}\)</span>, что</div>
 <div class="displaymath process-math" id="bilin_quad-4-15-2-1-1-4">
 \begin{equation*}
 \beta(x,y) = c x y
@@ -1442,63 +1442,63 @@ q( x_1 e_1 + \cdots + x_n e_n ) \amp = \rho( x_1 e_1 + \cdots + x_n e_n, x_1 e_1
 </article>
 <article class="exercise exercise-like" id="bilin_quad-4-15-3"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para logical" id="bilin_quad-4-15-3-1-1">
-<div class="para">Пусть <span class="process-math">\(n = \dim V{}\)</span>. Предположим, что <span class="process-math">\(\beta\)</span> — билинейная форма на <span class="process-math">\(V{}\)</span>. Докажите, что существует <span class="process-math">\(\phi_1, \ldots, \phi_n, \tau_1, \ldots, \tau_n \in V'\)</span> такое, что</div>
+<div class="para">Пусть <span class="process-math">\(n = \dim V{}\)</span> и <span class="process-math">\(\beta\)</span> — билинейная форма на <span class="process-math">\(V{}\)</span>. Докажите, что существуют такие функционалы <span class="process-math">\(\phi_1, \ldots, \phi_n, \tau_1, \ldots, \tau_n \in V'\)</span>, что</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x9BilinearExample.html" id="bilin_quad-4-15-3-1-1-5">
 \begin{equation*}
 \beta(u, v) = \phi_1(u) \cdot \tau_1(v) + \cdots + \phi_n(u) \cdot \tau_n(v)
 \end{equation*}
 </div>
-<div class="para">для всех <span class="process-math">\(u, v \in V{}\)</span>. Примечание. Это упражнение показывает, что если <span class="process-math">\(n = \dim V{}\)</span>, то каждая билинейная форма на <span class="process-math">\(V\)</span> имеет форму, заданную последним пунктом <a href="bilin_quad.html#x9BilinearExample" class="xref" data-knowl="./knowl/xref/x9BilinearExample.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 9.2: билинейные формы">Примера 9.2</a>.</div>
+<div class="para">для всех <span class="process-math">\(u, v \in V{}\)</span>. Примечание: Это упражнение показывает, что при <span class="process-math">\(n = \dim V{}\)</span> всякая билинейная форма на <span class="process-math">\(V\)</span> имеет вид, указанный в последнем пункте <a href="bilin_quad.html#x9BilinearExample" class="xref" data-knowl="./knowl/xref/x9BilinearExample.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 9.2: билинейные формы">примера 9.2</a>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.3.2"><a tabindex="-1" href="#bilin_quad-4-15-3" title="Copy heading and permalink for Exercise 9.1.3.2" aria-label="Copy heading and permalink for Exercise 9.1.3.2">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="x11zero"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="para" id="x11zero-1-1">Предположим, что <span class="process-math">\(\fun \beta {V{} \times V} {\F{}}\)</span> — билинейная форма на <span class="process-math">\(V\)</span>, а также линейный функционал на <span class="process-math">\(V{} \times V{}\)</span>. Докажите, что <span class="process-math">\(\beta = 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x11zero-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="x11zero-1-1">Пусть <span class="process-math">\(\fun \beta {V{} \times V} {\F{}}\)</span> — билинейная форма на <span class="process-math">\(V\)</span>, которая одновременно является линейным функционалом на <span class="process-math">\(V{} \times V{}\)</span>. Докажите, что <span class="process-math">\(\beta = 0\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x11zero-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.3.3"><a tabindex="-1" href="#x11zero" title="Copy heading and permalink for Exercise 9.1.3.3" aria-label="Copy heading and permalink for Exercise 9.1.3.3">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="x9inn"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para logical" id="x9inn-1-1">
-<div class="para">Предположим, что <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением, а <span class="process-math">\(\beta\)</span> — билинейная форма на <span class="process-math">\(V{}\)</span>. Докажите, что существует единственный оператор <span class="process-math">\(T \in \Lc(V)\)</span> такой, что</div>
+<div class="para">Пусть <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением и <span class="process-math">\(\beta\)</span> — билинейная форма на <span class="process-math">\(V{}\)</span>. Покажите, что существует единственный оператор <span class="process-math">\(T \in \Lc(V)\)</span>, такой, что</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x9BilinearExample.html" id="x9inn-1-1-5">
 \begin{equation*}
 \beta(u, v) = \langle u,Tv \rangle
 \end{equation*}
 </div>
-<div class="para">для всех <span class="process-math">\(u, v \in V{}\)</span>. Примечание. В этом упражнении утверждается, что если <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением, то каждая билинейная форма на <span class="process-math">\(V\)</span> имеет форму, заданную третьим пунктом в <a href="bilin_quad.html#x9BilinearExample" class="xref" data-knowl="./knowl/xref/x9BilinearExample.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 9.2: билинейные формы">Примере 9.2</a>.</div>
+<div class="para">для всех <span class="process-math">\(u, v \in V{}\)</span>. Примечание: В этом упражнении утверждается, что если <span class="process-math">\(V\)</span> — вещественное пространство со скалярным произведением, то всякая билинейная форма на <span class="process-math">\(V\)</span> имеет вид, описанный в третьем пункте <a href="bilin_quad.html#x9BilinearExample" class="xref" data-knowl="./knowl/xref/x9BilinearExample.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Пример 9.2: билинейные формы">примера 9.2</a>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#x9inn-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.3.4"><a tabindex="-1" href="#x9inn" title="Copy heading and permalink for Exercise 9.1.3.4" aria-label="Copy heading and permalink for Exercise 9.1.3.4">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="bilin_quad-4-15-6"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="para" id="bilin_quad-4-15-6-1-1">Предположим, что <span class="process-math">\(\beta\)</span> — билинейная форма в вещественном пространстве со скалярным произведением <span class="process-math">\(V{}\)</span>, а <span class="process-math">\(T\)</span> — единственный оператор на <span class="process-math">\(V\)</span>, такой, что <span class="process-math">\(\beta(u,v) = \langle u, Tv \rangle\)</span> для всех <span class="process-math">\(u,
-v \in V\)</span> (см. <a href="bilin_quad.html#x9inn" class="xref" data-knowl="./knowl/xref/x9inn.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 9.1.3.4">Упражнение 9.1.3.4</a>). Покажите, что <span class="process-math">\(\beta\)</span> — пространство со скалярным произведением на <span class="process-math">\(V\)</span> тогда и только тогда, когда <span class="process-math">\(T\)</span> — обратимый положительный оператор на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-15-6-1-1">Пусть <span class="process-math">\(\beta\)</span> — билинейная форма на вещественном пространстве со скалярным произведением <span class="process-math">\(V{}\)</span>, а <span class="process-math">\(T\)</span> — единственный оператор на <span class="process-math">\(V\)</span>, такой, что <span class="process-math">\(\beta(u,v) = \langle u, Tv \rangle\)</span> для всех <span class="process-math">\(u,
+v \in V\)</span> (см. <a href="bilin_quad.html#x9inn" class="xref" data-knowl="./knowl/xref/x9inn.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Упражнение 9.1.3.4">упражнение 9.1.3.4</a>). Покажите, что <span class="process-math">\(\beta\)</span> является скалярным произведением на <span class="process-math">\(V\)</span> в том и только том случае, когда <span class="process-math">\(T\)</span> — обратимый положительный оператор на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.3.5"><a tabindex="-1" href="#bilin_quad-4-15-6" title="Copy heading and permalink for Exercise 9.1.3.5" aria-label="Copy heading and permalink for Exercise 9.1.3.5">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="bilin_quad-4-15-7"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para logical" id="bilin_quad-4-15-7-1-1">
-<div class="para">Докажите или приведите контрпример: если <span class="process-math">\(\rho\)</span> — симметричная билинейная форма на <span class="process-math">\(V{}\)</span>, то</div>
+<div class="para">Докажите или приведите контрпример: если <span class="process-math">\(\rho\)</span> — симметричная билинейная форма на <span class="process-math">\(V{}\)</span>, то множество</div>
 <div class="displaymath process-math" id="bilin_quad-4-15-7-1-1-3">
 \begin{equation*}
 \{ v \in V: \rho(v, v) = 0 \}
 \end{equation*}
 </div>
-<div class="para">является подпространством <span class="process-math">\(V{}\)</span>.</div>
+<div class="para">является подпространством в <span class="process-math">\(V{}\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.3.6"><a tabindex="-1" href="#bilin_quad-4-15-7" title="Copy heading and permalink for Exercise 9.1.3.6" aria-label="Copy heading and permalink for Exercise 9.1.3.6">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="bilin_quad-4-15-8"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="para" id="bilin_quad-4-15-8-1-1">Объясните, почему доказательство <a href="bilin_quad.html#x9diagortho" class="xref" data-knowl="./knowl/xref/x9diagortho.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.13: диагонализация симметричной билинейной формы ортонормированным базисом">теоремы 9.13</a> (диагонализация симметричной билинейной формы с помощью ортонормированного базиса в вещественном пространстве со скалярным произведением) терпит неудачу, если отбросить гипотезу о том, что <span class="process-math">\(\F{} = \R{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-15-8-1-1">Объясните, почему доказательство <a href="bilin_quad.html#x9diagortho" class="xref" data-knowl="./knowl/xref/x9diagortho.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 9.13: диагонализация симметричной билинейной формы в ортонормированном базисе">теоремы 9.13</a> (о диагонализации симметричной билинейной формы в ортонормированном базисе вещественного пространства со скалярным произведением) перестаёт работать, если опустить предположение <span class="process-math">\(\F{} = \R{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.3.7"><a tabindex="-1" href="#bilin_quad-4-15-8" title="Copy heading and permalink for Exercise 9.1.3.7" aria-label="Copy heading and permalink for Exercise 9.1.3.7">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="bilin_quad-4-15-9"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="para" id="bilin_quad-4-15-9-1-1">Найдите формулы для <span class="process-math">\(\dim V^{(2)}_{\text{ sym } }\)</span> и <span class="process-math">\(\dim V^{(2)}_{\text{ alt } }\)</span> через <span class="process-math">\(\dim V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-15-9-1-1">Выразите <span class="process-math">\(\dim V^{(2)}_{\text{ sym } }\)</span> и <span class="process-math">\(\dim V^{(2)}_{\text{ alt } }\)</span> через <span class="process-math">\(\dim V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.3.8"><a tabindex="-1" href="#bilin_quad-4-15-9" title="Copy heading and permalink for Exercise 9.1.3.8" aria-label="Copy heading and permalink for Exercise 9.1.3.8">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="bilin_quad-4-15-10"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para logical" id="bilin_quad-4-15-10-1-1">
-<div class="para">Предположим, что <span class="process-math">\(n\)</span> — целое положительное число и <span class="process-math">\(V = \{  p \in \P{}_n(\R{}): p(0) = p(1)  \}\)</span>. Определите <span class="process-math">\(\fun \alpha  {V{} \times V} {\R{}}\)</span> по</div>
+<div class="para">Пусть <span class="process-math">\(n\)</span> — целое положительное число и <span class="process-math">\(V = \{  p \in \P{}_n(\R{}): p(0) = p(1)  \}\)</span>. Зададим отображение <span class="process-math">\(\fun \alpha  {V{} \times V} {\R{}}\)</span> формулой</div>
 <div class="displaymath process-math" id="bilin_quad-4-15-10-1-1-4">
 \begin{equation*}
 \alpha (p,q) = \int_0^1 p q'\!.
@@ -1506,12 +1506,12 @@ v \in V\)</span> (см. <a href="bilin_quad.html#x9inn" class="xref" data-knowl=
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="bilin_quad-4-15-10-1-2">Покажите, что <span class="process-math">\(\alpha\)</span> — знакопеременная билинейная форма на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-10-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-15-10-1-2">Покажите, что <span class="process-math">\(\alpha\)</span> — кососимметрическая билинейная форма на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-10-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.3.9"><a tabindex="-1" href="#bilin_quad-4-15-10" title="Copy heading and permalink for Exercise 9.1.3.9" aria-label="Copy heading and permalink for Exercise 9.1.3.9">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="bilin_quad-4-15-11"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para logical" id="bilin_quad-4-15-11-1-1">
-<div class="para">Предположим, что <span class="process-math">\(n\)</span> — целое положительное число и</div>
+<div class="para">Пусть <span class="process-math">\(n\)</span> — целое положительное число и</div>
 <div class="displaymath process-math" id="bilin_quad-4-15-11-1-1-2">
 \begin{equation*}
 V = \{  p \in \P{}_n(\R{}): p(0) = p(1) \text{ и }  p'(0) = p'(1) \}.
@@ -1520,7 +1520,7 @@ V = \{  p \in \P{}_n(\R{}): p(0) = p(1) \text{ и }  p'(0) = p'(1) \}.
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="bilin_quad-4-15-11-1-2">
-<div class="para">Определите <span class="process-math">\(\fun \rho {V{} \times V} {\R{}}\)</span> по</div>
+<div class="para">Определим <span class="process-math">\(\fun \rho {V{} \times V} {\R{}}\)</span> формулой</div>
 <div class="displaymath process-math" id="bilin_quad-4-15-11-1-2-2">
 \begin{equation*}
 \rho(p,q) = \int_0^1 p q''\!.
@@ -1528,7 +1528,7 @@ V = \{  p \in \P{}_n(\R{}): p(0) = p(1) \text{ и }  p'(0) = p'(1) \}.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-11-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="bilin_quad-4-15-11-1-3">Докажите, что <span class="process-math">\(\rho\)</span> — симметричная билинейная форма на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-11-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="bilin_quad-4-15-11-1-3">Покажите, что <span class="process-math">\(\rho\)</span> — симметричная билинейная форма на <span class="process-math">\(V{}\)</span>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#bilin_quad-4-15-11-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Exercise 9.1.3.10"><a tabindex="-1" href="#bilin_quad-4-15-11" title="Copy heading and permalink for Exercise 9.1.3.10" aria-label="Copy heading and permalink for Exercise 9.1.3.10">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Exercises 9.1.3: Exercises"><a tabindex="-1" href="#bilin_quad-4-15" title="Copy heading and permalink for Exercises 9.1.3: Упражнения" aria-label="Copy heading and permalink for Exercises 9.1.3: Exercises">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Subsection 9.1.3: Quadratic Forms"><a tabindex="-1" href="#bilin_quad-4" title="Copy heading and permalink for Subsection 9.1.3: Квадратичные формы" aria-label="Copy heading and permalink for Subsection 9.1.3: Quadratic Forms">🔗</a></div>

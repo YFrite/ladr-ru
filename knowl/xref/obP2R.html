@@ -22,27 +22,27 @@
 <span class="type">Пример</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.34</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">ортонормированный базис пространства <span class="process-math">\(\P_2(\R{})\)</span>.</span>
 </h2>
 <div class="para logical">
-<div class="para">Предположим, мы превратили <span class="process-math">\(\P{}_2(\R{})\)</span> в пространство со скалярным произведением, используя скалярное произведение, заданное формулой</div>
+<div class="para">Превратим пространство <span class="process-math">\(\P{}_2(\R{})\)</span> в пространство со скалярным произведением, задав скалярное произведение формулой</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \langle p, q \rangle  = \int_{-1}^{1} pq
 \end{equation*}
 </div>
-<div class="para">для всех <span class="process-math">\(p, q \in \P{}_2(\R{})\)</span>. Мы знаем, что <span class="process-math">\(1, x, x^2\)</span> является базисом <span class="process-math">\(\P{}_2(\R{})\)</span>, но это не ортонормированный базис. Мы найдем ортонормированный базис <span class="process-math">\(\P{}_2(\R{})\)</span>, применив процедуру Грама – Шмидта к <span class="process-math">\(v_1 = 1\)</span>, <span class="process-math">\(v_2 = x\)</span> и <span class="process-math">\(v_3 = x^2{}\)</span>.</div>
+<div class="para">для всех <span class="process-math">\(p, q \in \P{}_2(\R{})\)</span>. Мы знаем, что <span class="process-math">\(1, x, x^2\)</span> — базис пространства <span class="process-math">\(\P{}_2(\R{})\)</span>, однако он не является ортонормированным. Найдём ортонормированный базис пространства <span class="process-math">\(\P{}_2(\R{})\)</span>, применив процесс ортогонализации Грама — Шмидта к векторам <span class="process-math">\(v_1 = 1\)</span>, <span class="process-math">\(v_2 = x\)</span> и <span class="process-math">\(v_3 = x^2{}\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#obP2R-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical">
-<div class="para">Для начала возьмите <span class="process-math">\(f_1 = v_1 = 1\)</span>. Таким образом <span class="process-math">\(\lVert f_1 \rVert ^2 = \int_{-1}^1 1 = 2\)</span>. Следовательно, формула в <a href="orthobases.html#x186" class="xref" data-knowl="./knowl/xref/x186.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 6.32: Процедура Грама-Шмидта">Теореме 6.32</a> говорит нам, что</div>
+<div class="para">Начнём с <span class="process-math">\(f_1 = v_1 = 1\)</span>. Тогда <span class="process-math">\(\lVert f_1 \rVert ^2 = \int_{-1}^1 1 = 2\)</span>. Следовательно, по формуле из <a href="orthobases.html#x186" class="xref" data-knowl="./knowl/xref/x186.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 6.32: процесс ортогонализации Грама — Шмидта">Теоремы 6.32</a> получаем</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x186.html">
 \begin{equation*}
 f_2 = v_2 - \frac{\langle v_2, f_1 \rangle }{\lVert f_1 \rVert ^2} f_1 = x - \frac{\langle x, 1 \rangle }{\lVert f_1 \rVert ^2} = x,
 \end{equation*}
 </div>
-<div class="para">где последнее равенство выполнено, поскольку <span class="process-math">\(\langle x, 1 \rangle  = \int_{-1}^1 t   dt = 0\)</span>.</div>
+<div class="para">где последнее равенство справедливо, так как <span class="process-math">\(\langle x, 1 \rangle  = \int_{-1}^1 t   dt = 0\)</span>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#obP2R-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical">
-<div class="para">Из приведенной выше формулы для <span class="process-math">\(f_2\)</span> следует, что <span class="process-math">\(\lVert f_2 \rVert ^2 = \int_{-1}^1 t^2   dt = \frac{2}{3}\)</span>. Теперь формула <a href="orthobases.html#x186" class="xref" data-knowl="./knowl/xref/x186.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 6.32: Процедура Грама-Шмидта">Теоремы 6.32</a> говорит нам, что</div>
+<div class="para">Из полученной формулы для <span class="process-math">\(f_2\)</span> следует, что <span class="process-math">\(\lVert f_2 \rVert ^2 = \int_{-1}^1 t^2   dt = \frac{2}{3}\)</span>. Теперь формула из <a href="orthobases.html#x186" class="xref" data-knowl="./knowl/xref/x186.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 6.32: процесс ортогонализации Грама — Шмидта">Теоремы 6.32</a> даёт</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/x186.html">
 \begin{align*}
 f_3 =\mathstrut\amp v_3 - \frac{\langle v_3, f_1 \rangle }{\lVert f_1 \rVert ^2} f_1 - \frac{\langle v_3, f_2 \rangle }{\lVert f_2 \rVert ^2} f_2 \\
@@ -53,7 +53,7 @@ f_3 =\mathstrut\amp v_3 - \frac{\langle v_3, f_1 \rangle }{\lVert f_1 \rVert ^2}
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#obP2R-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical">
-<div class="para">Из приведенной выше формулы для <span class="process-math">\(f_3\)</span> следует, что</div>
+<div class="para">Из этой формулы для <span class="process-math">\(f_3\)</span> вытекает, что</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \lVert f_3 \rVert ^2 = \int_{-1}^1 ( t^2 - \tfrac{1}{3}  )^2   dt =  \int_{-1}^{1} (  t^4 -\tfrac{2}{3} t^2 + \tfrac{1}{9}  )   dt = \tfrac{8}{45}.
@@ -62,7 +62,7 @@ f_3 =\mathstrut\amp v_3 - \frac{\langle v_3, f_1 \rangle }{\lVert f_1 \rVert ^2}
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#obP2R-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical">
-<div class="para">Теперь деление каждого из <span class="process-math">\(f_1, f_2, f_3\)</span> на его норму дает нам ортонормированный список</div>
+<div class="para">Разделив теперь каждый из векторов <span class="process-math">\(f_1, f_2, f_3\)</span> на его норму, получим ортонормированную систему</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \sqrt{\tfrac{1}{2}}, \sqrt{\tfrac{3}{2}} x, \sqrt{\tfrac{45}{8}} (  x^2 - \tfrac{1}{3}  ).
@@ -70,7 +70,7 @@ f_3 =\mathstrut\amp v_3 - \frac{\langle v_3, f_1 \rangle }{\lVert f_1 \rVert ^2}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#obP2R-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para">Ортонормированный список выше имеет длину три, что соответствует размерности <span class="process-math">\(\P{}_2(\R{})\)</span>. Следовательно, этот ортонормированный список является ортонормированным базисом <span class="process-math">\(\P{}_2(\R{})\)</span> [по <a href="orthobases.html#onbasis" class="xref" data-knowl="./knowl/xref/onbasis.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 6.28: ортонормированные списки правильной длины являются ортонормированными базисами">теореме 6.28</a>].<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#obP2R-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para">Построенная ортонормированная система состоит из трёх векторов, что совпадает с размерностью пространства <span class="process-math">\(\P{}_2(\R{})\)</span>. Следовательно, эта система является ортонормированным базисом пространства <span class="process-math">\(\P{}_2(\R{})\)</span> [по <a href="orthobases.html#onbasis" class="xref" data-knowl="./knowl/xref/onbasis.html" data-reveal-label="Показать" data-close-label="Скрыть" title="Теорема 6.28: ортонормированная система подходящей длины является ортонормированным базисом">Теореме 6.28</a>].<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#obP2R-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 6.34: an orthonormal basis of  \P_2(\R{})"><a tabindex="-1" href="#obP2R" title="Copy heading and permalink for Example 6.34: ортонормированный базис пространства \P_2(\R{})" aria-label="Copy heading and permalink for Example 6.34: an orthonormal basis of  \P_2(\R{})">🔗</a></div>
 </article><span class="incontext"><a class="internal" href="orthobases.html#obP2R">В контексте</a></span>
 </body>
